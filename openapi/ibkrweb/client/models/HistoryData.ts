@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   HistoryDataData,
   HistoryDataDataFromJSON,
   HistoryDataDataFromJSONTyped,
   HistoryDataDataToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,128 +31,128 @@ export interface HistoryData {
    * @type {string}
    * @memberof HistoryData
    */
-  symbol?: string;
+  symbol?: string
   /**
    * companyName
    * @type {string}
    * @memberof HistoryData
    */
-  text?: string;
+  text?: string
   /**
    * priceFactor is price increment obtained from display rule
    * @type {number}
    * @memberof HistoryData
    */
-  priceFactor?: number;
+  priceFactor?: number
   /**
    * start date time in the format YYYYMMDD-HH:mm:ss
    * @type {string}
    * @memberof HistoryData
    */
-  startTime?: string;
+  startTime?: string
   /**
    * High value during this time series with format %h/%v/%t. %h is the high price (scaled by priceFactor), %v is volume
    * (volume factor will always be 100 (reported volume = actual volume/100)) and %t is minutes from start time of the chart
    * @type {string}
    * @memberof HistoryData
    */
-  high?: string;
+  high?: string
   /**
    * Low value during this time series with format %l/%v/%t. %l is the low price (scaled by priceFactor), %v is volume
    * (volume factor will always be 100 (reported volume = actual volume/100)) and %t is minutes from start time of the chart
    * @type {string}
    * @memberof HistoryData
    */
-  low?: string;
+  low?: string
   /**
    * The duration for the historical data request
    * @type {string}
    * @memberof HistoryData
    */
-  timePeriod?: string;
+  timePeriod?: string
   /**
    * The number of seconds in a bar
    * @type {number}
    * @memberof HistoryData
    */
-  barLength?: number;
+  barLength?: number
   /**
    * Market Data Availability. The field may contain two chars. The first char is the primary code: S = Streaming, R = Realtime, D = Delayed,
    * Z = Frozen, Y = Frozen Delayed. The second char is the secondary code: P = Snapshot Available, p = Consolidated.
    * @type {string}
    * @memberof HistoryData
    */
-  mdAvailability?: string;
+  mdAvailability?: string
   /**
    * The time it takes, in milliseconds, to process the historical data request
    * @type {number}
    * @memberof HistoryData
    */
-  mktDataDelay?: number;
+  mktDataDelay?: number
   /**
    * The historical data returned includes outside of regular trading hours
    * @type {boolean}
    * @memberof HistoryData
    */
-  outsideRth?: boolean;
+  outsideRth?: boolean
   /**
    * The number of seconds in the trading day
    * @type {number}
    * @memberof HistoryData
    */
-  tradingDayDuration?: number;
+  tradingDayDuration?: number
   /**
    *
    * @type {number}
    * @memberof HistoryData
    */
-  volumeFactor?: number;
+  volumeFactor?: number
   /**
    *
    * @type {number}
    * @memberof HistoryData
    */
-  priceDisplayRule?: number;
+  priceDisplayRule?: number
   /**
    *
    * @type {string}
    * @memberof HistoryData
    */
-  priceDisplayValue?: string;
+  priceDisplayValue?: string
   /**
    *
    * @type {boolean}
    * @memberof HistoryData
    */
-  negativeCapable?: boolean;
+  negativeCapable?: boolean
   /**
    *
    * @type {number}
    * @memberof HistoryData
    */
-  messageVersion?: number;
+  messageVersion?: number
   /**
    *
    * @type {Array<HistoryDataData>}
    * @memberof HistoryData
    */
-  data?: Array<HistoryDataData>;
+  data?: Array<HistoryDataData>
   /**
    * total number of points
    * @type {number}
    * @memberof HistoryData
    */
-  points?: number;
+  points?: number
   /**
    *
    * @type {number}
    * @memberof HistoryData
    */
-  travelTime?: number;
+  travelTime?: number
 }
 
 export function HistoryDataFromJSON(json: any): HistoryData {
-  return HistoryDataFromJSONTyped(json, false);
+  return HistoryDataFromJSONTyped(json, false)
 }
 
 export function HistoryDataFromJSONTyped(
@@ -160,56 +160,56 @@ export function HistoryDataFromJSONTyped(
   ignoreDiscriminator: boolean
 ): HistoryData {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    symbol: !exists(json, "symbol") ? undefined : json["symbol"],
-    text: !exists(json, "text") ? undefined : json["text"],
-    priceFactor: !exists(json, "priceFactor") ? undefined : json["priceFactor"],
-    startTime: !exists(json, "startTime") ? undefined : json["startTime"],
-    high: !exists(json, "high") ? undefined : json["high"],
-    low: !exists(json, "low") ? undefined : json["low"],
-    timePeriod: !exists(json, "timePeriod") ? undefined : json["timePeriod"],
-    barLength: !exists(json, "barLength") ? undefined : json["barLength"],
-    mdAvailability: !exists(json, "mdAvailability")
+    symbol: !exists(json, 'symbol') ? undefined : json['symbol'],
+    text: !exists(json, 'text') ? undefined : json['text'],
+    priceFactor: !exists(json, 'priceFactor') ? undefined : json['priceFactor'],
+    startTime: !exists(json, 'startTime') ? undefined : json['startTime'],
+    high: !exists(json, 'high') ? undefined : json['high'],
+    low: !exists(json, 'low') ? undefined : json['low'],
+    timePeriod: !exists(json, 'timePeriod') ? undefined : json['timePeriod'],
+    barLength: !exists(json, 'barLength') ? undefined : json['barLength'],
+    mdAvailability: !exists(json, 'mdAvailability')
       ? undefined
-      : json["mdAvailability"],
-    mktDataDelay: !exists(json, "mktDataDelay")
+      : json['mdAvailability'],
+    mktDataDelay: !exists(json, 'mktDataDelay')
       ? undefined
-      : json["mktDataDelay"],
-    outsideRth: !exists(json, "outsideRth") ? undefined : json["outsideRth"],
-    tradingDayDuration: !exists(json, "tradingDayDuration")
+      : json['mktDataDelay'],
+    outsideRth: !exists(json, 'outsideRth') ? undefined : json['outsideRth'],
+    tradingDayDuration: !exists(json, 'tradingDayDuration')
       ? undefined
-      : json["tradingDayDuration"],
-    volumeFactor: !exists(json, "volumeFactor")
+      : json['tradingDayDuration'],
+    volumeFactor: !exists(json, 'volumeFactor')
       ? undefined
-      : json["volumeFactor"],
-    priceDisplayRule: !exists(json, "priceDisplayRule")
+      : json['volumeFactor'],
+    priceDisplayRule: !exists(json, 'priceDisplayRule')
       ? undefined
-      : json["priceDisplayRule"],
-    priceDisplayValue: !exists(json, "priceDisplayValue")
+      : json['priceDisplayRule'],
+    priceDisplayValue: !exists(json, 'priceDisplayValue')
       ? undefined
-      : json["priceDisplayValue"],
-    negativeCapable: !exists(json, "negativeCapable")
+      : json['priceDisplayValue'],
+    negativeCapable: !exists(json, 'negativeCapable')
       ? undefined
-      : json["negativeCapable"],
-    messageVersion: !exists(json, "messageVersion")
+      : json['negativeCapable'],
+    messageVersion: !exists(json, 'messageVersion')
       ? undefined
-      : json["messageVersion"],
-    data: !exists(json, "data")
+      : json['messageVersion'],
+    data: !exists(json, 'data')
       ? undefined
-      : (json["data"] as Array<any>).map(HistoryDataDataFromJSON),
-    points: !exists(json, "points") ? undefined : json["points"],
-    travelTime: !exists(json, "travelTime") ? undefined : json["travelTime"],
-  };
+      : (json['data'] as Array<any>).map(HistoryDataDataFromJSON),
+    points: !exists(json, 'points') ? undefined : json['points'],
+    travelTime: !exists(json, 'travelTime') ? undefined : json['travelTime'],
+  }
 }
 
 export function HistoryDataToJSON(value?: HistoryData | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     symbol: value.symbol,
@@ -235,5 +235,5 @@ export function HistoryDataToJSON(value?: HistoryData | null): any {
         : (value.data as Array<any>).map(HistoryDataDataToJSON),
     points: value.points,
     travelTime: value.travelTime,
-  };
+  }
 }

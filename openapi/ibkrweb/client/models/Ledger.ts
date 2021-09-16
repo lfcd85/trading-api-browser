@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,131 +24,131 @@ export interface Ledger {
    * @type {number}
    * @memberof Ledger
    */
-  commoditymarketvalue?: number;
+  commoditymarketvalue?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  futuremarketvalue?: number;
+  futuremarketvalue?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  settledcash?: number;
+  settledcash?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  exchangerate?: number;
+  exchangerate?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  sessionid?: number;
+  sessionid?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  cashbalance?: number;
+  cashbalance?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  corporatebondsmarketvalue?: number;
+  corporatebondsmarketvalue?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  warrantsmarketvalue?: number;
+  warrantsmarketvalue?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  netliquidationvalue?: number;
+  netliquidationvalue?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  interest?: number;
+  interest?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  unrealizedpnl?: number;
+  unrealizedpnl?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  stockmarketvalue?: number;
+  stockmarketvalue?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  moneyfunds?: number;
+  moneyfunds?: number
   /**
    *
    * @type {string}
    * @memberof Ledger
    */
-  currency?: string;
+  currency?: string
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  realizedpnl?: number;
+  realizedpnl?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  funds?: number;
+  funds?: number
   /**
    *
    * @type {string}
    * @memberof Ledger
    */
-  acctcode?: string;
+  acctcode?: string
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  issueroptionsmarketvalue?: number;
+  issueroptionsmarketvalue?: number
   /**
    *
    * @type {string}
    * @memberof Ledger
    */
-  key?: string;
+  key?: string
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  timestamp?: number;
+  timestamp?: number
   /**
    *
    * @type {number}
    * @memberof Ledger
    */
-  severity?: number;
+  severity?: number
 }
 
 export function LedgerFromJSON(json: any): Ledger {
-  return LedgerFromJSONTyped(json, false);
+  return LedgerFromJSONTyped(json, false)
 }
 
 export function LedgerFromJSONTyped(
@@ -156,57 +156,57 @@ export function LedgerFromJSONTyped(
   ignoreDiscriminator: boolean
 ): Ledger {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    commoditymarketvalue: !exists(json, "commoditymarketvalue")
+    commoditymarketvalue: !exists(json, 'commoditymarketvalue')
       ? undefined
-      : json["commoditymarketvalue"],
-    futuremarketvalue: !exists(json, "futuremarketvalue")
+      : json['commoditymarketvalue'],
+    futuremarketvalue: !exists(json, 'futuremarketvalue')
       ? undefined
-      : json["futuremarketvalue"],
-    settledcash: !exists(json, "settledcash") ? undefined : json["settledcash"],
-    exchangerate: !exists(json, "exchangerate")
+      : json['futuremarketvalue'],
+    settledcash: !exists(json, 'settledcash') ? undefined : json['settledcash'],
+    exchangerate: !exists(json, 'exchangerate')
       ? undefined
-      : json["exchangerate"],
-    sessionid: !exists(json, "sessionid") ? undefined : json["sessionid"],
-    cashbalance: !exists(json, "cashbalance") ? undefined : json["cashbalance"],
-    corporatebondsmarketvalue: !exists(json, "corporatebondsmarketvalue")
+      : json['exchangerate'],
+    sessionid: !exists(json, 'sessionid') ? undefined : json['sessionid'],
+    cashbalance: !exists(json, 'cashbalance') ? undefined : json['cashbalance'],
+    corporatebondsmarketvalue: !exists(json, 'corporatebondsmarketvalue')
       ? undefined
-      : json["corporatebondsmarketvalue"],
-    warrantsmarketvalue: !exists(json, "warrantsmarketvalue")
+      : json['corporatebondsmarketvalue'],
+    warrantsmarketvalue: !exists(json, 'warrantsmarketvalue')
       ? undefined
-      : json["warrantsmarketvalue"],
-    netliquidationvalue: !exists(json, "netliquidationvalue")
+      : json['warrantsmarketvalue'],
+    netliquidationvalue: !exists(json, 'netliquidationvalue')
       ? undefined
-      : json["netliquidationvalue"],
-    interest: !exists(json, "interest") ? undefined : json["interest"],
-    unrealizedpnl: !exists(json, "unrealizedpnl")
+      : json['netliquidationvalue'],
+    interest: !exists(json, 'interest') ? undefined : json['interest'],
+    unrealizedpnl: !exists(json, 'unrealizedpnl')
       ? undefined
-      : json["unrealizedpnl"],
-    stockmarketvalue: !exists(json, "stockmarketvalue")
+      : json['unrealizedpnl'],
+    stockmarketvalue: !exists(json, 'stockmarketvalue')
       ? undefined
-      : json["stockmarketvalue"],
-    moneyfunds: !exists(json, "moneyfunds") ? undefined : json["moneyfunds"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    realizedpnl: !exists(json, "realizedpnl") ? undefined : json["realizedpnl"],
-    funds: !exists(json, "funds") ? undefined : json["funds"],
-    acctcode: !exists(json, "acctcode") ? undefined : json["acctcode"],
-    issueroptionsmarketvalue: !exists(json, "issueroptionsmarketvalue")
+      : json['stockmarketvalue'],
+    moneyfunds: !exists(json, 'moneyfunds') ? undefined : json['moneyfunds'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    realizedpnl: !exists(json, 'realizedpnl') ? undefined : json['realizedpnl'],
+    funds: !exists(json, 'funds') ? undefined : json['funds'],
+    acctcode: !exists(json, 'acctcode') ? undefined : json['acctcode'],
+    issueroptionsmarketvalue: !exists(json, 'issueroptionsmarketvalue')
       ? undefined
-      : json["issueroptionsmarketvalue"],
-    key: !exists(json, "key") ? undefined : json["key"],
-    timestamp: !exists(json, "timestamp") ? undefined : json["timestamp"],
-    severity: !exists(json, "severity") ? undefined : json["severity"],
-  };
+      : json['issueroptionsmarketvalue'],
+    key: !exists(json, 'key') ? undefined : json['key'],
+    timestamp: !exists(json, 'timestamp') ? undefined : json['timestamp'],
+    severity: !exists(json, 'severity') ? undefined : json['severity'],
+  }
 }
 
 export function LedgerToJSON(value?: Ledger | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     commoditymarketvalue: value.commoditymarketvalue,
@@ -230,5 +230,5 @@ export function LedgerToJSON(value?: Ledger | null): any {
     key: value.key,
     timestamp: value.timestamp,
     severity: value.severity,
-  };
+  }
 }

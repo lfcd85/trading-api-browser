@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   AlertRequestConditions,
   AlertRequestConditionsFromJSON,
   AlertRequestConditionsFromJSONTyped,
   AlertRequestConditionsToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,89 +31,89 @@ export interface AlertRequest {
    * @type {number}
    * @memberof AlertRequest
    */
-  orderId?: number;
+  orderId?: number
   /**
    * name of alert
    * @type {string}
    * @memberof AlertRequest
    */
-  alertName?: string;
+  alertName?: string
   /**
    * The message you want to receive via email or text message
    * @type {string}
    * @memberof AlertRequest
    */
-  alertMessage?: string;
+  alertMessage?: string
   /**
    * whether alert is repeatable or not, so value can only be 0 or 1, this has to be 1 for MTA alert
    * @type {number}
    * @memberof AlertRequest
    */
-  alertRepeatable?: number;
+  alertRepeatable?: number
   /**
    * email address to receive alert
    * @type {string}
    * @memberof AlertRequest
    */
-  email?: string;
+  email?: string
   /**
    * whether allowing to send email or not, so value can only be 0 or 1,
    * @type {number}
    * @memberof AlertRequest
    */
-  sendMessage?: number;
+  sendMessage?: number
   /**
    * time in force, can only be GTC or GTD
    * @type {string}
    * @memberof AlertRequest
    */
-  tif?: string;
+  tif?: string
   /**
    * format, YYYYMMDD-HH:mm:ss, please NOTE this will only work when tif is GTD
    * @type {string}
    * @memberof AlertRequest
    */
-  expireTime?: string;
+  expireTime?: string
   /**
    * value can only be 0 or 1, set to 1 if the alert can be triggered outside regular trading hours.
    * @type {number}
    * @memberof AlertRequest
    */
-  outsideRth?: number;
+  outsideRth?: number
   /**
    * value can only be 0 or 1, set to 1 to enable the alert only in IBKR mobile
    * @type {number}
    * @memberof AlertRequest
    */
-  iTWSOrdersOnly?: number;
+  iTWSOrdersOnly?: number
   /**
    * value can only be 0 or 1, set to 1 to allow to show alert in pop-ups
    * @type {number}
    * @memberof AlertRequest
    */
-  showPopup?: number;
+  showPopup?: number
   /**
    * for MTA alert only, each user has a unique toolId and it will stay the same, do not send for normal alert
    * @type {number}
    * @memberof AlertRequest
    */
-  toolId?: number;
+  toolId?: number
   /**
    * audio message to play when alert is triggered
    * @type {string}
    * @memberof AlertRequest
    */
-  playAudio?: string;
+  playAudio?: string
   /**
    *
    * @type {Array<AlertRequestConditions>}
    * @memberof AlertRequest
    */
-  conditions?: Array<AlertRequestConditions>;
+  conditions?: Array<AlertRequestConditions>
 }
 
 export function AlertRequestFromJSON(json: any): AlertRequest {
-  return AlertRequestFromJSONTyped(json, false);
+  return AlertRequestFromJSONTyped(json, false)
 }
 
 export function AlertRequestFromJSONTyped(
@@ -121,40 +121,40 @@ export function AlertRequestFromJSONTyped(
   ignoreDiscriminator: boolean
 ): AlertRequest {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    orderId: !exists(json, "orderId") ? undefined : json["orderId"],
-    alertName: !exists(json, "alertName") ? undefined : json["alertName"],
-    alertMessage: !exists(json, "alertMessage")
+    orderId: !exists(json, 'orderId') ? undefined : json['orderId'],
+    alertName: !exists(json, 'alertName') ? undefined : json['alertName'],
+    alertMessage: !exists(json, 'alertMessage')
       ? undefined
-      : json["alertMessage"],
-    alertRepeatable: !exists(json, "alertRepeatable")
+      : json['alertMessage'],
+    alertRepeatable: !exists(json, 'alertRepeatable')
       ? undefined
-      : json["alertRepeatable"],
-    email: !exists(json, "email") ? undefined : json["email"],
-    sendMessage: !exists(json, "sendMessage") ? undefined : json["sendMessage"],
-    tif: !exists(json, "tif") ? undefined : json["tif"],
-    expireTime: !exists(json, "expireTime") ? undefined : json["expireTime"],
-    outsideRth: !exists(json, "outsideRth") ? undefined : json["outsideRth"],
-    iTWSOrdersOnly: !exists(json, "iTWSOrdersOnly")
+      : json['alertRepeatable'],
+    email: !exists(json, 'email') ? undefined : json['email'],
+    sendMessage: !exists(json, 'sendMessage') ? undefined : json['sendMessage'],
+    tif: !exists(json, 'tif') ? undefined : json['tif'],
+    expireTime: !exists(json, 'expireTime') ? undefined : json['expireTime'],
+    outsideRth: !exists(json, 'outsideRth') ? undefined : json['outsideRth'],
+    iTWSOrdersOnly: !exists(json, 'iTWSOrdersOnly')
       ? undefined
-      : json["iTWSOrdersOnly"],
-    showPopup: !exists(json, "showPopup") ? undefined : json["showPopup"],
-    toolId: !exists(json, "toolId") ? undefined : json["toolId"],
-    playAudio: !exists(json, "playAudio") ? undefined : json["playAudio"],
-    conditions: !exists(json, "conditions")
+      : json['iTWSOrdersOnly'],
+    showPopup: !exists(json, 'showPopup') ? undefined : json['showPopup'],
+    toolId: !exists(json, 'toolId') ? undefined : json['toolId'],
+    playAudio: !exists(json, 'playAudio') ? undefined : json['playAudio'],
+    conditions: !exists(json, 'conditions')
       ? undefined
-      : (json["conditions"] as Array<any>).map(AlertRequestConditionsFromJSON),
-  };
+      : (json['conditions'] as Array<any>).map(AlertRequestConditionsFromJSON),
+  }
 }
 
 export function AlertRequestToJSON(value?: AlertRequest | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     orderId: value.orderId,
@@ -174,5 +174,5 @@ export function AlertRequestToJSON(value?: AlertRequest | null): any {
       value.conditions === undefined
         ? undefined
         : (value.conditions as Array<any>).map(AlertRequestConditionsToJSON),
-  };
+  }
 }

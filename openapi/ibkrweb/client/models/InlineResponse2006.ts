@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   InlineResponse2006E,
   InlineResponse2006EFromJSON,
   InlineResponse2006EFromJSONTyped,
   InlineResponse2006EToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,17 +31,17 @@ export interface InlineResponse2006 {
    * @type {number}
    * @memberof InlineResponse2006
    */
-  m?: number;
+  m?: number
   /**
    *
    * @type {Array<InlineResponse2006E>}
    * @memberof InlineResponse2006
    */
-  e?: Array<InlineResponse2006E>;
+  e?: Array<InlineResponse2006E>
 }
 
 export function InlineResponse2006FromJSON(json: any): InlineResponse2006 {
-  return InlineResponse2006FromJSONTyped(json, false);
+  return InlineResponse2006FromJSONTyped(json, false)
 }
 
 export function InlineResponse2006FromJSONTyped(
@@ -49,24 +49,24 @@ export function InlineResponse2006FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse2006 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    m: !exists(json, "M") ? undefined : json["M"],
-    e: !exists(json, "E")
+    m: !exists(json, 'M') ? undefined : json['M'],
+    e: !exists(json, 'E')
       ? undefined
-      : (json["E"] as Array<any>).map(InlineResponse2006EFromJSON),
-  };
+      : (json['E'] as Array<any>).map(InlineResponse2006EFromJSON),
+  }
 }
 
 export function InlineResponse2006ToJSON(
   value?: InlineResponse2006 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     M: value.m,
@@ -74,5 +74,5 @@ export function InlineResponse2006ToJSON(
       value.e === undefined
         ? undefined
         : (value.e as Array<any>).map(InlineResponse2006EToJSON),
-  };
+  }
 }

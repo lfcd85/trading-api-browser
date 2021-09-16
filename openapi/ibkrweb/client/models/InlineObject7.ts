@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   OrderRequest,
   OrderRequestFromJSON,
   OrderRequestFromJSONTyped,
   OrderRequestToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -34,11 +34,11 @@ export interface InlineObject7 {
    * @type {Array<OrderRequest>}
    * @memberof InlineObject7
    */
-  orders?: Array<OrderRequest>;
+  orders?: Array<OrderRequest>
 }
 
 export function InlineObject7FromJSON(json: any): InlineObject7 {
-  return InlineObject7FromJSONTyped(json, false);
+  return InlineObject7FromJSONTyped(json, false)
 }
 
 export function InlineObject7FromJSONTyped(
@@ -46,26 +46,26 @@ export function InlineObject7FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject7 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    orders: !exists(json, "orders")
+    orders: !exists(json, 'orders')
       ? undefined
-      : (json["orders"] as Array<any>).map(OrderRequestFromJSON),
-  };
+      : (json['orders'] as Array<any>).map(OrderRequestFromJSON),
+  }
 }
 
 export function InlineObject7ToJSON(value?: InlineObject7 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     orders:
       value.orders === undefined
         ? undefined
         : (value.orders as Array<any>).map(OrderRequestToJSON),
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   InlineResponse20029,
   InlineResponse20029FromJSON,
@@ -23,10 +23,10 @@ import {
   ScannerParams,
   ScannerParamsFromJSON,
   ScannerParamsToJSON,
-} from "../models";
+} from '../models'
 
 export interface IserverScannerRunPostRequest {
-  body: ScannerParams;
+  body: ScannerParams
 }
 
 /**
@@ -40,23 +40,23 @@ export class ScannerApi extends runtime.BaseAPI {
   async iserverScannerParamsGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse20029>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/scanner/params`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20029FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -66,8 +66,8 @@ export class ScannerApi extends runtime.BaseAPI {
   async iserverScannerParamsGet(
     initOverrides?: RequestInit
   ): Promise<InlineResponse20029> {
-    const response = await this.iserverScannerParamsGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.iserverScannerParamsGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -82,31 +82,31 @@ export class ScannerApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverScannerRunPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverScannerRunPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/scanner/run`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: ScannerParamsToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20030FromJSON)
-    );
+    )
   }
 
   /**
@@ -119,7 +119,7 @@ export class ScannerApi extends runtime.BaseAPI {
     const response = await this.iserverScannerRunPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 }

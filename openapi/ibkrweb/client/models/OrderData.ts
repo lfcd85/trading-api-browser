@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   OrderDataWarnings,
   OrderDataWarningsFromJSON,
   OrderDataWarningsFromJSONTyped,
   OrderDataWarningsToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,175 +31,175 @@ export interface OrderData {
    * @type {string}
    * @memberof OrderData
    */
-  clientOrderId?: string;
+  clientOrderId?: string
   /**
    *
    * @type {string}
    * @memberof OrderData
    */
-  execId?: string;
+  execId?: string
   /**
    *
    * @type {string}
    * @memberof OrderData
    */
-  execType?: OrderDataExecTypeEnum;
+  execType?: OrderDataExecTypeEnum
   /**
    *
    * @type {string}
    * @memberof OrderData
    */
-  orderType?: OrderDataOrderTypeEnum;
+  orderType?: OrderDataOrderTypeEnum
   /**
    *
    * @type {string}
    * @memberof OrderData
    */
-  orderStatus?: OrderDataOrderStatusEnum;
+  orderStatus?: OrderDataOrderStatusEnum
   /**
    * Underlying symbol for contract
    * @type {string}
    * @memberof OrderData
    */
-  symbol?: string;
+  symbol?: string
   /**
    * Quantity of active order
    * @type {string}
    * @memberof OrderData
    */
-  orderQty?: string;
+  orderQty?: string
   /**
    * Price of active order
    * @type {string}
    * @memberof OrderData
    */
-  price?: string;
+  price?: string
   /**
    * Quantity of the last partial fill
    * @type {string}
    * @memberof OrderData
    */
-  lastShares?: string;
+  lastShares?: string
   /**
    * Price of the last partial fill
    * @type {string}
    * @memberof OrderData
    */
-  lastPrice?: string;
+  lastPrice?: string
   /**
    * Cumulative fill quantity
    * @type {string}
    * @memberof OrderData
    */
-  cumQty?: string;
+  cumQty?: string
   /**
    * Remaining quantity to be filled
    * @type {string}
    * @memberof OrderData
    */
-  leavesQty?: string;
+  leavesQty?: string
   /**
    * Average fill price
    * @type {string}
    * @memberof OrderData
    */
-  avgPrice?: string;
+  avgPrice?: string
   /**
    *
    * @type {string}
    * @memberof OrderData
    */
-  side?: OrderDataSideEnum;
+  side?: OrderDataSideEnum
   /**
    * Order identifier
    * @type {string}
    * @memberof OrderData
    */
-  orderId?: string;
+  orderId?: string
   /**
    * Account number
    * @type {string}
    * @memberof OrderData
    */
-  account?: string;
+  account?: string
   /**
    * Contracts asset class
    * @type {string}
    * @memberof OrderData
    */
-  secType?: OrderDataSecTypeEnum;
+  secType?: OrderDataSecTypeEnum
   /**
    * Time of transaction in GMT, format YYYYMMDD-hh:m:ss
    * @type {string}
    * @memberof OrderData
    */
-  txTime?: string;
+  txTime?: string
   /**
    * Time of receipt in GMT, format YYYYMMDD-hh:mm:ss
    * @type {string}
    * @memberof OrderData
    */
-  rcptTime?: string;
+  rcptTime?: string
   /**
    * Time in Force
    * @type {string}
    * @memberof OrderData
    */
-  tif?: OrderDataTifEnum;
+  tif?: OrderDataTifEnum
   /**
    * Contract identifier from IBKR's database.
    * @type {string}
    * @memberof OrderData
    */
-  conid?: string;
+  conid?: string
   /**
    * Trading currency
    * @type {string}
    * @memberof OrderData
    */
-  currency?: string;
+  currency?: string
   /**
    * Exchange or venue
    * @type {string}
    * @memberof OrderData
    */
-  exchange?: string;
+  exchange?: string
   /**
    * Listing Exchange
    * @type {string}
    * @memberof OrderData
    */
-  listingExchange?: string;
+  listingExchange?: string
   /**
    * error message
    * @type {number}
    * @memberof OrderData
    */
-  text?: number;
+  text?: number
   /**
    *
    * @type {OrderDataWarnings}
    * @memberof OrderData
    */
-  warnings?: OrderDataWarnings;
+  warnings?: OrderDataWarnings
   /**
    * Commission currency
    * @type {string}
    * @memberof OrderData
    */
-  commCurr?: string;
+  commCurr?: string
   /**
    * Commissions
    * @type {string}
    * @memberof OrderData
    */
-  comms?: string;
+  comms?: string
   /**
    * Realized PnL
    * @type {string}
    * @memberof OrderData
    */
-  realizedPnl?: string;
+  realizedPnl?: string
 }
 
 /**
@@ -310,7 +310,7 @@ export enum OrderDataTifEnum {
 }
 
 export function OrderDataFromJSON(json: any): OrderData {
-  return OrderDataFromJSONTyped(json, false);
+  return OrderDataFromJSONTyped(json, false)
 }
 
 export function OrderDataFromJSONTyped(
@@ -318,53 +318,53 @@ export function OrderDataFromJSONTyped(
   ignoreDiscriminator: boolean
 ): OrderData {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    clientOrderId: !exists(json, "clientOrderId")
+    clientOrderId: !exists(json, 'clientOrderId')
       ? undefined
-      : json["clientOrderId"],
-    execId: !exists(json, "execId") ? undefined : json["execId"],
-    execType: !exists(json, "execType") ? undefined : json["execType"],
-    orderType: !exists(json, "orderType") ? undefined : json["orderType"],
-    orderStatus: !exists(json, "orderStatus") ? undefined : json["orderStatus"],
-    symbol: !exists(json, "symbol") ? undefined : json["symbol"],
-    orderQty: !exists(json, "orderQty") ? undefined : json["orderQty"],
-    price: !exists(json, "price") ? undefined : json["price"],
-    lastShares: !exists(json, "lastShares") ? undefined : json["lastShares"],
-    lastPrice: !exists(json, "lastPrice") ? undefined : json["lastPrice"],
-    cumQty: !exists(json, "cumQty") ? undefined : json["cumQty"],
-    leavesQty: !exists(json, "leavesQty") ? undefined : json["leavesQty"],
-    avgPrice: !exists(json, "avgPrice") ? undefined : json["avgPrice"],
-    side: !exists(json, "side") ? undefined : json["side"],
-    orderId: !exists(json, "orderId") ? undefined : json["orderId"],
-    account: !exists(json, "account") ? undefined : json["account"],
-    secType: !exists(json, "secType") ? undefined : json["secType"],
-    txTime: !exists(json, "txTime") ? undefined : json["txTime"],
-    rcptTime: !exists(json, "rcptTime") ? undefined : json["rcptTime"],
-    tif: !exists(json, "tif") ? undefined : json["tif"],
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    exchange: !exists(json, "exchange") ? undefined : json["exchange"],
-    listingExchange: !exists(json, "listingExchange")
+      : json['clientOrderId'],
+    execId: !exists(json, 'execId') ? undefined : json['execId'],
+    execType: !exists(json, 'execType') ? undefined : json['execType'],
+    orderType: !exists(json, 'orderType') ? undefined : json['orderType'],
+    orderStatus: !exists(json, 'orderStatus') ? undefined : json['orderStatus'],
+    symbol: !exists(json, 'symbol') ? undefined : json['symbol'],
+    orderQty: !exists(json, 'orderQty') ? undefined : json['orderQty'],
+    price: !exists(json, 'price') ? undefined : json['price'],
+    lastShares: !exists(json, 'lastShares') ? undefined : json['lastShares'],
+    lastPrice: !exists(json, 'lastPrice') ? undefined : json['lastPrice'],
+    cumQty: !exists(json, 'cumQty') ? undefined : json['cumQty'],
+    leavesQty: !exists(json, 'leavesQty') ? undefined : json['leavesQty'],
+    avgPrice: !exists(json, 'avgPrice') ? undefined : json['avgPrice'],
+    side: !exists(json, 'side') ? undefined : json['side'],
+    orderId: !exists(json, 'orderId') ? undefined : json['orderId'],
+    account: !exists(json, 'account') ? undefined : json['account'],
+    secType: !exists(json, 'secType') ? undefined : json['secType'],
+    txTime: !exists(json, 'txTime') ? undefined : json['txTime'],
+    rcptTime: !exists(json, 'rcptTime') ? undefined : json['rcptTime'],
+    tif: !exists(json, 'tif') ? undefined : json['tif'],
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    exchange: !exists(json, 'exchange') ? undefined : json['exchange'],
+    listingExchange: !exists(json, 'listingExchange')
       ? undefined
-      : json["listingExchange"],
-    text: !exists(json, "text") ? undefined : json["text"],
-    warnings: !exists(json, "warnings")
+      : json['listingExchange'],
+    text: !exists(json, 'text') ? undefined : json['text'],
+    warnings: !exists(json, 'warnings')
       ? undefined
-      : OrderDataWarningsFromJSON(json["warnings"]),
-    commCurr: !exists(json, "commCurr") ? undefined : json["commCurr"],
-    comms: !exists(json, "comms") ? undefined : json["comms"],
-    realizedPnl: !exists(json, "realizedPnl") ? undefined : json["realizedPnl"],
-  };
+      : OrderDataWarningsFromJSON(json['warnings']),
+    commCurr: !exists(json, 'commCurr') ? undefined : json['commCurr'],
+    comms: !exists(json, 'comms') ? undefined : json['comms'],
+    realizedPnl: !exists(json, 'realizedPnl') ? undefined : json['realizedPnl'],
+  }
 }
 
 export function OrderDataToJSON(value?: OrderData | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     clientOrderId: value.clientOrderId,
@@ -396,5 +396,5 @@ export function OrderDataToJSON(value?: OrderData | null): any {
     commCurr: value.commCurr,
     comms: value.comms,
     realizedPnl: value.realizedPnl,
-  };
+  }
 }

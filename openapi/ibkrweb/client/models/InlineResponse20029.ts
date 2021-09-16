@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   InlineResponse20029FilterList,
   InlineResponse20029FilterListFromJSON,
@@ -30,7 +30,7 @@ import {
   InlineResponse20029ScanTypeListFromJSON,
   InlineResponse20029ScanTypeListFromJSONTyped,
   InlineResponse20029ScanTypeListToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -43,29 +43,29 @@ export interface InlineResponse20029 {
    * @type {Array<InlineResponse20029ScanTypeList>}
    * @memberof InlineResponse20029
    */
-  scanTypeList?: Array<InlineResponse20029ScanTypeList>;
+  scanTypeList?: Array<InlineResponse20029ScanTypeList>
   /**
    *
    * @type {Array<InlineResponse20029InstrumentList>}
    * @memberof InlineResponse20029
    */
-  instrumentList?: Array<InlineResponse20029InstrumentList>;
+  instrumentList?: Array<InlineResponse20029InstrumentList>
   /**
    *
    * @type {Array<InlineResponse20029FilterList>}
    * @memberof InlineResponse20029
    */
-  filterList?: Array<InlineResponse20029FilterList>;
+  filterList?: Array<InlineResponse20029FilterList>
   /**
    *
    * @type {Array<InlineResponse20029LocationTree>}
    * @memberof InlineResponse20029
    */
-  locationTree?: Array<InlineResponse20029LocationTree>;
+  locationTree?: Array<InlineResponse20029LocationTree>
 }
 
 export function InlineResponse20029FromJSON(json: any): InlineResponse20029 {
-  return InlineResponse20029FromJSONTyped(json, false);
+  return InlineResponse20029FromJSONTyped(json, false)
 }
 
 export function InlineResponse20029FromJSONTyped(
@@ -73,40 +73,40 @@ export function InlineResponse20029FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20029 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    scanTypeList: !exists(json, "scan_type_list")
+    scanTypeList: !exists(json, 'scan_type_list')
       ? undefined
-      : (json["scan_type_list"] as Array<any>).map(
+      : (json['scan_type_list'] as Array<any>).map(
           InlineResponse20029ScanTypeListFromJSON
         ),
-    instrumentList: !exists(json, "instrument_list")
+    instrumentList: !exists(json, 'instrument_list')
       ? undefined
-      : (json["instrument_list"] as Array<any>).map(
+      : (json['instrument_list'] as Array<any>).map(
           InlineResponse20029InstrumentListFromJSON
         ),
-    filterList: !exists(json, "filter_list")
+    filterList: !exists(json, 'filter_list')
       ? undefined
-      : (json["filter_list"] as Array<any>).map(
+      : (json['filter_list'] as Array<any>).map(
           InlineResponse20029FilterListFromJSON
         ),
-    locationTree: !exists(json, "location_tree")
+    locationTree: !exists(json, 'location_tree')
       ? undefined
-      : (json["location_tree"] as Array<any>).map(
+      : (json['location_tree'] as Array<any>).map(
           InlineResponse20029LocationTreeFromJSON
         ),
-  };
+  }
 }
 
 export function InlineResponse20029ToJSON(
   value?: InlineResponse20029 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     scan_type_list:
@@ -133,5 +133,5 @@ export function InlineResponse20029ToJSON(
         : (value.locationTree as Array<any>).map(
             InlineResponse20029LocationTreeToJSON
           ),
-  };
+  }
 }

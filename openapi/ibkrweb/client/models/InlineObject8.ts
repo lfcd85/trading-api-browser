@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,23 +24,23 @@ export interface InlineObject8 {
    * @type {string}
    * @memberof InlineObject8
    */
-  symbol: string;
+  symbol: string
   /**
    * should be true if the search is to be performed by name. false by default.
    * @type {boolean}
    * @memberof InlineObject8
    */
-  name?: boolean;
+  name?: boolean
   /**
    * If search is done by name, only the assets provided in this field will be returned. Currently, only STK is supported.
    * @type {string}
    * @memberof InlineObject8
    */
-  secType?: string;
+  secType?: string
 }
 
 export function InlineObject8FromJSON(json: any): InlineObject8 {
-  return InlineObject8FromJSONTyped(json, false);
+  return InlineObject8FromJSONTyped(json, false)
 }
 
 export function InlineObject8FromJSONTyped(
@@ -48,25 +48,25 @@ export function InlineObject8FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject8 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    symbol: json["symbol"],
-    name: !exists(json, "name") ? undefined : json["name"],
-    secType: !exists(json, "secType") ? undefined : json["secType"],
-  };
+    symbol: json['symbol'],
+    name: !exists(json, 'name') ? undefined : json['name'],
+    secType: !exists(json, 'secType') ? undefined : json['secType'],
+  }
 }
 
 export function InlineObject8ToJSON(value?: InlineObject8 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     symbol: value.symbol,
     name: value.name,
     secType: value.secType,
-  };
+  }
 }

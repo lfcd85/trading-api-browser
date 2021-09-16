@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   IbcustEntityInfoEntities,
   IbcustEntityInfoEntitiesFromJSON,
   IbcustEntityInfoEntitiesFromJSONTyped,
   IbcustEntityInfoEntitiesToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,17 +31,17 @@ export interface InlineResponse20039 {
    * @type {number}
    * @memberof InlineResponse20039
    */
-  applicantId?: number;
+  applicantId?: number
   /**
    *
    * @type {Array<IbcustEntityInfoEntities>}
    * @memberof InlineResponse20039
    */
-  entities?: Array<IbcustEntityInfoEntities>;
+  entities?: Array<IbcustEntityInfoEntities>
 }
 
 export function InlineResponse20039FromJSON(json: any): InlineResponse20039 {
-  return InlineResponse20039FromJSONTyped(json, false);
+  return InlineResponse20039FromJSONTyped(json, false)
 }
 
 export function InlineResponse20039FromJSONTyped(
@@ -49,24 +49,24 @@ export function InlineResponse20039FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20039 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    applicantId: !exists(json, "applicantId") ? undefined : json["applicantId"],
-    entities: !exists(json, "entities")
+    applicantId: !exists(json, 'applicantId') ? undefined : json['applicantId'],
+    entities: !exists(json, 'entities')
       ? undefined
-      : (json["entities"] as Array<any>).map(IbcustEntityInfoEntitiesFromJSON),
-  };
+      : (json['entities'] as Array<any>).map(IbcustEntityInfoEntitiesFromJSON),
+  }
 }
 
 export function InlineResponse20039ToJSON(
   value?: InlineResponse20039 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     applicantId: value.applicantId,
@@ -74,5 +74,5 @@ export function InlineResponse20039ToJSON(
       value.entities === undefined
         ? undefined
         : (value.entities as Array<any>).map(IbcustEntityInfoEntitiesToJSON),
-  };
+  }
 }

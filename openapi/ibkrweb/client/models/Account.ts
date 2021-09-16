@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   AccountParent,
   AccountParentFromJSON,
   AccountParentFromJSONTyped,
   AccountParentToJSON,
-} from "./";
+} from './'
 
 /**
  * account information
@@ -31,67 +31,67 @@ export interface Account {
    * @type {string}
    * @memberof Account
    */
-  id?: string;
+  id?: string
   /**
    * The account number
    * @type {string}
    * @memberof Account
    */
-  accountId?: string;
+  accountId?: string
   /**
    * The accountAlias
    * @type {string}
    * @memberof Account
    */
-  accountVan?: string;
+  accountVan?: string
   /**
    * Title of the account
    * @type {string}
    * @memberof Account
    */
-  accountTitle?: string;
+  accountTitle?: string
   /**
    * Whichever value is not null in this priority
    * @type {string}
    * @memberof Account
    */
-  displayName?: AccountDisplayNameEnum;
+  displayName?: AccountDisplayNameEnum
   /**
    * User customizable account alias. Refer to [Configure Account Alias](https://guides.interactivebrokers.com/cp/cp.htm#am/settings/accountalias.htm) for details.
    * @type {string}
    * @memberof Account
    */
-  accountAlias?: string;
+  accountAlias?: string
   /**
    * When the account was opened in unix time.
    * @type {number}
    * @memberof Account
    */
-  accountStatus?: number;
+  accountStatus?: number
   /**
    * Base currency of the account.
    * @type {string}
    * @memberof Account
    */
-  currency?: AccountCurrencyEnum;
+  currency?: AccountCurrencyEnum
   /**
    * Account Type
    * @type {string}
    * @memberof Account
    */
-  type?: AccountTypeEnum;
+  type?: AccountTypeEnum
   /**
    * UNI - Deprecated property
    * @type {string}
    * @memberof Account
    */
-  tradingType?: string;
+  tradingType?: string
   /**
    * If an account is a sub-account to a Financial Advisor.
    * @type {boolean}
    * @memberof Account
    */
-  faclient?: boolean;
+  faclient?: boolean
   /**
    * Status of the Account
    *   * O = Open
@@ -102,25 +102,25 @@ export interface Account {
    * @type {string}
    * @memberof Account
    */
-  clearingStatus?: AccountClearingStatusEnum;
+  clearingStatus?: AccountClearingStatusEnum
   /**
    * Is a Covestor Account
    * @type {boolean}
    * @memberof Account
    */
-  covestor?: boolean;
+  covestor?: boolean
   /**
    *
    * @type {AccountParent}
    * @memberof Account
    */
-  parent?: AccountParent;
+  parent?: AccountParent
   /**
    * Formatted "accountId - accountAlias"
    * @type {string}
    * @memberof Account
    */
-  desc?: string;
+  desc?: string
 }
 
 /**
@@ -128,63 +128,63 @@ export interface Account {
  * @enum {string}
  */
 export enum AccountDisplayNameEnum {
-  AccountTitle = "accountTitle",
-  AccountVan = "accountVan",
-  AccountId = "accountId",
+  AccountTitle = 'accountTitle',
+  AccountVan = 'accountVan',
+  AccountId = 'accountId',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum AccountCurrencyEnum {
-  Aud = "AUD",
-  Gbp = "GBP",
-  Cad = "CAD",
-  Cnh = "CNH",
-  Czk = "CZK",
-  Dkk = "DKK",
-  Eur = "EUR",
-  Hkd = "HKD",
-  Huf = "HUF",
-  Inr = "INR",
-  Ils = "ILS",
-  Jpy = "JPY",
-  Mxn = "MXN",
-  Nok = "NOK",
-  Nzd = "NZD",
-  Pln = "PLN",
-  Rub = "RUB",
-  Sgd = "SGD",
-  Sek = "SEK",
-  Chf = "CHF",
-  Usd = "USD",
+  Aud = 'AUD',
+  Gbp = 'GBP',
+  Cad = 'CAD',
+  Cnh = 'CNH',
+  Czk = 'CZK',
+  Dkk = 'DKK',
+  Eur = 'EUR',
+  Hkd = 'HKD',
+  Huf = 'HUF',
+  Inr = 'INR',
+  Ils = 'ILS',
+  Jpy = 'JPY',
+  Mxn = 'MXN',
+  Nok = 'NOK',
+  Nzd = 'NZD',
+  Pln = 'PLN',
+  Rub = 'RUB',
+  Sgd = 'SGD',
+  Sek = 'SEK',
+  Chf = 'CHF',
+  Usd = 'USD',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum AccountTypeEnum {
-  Individual = "INDIVIDUAL",
-  Joint = "JOINT",
-  Org = "ORG",
-  Trust = "TRUST",
-  Demo = "DEMO",
+  Individual = 'INDIVIDUAL',
+  Joint = 'JOINT',
+  Org = 'ORG',
+  Trust = 'TRUST',
+  Demo = 'DEMO',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum AccountClearingStatusEnum {
-  O = "O",
-  P = "P",
-  N = "N",
-  A = "A",
-  R = "R",
-  C = "C",
+  O = 'O',
+  P = 'P',
+  N = 'N',
+  A = 'A',
+  R = 'R',
+  C = 'C',
 }
 
 export function AccountFromJSON(json: any): Account {
-  return AccountFromJSONTyped(json, false);
+  return AccountFromJSONTyped(json, false)
 }
 
 export function AccountFromJSONTyped(
@@ -192,43 +192,43 @@ export function AccountFromJSONTyped(
   ignoreDiscriminator: boolean
 ): Account {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    id: !exists(json, "id") ? undefined : json["id"],
-    accountId: !exists(json, "accountId") ? undefined : json["accountId"],
-    accountVan: !exists(json, "accountVan") ? undefined : json["accountVan"],
-    accountTitle: !exists(json, "accountTitle")
+    id: !exists(json, 'id') ? undefined : json['id'],
+    accountId: !exists(json, 'accountId') ? undefined : json['accountId'],
+    accountVan: !exists(json, 'accountVan') ? undefined : json['accountVan'],
+    accountTitle: !exists(json, 'accountTitle')
       ? undefined
-      : json["accountTitle"],
-    displayName: !exists(json, "displayName") ? undefined : json["displayName"],
-    accountAlias: !exists(json, "accountAlias")
+      : json['accountTitle'],
+    displayName: !exists(json, 'displayName') ? undefined : json['displayName'],
+    accountAlias: !exists(json, 'accountAlias')
       ? undefined
-      : json["accountAlias"],
-    accountStatus: !exists(json, "accountStatus")
+      : json['accountAlias'],
+    accountStatus: !exists(json, 'accountStatus')
       ? undefined
-      : json["accountStatus"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    type: !exists(json, "type") ? undefined : json["type"],
-    tradingType: !exists(json, "tradingType") ? undefined : json["tradingType"],
-    faclient: !exists(json, "faclient") ? undefined : json["faclient"],
-    clearingStatus: !exists(json, "clearingStatus")
+      : json['accountStatus'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    type: !exists(json, 'type') ? undefined : json['type'],
+    tradingType: !exists(json, 'tradingType') ? undefined : json['tradingType'],
+    faclient: !exists(json, 'faclient') ? undefined : json['faclient'],
+    clearingStatus: !exists(json, 'clearingStatus')
       ? undefined
-      : json["clearingStatus"],
-    covestor: !exists(json, "covestor") ? undefined : json["covestor"],
-    parent: !exists(json, "parent")
+      : json['clearingStatus'],
+    covestor: !exists(json, 'covestor') ? undefined : json['covestor'],
+    parent: !exists(json, 'parent')
       ? undefined
-      : AccountParentFromJSON(json["parent"]),
-    desc: !exists(json, "desc") ? undefined : json["desc"],
-  };
+      : AccountParentFromJSON(json['parent']),
+    desc: !exists(json, 'desc') ? undefined : json['desc'],
+  }
 }
 
 export function AccountToJSON(value?: Account | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     id: value.id,
@@ -246,5 +246,5 @@ export function AccountToJSON(value?: Account | null): any {
     covestor: value.covestor,
     parent: AccountParentToJSON(value.parent),
     desc: value.desc,
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,25 +24,25 @@ export interface InlineResponse20029InstrumentList {
    * @type {string}
    * @memberof InlineResponse20029InstrumentList
    */
-  displayName?: string;
+  displayName?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20029InstrumentList
    */
-  type?: string;
+  type?: string
   /**
    *
    * @type {Array<string>}
    * @memberof InlineResponse20029InstrumentList
    */
-  filters?: Array<string>;
+  filters?: Array<string>
 }
 
 export function InlineResponse20029InstrumentListFromJSON(
   json: any
 ): InlineResponse20029InstrumentList {
-  return InlineResponse20029InstrumentListFromJSONTyped(json, false);
+  return InlineResponse20029InstrumentListFromJSONTyped(json, false)
 }
 
 export function InlineResponse20029InstrumentListFromJSONTyped(
@@ -50,29 +50,29 @@ export function InlineResponse20029InstrumentListFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20029InstrumentList {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    displayName: !exists(json, "display_name")
+    displayName: !exists(json, 'display_name')
       ? undefined
-      : json["display_name"],
-    type: !exists(json, "type") ? undefined : json["type"],
-    filters: !exists(json, "filters") ? undefined : json["filters"],
-  };
+      : json['display_name'],
+    type: !exists(json, 'type') ? undefined : json['type'],
+    filters: !exists(json, 'filters') ? undefined : json['filters'],
+  }
 }
 
 export function InlineResponse20029InstrumentListToJSON(
   value?: InlineResponse20029InstrumentList | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     display_name: value.displayName,
     type: value.type,
     filters: value.filters,
-  };
+  }
 }

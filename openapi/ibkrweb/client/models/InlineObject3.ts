@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,17 +24,17 @@ export interface InlineObject3 {
    * @type {number}
    * @memberof InlineObject3
    */
-  alertId?: number;
+  alertId?: number
   /**
    * 1 to activate, 0 to deactivate
    * @type {number}
    * @memberof InlineObject3
    */
-  alertActive?: number;
+  alertActive?: number
 }
 
 export function InlineObject3FromJSON(json: any): InlineObject3 {
-  return InlineObject3FromJSONTyped(json, false);
+  return InlineObject3FromJSONTyped(json, false)
 }
 
 export function InlineObject3FromJSONTyped(
@@ -42,23 +42,23 @@ export function InlineObject3FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject3 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    alertId: !exists(json, "alertId") ? undefined : json["alertId"],
-    alertActive: !exists(json, "alertActive") ? undefined : json["alertActive"],
-  };
+    alertId: !exists(json, 'alertId') ? undefined : json['alertId'],
+    alertActive: !exists(json, 'alertActive') ? undefined : json['alertActive'],
+  }
 }
 
 export function InlineObject3ToJSON(value?: InlineObject3 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     alertId: value.alertId,
     alertActive: value.alertActive,
-  };
+  }
 }

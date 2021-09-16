@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,35 +24,35 @@ export interface SummaryTotal {
    * @type {string}
    * @memberof SummaryTotal
    */
-  chg?: string;
+  chg?: string
   /**
    * change percent
    * @type {string}
    * @memberof SummaryTotal
    */
-  rtn?: string;
+  rtn?: string
   /**
    * set to true if any external account data is not available for starting or ending date, resulting in potentially unusual total values.
    * @type {boolean}
    * @memberof SummaryTotal
    */
-  incompleteData?: boolean;
+  incompleteData?: boolean
   /**
    *
    * @type {string}
    * @memberof SummaryTotal
    */
-  endVal?: string;
+  endVal?: string
   /**
    *
    * @type {string}
    * @memberof SummaryTotal
    */
-  startVal?: string;
+  startVal?: string
 }
 
 export function SummaryTotalFromJSON(json: any): SummaryTotal {
-  return SummaryTotalFromJSONTyped(json, false);
+  return SummaryTotalFromJSONTyped(json, false)
 }
 
 export function SummaryTotalFromJSONTyped(
@@ -60,25 +60,25 @@ export function SummaryTotalFromJSONTyped(
   ignoreDiscriminator: boolean
 ): SummaryTotal {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    chg: !exists(json, "chg") ? undefined : json["chg"],
-    rtn: !exists(json, "rtn") ? undefined : json["rtn"],
-    incompleteData: !exists(json, "incompleteData")
+    chg: !exists(json, 'chg') ? undefined : json['chg'],
+    rtn: !exists(json, 'rtn') ? undefined : json['rtn'],
+    incompleteData: !exists(json, 'incompleteData')
       ? undefined
-      : json["incompleteData"],
-    endVal: !exists(json, "endVal") ? undefined : json["endVal"],
-    startVal: !exists(json, "startVal") ? undefined : json["startVal"],
-  };
+      : json['incompleteData'],
+    endVal: !exists(json, 'endVal') ? undefined : json['endVal'],
+    startVal: !exists(json, 'startVal') ? undefined : json['startVal'],
+  }
 }
 
 export function SummaryTotalToJSON(value?: SummaryTotal | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     chg: value.chg,
@@ -86,5 +86,5 @@ export function SummaryTotalToJSON(value?: SummaryTotal | null): any {
     incompleteData: value.incompleteData,
     endVal: value.endVal,
     startVal: value.startVal,
-  };
+  }
 }

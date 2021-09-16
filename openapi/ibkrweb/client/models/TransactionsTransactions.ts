@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,37 +24,37 @@ export interface TransactionsTransactions {
    * @type {string}
    * @memberof TransactionsTransactions
    */
-  acctid?: string;
+  acctid?: string
   /**
    *
    * @type {number}
    * @memberof TransactionsTransactions
    */
-  conid?: number;
+  conid?: number
   /**
    * currency code
    * @type {string}
    * @memberof TransactionsTransactions
    */
-  cur?: string;
+  cur?: string
   /**
    * Conversion rate from asset currency to response currency
    * @type {number}
    * @memberof TransactionsTransactions
    */
-  fxRate?: number;
+  fxRate?: number
   /**
    * Transaction description
    * @type {string}
    * @memberof TransactionsTransactions
    */
-  desc?: string;
+  desc?: string
   /**
    * Date of transaction.  Epoch time, GMT
    * @type {string}
    * @memberof TransactionsTransactions
    */
-  date?: string;
+  date?: string
   /**
    * Transaction Type Name: Examples: "Sell", "Buy", "Corporate Action",
    * "Dividend Payment", "Transfer", "Payment in Lieu"
@@ -62,32 +62,32 @@ export interface TransactionsTransactions {
    * @type {string}
    * @memberof TransactionsTransactions
    */
-  type?: string;
+  type?: string
   /**
    * Not applicable for all transaction types
    * @type {number}
    * @memberof TransactionsTransactions
    */
-  qty?: number;
+  qty?: number
   /**
    * In asset currency. Not be applicable for all transaction types.
    * @type {number}
    * @memberof TransactionsTransactions
    */
-  pr?: number;
+  pr?: number
   /**
    * Raw value, no formatting. Transaction amount. For trades does not include commission.
    * In asset currency
    * @type {number}
    * @memberof TransactionsTransactions
    */
-  amt?: number;
+  amt?: number
 }
 
 export function TransactionsTransactionsFromJSON(
   json: any
 ): TransactionsTransactions {
-  return TransactionsTransactionsFromJSONTyped(json, false);
+  return TransactionsTransactionsFromJSONTyped(json, false)
 }
 
 export function TransactionsTransactionsFromJSONTyped(
@@ -95,30 +95,30 @@ export function TransactionsTransactionsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): TransactionsTransactions {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    acctid: !exists(json, "acctid") ? undefined : json["acctid"],
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    cur: !exists(json, "cur") ? undefined : json["cur"],
-    fxRate: !exists(json, "fxRate") ? undefined : json["fxRate"],
-    desc: !exists(json, "desc") ? undefined : json["desc"],
-    date: !exists(json, "date") ? undefined : json["date"],
-    type: !exists(json, "type") ? undefined : json["type"],
-    qty: !exists(json, "qty") ? undefined : json["qty"],
-    pr: !exists(json, "pr") ? undefined : json["pr"],
-    amt: !exists(json, "amt") ? undefined : json["amt"],
-  };
+    acctid: !exists(json, 'acctid') ? undefined : json['acctid'],
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    cur: !exists(json, 'cur') ? undefined : json['cur'],
+    fxRate: !exists(json, 'fxRate') ? undefined : json['fxRate'],
+    desc: !exists(json, 'desc') ? undefined : json['desc'],
+    date: !exists(json, 'date') ? undefined : json['date'],
+    type: !exists(json, 'type') ? undefined : json['type'],
+    qty: !exists(json, 'qty') ? undefined : json['qty'],
+    pr: !exists(json, 'pr') ? undefined : json['pr'],
+    amt: !exists(json, 'amt') ? undefined : json['amt'],
+  }
 }
 
 export function TransactionsTransactionsToJSON(
   value?: TransactionsTransactions | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     acctid: value.acctid,
@@ -131,5 +131,5 @@ export function TransactionsTransactionsToJSON(
     qty: value.qty,
     pr: value.pr,
     amt: value.amt,
-  };
+  }
 }

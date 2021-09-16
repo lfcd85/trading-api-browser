@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   ScannerResultContractsContract,
   ScannerResultContractsContractFromJSON,
   ScannerResultContractsContractFromJSONTyped,
   ScannerResultContractsContractToJSON,
-} from "./";
+} from './'
 
 /**
  * Contains list of contracts matching the scanner query
@@ -31,13 +31,13 @@ export interface ScannerResultContracts {
    * @type {Array<ScannerResultContractsContract>}
    * @memberof ScannerResultContracts
    */
-  contract?: Array<ScannerResultContractsContract>;
+  contract?: Array<ScannerResultContractsContract>
 }
 
 export function ScannerResultContractsFromJSON(
   json: any
 ): ScannerResultContracts {
-  return ScannerResultContractsFromJSONTyped(json, false);
+  return ScannerResultContractsFromJSONTyped(json, false)
 }
 
 export function ScannerResultContractsFromJSONTyped(
@@ -45,25 +45,25 @@ export function ScannerResultContractsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerResultContracts {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    contract: !exists(json, "Contract")
+    contract: !exists(json, 'Contract')
       ? undefined
-      : (json["Contract"] as Array<any>).map(
+      : (json['Contract'] as Array<any>).map(
           ScannerResultContractsContractFromJSON
         ),
-  };
+  }
 }
 
 export function ScannerResultContractsToJSON(
   value?: ScannerResultContracts | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     Contract:
@@ -72,5 +72,5 @@ export function ScannerResultContractsToJSON(
         : (value.contract as Array<any>).map(
             ScannerResultContractsContractToJSON
           ),
-  };
+  }
 }

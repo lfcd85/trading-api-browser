@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  * Contains some basic info of contract
  * @export
@@ -24,101 +24,101 @@ export interface SecdefInfo {
    * @type {number}
    * @memberof SecdefInfo
    */
-  conid?: number;
+  conid?: number
   /**
    * Underlying symbol
    * @type {string}
    * @memberof SecdefInfo
    */
-  symbol?: string;
+  symbol?: string
   /**
    *
    * @type {string}
    * @memberof SecdefInfo
    */
-  secType?: string;
+  secType?: string
   /**
    *
    * @type {string}
    * @memberof SecdefInfo
    */
-  exchange?: string;
+  exchange?: string
   /**
    *
    * @type {string}
    * @memberof SecdefInfo
    */
-  listingExchange?: string;
+  listingExchange?: string
   /**
    * C = Call Option, P = Put Option
    * @type {string}
    * @memberof SecdefInfo
    */
-  right?: string;
+  right?: string
   /**
    * The strike price also known as exercise price
    * @type {string}
    * @memberof SecdefInfo
    */
-  strike?: string;
+  strike?: string
   /**
    * Currency the contract trades in
    * @type {string}
    * @memberof SecdefInfo
    */
-  currency?: string;
+  currency?: string
   /**
    * Committee on Uniform Securities Identification Procedures number
    * @type {string}
    * @memberof SecdefInfo
    */
-  cusip?: string;
+  cusip?: string
   /**
    * Annual interest rate paid on a bond
    * @type {string}
    * @memberof SecdefInfo
    */
-  coupon?: string;
+  coupon?: string
   /**
    * Formatted symbol
    * @type {string}
    * @memberof SecdefInfo
    */
-  desc1?: string;
+  desc1?: string
   /**
    * Formatted expiration, strike and right
    * @type {string}
    * @memberof SecdefInfo
    */
-  desc2?: string;
+  desc2?: string
   /**
    * Format YYYYMMDD, the date on which the underlying transaction settles if the option is exercised
    * @type {string}
    * @memberof SecdefInfo
    */
-  maturityDate?: string;
+  maturityDate?: string
   /**
    * total premium paid or received for an option contract
    * @type {string}
    * @memberof SecdefInfo
    */
-  multiplier?: string;
+  multiplier?: string
   /**
    *
    * @type {string}
    * @memberof SecdefInfo
    */
-  tradingClass?: string;
+  tradingClass?: string
   /**
    *
    * @type {string}
    * @memberof SecdefInfo
    */
-  validExchanges?: string;
+  validExchanges?: string
 }
 
 export function SecdefInfoFromJSON(json: any): SecdefInfo {
-  return SecdefInfoFromJSONTyped(json, false);
+  return SecdefInfoFromJSONTyped(json, false)
 }
 
 export function SecdefInfoFromJSONTyped(
@@ -126,42 +126,42 @@ export function SecdefInfoFromJSONTyped(
   ignoreDiscriminator: boolean
 ): SecdefInfo {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    symbol: !exists(json, "symbol") ? undefined : json["symbol"],
-    secType: !exists(json, "secType") ? undefined : json["secType"],
-    exchange: !exists(json, "exchange") ? undefined : json["exchange"],
-    listingExchange: !exists(json, "listingExchange")
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    symbol: !exists(json, 'symbol') ? undefined : json['symbol'],
+    secType: !exists(json, 'secType') ? undefined : json['secType'],
+    exchange: !exists(json, 'exchange') ? undefined : json['exchange'],
+    listingExchange: !exists(json, 'listingExchange')
       ? undefined
-      : json["listingExchange"],
-    right: !exists(json, "right") ? undefined : json["right"],
-    strike: !exists(json, "strike") ? undefined : json["strike"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    cusip: !exists(json, "cusip") ? undefined : json["cusip"],
-    coupon: !exists(json, "coupon") ? undefined : json["coupon"],
-    desc1: !exists(json, "desc1") ? undefined : json["desc1"],
-    desc2: !exists(json, "desc2") ? undefined : json["desc2"],
-    maturityDate: !exists(json, "maturityDate")
+      : json['listingExchange'],
+    right: !exists(json, 'right') ? undefined : json['right'],
+    strike: !exists(json, 'strike') ? undefined : json['strike'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    cusip: !exists(json, 'cusip') ? undefined : json['cusip'],
+    coupon: !exists(json, 'coupon') ? undefined : json['coupon'],
+    desc1: !exists(json, 'desc1') ? undefined : json['desc1'],
+    desc2: !exists(json, 'desc2') ? undefined : json['desc2'],
+    maturityDate: !exists(json, 'maturityDate')
       ? undefined
-      : json["maturityDate"],
-    multiplier: !exists(json, "multiplier") ? undefined : json["multiplier"],
-    tradingClass: !exists(json, "tradingClass")
+      : json['maturityDate'],
+    multiplier: !exists(json, 'multiplier') ? undefined : json['multiplier'],
+    tradingClass: !exists(json, 'tradingClass')
       ? undefined
-      : json["tradingClass"],
-    validExchanges: !exists(json, "validExchanges")
+      : json['tradingClass'],
+    validExchanges: !exists(json, 'validExchanges')
       ? undefined
-      : json["validExchanges"],
-  };
+      : json['validExchanges'],
+  }
 }
 
 export function SecdefInfoToJSON(value?: SecdefInfo | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     conid: value.conid,
@@ -180,5 +180,5 @@ export function SecdefInfoToJSON(value?: SecdefInfo | null): any {
     multiplier: value.multiplier,
     tradingClass: value.tradingClass,
     validExchanges: value.validExchanges,
-  };
+  }
 }

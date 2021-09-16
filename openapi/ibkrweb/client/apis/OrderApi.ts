@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   InlineObject4,
   InlineObject4FromJSON,
@@ -56,55 +56,55 @@ import {
   OrderStatus,
   OrderStatusFromJSON,
   OrderStatusToJSON,
-} from "../models";
+} from '../models'
 
 export interface IserverAccountAccountIdOrderOrderIdDeleteRequest {
-  accountId: string;
-  orderId: string;
+  accountId: string
+  orderId: string
 }
 
 export interface IserverAccountAccountIdOrderOrderIdPostRequest {
-  accountId: string;
-  orderId: string;
-  body: ModifyOrder;
+  accountId: string
+  orderId: string
+  body: ModifyOrder
 }
 
 export interface IserverAccountAccountIdOrderPostRequest {
-  accountId: string;
-  body: OrderRequest;
+  accountId: string
+  body: OrderRequest
 }
 
 export interface IserverAccountAccountIdOrderWhatifPostRequest {
-  accountId: string;
-  body: OrderRequest;
+  accountId: string
+  body: OrderRequest
 }
 
 export interface IserverAccountAccountIdOrdersPostRequest {
-  accountId: string;
-  body: InlineObject5;
+  accountId: string
+  body: InlineObject5
 }
 
 export interface IserverAccountAccountIdOrdersWhatifPostRequest {
-  accountId: string;
-  body: InlineObject7;
+  accountId: string
+  body: InlineObject7
 }
 
 export interface IserverAccountOrderStatusOrderIdGetRequest {
-  orderId: string;
+  orderId: string
 }
 
 export interface IserverAccountOrdersFaGroupPostRequest {
-  faGroup: string;
-  body: OrderRequest;
+  faGroup: string
+  body: OrderRequest
 }
 
 export interface IserverAccountOrdersGetRequest {
-  body?: InlineObject4;
+  body?: InlineObject4
 }
 
 export interface IserverReplyReplyidPostRequest {
-  replyid: string;
-  body: InlineObject6;
+  replyid: string
+  body: InlineObject6
 }
 
 /**
@@ -124,9 +124,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrderOrderIdDelete."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrderOrderIdDelete.'
+      )
     }
 
     if (
@@ -134,36 +134,36 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.orderId === undefined
     ) {
       throw new runtime.RequiredError(
-        "orderId",
-        "Required parameter requestParameters.orderId was null or undefined when calling iserverAccountAccountIdOrderOrderIdDelete."
-      );
+        'orderId',
+        'Required parameter requestParameters.orderId was null or undefined when calling iserverAccountAccountIdOrderOrderIdDelete.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/{accountId}/order/{orderId}`
           .replace(
-            `{${"accountId"}}`,
+            `{${'accountId'}}`,
             encodeURIComponent(String(requestParameters.accountId))
           )
           .replace(
-            `{${"orderId"}}`,
+            `{${'orderId'}}`,
             encodeURIComponent(String(requestParameters.orderId))
           ),
-        method: "DELETE",
+        method: 'DELETE',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20021FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -177,8 +177,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdOrderOrderIdDeleteRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -194,9 +194,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrderOrderIdPost."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrderOrderIdPost.'
+      )
     }
 
     if (
@@ -204,9 +204,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.orderId === undefined
     ) {
       throw new runtime.RequiredError(
-        "orderId",
-        "Required parameter requestParameters.orderId was null or undefined when calling iserverAccountAccountIdOrderOrderIdPost."
-      );
+        'orderId',
+        'Required parameter requestParameters.orderId was null or undefined when calling iserverAccountAccountIdOrderOrderIdPost.'
+      )
     }
 
     if (
@@ -214,39 +214,39 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrderOrderIdPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrderOrderIdPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/{accountId}/order/{orderId}`
           .replace(
-            `{${"accountId"}}`,
+            `{${'accountId'}}`,
             encodeURIComponent(String(requestParameters.accountId))
           )
           .replace(
-            `{${"orderId"}}`,
+            `{${'orderId'}}`,
             encodeURIComponent(String(requestParameters.orderId))
           ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: ModifyOrderToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20020FromJSON)
-    );
+    )
   }
 
   /**
@@ -260,8 +260,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdOrderOrderIdPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -277,9 +277,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrderPost."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrderPost.'
+      )
     }
 
     if (
@@ -287,34 +287,34 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrderPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrderPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/{accountId}/order`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: OrderRequestToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20017FromJSON)
-    );
+    )
   }
 
   /**
@@ -328,8 +328,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdOrderPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -345,9 +345,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrderWhatifPost."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrderWhatifPost.'
+      )
     }
 
     if (
@@ -355,34 +355,34 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrderWhatifPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrderWhatifPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/{accountId}/order/whatif`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: OrderRequestToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20019FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -396,8 +396,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdOrderWhatifPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -413,9 +413,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrdersPost."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrdersPost.'
+      )
     }
 
     if (
@@ -423,34 +423,34 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrdersPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrdersPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/{accountId}/orders`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject5ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20017FromJSON)
-    );
+    )
   }
 
   /**
@@ -464,8 +464,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdOrdersPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -481,9 +481,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrdersWhatifPost."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdOrdersWhatifPost.'
+      )
     }
 
     if (
@@ -491,34 +491,34 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrdersWhatifPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdOrdersWhatifPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/{accountId}/orders/whatif`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject7ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20019FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -532,8 +532,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdOrdersWhatifPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -548,31 +548,31 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.orderId === undefined
     ) {
       throw new runtime.RequiredError(
-        "orderId",
-        "Required parameter requestParameters.orderId was null or undefined when calling iserverAccountOrderStatusOrderIdGet."
-      );
+        'orderId',
+        'Required parameter requestParameters.orderId was null or undefined when calling iserverAccountOrderStatusOrderIdGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/order/status/{orderId}`.replace(
-          `{${"orderId"}}`,
+          `{${'orderId'}}`,
           encodeURIComponent(String(requestParameters.orderId))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       OrderStatusFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -585,8 +585,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountOrderStatusOrderIdGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -602,9 +602,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.faGroup === undefined
     ) {
       throw new runtime.RequiredError(
-        "faGroup",
-        "Required parameter requestParameters.faGroup was null or undefined when calling iserverAccountOrdersFaGroupPost."
-      );
+        'faGroup',
+        'Required parameter requestParameters.faGroup was null or undefined when calling iserverAccountOrdersFaGroupPost.'
+      )
     }
 
     if (
@@ -612,34 +612,34 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountOrdersFaGroupPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountOrdersFaGroupPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/orders/{faGroup}`.replace(
-          `{${"faGroup"}}`,
+          `{${'faGroup'}}`,
           encodeURIComponent(String(requestParameters.faGroup))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: OrderRequestToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20017FromJSON)
-    );
+    )
   }
 
   /**
@@ -653,8 +653,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountOrdersFaGroupPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -665,26 +665,26 @@ export class OrderApi extends runtime.BaseAPI {
     requestParameters: IserverAccountOrdersGetRequest,
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse20016>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/orders`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject4ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20016FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -698,8 +698,8 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverAccountOrdersGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -715,9 +715,9 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.replyid === undefined
     ) {
       throw new runtime.RequiredError(
-        "replyid",
-        "Required parameter requestParameters.replyid was null or undefined when calling iserverReplyReplyidPost."
-      );
+        'replyid',
+        'Required parameter requestParameters.replyid was null or undefined when calling iserverReplyReplyidPost.'
+      )
     }
 
     if (
@@ -725,34 +725,34 @@ export class OrderApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverReplyReplyidPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverReplyReplyidPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/reply/{replyid}`.replace(
-          `{${"replyid"}}`,
+          `{${'replyid'}}`,
           encodeURIComponent(String(requestParameters.replyid))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject6ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20018FromJSON)
-    );
+    )
   }
 
   /**
@@ -766,7 +766,7 @@ export class OrderApi extends runtime.BaseAPI {
     const response = await this.iserverReplyReplyidPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  * Returns tradingTime in exchange time zone.
  * @export
@@ -24,25 +24,25 @@ export interface InlineResponse20032TradingTimes {
    * @type {number}
    * @memberof InlineResponse20032TradingTimes
    */
-  openingTime?: number;
+  openingTime?: number
   /**
    *
    * @type {number}
    * @memberof InlineResponse20032TradingTimes
    */
-  closingTime?: number;
+  closingTime?: number
   /**
    *
    * @type {string}
    * @memberof InlineResponse20032TradingTimes
    */
-  cancelDayOrders?: string;
+  cancelDayOrders?: string
 }
 
 export function InlineResponse20032TradingTimesFromJSON(
   json: any
 ): InlineResponse20032TradingTimes {
-  return InlineResponse20032TradingTimesFromJSONTyped(json, false);
+  return InlineResponse20032TradingTimesFromJSONTyped(json, false)
 }
 
 export function InlineResponse20032TradingTimesFromJSONTyped(
@@ -50,29 +50,29 @@ export function InlineResponse20032TradingTimesFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20032TradingTimes {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    openingTime: !exists(json, "openingTime") ? undefined : json["openingTime"],
-    closingTime: !exists(json, "closingTime") ? undefined : json["closingTime"],
-    cancelDayOrders: !exists(json, "cancelDayOrders")
+    openingTime: !exists(json, 'openingTime') ? undefined : json['openingTime'],
+    closingTime: !exists(json, 'closingTime') ? undefined : json['closingTime'],
+    cancelDayOrders: !exists(json, 'cancelDayOrders')
       ? undefined
-      : json["cancelDayOrders"],
-  };
+      : json['cancelDayOrders'],
+  }
 }
 
 export function InlineResponse20032TradingTimesToJSON(
   value?: InlineResponse20032TradingTimes | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     openingTime: value.openingTime,
     closingTime: value.closingTime,
     cancelDayOrders: value.cancelDayOrders,
-  };
+  }
 }

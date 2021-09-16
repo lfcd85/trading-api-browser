@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,59 +24,59 @@ export interface HistoryResultBars {
    * @type {number}
    * @memberof HistoryResultBars
    */
-  open?: number;
+  open?: number
   /**
    *
    * @type {number}
    * @memberof HistoryResultBars
    */
-  high?: number;
+  high?: number
   /**
    *
    * @type {number}
    * @memberof HistoryResultBars
    */
-  low?: number;
+  low?: number
   /**
    *
    * @type {number}
    * @memberof HistoryResultBars
    */
-  close?: number;
+  close?: number
   /**
    *
    * @type {number}
    * @memberof HistoryResultBars
    */
-  volume?: number;
+  volume?: number
   /**
    *
    * @type {string}
    * @memberof HistoryResultBars
    */
-  time?: string;
+  time?: string
   /**
    *
    * @type {string}
    * @memberof HistoryResultBars
    */
-  endTime?: string;
+  endTime?: string
   /**
    *
    * @type {number}
    * @memberof HistoryResultBars
    */
-  weightedAvg?: number;
+  weightedAvg?: number
   /**
    *
    * @type {number}
    * @memberof HistoryResultBars
    */
-  count?: number;
+  count?: number
 }
 
 export function HistoryResultBarsFromJSON(json: any): HistoryResultBars {
-  return HistoryResultBarsFromJSONTyped(json, false);
+  return HistoryResultBarsFromJSONTyped(json, false)
 }
 
 export function HistoryResultBarsFromJSONTyped(
@@ -84,27 +84,27 @@ export function HistoryResultBarsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): HistoryResultBars {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    open: !exists(json, "open") ? undefined : json["open"],
-    high: !exists(json, "high") ? undefined : json["high"],
-    low: !exists(json, "low") ? undefined : json["low"],
-    close: !exists(json, "close") ? undefined : json["close"],
-    volume: !exists(json, "volume") ? undefined : json["volume"],
-    time: !exists(json, "time") ? undefined : json["time"],
-    endTime: !exists(json, "endTime") ? undefined : json["endTime"],
-    weightedAvg: !exists(json, "weightedAvg") ? undefined : json["weightedAvg"],
-    count: !exists(json, "count") ? undefined : json["count"],
-  };
+    open: !exists(json, 'open') ? undefined : json['open'],
+    high: !exists(json, 'high') ? undefined : json['high'],
+    low: !exists(json, 'low') ? undefined : json['low'],
+    close: !exists(json, 'close') ? undefined : json['close'],
+    volume: !exists(json, 'volume') ? undefined : json['volume'],
+    time: !exists(json, 'time') ? undefined : json['time'],
+    endTime: !exists(json, 'endTime') ? undefined : json['endTime'],
+    weightedAvg: !exists(json, 'weightedAvg') ? undefined : json['weightedAvg'],
+    count: !exists(json, 'count') ? undefined : json['count'],
+  }
 }
 
 export function HistoryResultBarsToJSON(value?: HistoryResultBars | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     open: value.open,
@@ -116,5 +116,5 @@ export function HistoryResultBarsToJSON(value?: HistoryResultBars | null): any {
     endTime: value.endTime,
     weightedAvg: value.weightedAvg,
     count: value.count,
-  };
+  }
 }

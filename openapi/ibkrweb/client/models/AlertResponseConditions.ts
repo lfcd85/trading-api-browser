@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,19 +24,19 @@ export interface AlertResponseConditions {
    * @type {number}
    * @memberof AlertResponseConditions
    */
-  conditionType?: number;
+  conditionType?: number
   /**
    * conid and exchange. Format supports conid or conid@exchange
    * @type {string}
    * @memberof AlertResponseConditions
    */
-  conidex?: string;
+  conidex?: string
   /**
    * Format contract name
    * @type {string}
    * @memberof AlertResponseConditions
    */
-  contractDescription1?: string;
+  contractDescription1?: string
   /**
    * optional, operator for the current condition
    *   * >= Greater than or equal to
@@ -44,19 +44,19 @@ export interface AlertResponseConditions {
    * @type {string}
    * @memberof AlertResponseConditions
    */
-  conditionOperator?: string;
+  conditionOperator?: string
   /**
    * optional, only some type of conditions have triggerMethod
    * @type {string}
    * @memberof AlertResponseConditions
    */
-  conditionTriggerMethod?: string;
+  conditionTriggerMethod?: string
   /**
    * can not be empty, can pass default value "*"
    * @type {string}
    * @memberof AlertResponseConditions
    */
-  conditionValue?: string;
+  conditionValue?: string
   /**
    * Condition array should end with "n"
    *   * a - AND
@@ -65,19 +65,19 @@ export interface AlertResponseConditions {
    * @type {string}
    * @memberof AlertResponseConditions
    */
-  conditionLogicBind?: string;
+  conditionLogicBind?: string
   /**
    * only needed for some MTA alert condition
    * @type {string}
    * @memberof AlertResponseConditions
    */
-  conditionTimeZone?: string;
+  conditionTimeZone?: string
 }
 
 export function AlertResponseConditionsFromJSON(
   json: any
 ): AlertResponseConditions {
-  return AlertResponseConditionsFromJSONTyped(json, false);
+  return AlertResponseConditionsFromJSONTyped(json, false)
 }
 
 export function AlertResponseConditionsFromJSONTyped(
@@ -85,42 +85,42 @@ export function AlertResponseConditionsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): AlertResponseConditions {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    conditionType: !exists(json, "condition_type")
+    conditionType: !exists(json, 'condition_type')
       ? undefined
-      : json["condition_type"],
-    conidex: !exists(json, "conidex") ? undefined : json["conidex"],
-    contractDescription1: !exists(json, "contract_description_1")
+      : json['condition_type'],
+    conidex: !exists(json, 'conidex') ? undefined : json['conidex'],
+    contractDescription1: !exists(json, 'contract_description_1')
       ? undefined
-      : json["contract_description_1"],
-    conditionOperator: !exists(json, "condition_operator")
+      : json['contract_description_1'],
+    conditionOperator: !exists(json, 'condition_operator')
       ? undefined
-      : json["condition_operator"],
-    conditionTriggerMethod: !exists(json, "condition_trigger_method")
+      : json['condition_operator'],
+    conditionTriggerMethod: !exists(json, 'condition_trigger_method')
       ? undefined
-      : json["condition_trigger_method"],
-    conditionValue: !exists(json, "condition_value")
+      : json['condition_trigger_method'],
+    conditionValue: !exists(json, 'condition_value')
       ? undefined
-      : json["condition_value"],
-    conditionLogicBind: !exists(json, "condition_logic_bind")
+      : json['condition_value'],
+    conditionLogicBind: !exists(json, 'condition_logic_bind')
       ? undefined
-      : json["condition_logic_bind"],
-    conditionTimeZone: !exists(json, "condition_time_zone")
+      : json['condition_logic_bind'],
+    conditionTimeZone: !exists(json, 'condition_time_zone')
       ? undefined
-      : json["condition_time_zone"],
-  };
+      : json['condition_time_zone'],
+  }
 }
 
 export function AlertResponseConditionsToJSON(
   value?: AlertResponseConditions | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     condition_type: value.conditionType,
@@ -131,5 +131,5 @@ export function AlertResponseConditionsToJSON(
     condition_value: value.conditionValue,
     condition_logic_bind: value.conditionLogicBind,
     condition_time_zone: value.conditionTimeZone,
-  };
+  }
 }

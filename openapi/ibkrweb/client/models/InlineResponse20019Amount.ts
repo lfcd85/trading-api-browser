@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,25 +24,25 @@ export interface InlineResponse20019Amount {
    * @type {string}
    * @memberof InlineResponse20019Amount
    */
-  amount?: string;
+  amount?: string
   /**
    * for example 1.1 ... 1.2 USD
    * @type {string}
    * @memberof InlineResponse20019Amount
    */
-  commission?: string;
+  commission?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20019Amount
    */
-  total?: string;
+  total?: string
 }
 
 export function InlineResponse20019AmountFromJSON(
   json: any
 ): InlineResponse20019Amount {
-  return InlineResponse20019AmountFromJSONTyped(json, false);
+  return InlineResponse20019AmountFromJSONTyped(json, false)
 }
 
 export function InlineResponse20019AmountFromJSONTyped(
@@ -50,27 +50,27 @@ export function InlineResponse20019AmountFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20019Amount {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    amount: !exists(json, "amount") ? undefined : json["amount"],
-    commission: !exists(json, "commission") ? undefined : json["commission"],
-    total: !exists(json, "total") ? undefined : json["total"],
-  };
+    amount: !exists(json, 'amount') ? undefined : json['amount'],
+    commission: !exists(json, 'commission') ? undefined : json['commission'],
+    total: !exists(json, 'total') ? undefined : json['total'],
+  }
 }
 
 export function InlineResponse20019AmountToJSON(
   value?: InlineResponse20019Amount | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     amount: value.amount,
     commission: value.commission,
     total: value.total,
-  };
+  }
 }

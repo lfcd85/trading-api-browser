@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,65 +24,65 @@ export interface ContractRules {
    * @type {Array<string>}
    * @memberof ContractRules
    */
-  orderTypes?: Array<string>;
+  orderTypes?: Array<string>
   /**
    *
    * @type {Array<string>}
    * @memberof ContractRules
    */
-  orderTypesOutside?: Array<string>;
+  orderTypesOutside?: Array<string>
   /**
    * default quantity you can use to place an order
    * @type {number}
    * @memberof ContractRules
    */
-  defaultSize?: number;
+  defaultSize?: number
   /**
    *
    * @type {number}
    * @memberof ContractRules
    */
-  sizeIncrement?: number;
+  sizeIncrement?: number
   /**
    *
    * @type {Array<string>}
    * @memberof ContractRules
    */
-  tifTypes?: Array<string>;
+  tifTypes?: Array<string>
   /**
    * default limit price you can use to prefill your order
    * @type {number}
    * @memberof ContractRules
    */
-  limitPrice?: number;
+  limitPrice?: number
   /**
    * default stop price you can use to prefill your order
    * @type {number}
    * @memberof ContractRules
    */
-  stopprice?: number;
+  stopprice?: number
   /**
    * if you can preview the order or not with the whatif endpoint
    * @type {boolean}
    * @memberof ContractRules
    */
-  preview?: boolean;
+  preview?: boolean
   /**
    *
    * @type {string}
    * @memberof ContractRules
    */
-  displaySize?: string;
+  displaySize?: string
   /**
    *
    * @type {string}
    * @memberof ContractRules
    */
-  increment?: string;
+  increment?: string
 }
 
 export function ContractRulesFromJSON(json: any): ContractRules {
-  return ContractRulesFromJSONTyped(json, false);
+  return ContractRulesFromJSONTyped(json, false)
 }
 
 export function ContractRulesFromJSONTyped(
@@ -90,32 +90,32 @@ export function ContractRulesFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ContractRules {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    orderTypes: !exists(json, "orderTypes") ? undefined : json["orderTypes"],
-    orderTypesOutside: !exists(json, "orderTypesOutside")
+    orderTypes: !exists(json, 'orderTypes') ? undefined : json['orderTypes'],
+    orderTypesOutside: !exists(json, 'orderTypesOutside')
       ? undefined
-      : json["orderTypesOutside"],
-    defaultSize: !exists(json, "defaultSize") ? undefined : json["defaultSize"],
-    sizeIncrement: !exists(json, "sizeIncrement")
+      : json['orderTypesOutside'],
+    defaultSize: !exists(json, 'defaultSize') ? undefined : json['defaultSize'],
+    sizeIncrement: !exists(json, 'sizeIncrement')
       ? undefined
-      : json["sizeIncrement"],
-    tifTypes: !exists(json, "tifTypes") ? undefined : json["tifTypes"],
-    limitPrice: !exists(json, "limitPrice") ? undefined : json["limitPrice"],
-    stopprice: !exists(json, "stopprice") ? undefined : json["stopprice"],
-    preview: !exists(json, "preview") ? undefined : json["preview"],
-    displaySize: !exists(json, "displaySize") ? undefined : json["displaySize"],
-    increment: !exists(json, "increment") ? undefined : json["increment"],
-  };
+      : json['sizeIncrement'],
+    tifTypes: !exists(json, 'tifTypes') ? undefined : json['tifTypes'],
+    limitPrice: !exists(json, 'limitPrice') ? undefined : json['limitPrice'],
+    stopprice: !exists(json, 'stopprice') ? undefined : json['stopprice'],
+    preview: !exists(json, 'preview') ? undefined : json['preview'],
+    displaySize: !exists(json, 'displaySize') ? undefined : json['displaySize'],
+    increment: !exists(json, 'increment') ? undefined : json['increment'],
+  }
 }
 
 export function ContractRulesToJSON(value?: ContractRules | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     orderTypes: value.orderTypes,
@@ -128,5 +128,5 @@ export function ContractRulesToJSON(value?: ContractRules | null): any {
     preview: value.preview,
     displaySize: value.displaySize,
     increment: value.increment,
-  };
+  }
 }

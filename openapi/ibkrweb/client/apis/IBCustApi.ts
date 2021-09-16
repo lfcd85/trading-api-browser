@@ -12,12 +12,12 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   InlineResponse20039,
   InlineResponse20039FromJSON,
   InlineResponse20039ToJSON,
-} from "../models";
+} from '../models'
 
 /**
  *
@@ -30,23 +30,23 @@ export class IBCustApi extends runtime.BaseAPI {
   async ibcustEntityInfoGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<Array<InlineResponse20039>>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ibcust/entity/info`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20039FromJSON)
-    );
+    )
   }
 
   /**
@@ -56,7 +56,7 @@ export class IBCustApi extends runtime.BaseAPI {
   async ibcustEntityInfoGet(
     initOverrides?: RequestInit
   ): Promise<Array<InlineResponse20039>> {
-    const response = await this.ibcustEntityInfoGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.ibcustEntityInfoGetRaw(initOverrides)
+    return await response.value()
   }
 }

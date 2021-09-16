@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   InlineObject2,
   InlineObject2FromJSON,
@@ -38,50 +38,50 @@ import {
   PositionData,
   PositionDataFromJSON,
   PositionDataToJSON,
-} from "../models";
+} from '../models'
 
 export interface CcpAuthInitPostRequest {
-  compete?: boolean;
-  locale?: string;
-  mac?: string;
-  machineId?: string;
-  username?: string;
+  compete?: boolean
+  locale?: string
+  mac?: string
+  machineId?: string
+  username?: string
 }
 
 export interface CcpAuthResponsePostRequest {
-  auth?: InlineObject2;
+  auth?: InlineObject2
 }
 
 export interface CcpOrderDeleteRequest {
-  acct: string;
-  id: number;
+  acct: string
+  id: number
 }
 
 export interface CcpOrderPostRequest {
-  acct: string;
-  conid: number;
-  ccy: CcpOrderPostCcyEnum;
-  exchange: CcpOrderPostExchangeEnum;
-  qty: number;
-  type?: CcpOrderPostTypeEnum;
-  side?: CcpOrderPostSideEnum;
-  price?: number;
-  tif?: CcpOrderPostTifEnum;
+  acct: string
+  conid: number
+  ccy: CcpOrderPostCcyEnum
+  exchange: CcpOrderPostExchangeEnum
+  qty: number
+  type?: CcpOrderPostTypeEnum
+  side?: CcpOrderPostSideEnum
+  price?: number
+  tif?: CcpOrderPostTifEnum
 }
 
 export interface CcpOrderPutRequest {
-  acct: string;
-  id: number;
+  acct: string
+  id: number
 }
 
 export interface CcpOrdersGetRequest {
-  acct: string;
-  cancelled?: boolean;
+  acct: string
+  cancelled?: boolean
 }
 
 export interface CcpTradesGetRequest {
-  from?: string;
-  to?: string;
+  from?: string
+  to?: string
 }
 
 /**
@@ -95,23 +95,23 @@ export class CCPBetaApi extends runtime.BaseAPI {
   async ccpAccountGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse2009>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ccp/account`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2009FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -121,8 +121,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
   async ccpAccountGet(
     initOverrides?: RequestInit
   ): Promise<InlineResponse2009> {
-    const response = await this.ccpAccountGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.ccpAccountGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -133,58 +133,58 @@ export class CCPBetaApi extends runtime.BaseAPI {
     requestParameters: CcpAuthInitPostRequest,
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse2001>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const consumes: runtime.Consume[] = [
-      { contentType: "application/x-www-form-urlencoded" },
-    ];
+      { contentType: 'application/x-www-form-urlencoded' },
+    ]
     // @ts-ignore: canConsumeForm may be unused
-    const canConsumeForm = runtime.canConsumeForm(consumes);
+    const canConsumeForm = runtime.canConsumeForm(consumes)
 
-    let formParams: { append(param: string, value: any): any };
-    let useForm = false;
+    let formParams: { append(param: string, value: any): any }
+    let useForm = false
     if (useForm) {
-      formParams = new FormData();
+      formParams = new FormData()
     } else {
-      formParams = new URLSearchParams();
+      formParams = new URLSearchParams()
     }
 
     if (requestParameters.compete !== undefined) {
-      formParams.append("compete", requestParameters.compete as any);
+      formParams.append('compete', requestParameters.compete as any)
     }
 
     if (requestParameters.locale !== undefined) {
-      formParams.append("locale", requestParameters.locale as any);
+      formParams.append('locale', requestParameters.locale as any)
     }
 
     if (requestParameters.mac !== undefined) {
-      formParams.append("mac", requestParameters.mac as any);
+      formParams.append('mac', requestParameters.mac as any)
     }
 
     if (requestParameters.machineId !== undefined) {
-      formParams.append("machineId", requestParameters.machineId as any);
+      formParams.append('machineId', requestParameters.machineId as any)
     }
 
     if (requestParameters.username !== undefined) {
-      formParams.append("username", requestParameters.username as any);
+      formParams.append('username', requestParameters.username as any)
     }
 
     const response = await this.request(
       {
         path: `/ccp/auth/init`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: formParams,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2001FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -198,8 +198,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
     const response = await this.ccpAuthInitPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -210,26 +210,26 @@ export class CCPBetaApi extends runtime.BaseAPI {
     requestParameters: CcpAuthResponsePostRequest,
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse2007>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/ccp/auth/response`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject2ToJSON(requestParameters.auth),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2007FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -243,8 +243,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
     const response = await this.ccpAuthResponsePostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -260,43 +260,43 @@ export class CCPBetaApi extends runtime.BaseAPI {
       requestParameters.acct === undefined
     ) {
       throw new runtime.RequiredError(
-        "acct",
-        "Required parameter requestParameters.acct was null or undefined when calling ccpOrderDelete."
-      );
+        'acct',
+        'Required parameter requestParameters.acct was null or undefined when calling ccpOrderDelete.'
+      )
     }
 
     if (requestParameters.id === null || requestParameters.id === undefined) {
       throw new runtime.RequiredError(
-        "id",
-        "Required parameter requestParameters.id was null or undefined when calling ccpOrderDelete."
-      );
+        'id',
+        'Required parameter requestParameters.id was null or undefined when calling ccpOrderDelete.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.acct !== undefined) {
-      queryParameters["acct"] = requestParameters.acct;
+      queryParameters['acct'] = requestParameters.acct
     }
 
     if (requestParameters.id !== undefined) {
-      queryParameters["id"] = requestParameters.id;
+      queryParameters['id'] = requestParameters.id
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ccp/order`,
-        method: "DELETE",
+        method: 'DELETE',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       OrderDataFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -310,8 +310,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
     const response = await this.ccpOrderDeleteRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -327,9 +327,9 @@ export class CCPBetaApi extends runtime.BaseAPI {
       requestParameters.acct === undefined
     ) {
       throw new runtime.RequiredError(
-        "acct",
-        "Required parameter requestParameters.acct was null or undefined when calling ccpOrderPost."
-      );
+        'acct',
+        'Required parameter requestParameters.acct was null or undefined when calling ccpOrderPost.'
+      )
     }
 
     if (
@@ -337,16 +337,16 @@ export class CCPBetaApi extends runtime.BaseAPI {
       requestParameters.conid === undefined
     ) {
       throw new runtime.RequiredError(
-        "conid",
-        "Required parameter requestParameters.conid was null or undefined when calling ccpOrderPost."
-      );
+        'conid',
+        'Required parameter requestParameters.conid was null or undefined when calling ccpOrderPost.'
+      )
     }
 
     if (requestParameters.ccy === null || requestParameters.ccy === undefined) {
       throw new runtime.RequiredError(
-        "ccy",
-        "Required parameter requestParameters.ccy was null or undefined when calling ccpOrderPost."
-      );
+        'ccy',
+        'Required parameter requestParameters.ccy was null or undefined when calling ccpOrderPost.'
+      )
     }
 
     if (
@@ -354,71 +354,71 @@ export class CCPBetaApi extends runtime.BaseAPI {
       requestParameters.exchange === undefined
     ) {
       throw new runtime.RequiredError(
-        "exchange",
-        "Required parameter requestParameters.exchange was null or undefined when calling ccpOrderPost."
-      );
+        'exchange',
+        'Required parameter requestParameters.exchange was null or undefined when calling ccpOrderPost.'
+      )
     }
 
     if (requestParameters.qty === null || requestParameters.qty === undefined) {
       throw new runtime.RequiredError(
-        "qty",
-        "Required parameter requestParameters.qty was null or undefined when calling ccpOrderPost."
-      );
+        'qty',
+        'Required parameter requestParameters.qty was null or undefined when calling ccpOrderPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.acct !== undefined) {
-      queryParameters["acct"] = requestParameters.acct;
+      queryParameters['acct'] = requestParameters.acct
     }
 
     if (requestParameters.conid !== undefined) {
-      queryParameters["conid"] = requestParameters.conid;
+      queryParameters['conid'] = requestParameters.conid
     }
 
     if (requestParameters.ccy !== undefined) {
-      queryParameters["ccy"] = requestParameters.ccy;
+      queryParameters['ccy'] = requestParameters.ccy
     }
 
     if (requestParameters.exchange !== undefined) {
-      queryParameters["exchange"] = requestParameters.exchange;
+      queryParameters['exchange'] = requestParameters.exchange
     }
 
     if (requestParameters.qty !== undefined) {
-      queryParameters["qty"] = requestParameters.qty;
+      queryParameters['qty'] = requestParameters.qty
     }
 
     if (requestParameters.type !== undefined) {
-      queryParameters["type"] = requestParameters.type;
+      queryParameters['type'] = requestParameters.type
     }
 
     if (requestParameters.side !== undefined) {
-      queryParameters["side"] = requestParameters.side;
+      queryParameters['side'] = requestParameters.side
     }
 
     if (requestParameters.price !== undefined) {
-      queryParameters["price"] = requestParameters.price;
+      queryParameters['price'] = requestParameters.price
     }
 
     if (requestParameters.tif !== undefined) {
-      queryParameters["tif"] = requestParameters.tif;
+      queryParameters['tif'] = requestParameters.tif
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ccp/order`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       OrderDataFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -432,8 +432,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
     const response = await this.ccpOrderPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -449,43 +449,43 @@ export class CCPBetaApi extends runtime.BaseAPI {
       requestParameters.acct === undefined
     ) {
       throw new runtime.RequiredError(
-        "acct",
-        "Required parameter requestParameters.acct was null or undefined when calling ccpOrderPut."
-      );
+        'acct',
+        'Required parameter requestParameters.acct was null or undefined when calling ccpOrderPut.'
+      )
     }
 
     if (requestParameters.id === null || requestParameters.id === undefined) {
       throw new runtime.RequiredError(
-        "id",
-        "Required parameter requestParameters.id was null or undefined when calling ccpOrderPut."
-      );
+        'id',
+        'Required parameter requestParameters.id was null or undefined when calling ccpOrderPut.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.acct !== undefined) {
-      queryParameters["acct"] = requestParameters.acct;
+      queryParameters['acct'] = requestParameters.acct
     }
 
     if (requestParameters.id !== undefined) {
-      queryParameters["id"] = requestParameters.id;
+      queryParameters['id'] = requestParameters.id
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ccp/order`,
-        method: "PUT",
+        method: 'PUT',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       OrderDataFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -496,11 +496,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
     requestParameters: CcpOrderPutRequest,
     initOverrides?: RequestInit
   ): Promise<OrderData> {
-    const response = await this.ccpOrderPutRaw(
-      requestParameters,
-      initOverrides
-    );
-    return await response.value();
+    const response = await this.ccpOrderPutRaw(requestParameters, initOverrides)
+    return await response.value()
   }
 
   /**
@@ -516,36 +513,36 @@ export class CCPBetaApi extends runtime.BaseAPI {
       requestParameters.acct === undefined
     ) {
       throw new runtime.RequiredError(
-        "acct",
-        "Required parameter requestParameters.acct was null or undefined when calling ccpOrdersGet."
-      );
+        'acct',
+        'Required parameter requestParameters.acct was null or undefined when calling ccpOrdersGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.acct !== undefined) {
-      queryParameters["acct"] = requestParameters.acct;
+      queryParameters['acct'] = requestParameters.acct
     }
 
     if (requestParameters.cancelled !== undefined) {
-      queryParameters["cancelled"] = requestParameters.cancelled;
+      queryParameters['cancelled'] = requestParameters.cancelled
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ccp/orders`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20010FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -559,8 +556,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
     const response = await this.ccpOrdersGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -570,23 +567,23 @@ export class CCPBetaApi extends runtime.BaseAPI {
   async ccpPositionsGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<PositionData>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ccp/positions`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       PositionDataFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -594,8 +591,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
    * Positions
    */
   async ccpPositionsGet(initOverrides?: RequestInit): Promise<PositionData> {
-    const response = await this.ccpPositionsGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.ccpPositionsGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -605,23 +602,23 @@ export class CCPBetaApi extends runtime.BaseAPI {
   async ccpStatusGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse2008>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ccp/status`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2008FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -629,8 +626,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
    * CCP Status
    */
   async ccpStatusGet(initOverrides?: RequestInit): Promise<InlineResponse2008> {
-    const response = await this.ccpStatusGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.ccpStatusGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -641,31 +638,31 @@ export class CCPBetaApi extends runtime.BaseAPI {
     requestParameters: CcpTradesGetRequest,
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse20010>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.from !== undefined) {
-      queryParameters["from"] = requestParameters.from;
+      queryParameters['from'] = requestParameters.from
     }
 
     if (requestParameters.to !== undefined) {
-      queryParameters["to"] = requestParameters.to;
+      queryParameters['to'] = requestParameters.to
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ccp/trades`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20010FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -679,8 +676,8 @@ export class CCPBetaApi extends runtime.BaseAPI {
     const response = await this.ccpTradesGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 }
 
@@ -689,40 +686,40 @@ export class CCPBetaApi extends runtime.BaseAPI {
  * @enum {string}
  */
 export enum CcpOrderPostCcyEnum {
-  Usd = "USD",
-  Gbp = "GBP",
-  Eur = "EUR",
+  Usd = 'USD',
+  Gbp = 'GBP',
+  Eur = 'EUR',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum CcpOrderPostExchangeEnum {
-  Nyse = "NYSE",
-  Cboe = "CBOE",
-  Nymex = "NYMEX",
+  Nyse = 'NYSE',
+  Cboe = 'CBOE',
+  Nymex = 'NYMEX',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum CcpOrderPostTypeEnum {
-  Limit = "limit",
-  Market = "market",
+  Limit = 'limit',
+  Market = 'market',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum CcpOrderPostSideEnum {
-  Sell = "sell",
-  Buy = "buy",
+  Sell = 'sell',
+  Buy = 'buy',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum CcpOrderPostTifEnum {
-  Ioc = "IOC",
-  Gtc = "GTC",
+  Ioc = 'IOC',
+  Gtc = 'GTC',
 }

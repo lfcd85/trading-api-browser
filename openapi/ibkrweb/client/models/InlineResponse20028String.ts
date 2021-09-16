@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,67 +24,67 @@ export interface InlineResponse20028String {
    * @type {boolean}
    * @memberof InlineResponse20028String
    */
-  oRTH?: boolean;
+  oRTH?: boolean
   /**
    * Stop Price value
    * @type {string}
    * @memberof InlineResponse20028String
    */
-  sP?: string;
+  sP?: string
   /**
    * Limit Price value
    * @type {string}
    * @memberof InlineResponse20028String
    */
-  lP?: string;
+  lP?: string
   /**
    * Price Cap value
    * @type {string}
    * @memberof InlineResponse20028String
    */
-  pC?: string;
+  pC?: string
   /**
    * Trailing amount value
    * @type {string}
    * @memberof InlineResponse20028String
    */
-  tA?: string;
+  tA?: string
   /**
    * Trailing unit
    * @type {string}
    * @memberof InlineResponse20028String
    */
-  tU?: string;
+  tU?: string
   /**
    * Releative offset amount
    * @type {string}
    * @memberof InlineResponse20028String
    */
-  rOA?: string;
+  rOA?: string
   /**
    * Relative offset percent
    * @type {string}
    * @memberof InlineResponse20028String
    */
-  rOP?: string;
+  rOP?: string
   /**
    * Touch trigger price
    * @type {string}
    * @memberof InlineResponse20028String
    */
-  tT?: string;
+  tT?: string
   /**
    * Use Net Price for Bonds
    * @type {boolean}
    * @memberof InlineResponse20028String
    */
-  uNP?: boolean;
+  uNP?: boolean
 }
 
 export function InlineResponse20028StringFromJSON(
   json: any
 ): InlineResponse20028String {
-  return InlineResponse20028StringFromJSONTyped(json, false);
+  return InlineResponse20028StringFromJSONTyped(json, false)
 }
 
 export function InlineResponse20028StringFromJSONTyped(
@@ -92,30 +92,30 @@ export function InlineResponse20028StringFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20028String {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    oRTH: !exists(json, "ORTH") ? undefined : json["ORTH"],
-    sP: !exists(json, "SP") ? undefined : json["SP"],
-    lP: !exists(json, "LP") ? undefined : json["LP"],
-    pC: !exists(json, "PC") ? undefined : json["PC"],
-    tA: !exists(json, "TA") ? undefined : json["TA"],
-    tU: !exists(json, "TU") ? undefined : json["TU"],
-    rOA: !exists(json, "ROA") ? undefined : json["ROA"],
-    rOP: !exists(json, "ROP") ? undefined : json["ROP"],
-    tT: !exists(json, "TT") ? undefined : json["TT"],
-    uNP: !exists(json, "UNP") ? undefined : json["UNP"],
-  };
+    oRTH: !exists(json, 'ORTH') ? undefined : json['ORTH'],
+    sP: !exists(json, 'SP') ? undefined : json['SP'],
+    lP: !exists(json, 'LP') ? undefined : json['LP'],
+    pC: !exists(json, 'PC') ? undefined : json['PC'],
+    tA: !exists(json, 'TA') ? undefined : json['TA'],
+    tU: !exists(json, 'TU') ? undefined : json['TU'],
+    rOA: !exists(json, 'ROA') ? undefined : json['ROA'],
+    rOP: !exists(json, 'ROP') ? undefined : json['ROP'],
+    tT: !exists(json, 'TT') ? undefined : json['TT'],
+    uNP: !exists(json, 'UNP') ? undefined : json['UNP'],
+  }
 }
 
 export function InlineResponse20028StringToJSON(
   value?: InlineResponse20028String | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     ORTH: value.oRTH,
@@ -128,5 +128,5 @@ export function InlineResponse20028StringToJSON(
     ROP: value.rOP,
     TT: value.tT,
     UNP: value.uNP,
-  };
+  }
 }

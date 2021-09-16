@@ -12,8 +12,8 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
-import { Ledger, LedgerFromJSON, LedgerFromJSONTyped, LedgerToJSON } from "./";
+import { exists, mapValues } from '../runtime'
+import { Ledger, LedgerFromJSON, LedgerFromJSONTyped, LedgerToJSON } from './'
 
 /**
  *
@@ -26,11 +26,11 @@ export interface InlineResponse20036 {
    * @type {Ledger}
    * @memberof InlineResponse20036
    */
-  bASE?: Ledger;
+  bASE?: Ledger
 }
 
 export function InlineResponse20036FromJSON(json: any): InlineResponse20036 {
-  return InlineResponse20036FromJSONTyped(json, false);
+  return InlineResponse20036FromJSONTyped(json, false)
 }
 
 export function InlineResponse20036FromJSONTyped(
@@ -38,23 +38,23 @@ export function InlineResponse20036FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20036 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    bASE: !exists(json, "BASE") ? undefined : LedgerFromJSON(json["BASE"]),
-  };
+    bASE: !exists(json, 'BASE') ? undefined : LedgerFromJSON(json['BASE']),
+  }
 }
 
 export function InlineResponse20036ToJSON(
   value?: InlineResponse20036 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     BASE: LedgerToJSON(value.bASE),
-  };
+  }
 }

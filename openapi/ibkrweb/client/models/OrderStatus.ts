@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  * contains all the details of an order
  * @export
@@ -24,31 +24,31 @@ export interface OrderStatus {
    * @type {string}
    * @memberof OrderStatus
    */
-  subType?: string;
+  subType?: string
   /**
    * order request id
    * @type {string}
    * @memberof OrderStatus
    */
-  requestId?: string;
+  requestId?: string
   /**
    * system generated order id, unique per account
    * @type {number}
    * @memberof OrderStatus
    */
-  orderId?: number;
+  orderId?: number
   /**
    * conid and exchange. Format supports conid or conid@exchange
    * @type {string}
    * @memberof OrderStatus
    */
-  conidex?: string;
+  conidex?: string
   /**
    * Underlying symbol
    * @type {string}
    * @memberof OrderStatus
    */
-  symbol?: string;
+  symbol?: string
   /**
    * The side of the market of the order.
    *   * B - Buy contract near posted ask price
@@ -57,79 +57,79 @@ export interface OrderStatus {
    * @type {string}
    * @memberof OrderStatus
    */
-  side?: OrderStatusSideEnum;
+  side?: OrderStatusSideEnum
   /**
    * Format contract name
    * @type {string}
    * @memberof OrderStatus
    */
-  contractDescription1?: string;
+  contractDescription1?: string
   /**
    * Trading Exchange or Venue
    * @type {string}
    * @memberof OrderStatus
    */
-  listingExchange?: string;
+  listingExchange?: string
   /**
    *
    * @type {string}
    * @memberof OrderStatus
    */
-  optionAcct?: string;
+  optionAcct?: string
   /**
    * Contracts company name
    * @type {string}
    * @memberof OrderStatus
    */
-  companyName?: string;
+  companyName?: string
   /**
    * Quantity updated
    * @type {string}
    * @memberof OrderStatus
    */
-  size?: string;
+  size?: string
   /**
    * Total quantity
    * @type {string}
    * @memberof OrderStatus
    */
-  totalSize?: string;
+  totalSize?: string
   /**
    * Contract traded currency
    * @type {string}
    * @memberof OrderStatus
    */
-  currency?: string;
+  currency?: string
   /**
    * account id
    * @type {string}
    * @memberof OrderStatus
    */
-  account?: string;
+  account?: string
   /**
    * Types of orders
    * @type {string}
    * @memberof OrderStatus
    */
-  orderType?: string;
+  orderType?: string
   /**
    * Limit price
    * @type {string}
    * @memberof OrderStatus
    */
-  limitPrice?: string;
+  limitPrice?: string
   /**
    * Stop price
    * @type {string}
    * @memberof OrderStatus
    */
-  stopPrice?: string;
+  stopPrice?: string
   /**
    * Cumulative fill
    * @type {string}
    * @memberof OrderStatus
    */
-  cumFill?: string;
+  cumFill?: string
   /**
    * *  PendingSubmit - Indicates the order was sent, but confirmation has not been received that it has been received by the destination.
    *                    Occurs most commonly if an exchange is closed.
@@ -142,145 +142,145 @@ export interface OrderStatus {
    * @type {string}
    * @memberof OrderStatus
    */
-  orderStatus?: string;
+  orderStatus?: string
   /**
    * Description of the order status
    * @type {string}
    * @memberof OrderStatus
    */
-  orderStatusDescription?: string;
+  orderStatusDescription?: string
   /**
    * Time-in-Force - length of time order will continue working before it is canceled.
    * @type {string}
    * @memberof OrderStatus
    */
-  tif?: string;
+  tif?: string
   /**
    * Foreground color in hex format
    * @type {string}
    * @memberof OrderStatus
    */
-  fgColor?: string;
+  fgColor?: string
   /**
    * Background color in hex format
    * @type {string}
    * @memberof OrderStatus
    */
-  bgColor?: string;
+  bgColor?: string
   /**
    * If true not allowed to modify order
    * @type {boolean}
    * @memberof OrderStatus
    */
-  orderNotEditable?: boolean;
+  orderNotEditable?: boolean
   /**
    * Fields that can be edited in escaped unicode characters
    * @type {string}
    * @memberof OrderStatus
    */
-  editableFields?: string;
+  editableFields?: string
   /**
    * If true not allowed to cancel order
    * @type {boolean}
    * @memberof OrderStatus
    */
-  cannotCancelOrder?: boolean;
+  cannotCancelOrder?: boolean
   /**
    * If true order trades outside regular trading hours
    * @type {boolean}
    * @memberof OrderStatus
    */
-  outsideRth?: boolean;
+  outsideRth?: boolean
   /**
    * If true order is de-activated
    * @type {boolean}
    * @memberof OrderStatus
    */
-  deactivateOrder?: boolean;
+  deactivateOrder?: boolean
   /**
    * If true price management algo is enabled, refer to https://www.interactivebrokers.com/en/index.php?f=43423
    * @type {boolean}
    * @memberof OrderStatus
    */
-  usePriceMgmtAlgo?: boolean;
+  usePriceMgmtAlgo?: boolean
   /**
    * Asset class
    * @type {string}
    * @memberof OrderStatus
    */
-  secType?: string;
+  secType?: string
   /**
    * List of available chart periods
    * @type {string}
    * @memberof OrderStatus
    */
-  availableChartPeriods?: string;
+  availableChartPeriods?: string
   /**
    * Format description of order
    * @type {string}
    * @memberof OrderStatus
    */
-  orderDescription?: string;
+  orderDescription?: string
   /**
    * order_description with the symbol
    * @type {string}
    * @memberof OrderStatus
    */
-  orderDescriptionWithContract?: string;
+  orderDescriptionWithContract?: string
   /**
    *
    * @type {number}
    * @memberof OrderStatus
    */
-  alertActive?: number;
+  alertActive?: number
   /**
    * type of the child order
    * @type {string}
    * @memberof OrderStatus
    */
-  childOrderType?: string;
+  childOrderType?: string
   /**
    * Format fillQuantity\totalQuantity
    * @type {string}
    * @memberof OrderStatus
    */
-  sizeAndFills?: string;
+  sizeAndFills?: string
   /**
    * Position display price
    * @type {string}
    * @memberof OrderStatus
    */
-  exitStrategyDisplayPrice?: string;
+  exitStrategyDisplayPrice?: string
   /**
    * Position description to display on chart
    * @type {string}
    * @memberof OrderStatus
    */
-  exitStrategyChartDescription?: string;
+  exitStrategyChartDescription?: string
   /**
    * * 1: If your account has position or order for contract * 0: If your account has no position or order for contract
    * @type {string}
    * @memberof OrderStatus
    */
-  exitStrategyToolAvailability?: OrderStatusExitStrategyToolAvailabilityEnum;
+  exitStrategyToolAvailability?: OrderStatusExitStrategyToolAvailabilityEnum
   /**
    * Returns true if contract supports duplicate/opposite side order.
    * @type {boolean}
    * @memberof OrderStatus
    */
-  allowedDuplicateOpposite?: boolean;
+  allowedDuplicateOpposite?: boolean
   /**
    * Time of status update in unix time
    * @type {string}
    * @memberof OrderStatus
    */
-  orderTime?: string;
+  orderTime?: string
   /**
    * only exists for oca orders, oca orders in same group will have same id
    * @type {string}
    * @memberof OrderStatus
    */
-  ocaGroupId?: string;
+  ocaGroupId?: string
 }
 
 /**
@@ -288,21 +288,21 @@ export interface OrderStatus {
  * @enum {string}
  */
 export enum OrderStatusSideEnum {
-  B = "B",
-  S = "S",
-  X = "X",
+  B = 'B',
+  S = 'S',
+  X = 'X',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum OrderStatusExitStrategyToolAvailabilityEnum {
-  _1 = "1",
-  _0 = "0",
+  _1 = '1',
+  _0 = '0',
 }
 
 export function OrderStatusFromJSON(json: any): OrderStatus {
-  return OrderStatusFromJSONTyped(json, false);
+  return OrderStatusFromJSONTyped(json, false)
 }
 
 export function OrderStatusFromJSONTyped(
@@ -310,111 +310,111 @@ export function OrderStatusFromJSONTyped(
   ignoreDiscriminator: boolean
 ): OrderStatus {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    subType: !exists(json, "sub_type") ? undefined : json["sub_type"],
-    requestId: !exists(json, "request_id") ? undefined : json["request_id"],
-    orderId: !exists(json, "order_id") ? undefined : json["order_id"],
-    conidex: !exists(json, "conidex") ? undefined : json["conidex"],
-    symbol: !exists(json, "symbol") ? undefined : json["symbol"],
-    side: !exists(json, "side") ? undefined : json["side"],
-    contractDescription1: !exists(json, "contract_description_1")
+    subType: !exists(json, 'sub_type') ? undefined : json['sub_type'],
+    requestId: !exists(json, 'request_id') ? undefined : json['request_id'],
+    orderId: !exists(json, 'order_id') ? undefined : json['order_id'],
+    conidex: !exists(json, 'conidex') ? undefined : json['conidex'],
+    symbol: !exists(json, 'symbol') ? undefined : json['symbol'],
+    side: !exists(json, 'side') ? undefined : json['side'],
+    contractDescription1: !exists(json, 'contract_description_1')
       ? undefined
-      : json["contract_description_1"],
-    listingExchange: !exists(json, "listing_exchange")
+      : json['contract_description_1'],
+    listingExchange: !exists(json, 'listing_exchange')
       ? undefined
-      : json["listing_exchange"],
-    optionAcct: !exists(json, "option_acct") ? undefined : json["option_acct"],
-    companyName: !exists(json, "company_name")
+      : json['listing_exchange'],
+    optionAcct: !exists(json, 'option_acct') ? undefined : json['option_acct'],
+    companyName: !exists(json, 'company_name')
       ? undefined
-      : json["company_name"],
-    size: !exists(json, "size") ? undefined : json["size"],
-    totalSize: !exists(json, "total_size") ? undefined : json["total_size"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    account: !exists(json, "account") ? undefined : json["account"],
-    orderType: !exists(json, "order_type") ? undefined : json["order_type"],
-    limitPrice: !exists(json, "limit_price") ? undefined : json["limit_price"],
-    stopPrice: !exists(json, "stop_price") ? undefined : json["stop_price"],
-    cumFill: !exists(json, "cum_fill") ? undefined : json["cum_fill"],
-    orderStatus: !exists(json, "order_status")
+      : json['company_name'],
+    size: !exists(json, 'size') ? undefined : json['size'],
+    totalSize: !exists(json, 'total_size') ? undefined : json['total_size'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    account: !exists(json, 'account') ? undefined : json['account'],
+    orderType: !exists(json, 'order_type') ? undefined : json['order_type'],
+    limitPrice: !exists(json, 'limit_price') ? undefined : json['limit_price'],
+    stopPrice: !exists(json, 'stop_price') ? undefined : json['stop_price'],
+    cumFill: !exists(json, 'cum_fill') ? undefined : json['cum_fill'],
+    orderStatus: !exists(json, 'order_status')
       ? undefined
-      : json["order_status"],
-    orderStatusDescription: !exists(json, "order_status_description")
+      : json['order_status'],
+    orderStatusDescription: !exists(json, 'order_status_description')
       ? undefined
-      : json["order_status_description"],
-    tif: !exists(json, "tif") ? undefined : json["tif"],
-    fgColor: !exists(json, "fg_color") ? undefined : json["fg_color"],
-    bgColor: !exists(json, "bg_color") ? undefined : json["bg_color"],
-    orderNotEditable: !exists(json, "order_not_editable")
+      : json['order_status_description'],
+    tif: !exists(json, 'tif') ? undefined : json['tif'],
+    fgColor: !exists(json, 'fg_color') ? undefined : json['fg_color'],
+    bgColor: !exists(json, 'bg_color') ? undefined : json['bg_color'],
+    orderNotEditable: !exists(json, 'order_not_editable')
       ? undefined
-      : json["order_not_editable"],
-    editableFields: !exists(json, "editable_fields")
+      : json['order_not_editable'],
+    editableFields: !exists(json, 'editable_fields')
       ? undefined
-      : json["editable_fields"],
-    cannotCancelOrder: !exists(json, "cannot_cancel_order")
+      : json['editable_fields'],
+    cannotCancelOrder: !exists(json, 'cannot_cancel_order')
       ? undefined
-      : json["cannot_cancel_order"],
-    outsideRth: !exists(json, "outside_rth") ? undefined : json["outside_rth"],
-    deactivateOrder: !exists(json, "deactivate_order")
+      : json['cannot_cancel_order'],
+    outsideRth: !exists(json, 'outside_rth') ? undefined : json['outside_rth'],
+    deactivateOrder: !exists(json, 'deactivate_order')
       ? undefined
-      : json["deactivate_order"],
-    usePriceMgmtAlgo: !exists(json, "use_price_mgmt_algo")
+      : json['deactivate_order'],
+    usePriceMgmtAlgo: !exists(json, 'use_price_mgmt_algo')
       ? undefined
-      : json["use_price_mgmt_algo"],
-    secType: !exists(json, "sec_type") ? undefined : json["sec_type"],
-    availableChartPeriods: !exists(json, "available_chart_periods")
+      : json['use_price_mgmt_algo'],
+    secType: !exists(json, 'sec_type') ? undefined : json['sec_type'],
+    availableChartPeriods: !exists(json, 'available_chart_periods')
       ? undefined
-      : json["available_chart_periods"],
-    orderDescription: !exists(json, "order_description")
+      : json['available_chart_periods'],
+    orderDescription: !exists(json, 'order_description')
       ? undefined
-      : json["order_description"],
+      : json['order_description'],
     orderDescriptionWithContract: !exists(
       json,
-      "order_description_with_contract"
+      'order_description_with_contract'
     )
       ? undefined
-      : json["order_description_with_contract"],
-    alertActive: !exists(json, "alert_active")
+      : json['order_description_with_contract'],
+    alertActive: !exists(json, 'alert_active')
       ? undefined
-      : json["alert_active"],
-    childOrderType: !exists(json, "child_order_type")
+      : json['alert_active'],
+    childOrderType: !exists(json, 'child_order_type')
       ? undefined
-      : json["child_order_type"],
-    sizeAndFills: !exists(json, "size_and_fills")
+      : json['child_order_type'],
+    sizeAndFills: !exists(json, 'size_and_fills')
       ? undefined
-      : json["size_and_fills"],
-    exitStrategyDisplayPrice: !exists(json, "exit_strategy_display_price")
+      : json['size_and_fills'],
+    exitStrategyDisplayPrice: !exists(json, 'exit_strategy_display_price')
       ? undefined
-      : json["exit_strategy_display_price"],
+      : json['exit_strategy_display_price'],
     exitStrategyChartDescription: !exists(
       json,
-      "exit_strategy_chart_description"
+      'exit_strategy_chart_description'
     )
       ? undefined
-      : json["exit_strategy_chart_description"],
+      : json['exit_strategy_chart_description'],
     exitStrategyToolAvailability: !exists(
       json,
-      "exit_strategy_tool_availability"
+      'exit_strategy_tool_availability'
     )
       ? undefined
-      : json["exit_strategy_tool_availability"],
-    allowedDuplicateOpposite: !exists(json, "allowed_duplicate_opposite")
+      : json['exit_strategy_tool_availability'],
+    allowedDuplicateOpposite: !exists(json, 'allowed_duplicate_opposite')
       ? undefined
-      : json["allowed_duplicate_opposite"],
-    orderTime: !exists(json, "order_time") ? undefined : json["order_time"],
-    ocaGroupId: !exists(json, "oca_group_id")
+      : json['allowed_duplicate_opposite'],
+    orderTime: !exists(json, 'order_time') ? undefined : json['order_time'],
+    ocaGroupId: !exists(json, 'oca_group_id')
       ? undefined
-      : json["oca_group_id"],
-  };
+      : json['oca_group_id'],
+  }
 }
 
 export function OrderStatusToJSON(value?: OrderStatus | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     sub_type: value.subType,
@@ -459,5 +459,5 @@ export function OrderStatusToJSON(value?: OrderStatus | null): any {
     allowed_duplicate_opposite: value.allowedDuplicateOpposite,
     order_time: value.orderTime,
     oca_group_id: value.ocaGroupId,
-  };
+  }
 }

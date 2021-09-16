@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   InlineResponse20032Schedules,
   InlineResponse20032SchedulesFromJSON,
   InlineResponse20032SchedulesFromJSONTyped,
   InlineResponse20032SchedulesToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,23 +31,23 @@ export interface InlineResponse20032 {
    * @type {string}
    * @memberof InlineResponse20032
    */
-  id?: string;
+  id?: string
   /**
    * Reference on a trade venue of given exchange parameter
    * @type {string}
    * @memberof InlineResponse20032
    */
-  tradeVenueId?: string;
+  tradeVenueId?: string
   /**
    * Always contains at least one 'tradingTime'  and zero or more 'sessionTime' tags
    * @type {Array<InlineResponse20032Schedules>}
    * @memberof InlineResponse20032
    */
-  schedules?: Array<InlineResponse20032Schedules>;
+  schedules?: Array<InlineResponse20032Schedules>
 }
 
 export function InlineResponse20032FromJSON(json: any): InlineResponse20032 {
-  return InlineResponse20032FromJSONTyped(json, false);
+  return InlineResponse20032FromJSONTyped(json, false)
 }
 
 export function InlineResponse20032FromJSONTyped(
@@ -55,29 +55,29 @@ export function InlineResponse20032FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20032 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    id: !exists(json, "id") ? undefined : json["id"],
-    tradeVenueId: !exists(json, "tradeVenueId")
+    id: !exists(json, 'id') ? undefined : json['id'],
+    tradeVenueId: !exists(json, 'tradeVenueId')
       ? undefined
-      : json["tradeVenueId"],
-    schedules: !exists(json, "schedules")
+      : json['tradeVenueId'],
+    schedules: !exists(json, 'schedules')
       ? undefined
-      : (json["schedules"] as Array<any>).map(
+      : (json['schedules'] as Array<any>).map(
           InlineResponse20032SchedulesFromJSON
         ),
-  };
+  }
 }
 
 export function InlineResponse20032ToJSON(
   value?: InlineResponse20032 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     id: value.id,
@@ -88,5 +88,5 @@ export function InlineResponse20032ToJSON(
         : (value.schedules as Array<any>).map(
             InlineResponse20032SchedulesToJSON
           ),
-  };
+  }
 }

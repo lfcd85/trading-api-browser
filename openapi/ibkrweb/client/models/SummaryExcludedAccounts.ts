@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,61 +24,61 @@ export interface SummaryExcludedAccounts {
    * @type {string}
    * @memberof SummaryExcludedAccounts
    */
-  lastUpdateAttempt?: string;
+  lastUpdateAttempt?: string
   /**
    *
    * @type {string}
    * @memberof SummaryExcludedAccounts
    */
-  fiName?: string;
+  fiName?: string
   /**
    *
    * @type {string}
    * @memberof SummaryExcludedAccounts
    */
-  acctTitle?: string;
+  acctTitle?: string
   /**
    *
    * @type {string}
    * @memberof SummaryExcludedAccounts
    */
-  acctNumAtFI?: string;
+  acctNumAtFI?: string
   /**
    *
    * @type {string}
    * @memberof SummaryExcludedAccounts
    */
-  acctId?: string;
+  acctId?: string
   /**
    *
    * @type {string}
    * @memberof SummaryExcludedAccounts
    */
-  lastUpdate?: string;
+  lastUpdate?: string
   /**
    *
    * @type {number}
    * @memberof SummaryExcludedAccounts
    */
-  harvestCode?: number;
+  harvestCode?: number
   /**
    *
    * @type {string}
    * @memberof SummaryExcludedAccounts
    */
-  lastUpdateStatusCode?: string;
+  lastUpdateStatusCode?: string
   /**
    *
    * @type {number}
    * @memberof SummaryExcludedAccounts
    */
-  rc?: number;
+  rc?: number
 }
 
 export function SummaryExcludedAccountsFromJSON(
   json: any
 ): SummaryExcludedAccounts {
-  return SummaryExcludedAccountsFromJSONTyped(json, false);
+  return SummaryExcludedAccountsFromJSONTyped(json, false)
 }
 
 export function SummaryExcludedAccountsFromJSONTyped(
@@ -86,33 +86,33 @@ export function SummaryExcludedAccountsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): SummaryExcludedAccounts {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    lastUpdateAttempt: !exists(json, "lastUpdateAttempt")
+    lastUpdateAttempt: !exists(json, 'lastUpdateAttempt')
       ? undefined
-      : json["lastUpdateAttempt"],
-    fiName: !exists(json, "fiName") ? undefined : json["fiName"],
-    acctTitle: !exists(json, "acctTitle") ? undefined : json["acctTitle"],
-    acctNumAtFI: !exists(json, "acctNumAtFI") ? undefined : json["acctNumAtFI"],
-    acctId: !exists(json, "acctId") ? undefined : json["acctId"],
-    lastUpdate: !exists(json, "lastUpdate") ? undefined : json["lastUpdate"],
-    harvestCode: !exists(json, "harvestCode") ? undefined : json["harvestCode"],
-    lastUpdateStatusCode: !exists(json, "lastUpdateStatusCode")
+      : json['lastUpdateAttempt'],
+    fiName: !exists(json, 'fiName') ? undefined : json['fiName'],
+    acctTitle: !exists(json, 'acctTitle') ? undefined : json['acctTitle'],
+    acctNumAtFI: !exists(json, 'acctNumAtFI') ? undefined : json['acctNumAtFI'],
+    acctId: !exists(json, 'acctId') ? undefined : json['acctId'],
+    lastUpdate: !exists(json, 'lastUpdate') ? undefined : json['lastUpdate'],
+    harvestCode: !exists(json, 'harvestCode') ? undefined : json['harvestCode'],
+    lastUpdateStatusCode: !exists(json, 'lastUpdateStatusCode')
       ? undefined
-      : json["lastUpdateStatusCode"],
-    rc: !exists(json, "rc") ? undefined : json["rc"],
-  };
+      : json['lastUpdateStatusCode'],
+    rc: !exists(json, 'rc') ? undefined : json['rc'],
+  }
 }
 
 export function SummaryExcludedAccountsToJSON(
   value?: SummaryExcludedAccounts | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     lastUpdateAttempt: value.lastUpdateAttempt,
@@ -124,5 +124,5 @@ export function SummaryExcludedAccountsToJSON(
     harvestCode: value.harvestCode,
     lastUpdateStatusCode: value.lastUpdateStatusCode,
     rc: value.rc,
-  };
+  }
 }

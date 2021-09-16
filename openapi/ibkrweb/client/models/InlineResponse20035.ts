@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   Summary,
   SummaryFromJSON,
   SummaryFromJSONTyped,
   SummaryToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,779 +31,779 @@ export interface InlineResponse20035 {
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accountready?: Summary;
+  accountready?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accounttype?: Summary;
+  accounttype?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accruedcash?: Summary;
+  accruedcash?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accruedcashC?: Summary;
+  accruedcashC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accruedcashF?: Summary;
+  accruedcashF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accruedcashS?: Summary;
+  accruedcashS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accrueddividend?: Summary;
+  accrueddividend?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accrueddividendC?: Summary;
+  accrueddividendC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accrueddividendF?: Summary;
+  accrueddividendF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  accrueddividendS?: Summary;
+  accrueddividendS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  availablefunds?: Summary;
+  availablefunds?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  availablefundsC?: Summary;
+  availablefundsC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  availablefundsF?: Summary;
+  availablefundsF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  availablefundsS?: Summary;
+  availablefundsS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  billable?: Summary;
+  billable?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  billableC?: Summary;
+  billableC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  billableF?: Summary;
+  billableF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  billableS?: Summary;
+  billableS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  buyingpower?: Summary;
+  buyingpower?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  cushion?: Summary;
+  cushion?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  daytradesremaining?: Summary;
+  daytradesremaining?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  daytradesremainingt1?: Summary;
+  daytradesremainingt1?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  daytradesremainingt2?: Summary;
+  daytradesremainingt2?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  daytradesremainingt3?: Summary;
+  daytradesremainingt3?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  daytradesremainingt4?: Summary;
+  daytradesremainingt4?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  equitywithloanvalue?: Summary;
+  equitywithloanvalue?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  equitywithloanvalueC?: Summary;
+  equitywithloanvalueC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  equitywithloanvalueF?: Summary;
+  equitywithloanvalueF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  equitywithloanvalueS?: Summary;
+  equitywithloanvalueS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  excessliquidity?: Summary;
+  excessliquidity?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  excessliquidityC?: Summary;
+  excessliquidityC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  excessliquidityF?: Summary;
+  excessliquidityF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  excessliquidityS?: Summary;
+  excessliquidityS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullavailablefunds?: Summary;
+  fullavailablefunds?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullavailablefundsC?: Summary;
+  fullavailablefundsC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullavailablefundsF?: Summary;
+  fullavailablefundsF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullavailablefundsS?: Summary;
+  fullavailablefundsS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullexcessliquidity?: Summary;
+  fullexcessliquidity?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullexcessliquidityC?: Summary;
+  fullexcessliquidityC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullexcessliquidityF?: Summary;
+  fullexcessliquidityF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullexcessliquidityS?: Summary;
+  fullexcessliquidityS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullinitmarginreq?: Summary;
+  fullinitmarginreq?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullinitmarginreqC?: Summary;
+  fullinitmarginreqC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullinitmarginreqF?: Summary;
+  fullinitmarginreqF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullinitmarginreqS?: Summary;
+  fullinitmarginreqS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullmaintmarginreq?: Summary;
+  fullmaintmarginreq?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullmaintmarginreqC?: Summary;
+  fullmaintmarginreqC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullmaintmarginreqF?: Summary;
+  fullmaintmarginreqF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  fullmaintmarginreqS?: Summary;
+  fullmaintmarginreqS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  grosspositionvalue?: Summary;
+  grosspositionvalue?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  grosspositionvalueC?: Summary;
+  grosspositionvalueC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  grosspositionvalueF?: Summary;
+  grosspositionvalueF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  grosspositionvalueS?: Summary;
+  grosspositionvalueS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  guarantee?: Summary;
+  guarantee?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  guaranteeC?: Summary;
+  guaranteeC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  guaranteeF?: Summary;
+  guaranteeF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  guaranteeS?: Summary;
+  guaranteeS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  highestseverity?: Summary;
+  highestseverity?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  highestseverityC?: Summary;
+  highestseverityC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  highestseverityF?: Summary;
+  highestseverityF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  highestseverityS?: Summary;
+  highestseverityS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  indianstockhaircut?: Summary;
+  indianstockhaircut?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  indianstockhaircutC?: Summary;
+  indianstockhaircutC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  indianstockhaircutF?: Summary;
+  indianstockhaircutF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  indianstockhaircutS?: Summary;
+  indianstockhaircutS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  initmarginreq?: Summary;
+  initmarginreq?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  initmarginreqC?: Summary;
+  initmarginreqC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  initmarginreqF?: Summary;
+  initmarginreqF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  initmarginreqS?: Summary;
+  initmarginreqS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  leverage?: Summary;
+  leverage?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  leverageC?: Summary;
+  leverageC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  leverageF?: Summary;
+  leverageF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  leverageS?: Summary;
+  leverageS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadavailablefunds?: Summary;
+  lookaheadavailablefunds?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadavailablefundsC?: Summary;
+  lookaheadavailablefundsC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadavailablefundsF?: Summary;
+  lookaheadavailablefundsF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadavailablefundsS?: Summary;
+  lookaheadavailablefundsS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadexcessliquidity?: Summary;
+  lookaheadexcessliquidity?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadexcessliquidityC?: Summary;
+  lookaheadexcessliquidityC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadexcessliquidityF?: Summary;
+  lookaheadexcessliquidityF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadexcessliquidityS?: Summary;
+  lookaheadexcessliquidityS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadinitmarginreq?: Summary;
+  lookaheadinitmarginreq?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadinitmarginreqC?: Summary;
+  lookaheadinitmarginreqC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadinitmarginreqF?: Summary;
+  lookaheadinitmarginreqF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadinitmarginreqS?: Summary;
+  lookaheadinitmarginreqS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadmaintmarginreq?: Summary;
+  lookaheadmaintmarginreq?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadmaintmarginreqC?: Summary;
+  lookaheadmaintmarginreqC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadmaintmarginreqF?: Summary;
+  lookaheadmaintmarginreqF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadmaintmarginreqS?: Summary;
+  lookaheadmaintmarginreqS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  lookaheadnextchange?: Summary;
+  lookaheadnextchange?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  maintmarginreq?: Summary;
+  maintmarginreq?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  maintmarginreqC?: Summary;
+  maintmarginreqC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  maintmarginreqF?: Summary;
+  maintmarginreqF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  maintmarginreqS?: Summary;
+  maintmarginreqS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  netliquidation?: Summary;
+  netliquidation?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  netliquidationC?: Summary;
+  netliquidationC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  netliquidationF?: Summary;
+  netliquidationF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  netliquidationS?: Summary;
+  netliquidationS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  netliquidationuncertainty?: Summary;
+  netliquidationuncertainty?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  nlvandmargininreview?: Summary;
+  nlvandmargininreview?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  pasharesvalue?: Summary;
+  pasharesvalue?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  pasharesvalueC?: Summary;
+  pasharesvalueC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  pasharesvalueF?: Summary;
+  pasharesvalueF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  pasharesvalueS?: Summary;
+  pasharesvalueS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  postexpirationexcess?: Summary;
+  postexpirationexcess?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  postexpirationexcessC?: Summary;
+  postexpirationexcessC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  postexpirationexcessF?: Summary;
+  postexpirationexcessF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  postexpirationexcessS?: Summary;
+  postexpirationexcessS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  postexpirationmargin?: Summary;
+  postexpirationmargin?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  postexpirationmarginC?: Summary;
+  postexpirationmarginC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  postexpirationmarginF?: Summary;
+  postexpirationmarginF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  postexpirationmarginS?: Summary;
+  postexpirationmarginS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  previousdayequitywithloanvalue?: Summary;
+  previousdayequitywithloanvalue?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  previousdayequitywithloanvalueC?: Summary;
+  previousdayequitywithloanvalueC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  previousdayequitywithloanvalueF?: Summary;
+  previousdayequitywithloanvalueF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  previousdayequitywithloanvalueS?: Summary;
+  previousdayequitywithloanvalueS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  segmenttitleC?: Summary;
+  segmenttitleC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  segmenttitleF?: Summary;
+  segmenttitleF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  segmenttitleS?: Summary;
+  segmenttitleS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  totalcashvalue?: Summary;
+  totalcashvalue?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  totalcashvalueC?: Summary;
+  totalcashvalueC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  totalcashvalueF?: Summary;
+  totalcashvalueF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  totalcashvalueS?: Summary;
+  totalcashvalueS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  totaldebitcardpendingcharges?: Summary;
+  totaldebitcardpendingcharges?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  totaldebitcardpendingchargesC?: Summary;
+  totaldebitcardpendingchargesC?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  totaldebitcardpendingchargesF?: Summary;
+  totaldebitcardpendingchargesF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  totaldebitcardpendingchargesS?: Summary;
+  totaldebitcardpendingchargesS?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  tradingtypeF?: Summary;
+  tradingtypeF?: Summary
   /**
    *
    * @type {Summary}
    * @memberof InlineResponse20035
    */
-  tradingtypeS?: Summary;
+  tradingtypeS?: Summary
 }
 
 export function InlineResponse20035FromJSON(json: any): InlineResponse20035 {
-  return InlineResponse20035FromJSONTyped(json, false);
+  return InlineResponse20035FromJSONTyped(json, false)
 }
 
 export function InlineResponse20035FromJSONTyped(
@@ -811,580 +811,580 @@ export function InlineResponse20035FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20035 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    accountready: !exists(json, "accountready")
+    accountready: !exists(json, 'accountready')
       ? undefined
-      : SummaryFromJSON(json["accountready"]),
-    accounttype: !exists(json, "accounttype")
+      : SummaryFromJSON(json['accountready']),
+    accounttype: !exists(json, 'accounttype')
       ? undefined
-      : SummaryFromJSON(json["accounttype"]),
-    accruedcash: !exists(json, "accruedcash")
+      : SummaryFromJSON(json['accounttype']),
+    accruedcash: !exists(json, 'accruedcash')
       ? undefined
-      : SummaryFromJSON(json["accruedcash"]),
-    accruedcashC: !exists(json, "accruedcash-c")
+      : SummaryFromJSON(json['accruedcash']),
+    accruedcashC: !exists(json, 'accruedcash-c')
       ? undefined
-      : SummaryFromJSON(json["accruedcash-c"]),
-    accruedcashF: !exists(json, "accruedcash-f")
+      : SummaryFromJSON(json['accruedcash-c']),
+    accruedcashF: !exists(json, 'accruedcash-f')
       ? undefined
-      : SummaryFromJSON(json["accruedcash-f"]),
-    accruedcashS: !exists(json, "accruedcash-s")
+      : SummaryFromJSON(json['accruedcash-f']),
+    accruedcashS: !exists(json, 'accruedcash-s')
       ? undefined
-      : SummaryFromJSON(json["accruedcash-s"]),
-    accrueddividend: !exists(json, "accrueddividend")
+      : SummaryFromJSON(json['accruedcash-s']),
+    accrueddividend: !exists(json, 'accrueddividend')
       ? undefined
-      : SummaryFromJSON(json["accrueddividend"]),
-    accrueddividendC: !exists(json, "accrueddividend-c")
+      : SummaryFromJSON(json['accrueddividend']),
+    accrueddividendC: !exists(json, 'accrueddividend-c')
       ? undefined
-      : SummaryFromJSON(json["accrueddividend-c"]),
-    accrueddividendF: !exists(json, "accrueddividend-f")
+      : SummaryFromJSON(json['accrueddividend-c']),
+    accrueddividendF: !exists(json, 'accrueddividend-f')
       ? undefined
-      : SummaryFromJSON(json["accrueddividend-f"]),
-    accrueddividendS: !exists(json, "accrueddividend-s")
+      : SummaryFromJSON(json['accrueddividend-f']),
+    accrueddividendS: !exists(json, 'accrueddividend-s')
       ? undefined
-      : SummaryFromJSON(json["accrueddividend-s"]),
-    availablefunds: !exists(json, "availablefunds")
+      : SummaryFromJSON(json['accrueddividend-s']),
+    availablefunds: !exists(json, 'availablefunds')
       ? undefined
-      : SummaryFromJSON(json["availablefunds"]),
-    availablefundsC: !exists(json, "availablefunds-c")
+      : SummaryFromJSON(json['availablefunds']),
+    availablefundsC: !exists(json, 'availablefunds-c')
       ? undefined
-      : SummaryFromJSON(json["availablefunds-c"]),
-    availablefundsF: !exists(json, "availablefunds-f")
+      : SummaryFromJSON(json['availablefunds-c']),
+    availablefundsF: !exists(json, 'availablefunds-f')
       ? undefined
-      : SummaryFromJSON(json["availablefunds-f"]),
-    availablefundsS: !exists(json, "availablefunds-s")
+      : SummaryFromJSON(json['availablefunds-f']),
+    availablefundsS: !exists(json, 'availablefunds-s')
       ? undefined
-      : SummaryFromJSON(json["availablefunds-s"]),
-    billable: !exists(json, "billable")
+      : SummaryFromJSON(json['availablefunds-s']),
+    billable: !exists(json, 'billable')
       ? undefined
-      : SummaryFromJSON(json["billable"]),
-    billableC: !exists(json, "billable-c")
+      : SummaryFromJSON(json['billable']),
+    billableC: !exists(json, 'billable-c')
       ? undefined
-      : SummaryFromJSON(json["billable-c"]),
-    billableF: !exists(json, "billable-f")
+      : SummaryFromJSON(json['billable-c']),
+    billableF: !exists(json, 'billable-f')
       ? undefined
-      : SummaryFromJSON(json["billable-f"]),
-    billableS: !exists(json, "billable-s")
+      : SummaryFromJSON(json['billable-f']),
+    billableS: !exists(json, 'billable-s')
       ? undefined
-      : SummaryFromJSON(json["billable-s"]),
-    buyingpower: !exists(json, "buyingpower")
+      : SummaryFromJSON(json['billable-s']),
+    buyingpower: !exists(json, 'buyingpower')
       ? undefined
-      : SummaryFromJSON(json["buyingpower"]),
-    cushion: !exists(json, "cushion")
+      : SummaryFromJSON(json['buyingpower']),
+    cushion: !exists(json, 'cushion')
       ? undefined
-      : SummaryFromJSON(json["cushion"]),
-    daytradesremaining: !exists(json, "daytradesremaining")
+      : SummaryFromJSON(json['cushion']),
+    daytradesremaining: !exists(json, 'daytradesremaining')
       ? undefined
-      : SummaryFromJSON(json["daytradesremaining"]),
-    daytradesremainingt1: !exists(json, "daytradesremainingt+1")
+      : SummaryFromJSON(json['daytradesremaining']),
+    daytradesremainingt1: !exists(json, 'daytradesremainingt+1')
       ? undefined
-      : SummaryFromJSON(json["daytradesremainingt+1"]),
-    daytradesremainingt2: !exists(json, "daytradesremainingt+2")
+      : SummaryFromJSON(json['daytradesremainingt+1']),
+    daytradesremainingt2: !exists(json, 'daytradesremainingt+2')
       ? undefined
-      : SummaryFromJSON(json["daytradesremainingt+2"]),
-    daytradesremainingt3: !exists(json, "daytradesremainingt+3")
+      : SummaryFromJSON(json['daytradesremainingt+2']),
+    daytradesremainingt3: !exists(json, 'daytradesremainingt+3')
       ? undefined
-      : SummaryFromJSON(json["daytradesremainingt+3"]),
-    daytradesremainingt4: !exists(json, "daytradesremainingt+4")
+      : SummaryFromJSON(json['daytradesremainingt+3']),
+    daytradesremainingt4: !exists(json, 'daytradesremainingt+4')
       ? undefined
-      : SummaryFromJSON(json["daytradesremainingt+4"]),
-    equitywithloanvalue: !exists(json, "equitywithloanvalue")
+      : SummaryFromJSON(json['daytradesremainingt+4']),
+    equitywithloanvalue: !exists(json, 'equitywithloanvalue')
       ? undefined
-      : SummaryFromJSON(json["equitywithloanvalue"]),
-    equitywithloanvalueC: !exists(json, "equitywithloanvalue-c")
+      : SummaryFromJSON(json['equitywithloanvalue']),
+    equitywithloanvalueC: !exists(json, 'equitywithloanvalue-c')
       ? undefined
-      : SummaryFromJSON(json["equitywithloanvalue-c"]),
-    equitywithloanvalueF: !exists(json, "equitywithloanvalue-f")
+      : SummaryFromJSON(json['equitywithloanvalue-c']),
+    equitywithloanvalueF: !exists(json, 'equitywithloanvalue-f')
       ? undefined
-      : SummaryFromJSON(json["equitywithloanvalue-f"]),
-    equitywithloanvalueS: !exists(json, "equitywithloanvalue-s")
+      : SummaryFromJSON(json['equitywithloanvalue-f']),
+    equitywithloanvalueS: !exists(json, 'equitywithloanvalue-s')
       ? undefined
-      : SummaryFromJSON(json["equitywithloanvalue-s"]),
-    excessliquidity: !exists(json, "excessliquidity")
+      : SummaryFromJSON(json['equitywithloanvalue-s']),
+    excessliquidity: !exists(json, 'excessliquidity')
       ? undefined
-      : SummaryFromJSON(json["excessliquidity"]),
-    excessliquidityC: !exists(json, "excessliquidity-c")
+      : SummaryFromJSON(json['excessliquidity']),
+    excessliquidityC: !exists(json, 'excessliquidity-c')
       ? undefined
-      : SummaryFromJSON(json["excessliquidity-c"]),
-    excessliquidityF: !exists(json, "excessliquidity-f")
+      : SummaryFromJSON(json['excessliquidity-c']),
+    excessliquidityF: !exists(json, 'excessliquidity-f')
       ? undefined
-      : SummaryFromJSON(json["excessliquidity-f"]),
-    excessliquidityS: !exists(json, "excessliquidity-s")
+      : SummaryFromJSON(json['excessliquidity-f']),
+    excessliquidityS: !exists(json, 'excessliquidity-s')
       ? undefined
-      : SummaryFromJSON(json["excessliquidity-s"]),
-    fullavailablefunds: !exists(json, "fullavailablefunds")
+      : SummaryFromJSON(json['excessliquidity-s']),
+    fullavailablefunds: !exists(json, 'fullavailablefunds')
       ? undefined
-      : SummaryFromJSON(json["fullavailablefunds"]),
-    fullavailablefundsC: !exists(json, "fullavailablefunds-c")
+      : SummaryFromJSON(json['fullavailablefunds']),
+    fullavailablefundsC: !exists(json, 'fullavailablefunds-c')
       ? undefined
-      : SummaryFromJSON(json["fullavailablefunds-c"]),
-    fullavailablefundsF: !exists(json, "fullavailablefunds-f")
+      : SummaryFromJSON(json['fullavailablefunds-c']),
+    fullavailablefundsF: !exists(json, 'fullavailablefunds-f')
       ? undefined
-      : SummaryFromJSON(json["fullavailablefunds-f"]),
-    fullavailablefundsS: !exists(json, "fullavailablefunds-s")
+      : SummaryFromJSON(json['fullavailablefunds-f']),
+    fullavailablefundsS: !exists(json, 'fullavailablefunds-s')
       ? undefined
-      : SummaryFromJSON(json["fullavailablefunds-s"]),
-    fullexcessliquidity: !exists(json, "fullexcessliquidity")
+      : SummaryFromJSON(json['fullavailablefunds-s']),
+    fullexcessliquidity: !exists(json, 'fullexcessliquidity')
       ? undefined
-      : SummaryFromJSON(json["fullexcessliquidity"]),
-    fullexcessliquidityC: !exists(json, "fullexcessliquidity-c")
+      : SummaryFromJSON(json['fullexcessliquidity']),
+    fullexcessliquidityC: !exists(json, 'fullexcessliquidity-c')
       ? undefined
-      : SummaryFromJSON(json["fullexcessliquidity-c"]),
-    fullexcessliquidityF: !exists(json, "fullexcessliquidity-f")
+      : SummaryFromJSON(json['fullexcessliquidity-c']),
+    fullexcessliquidityF: !exists(json, 'fullexcessliquidity-f')
       ? undefined
-      : SummaryFromJSON(json["fullexcessliquidity-f"]),
-    fullexcessliquidityS: !exists(json, "fullexcessliquidity-s")
+      : SummaryFromJSON(json['fullexcessliquidity-f']),
+    fullexcessliquidityS: !exists(json, 'fullexcessliquidity-s')
       ? undefined
-      : SummaryFromJSON(json["fullexcessliquidity-s"]),
-    fullinitmarginreq: !exists(json, "fullinitmarginreq")
+      : SummaryFromJSON(json['fullexcessliquidity-s']),
+    fullinitmarginreq: !exists(json, 'fullinitmarginreq')
       ? undefined
-      : SummaryFromJSON(json["fullinitmarginreq"]),
-    fullinitmarginreqC: !exists(json, "fullinitmarginreq-c")
+      : SummaryFromJSON(json['fullinitmarginreq']),
+    fullinitmarginreqC: !exists(json, 'fullinitmarginreq-c')
       ? undefined
-      : SummaryFromJSON(json["fullinitmarginreq-c"]),
-    fullinitmarginreqF: !exists(json, "fullinitmarginreq-f")
+      : SummaryFromJSON(json['fullinitmarginreq-c']),
+    fullinitmarginreqF: !exists(json, 'fullinitmarginreq-f')
       ? undefined
-      : SummaryFromJSON(json["fullinitmarginreq-f"]),
-    fullinitmarginreqS: !exists(json, "fullinitmarginreq-s")
+      : SummaryFromJSON(json['fullinitmarginreq-f']),
+    fullinitmarginreqS: !exists(json, 'fullinitmarginreq-s')
       ? undefined
-      : SummaryFromJSON(json["fullinitmarginreq-s"]),
-    fullmaintmarginreq: !exists(json, "fullmaintmarginreq")
+      : SummaryFromJSON(json['fullinitmarginreq-s']),
+    fullmaintmarginreq: !exists(json, 'fullmaintmarginreq')
       ? undefined
-      : SummaryFromJSON(json["fullmaintmarginreq"]),
-    fullmaintmarginreqC: !exists(json, "fullmaintmarginreq-c")
+      : SummaryFromJSON(json['fullmaintmarginreq']),
+    fullmaintmarginreqC: !exists(json, 'fullmaintmarginreq-c')
       ? undefined
-      : SummaryFromJSON(json["fullmaintmarginreq-c"]),
-    fullmaintmarginreqF: !exists(json, "fullmaintmarginreq-f")
+      : SummaryFromJSON(json['fullmaintmarginreq-c']),
+    fullmaintmarginreqF: !exists(json, 'fullmaintmarginreq-f')
       ? undefined
-      : SummaryFromJSON(json["fullmaintmarginreq-f"]),
-    fullmaintmarginreqS: !exists(json, "fullmaintmarginreq-s")
+      : SummaryFromJSON(json['fullmaintmarginreq-f']),
+    fullmaintmarginreqS: !exists(json, 'fullmaintmarginreq-s')
       ? undefined
-      : SummaryFromJSON(json["fullmaintmarginreq-s"]),
-    grosspositionvalue: !exists(json, "grosspositionvalue")
+      : SummaryFromJSON(json['fullmaintmarginreq-s']),
+    grosspositionvalue: !exists(json, 'grosspositionvalue')
       ? undefined
-      : SummaryFromJSON(json["grosspositionvalue"]),
-    grosspositionvalueC: !exists(json, "grosspositionvalue-c")
+      : SummaryFromJSON(json['grosspositionvalue']),
+    grosspositionvalueC: !exists(json, 'grosspositionvalue-c')
       ? undefined
-      : SummaryFromJSON(json["grosspositionvalue-c"]),
-    grosspositionvalueF: !exists(json, "grosspositionvalue-f")
+      : SummaryFromJSON(json['grosspositionvalue-c']),
+    grosspositionvalueF: !exists(json, 'grosspositionvalue-f')
       ? undefined
-      : SummaryFromJSON(json["grosspositionvalue-f"]),
-    grosspositionvalueS: !exists(json, "grosspositionvalue-s")
+      : SummaryFromJSON(json['grosspositionvalue-f']),
+    grosspositionvalueS: !exists(json, 'grosspositionvalue-s')
       ? undefined
-      : SummaryFromJSON(json["grosspositionvalue-s"]),
-    guarantee: !exists(json, "guarantee")
+      : SummaryFromJSON(json['grosspositionvalue-s']),
+    guarantee: !exists(json, 'guarantee')
       ? undefined
-      : SummaryFromJSON(json["guarantee"]),
-    guaranteeC: !exists(json, "guarantee-c")
+      : SummaryFromJSON(json['guarantee']),
+    guaranteeC: !exists(json, 'guarantee-c')
       ? undefined
-      : SummaryFromJSON(json["guarantee-c"]),
-    guaranteeF: !exists(json, "guarantee-f")
+      : SummaryFromJSON(json['guarantee-c']),
+    guaranteeF: !exists(json, 'guarantee-f')
       ? undefined
-      : SummaryFromJSON(json["guarantee-f"]),
-    guaranteeS: !exists(json, "guarantee-s")
+      : SummaryFromJSON(json['guarantee-f']),
+    guaranteeS: !exists(json, 'guarantee-s')
       ? undefined
-      : SummaryFromJSON(json["guarantee-s"]),
-    highestseverity: !exists(json, "highestseverity")
+      : SummaryFromJSON(json['guarantee-s']),
+    highestseverity: !exists(json, 'highestseverity')
       ? undefined
-      : SummaryFromJSON(json["highestseverity"]),
-    highestseverityC: !exists(json, "highestseverity-c")
+      : SummaryFromJSON(json['highestseverity']),
+    highestseverityC: !exists(json, 'highestseverity-c')
       ? undefined
-      : SummaryFromJSON(json["highestseverity-c"]),
-    highestseverityF: !exists(json, "highestseverity-f")
+      : SummaryFromJSON(json['highestseverity-c']),
+    highestseverityF: !exists(json, 'highestseverity-f')
       ? undefined
-      : SummaryFromJSON(json["highestseverity-f"]),
-    highestseverityS: !exists(json, "highestseverity-s")
+      : SummaryFromJSON(json['highestseverity-f']),
+    highestseverityS: !exists(json, 'highestseverity-s')
       ? undefined
-      : SummaryFromJSON(json["highestseverity-s"]),
-    indianstockhaircut: !exists(json, "indianstockhaircut")
+      : SummaryFromJSON(json['highestseverity-s']),
+    indianstockhaircut: !exists(json, 'indianstockhaircut')
       ? undefined
-      : SummaryFromJSON(json["indianstockhaircut"]),
-    indianstockhaircutC: !exists(json, "indianstockhaircut-c")
+      : SummaryFromJSON(json['indianstockhaircut']),
+    indianstockhaircutC: !exists(json, 'indianstockhaircut-c')
       ? undefined
-      : SummaryFromJSON(json["indianstockhaircut-c"]),
-    indianstockhaircutF: !exists(json, "indianstockhaircut-f")
+      : SummaryFromJSON(json['indianstockhaircut-c']),
+    indianstockhaircutF: !exists(json, 'indianstockhaircut-f')
       ? undefined
-      : SummaryFromJSON(json["indianstockhaircut-f"]),
-    indianstockhaircutS: !exists(json, "indianstockhaircut-s")
+      : SummaryFromJSON(json['indianstockhaircut-f']),
+    indianstockhaircutS: !exists(json, 'indianstockhaircut-s')
       ? undefined
-      : SummaryFromJSON(json["indianstockhaircut-s"]),
-    initmarginreq: !exists(json, "initmarginreq")
+      : SummaryFromJSON(json['indianstockhaircut-s']),
+    initmarginreq: !exists(json, 'initmarginreq')
       ? undefined
-      : SummaryFromJSON(json["initmarginreq"]),
-    initmarginreqC: !exists(json, "initmarginreq-c")
+      : SummaryFromJSON(json['initmarginreq']),
+    initmarginreqC: !exists(json, 'initmarginreq-c')
       ? undefined
-      : SummaryFromJSON(json["initmarginreq-c"]),
-    initmarginreqF: !exists(json, "initmarginreq-f")
+      : SummaryFromJSON(json['initmarginreq-c']),
+    initmarginreqF: !exists(json, 'initmarginreq-f')
       ? undefined
-      : SummaryFromJSON(json["initmarginreq-f"]),
-    initmarginreqS: !exists(json, "initmarginreq-s")
+      : SummaryFromJSON(json['initmarginreq-f']),
+    initmarginreqS: !exists(json, 'initmarginreq-s')
       ? undefined
-      : SummaryFromJSON(json["initmarginreq-s"]),
-    leverage: !exists(json, "leverage")
+      : SummaryFromJSON(json['initmarginreq-s']),
+    leverage: !exists(json, 'leverage')
       ? undefined
-      : SummaryFromJSON(json["leverage"]),
-    leverageC: !exists(json, "leverage-c")
+      : SummaryFromJSON(json['leverage']),
+    leverageC: !exists(json, 'leverage-c')
       ? undefined
-      : SummaryFromJSON(json["leverage-c"]),
-    leverageF: !exists(json, "leverage-f")
+      : SummaryFromJSON(json['leverage-c']),
+    leverageF: !exists(json, 'leverage-f')
       ? undefined
-      : SummaryFromJSON(json["leverage-f"]),
-    leverageS: !exists(json, "leverage-s")
+      : SummaryFromJSON(json['leverage-f']),
+    leverageS: !exists(json, 'leverage-s')
       ? undefined
-      : SummaryFromJSON(json["leverage-s"]),
-    lookaheadavailablefunds: !exists(json, "lookaheadavailablefunds")
+      : SummaryFromJSON(json['leverage-s']),
+    lookaheadavailablefunds: !exists(json, 'lookaheadavailablefunds')
       ? undefined
-      : SummaryFromJSON(json["lookaheadavailablefunds"]),
-    lookaheadavailablefundsC: !exists(json, "lookaheadavailablefunds-c")
+      : SummaryFromJSON(json['lookaheadavailablefunds']),
+    lookaheadavailablefundsC: !exists(json, 'lookaheadavailablefunds-c')
       ? undefined
-      : SummaryFromJSON(json["lookaheadavailablefunds-c"]),
-    lookaheadavailablefundsF: !exists(json, "lookaheadavailablefunds-f")
+      : SummaryFromJSON(json['lookaheadavailablefunds-c']),
+    lookaheadavailablefundsF: !exists(json, 'lookaheadavailablefunds-f')
       ? undefined
-      : SummaryFromJSON(json["lookaheadavailablefunds-f"]),
-    lookaheadavailablefundsS: !exists(json, "lookaheadavailablefunds-s")
+      : SummaryFromJSON(json['lookaheadavailablefunds-f']),
+    lookaheadavailablefundsS: !exists(json, 'lookaheadavailablefunds-s')
       ? undefined
-      : SummaryFromJSON(json["lookaheadavailablefunds-s"]),
-    lookaheadexcessliquidity: !exists(json, "lookaheadexcessliquidity")
+      : SummaryFromJSON(json['lookaheadavailablefunds-s']),
+    lookaheadexcessliquidity: !exists(json, 'lookaheadexcessliquidity')
       ? undefined
-      : SummaryFromJSON(json["lookaheadexcessliquidity"]),
-    lookaheadexcessliquidityC: !exists(json, "lookaheadexcessliquidity-c")
+      : SummaryFromJSON(json['lookaheadexcessliquidity']),
+    lookaheadexcessliquidityC: !exists(json, 'lookaheadexcessliquidity-c')
       ? undefined
-      : SummaryFromJSON(json["lookaheadexcessliquidity-c"]),
-    lookaheadexcessliquidityF: !exists(json, "lookaheadexcessliquidity-f")
+      : SummaryFromJSON(json['lookaheadexcessliquidity-c']),
+    lookaheadexcessliquidityF: !exists(json, 'lookaheadexcessliquidity-f')
       ? undefined
-      : SummaryFromJSON(json["lookaheadexcessliquidity-f"]),
-    lookaheadexcessliquidityS: !exists(json, "lookaheadexcessliquidity-s")
+      : SummaryFromJSON(json['lookaheadexcessliquidity-f']),
+    lookaheadexcessliquidityS: !exists(json, 'lookaheadexcessliquidity-s')
       ? undefined
-      : SummaryFromJSON(json["lookaheadexcessliquidity-s"]),
-    lookaheadinitmarginreq: !exists(json, "lookaheadinitmarginreq")
+      : SummaryFromJSON(json['lookaheadexcessliquidity-s']),
+    lookaheadinitmarginreq: !exists(json, 'lookaheadinitmarginreq')
       ? undefined
-      : SummaryFromJSON(json["lookaheadinitmarginreq"]),
-    lookaheadinitmarginreqC: !exists(json, "lookaheadinitmarginreq-c")
+      : SummaryFromJSON(json['lookaheadinitmarginreq']),
+    lookaheadinitmarginreqC: !exists(json, 'lookaheadinitmarginreq-c')
       ? undefined
-      : SummaryFromJSON(json["lookaheadinitmarginreq-c"]),
-    lookaheadinitmarginreqF: !exists(json, "lookaheadinitmarginreq-f")
+      : SummaryFromJSON(json['lookaheadinitmarginreq-c']),
+    lookaheadinitmarginreqF: !exists(json, 'lookaheadinitmarginreq-f')
       ? undefined
-      : SummaryFromJSON(json["lookaheadinitmarginreq-f"]),
-    lookaheadinitmarginreqS: !exists(json, "lookaheadinitmarginreq-s")
+      : SummaryFromJSON(json['lookaheadinitmarginreq-f']),
+    lookaheadinitmarginreqS: !exists(json, 'lookaheadinitmarginreq-s')
       ? undefined
-      : SummaryFromJSON(json["lookaheadinitmarginreq-s"]),
-    lookaheadmaintmarginreq: !exists(json, "lookaheadmaintmarginreq")
+      : SummaryFromJSON(json['lookaheadinitmarginreq-s']),
+    lookaheadmaintmarginreq: !exists(json, 'lookaheadmaintmarginreq')
       ? undefined
-      : SummaryFromJSON(json["lookaheadmaintmarginreq"]),
-    lookaheadmaintmarginreqC: !exists(json, "lookaheadmaintmarginreq-c")
+      : SummaryFromJSON(json['lookaheadmaintmarginreq']),
+    lookaheadmaintmarginreqC: !exists(json, 'lookaheadmaintmarginreq-c')
       ? undefined
-      : SummaryFromJSON(json["lookaheadmaintmarginreq-c"]),
-    lookaheadmaintmarginreqF: !exists(json, "lookaheadmaintmarginreq-f")
+      : SummaryFromJSON(json['lookaheadmaintmarginreq-c']),
+    lookaheadmaintmarginreqF: !exists(json, 'lookaheadmaintmarginreq-f')
       ? undefined
-      : SummaryFromJSON(json["lookaheadmaintmarginreq-f"]),
-    lookaheadmaintmarginreqS: !exists(json, "lookaheadmaintmarginreq-s")
+      : SummaryFromJSON(json['lookaheadmaintmarginreq-f']),
+    lookaheadmaintmarginreqS: !exists(json, 'lookaheadmaintmarginreq-s')
       ? undefined
-      : SummaryFromJSON(json["lookaheadmaintmarginreq-s"]),
-    lookaheadnextchange: !exists(json, "lookaheadnextchange")
+      : SummaryFromJSON(json['lookaheadmaintmarginreq-s']),
+    lookaheadnextchange: !exists(json, 'lookaheadnextchange')
       ? undefined
-      : SummaryFromJSON(json["lookaheadnextchange"]),
-    maintmarginreq: !exists(json, "maintmarginreq")
+      : SummaryFromJSON(json['lookaheadnextchange']),
+    maintmarginreq: !exists(json, 'maintmarginreq')
       ? undefined
-      : SummaryFromJSON(json["maintmarginreq"]),
-    maintmarginreqC: !exists(json, "maintmarginreq-c")
+      : SummaryFromJSON(json['maintmarginreq']),
+    maintmarginreqC: !exists(json, 'maintmarginreq-c')
       ? undefined
-      : SummaryFromJSON(json["maintmarginreq-c"]),
-    maintmarginreqF: !exists(json, "maintmarginreq-f")
+      : SummaryFromJSON(json['maintmarginreq-c']),
+    maintmarginreqF: !exists(json, 'maintmarginreq-f')
       ? undefined
-      : SummaryFromJSON(json["maintmarginreq-f"]),
-    maintmarginreqS: !exists(json, "maintmarginreq-s")
+      : SummaryFromJSON(json['maintmarginreq-f']),
+    maintmarginreqS: !exists(json, 'maintmarginreq-s')
       ? undefined
-      : SummaryFromJSON(json["maintmarginreq-s"]),
-    netliquidation: !exists(json, "netliquidation")
+      : SummaryFromJSON(json['maintmarginreq-s']),
+    netliquidation: !exists(json, 'netliquidation')
       ? undefined
-      : SummaryFromJSON(json["netliquidation"]),
-    netliquidationC: !exists(json, "netliquidation-c")
+      : SummaryFromJSON(json['netliquidation']),
+    netliquidationC: !exists(json, 'netliquidation-c')
       ? undefined
-      : SummaryFromJSON(json["netliquidation-c"]),
-    netliquidationF: !exists(json, "netliquidation-f")
+      : SummaryFromJSON(json['netliquidation-c']),
+    netliquidationF: !exists(json, 'netliquidation-f')
       ? undefined
-      : SummaryFromJSON(json["netliquidation-f"]),
-    netliquidationS: !exists(json, "netliquidation-s")
+      : SummaryFromJSON(json['netliquidation-f']),
+    netliquidationS: !exists(json, 'netliquidation-s')
       ? undefined
-      : SummaryFromJSON(json["netliquidation-s"]),
-    netliquidationuncertainty: !exists(json, "netliquidationuncertainty")
+      : SummaryFromJSON(json['netliquidation-s']),
+    netliquidationuncertainty: !exists(json, 'netliquidationuncertainty')
       ? undefined
-      : SummaryFromJSON(json["netliquidationuncertainty"]),
-    nlvandmargininreview: !exists(json, "nlvandmargininreview")
+      : SummaryFromJSON(json['netliquidationuncertainty']),
+    nlvandmargininreview: !exists(json, 'nlvandmargininreview')
       ? undefined
-      : SummaryFromJSON(json["nlvandmargininreview"]),
-    pasharesvalue: !exists(json, "pasharesvalue")
+      : SummaryFromJSON(json['nlvandmargininreview']),
+    pasharesvalue: !exists(json, 'pasharesvalue')
       ? undefined
-      : SummaryFromJSON(json["pasharesvalue"]),
-    pasharesvalueC: !exists(json, "pasharesvalue-c")
+      : SummaryFromJSON(json['pasharesvalue']),
+    pasharesvalueC: !exists(json, 'pasharesvalue-c')
       ? undefined
-      : SummaryFromJSON(json["pasharesvalue-c"]),
-    pasharesvalueF: !exists(json, "pasharesvalue-f")
+      : SummaryFromJSON(json['pasharesvalue-c']),
+    pasharesvalueF: !exists(json, 'pasharesvalue-f')
       ? undefined
-      : SummaryFromJSON(json["pasharesvalue-f"]),
-    pasharesvalueS: !exists(json, "pasharesvalue-s")
+      : SummaryFromJSON(json['pasharesvalue-f']),
+    pasharesvalueS: !exists(json, 'pasharesvalue-s')
       ? undefined
-      : SummaryFromJSON(json["pasharesvalue-s"]),
-    postexpirationexcess: !exists(json, "postexpirationexcess")
+      : SummaryFromJSON(json['pasharesvalue-s']),
+    postexpirationexcess: !exists(json, 'postexpirationexcess')
       ? undefined
-      : SummaryFromJSON(json["postexpirationexcess"]),
-    postexpirationexcessC: !exists(json, "postexpirationexcess-c")
+      : SummaryFromJSON(json['postexpirationexcess']),
+    postexpirationexcessC: !exists(json, 'postexpirationexcess-c')
       ? undefined
-      : SummaryFromJSON(json["postexpirationexcess-c"]),
-    postexpirationexcessF: !exists(json, "postexpirationexcess-f")
+      : SummaryFromJSON(json['postexpirationexcess-c']),
+    postexpirationexcessF: !exists(json, 'postexpirationexcess-f')
       ? undefined
-      : SummaryFromJSON(json["postexpirationexcess-f"]),
-    postexpirationexcessS: !exists(json, "postexpirationexcess-s")
+      : SummaryFromJSON(json['postexpirationexcess-f']),
+    postexpirationexcessS: !exists(json, 'postexpirationexcess-s')
       ? undefined
-      : SummaryFromJSON(json["postexpirationexcess-s"]),
-    postexpirationmargin: !exists(json, "postexpirationmargin")
+      : SummaryFromJSON(json['postexpirationexcess-s']),
+    postexpirationmargin: !exists(json, 'postexpirationmargin')
       ? undefined
-      : SummaryFromJSON(json["postexpirationmargin"]),
-    postexpirationmarginC: !exists(json, "postexpirationmargin-c")
+      : SummaryFromJSON(json['postexpirationmargin']),
+    postexpirationmarginC: !exists(json, 'postexpirationmargin-c')
       ? undefined
-      : SummaryFromJSON(json["postexpirationmargin-c"]),
-    postexpirationmarginF: !exists(json, "postexpirationmargin-f")
+      : SummaryFromJSON(json['postexpirationmargin-c']),
+    postexpirationmarginF: !exists(json, 'postexpirationmargin-f')
       ? undefined
-      : SummaryFromJSON(json["postexpirationmargin-f"]),
-    postexpirationmarginS: !exists(json, "postexpirationmargin-s")
+      : SummaryFromJSON(json['postexpirationmargin-f']),
+    postexpirationmarginS: !exists(json, 'postexpirationmargin-s')
       ? undefined
-      : SummaryFromJSON(json["postexpirationmargin-s"]),
+      : SummaryFromJSON(json['postexpirationmargin-s']),
     previousdayequitywithloanvalue: !exists(
       json,
-      "previousdayequitywithloanvalue"
+      'previousdayequitywithloanvalue'
     )
       ? undefined
-      : SummaryFromJSON(json["previousdayequitywithloanvalue"]),
+      : SummaryFromJSON(json['previousdayequitywithloanvalue']),
     previousdayequitywithloanvalueC: !exists(
       json,
-      "previousdayequitywithloanvalue-c"
+      'previousdayequitywithloanvalue-c'
     )
       ? undefined
-      : SummaryFromJSON(json["previousdayequitywithloanvalue-c"]),
+      : SummaryFromJSON(json['previousdayequitywithloanvalue-c']),
     previousdayequitywithloanvalueF: !exists(
       json,
-      "previousdayequitywithloanvalue-f"
+      'previousdayequitywithloanvalue-f'
     )
       ? undefined
-      : SummaryFromJSON(json["previousdayequitywithloanvalue-f"]),
+      : SummaryFromJSON(json['previousdayequitywithloanvalue-f']),
     previousdayequitywithloanvalueS: !exists(
       json,
-      "previousdayequitywithloanvalue-s"
+      'previousdayequitywithloanvalue-s'
     )
       ? undefined
-      : SummaryFromJSON(json["previousdayequitywithloanvalue-s"]),
-    segmenttitleC: !exists(json, "segmenttitle-c")
+      : SummaryFromJSON(json['previousdayequitywithloanvalue-s']),
+    segmenttitleC: !exists(json, 'segmenttitle-c')
       ? undefined
-      : SummaryFromJSON(json["segmenttitle-c"]),
-    segmenttitleF: !exists(json, "segmenttitle-f")
+      : SummaryFromJSON(json['segmenttitle-c']),
+    segmenttitleF: !exists(json, 'segmenttitle-f')
       ? undefined
-      : SummaryFromJSON(json["segmenttitle-f"]),
-    segmenttitleS: !exists(json, "segmenttitle-s")
+      : SummaryFromJSON(json['segmenttitle-f']),
+    segmenttitleS: !exists(json, 'segmenttitle-s')
       ? undefined
-      : SummaryFromJSON(json["segmenttitle-s"]),
-    totalcashvalue: !exists(json, "totalcashvalue")
+      : SummaryFromJSON(json['segmenttitle-s']),
+    totalcashvalue: !exists(json, 'totalcashvalue')
       ? undefined
-      : SummaryFromJSON(json["totalcashvalue"]),
-    totalcashvalueC: !exists(json, "totalcashvalue-c")
+      : SummaryFromJSON(json['totalcashvalue']),
+    totalcashvalueC: !exists(json, 'totalcashvalue-c')
       ? undefined
-      : SummaryFromJSON(json["totalcashvalue-c"]),
-    totalcashvalueF: !exists(json, "totalcashvalue-f")
+      : SummaryFromJSON(json['totalcashvalue-c']),
+    totalcashvalueF: !exists(json, 'totalcashvalue-f')
       ? undefined
-      : SummaryFromJSON(json["totalcashvalue-f"]),
-    totalcashvalueS: !exists(json, "totalcashvalue-s")
+      : SummaryFromJSON(json['totalcashvalue-f']),
+    totalcashvalueS: !exists(json, 'totalcashvalue-s')
       ? undefined
-      : SummaryFromJSON(json["totalcashvalue-s"]),
-    totaldebitcardpendingcharges: !exists(json, "totaldebitcardpendingcharges")
+      : SummaryFromJSON(json['totalcashvalue-s']),
+    totaldebitcardpendingcharges: !exists(json, 'totaldebitcardpendingcharges')
       ? undefined
-      : SummaryFromJSON(json["totaldebitcardpendingcharges"]),
+      : SummaryFromJSON(json['totaldebitcardpendingcharges']),
     totaldebitcardpendingchargesC: !exists(
       json,
-      "totaldebitcardpendingcharges-c"
+      'totaldebitcardpendingcharges-c'
     )
       ? undefined
-      : SummaryFromJSON(json["totaldebitcardpendingcharges-c"]),
+      : SummaryFromJSON(json['totaldebitcardpendingcharges-c']),
     totaldebitcardpendingchargesF: !exists(
       json,
-      "totaldebitcardpendingcharges-f"
+      'totaldebitcardpendingcharges-f'
     )
       ? undefined
-      : SummaryFromJSON(json["totaldebitcardpendingcharges-f"]),
+      : SummaryFromJSON(json['totaldebitcardpendingcharges-f']),
     totaldebitcardpendingchargesS: !exists(
       json,
-      "totaldebitcardpendingcharges-s"
+      'totaldebitcardpendingcharges-s'
     )
       ? undefined
-      : SummaryFromJSON(json["totaldebitcardpendingcharges-s"]),
-    tradingtypeF: !exists(json, "tradingtype-f")
+      : SummaryFromJSON(json['totaldebitcardpendingcharges-s']),
+    tradingtypeF: !exists(json, 'tradingtype-f')
       ? undefined
-      : SummaryFromJSON(json["tradingtype-f"]),
-    tradingtypeS: !exists(json, "tradingtype-s")
+      : SummaryFromJSON(json['tradingtype-f']),
+    tradingtypeS: !exists(json, 'tradingtype-s')
       ? undefined
-      : SummaryFromJSON(json["tradingtype-s"]),
-  };
+      : SummaryFromJSON(json['tradingtype-s']),
+  }
 }
 
 export function InlineResponse20035ToJSON(
   value?: InlineResponse20035 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     accountready: SummaryToJSON(value.accountready),
     accounttype: SummaryToJSON(value.accounttype),
     accruedcash: SummaryToJSON(value.accruedcash),
-    "accruedcash-c": SummaryToJSON(value.accruedcashC),
-    "accruedcash-f": SummaryToJSON(value.accruedcashF),
-    "accruedcash-s": SummaryToJSON(value.accruedcashS),
+    'accruedcash-c': SummaryToJSON(value.accruedcashC),
+    'accruedcash-f': SummaryToJSON(value.accruedcashF),
+    'accruedcash-s': SummaryToJSON(value.accruedcashS),
     accrueddividend: SummaryToJSON(value.accrueddividend),
-    "accrueddividend-c": SummaryToJSON(value.accrueddividendC),
-    "accrueddividend-f": SummaryToJSON(value.accrueddividendF),
-    "accrueddividend-s": SummaryToJSON(value.accrueddividendS),
+    'accrueddividend-c': SummaryToJSON(value.accrueddividendC),
+    'accrueddividend-f': SummaryToJSON(value.accrueddividendF),
+    'accrueddividend-s': SummaryToJSON(value.accrueddividendS),
     availablefunds: SummaryToJSON(value.availablefunds),
-    "availablefunds-c": SummaryToJSON(value.availablefundsC),
-    "availablefunds-f": SummaryToJSON(value.availablefundsF),
-    "availablefunds-s": SummaryToJSON(value.availablefundsS),
+    'availablefunds-c': SummaryToJSON(value.availablefundsC),
+    'availablefunds-f': SummaryToJSON(value.availablefundsF),
+    'availablefunds-s': SummaryToJSON(value.availablefundsS),
     billable: SummaryToJSON(value.billable),
-    "billable-c": SummaryToJSON(value.billableC),
-    "billable-f": SummaryToJSON(value.billableF),
-    "billable-s": SummaryToJSON(value.billableS),
+    'billable-c': SummaryToJSON(value.billableC),
+    'billable-f': SummaryToJSON(value.billableF),
+    'billable-s': SummaryToJSON(value.billableS),
     buyingpower: SummaryToJSON(value.buyingpower),
     cushion: SummaryToJSON(value.cushion),
     daytradesremaining: SummaryToJSON(value.daytradesremaining),
-    "daytradesremainingt+1": SummaryToJSON(value.daytradesremainingt1),
-    "daytradesremainingt+2": SummaryToJSON(value.daytradesremainingt2),
-    "daytradesremainingt+3": SummaryToJSON(value.daytradesremainingt3),
-    "daytradesremainingt+4": SummaryToJSON(value.daytradesremainingt4),
+    'daytradesremainingt+1': SummaryToJSON(value.daytradesremainingt1),
+    'daytradesremainingt+2': SummaryToJSON(value.daytradesremainingt2),
+    'daytradesremainingt+3': SummaryToJSON(value.daytradesremainingt3),
+    'daytradesremainingt+4': SummaryToJSON(value.daytradesremainingt4),
     equitywithloanvalue: SummaryToJSON(value.equitywithloanvalue),
-    "equitywithloanvalue-c": SummaryToJSON(value.equitywithloanvalueC),
-    "equitywithloanvalue-f": SummaryToJSON(value.equitywithloanvalueF),
-    "equitywithloanvalue-s": SummaryToJSON(value.equitywithloanvalueS),
+    'equitywithloanvalue-c': SummaryToJSON(value.equitywithloanvalueC),
+    'equitywithloanvalue-f': SummaryToJSON(value.equitywithloanvalueF),
+    'equitywithloanvalue-s': SummaryToJSON(value.equitywithloanvalueS),
     excessliquidity: SummaryToJSON(value.excessliquidity),
-    "excessliquidity-c": SummaryToJSON(value.excessliquidityC),
-    "excessliquidity-f": SummaryToJSON(value.excessliquidityF),
-    "excessliquidity-s": SummaryToJSON(value.excessliquidityS),
+    'excessliquidity-c': SummaryToJSON(value.excessliquidityC),
+    'excessliquidity-f': SummaryToJSON(value.excessliquidityF),
+    'excessliquidity-s': SummaryToJSON(value.excessliquidityS),
     fullavailablefunds: SummaryToJSON(value.fullavailablefunds),
-    "fullavailablefunds-c": SummaryToJSON(value.fullavailablefundsC),
-    "fullavailablefunds-f": SummaryToJSON(value.fullavailablefundsF),
-    "fullavailablefunds-s": SummaryToJSON(value.fullavailablefundsS),
+    'fullavailablefunds-c': SummaryToJSON(value.fullavailablefundsC),
+    'fullavailablefunds-f': SummaryToJSON(value.fullavailablefundsF),
+    'fullavailablefunds-s': SummaryToJSON(value.fullavailablefundsS),
     fullexcessliquidity: SummaryToJSON(value.fullexcessliquidity),
-    "fullexcessliquidity-c": SummaryToJSON(value.fullexcessliquidityC),
-    "fullexcessliquidity-f": SummaryToJSON(value.fullexcessliquidityF),
-    "fullexcessliquidity-s": SummaryToJSON(value.fullexcessliquidityS),
+    'fullexcessliquidity-c': SummaryToJSON(value.fullexcessliquidityC),
+    'fullexcessliquidity-f': SummaryToJSON(value.fullexcessliquidityF),
+    'fullexcessliquidity-s': SummaryToJSON(value.fullexcessliquidityS),
     fullinitmarginreq: SummaryToJSON(value.fullinitmarginreq),
-    "fullinitmarginreq-c": SummaryToJSON(value.fullinitmarginreqC),
-    "fullinitmarginreq-f": SummaryToJSON(value.fullinitmarginreqF),
-    "fullinitmarginreq-s": SummaryToJSON(value.fullinitmarginreqS),
+    'fullinitmarginreq-c': SummaryToJSON(value.fullinitmarginreqC),
+    'fullinitmarginreq-f': SummaryToJSON(value.fullinitmarginreqF),
+    'fullinitmarginreq-s': SummaryToJSON(value.fullinitmarginreqS),
     fullmaintmarginreq: SummaryToJSON(value.fullmaintmarginreq),
-    "fullmaintmarginreq-c": SummaryToJSON(value.fullmaintmarginreqC),
-    "fullmaintmarginreq-f": SummaryToJSON(value.fullmaintmarginreqF),
-    "fullmaintmarginreq-s": SummaryToJSON(value.fullmaintmarginreqS),
+    'fullmaintmarginreq-c': SummaryToJSON(value.fullmaintmarginreqC),
+    'fullmaintmarginreq-f': SummaryToJSON(value.fullmaintmarginreqF),
+    'fullmaintmarginreq-s': SummaryToJSON(value.fullmaintmarginreqS),
     grosspositionvalue: SummaryToJSON(value.grosspositionvalue),
-    "grosspositionvalue-c": SummaryToJSON(value.grosspositionvalueC),
-    "grosspositionvalue-f": SummaryToJSON(value.grosspositionvalueF),
-    "grosspositionvalue-s": SummaryToJSON(value.grosspositionvalueS),
+    'grosspositionvalue-c': SummaryToJSON(value.grosspositionvalueC),
+    'grosspositionvalue-f': SummaryToJSON(value.grosspositionvalueF),
+    'grosspositionvalue-s': SummaryToJSON(value.grosspositionvalueS),
     guarantee: SummaryToJSON(value.guarantee),
-    "guarantee-c": SummaryToJSON(value.guaranteeC),
-    "guarantee-f": SummaryToJSON(value.guaranteeF),
-    "guarantee-s": SummaryToJSON(value.guaranteeS),
+    'guarantee-c': SummaryToJSON(value.guaranteeC),
+    'guarantee-f': SummaryToJSON(value.guaranteeF),
+    'guarantee-s': SummaryToJSON(value.guaranteeS),
     highestseverity: SummaryToJSON(value.highestseverity),
-    "highestseverity-c": SummaryToJSON(value.highestseverityC),
-    "highestseverity-f": SummaryToJSON(value.highestseverityF),
-    "highestseverity-s": SummaryToJSON(value.highestseverityS),
+    'highestseverity-c': SummaryToJSON(value.highestseverityC),
+    'highestseverity-f': SummaryToJSON(value.highestseverityF),
+    'highestseverity-s': SummaryToJSON(value.highestseverityS),
     indianstockhaircut: SummaryToJSON(value.indianstockhaircut),
-    "indianstockhaircut-c": SummaryToJSON(value.indianstockhaircutC),
-    "indianstockhaircut-f": SummaryToJSON(value.indianstockhaircutF),
-    "indianstockhaircut-s": SummaryToJSON(value.indianstockhaircutS),
+    'indianstockhaircut-c': SummaryToJSON(value.indianstockhaircutC),
+    'indianstockhaircut-f': SummaryToJSON(value.indianstockhaircutF),
+    'indianstockhaircut-s': SummaryToJSON(value.indianstockhaircutS),
     initmarginreq: SummaryToJSON(value.initmarginreq),
-    "initmarginreq-c": SummaryToJSON(value.initmarginreqC),
-    "initmarginreq-f": SummaryToJSON(value.initmarginreqF),
-    "initmarginreq-s": SummaryToJSON(value.initmarginreqS),
+    'initmarginreq-c': SummaryToJSON(value.initmarginreqC),
+    'initmarginreq-f': SummaryToJSON(value.initmarginreqF),
+    'initmarginreq-s': SummaryToJSON(value.initmarginreqS),
     leverage: SummaryToJSON(value.leverage),
-    "leverage-c": SummaryToJSON(value.leverageC),
-    "leverage-f": SummaryToJSON(value.leverageF),
-    "leverage-s": SummaryToJSON(value.leverageS),
+    'leverage-c': SummaryToJSON(value.leverageC),
+    'leverage-f': SummaryToJSON(value.leverageF),
+    'leverage-s': SummaryToJSON(value.leverageS),
     lookaheadavailablefunds: SummaryToJSON(value.lookaheadavailablefunds),
-    "lookaheadavailablefunds-c": SummaryToJSON(value.lookaheadavailablefundsC),
-    "lookaheadavailablefunds-f": SummaryToJSON(value.lookaheadavailablefundsF),
-    "lookaheadavailablefunds-s": SummaryToJSON(value.lookaheadavailablefundsS),
+    'lookaheadavailablefunds-c': SummaryToJSON(value.lookaheadavailablefundsC),
+    'lookaheadavailablefunds-f': SummaryToJSON(value.lookaheadavailablefundsF),
+    'lookaheadavailablefunds-s': SummaryToJSON(value.lookaheadavailablefundsS),
     lookaheadexcessliquidity: SummaryToJSON(value.lookaheadexcessliquidity),
-    "lookaheadexcessliquidity-c": SummaryToJSON(
+    'lookaheadexcessliquidity-c': SummaryToJSON(
       value.lookaheadexcessliquidityC
     ),
-    "lookaheadexcessliquidity-f": SummaryToJSON(
+    'lookaheadexcessliquidity-f': SummaryToJSON(
       value.lookaheadexcessliquidityF
     ),
-    "lookaheadexcessliquidity-s": SummaryToJSON(
+    'lookaheadexcessliquidity-s': SummaryToJSON(
       value.lookaheadexcessliquidityS
     ),
     lookaheadinitmarginreq: SummaryToJSON(value.lookaheadinitmarginreq),
-    "lookaheadinitmarginreq-c": SummaryToJSON(value.lookaheadinitmarginreqC),
-    "lookaheadinitmarginreq-f": SummaryToJSON(value.lookaheadinitmarginreqF),
-    "lookaheadinitmarginreq-s": SummaryToJSON(value.lookaheadinitmarginreqS),
+    'lookaheadinitmarginreq-c': SummaryToJSON(value.lookaheadinitmarginreqC),
+    'lookaheadinitmarginreq-f': SummaryToJSON(value.lookaheadinitmarginreqF),
+    'lookaheadinitmarginreq-s': SummaryToJSON(value.lookaheadinitmarginreqS),
     lookaheadmaintmarginreq: SummaryToJSON(value.lookaheadmaintmarginreq),
-    "lookaheadmaintmarginreq-c": SummaryToJSON(value.lookaheadmaintmarginreqC),
-    "lookaheadmaintmarginreq-f": SummaryToJSON(value.lookaheadmaintmarginreqF),
-    "lookaheadmaintmarginreq-s": SummaryToJSON(value.lookaheadmaintmarginreqS),
+    'lookaheadmaintmarginreq-c': SummaryToJSON(value.lookaheadmaintmarginreqC),
+    'lookaheadmaintmarginreq-f': SummaryToJSON(value.lookaheadmaintmarginreqF),
+    'lookaheadmaintmarginreq-s': SummaryToJSON(value.lookaheadmaintmarginreqS),
     lookaheadnextchange: SummaryToJSON(value.lookaheadnextchange),
     maintmarginreq: SummaryToJSON(value.maintmarginreq),
-    "maintmarginreq-c": SummaryToJSON(value.maintmarginreqC),
-    "maintmarginreq-f": SummaryToJSON(value.maintmarginreqF),
-    "maintmarginreq-s": SummaryToJSON(value.maintmarginreqS),
+    'maintmarginreq-c': SummaryToJSON(value.maintmarginreqC),
+    'maintmarginreq-f': SummaryToJSON(value.maintmarginreqF),
+    'maintmarginreq-s': SummaryToJSON(value.maintmarginreqS),
     netliquidation: SummaryToJSON(value.netliquidation),
-    "netliquidation-c": SummaryToJSON(value.netliquidationC),
-    "netliquidation-f": SummaryToJSON(value.netliquidationF),
-    "netliquidation-s": SummaryToJSON(value.netliquidationS),
+    'netliquidation-c': SummaryToJSON(value.netliquidationC),
+    'netliquidation-f': SummaryToJSON(value.netliquidationF),
+    'netliquidation-s': SummaryToJSON(value.netliquidationS),
     netliquidationuncertainty: SummaryToJSON(value.netliquidationuncertainty),
     nlvandmargininreview: SummaryToJSON(value.nlvandmargininreview),
     pasharesvalue: SummaryToJSON(value.pasharesvalue),
-    "pasharesvalue-c": SummaryToJSON(value.pasharesvalueC),
-    "pasharesvalue-f": SummaryToJSON(value.pasharesvalueF),
-    "pasharesvalue-s": SummaryToJSON(value.pasharesvalueS),
+    'pasharesvalue-c': SummaryToJSON(value.pasharesvalueC),
+    'pasharesvalue-f': SummaryToJSON(value.pasharesvalueF),
+    'pasharesvalue-s': SummaryToJSON(value.pasharesvalueS),
     postexpirationexcess: SummaryToJSON(value.postexpirationexcess),
-    "postexpirationexcess-c": SummaryToJSON(value.postexpirationexcessC),
-    "postexpirationexcess-f": SummaryToJSON(value.postexpirationexcessF),
-    "postexpirationexcess-s": SummaryToJSON(value.postexpirationexcessS),
+    'postexpirationexcess-c': SummaryToJSON(value.postexpirationexcessC),
+    'postexpirationexcess-f': SummaryToJSON(value.postexpirationexcessF),
+    'postexpirationexcess-s': SummaryToJSON(value.postexpirationexcessS),
     postexpirationmargin: SummaryToJSON(value.postexpirationmargin),
-    "postexpirationmargin-c": SummaryToJSON(value.postexpirationmarginC),
-    "postexpirationmargin-f": SummaryToJSON(value.postexpirationmarginF),
-    "postexpirationmargin-s": SummaryToJSON(value.postexpirationmarginS),
+    'postexpirationmargin-c': SummaryToJSON(value.postexpirationmarginC),
+    'postexpirationmargin-f': SummaryToJSON(value.postexpirationmarginF),
+    'postexpirationmargin-s': SummaryToJSON(value.postexpirationmarginS),
     previousdayequitywithloanvalue: SummaryToJSON(
       value.previousdayequitywithloanvalue
     ),
-    "previousdayequitywithloanvalue-c": SummaryToJSON(
+    'previousdayequitywithloanvalue-c': SummaryToJSON(
       value.previousdayequitywithloanvalueC
     ),
-    "previousdayequitywithloanvalue-f": SummaryToJSON(
+    'previousdayequitywithloanvalue-f': SummaryToJSON(
       value.previousdayequitywithloanvalueF
     ),
-    "previousdayequitywithloanvalue-s": SummaryToJSON(
+    'previousdayequitywithloanvalue-s': SummaryToJSON(
       value.previousdayequitywithloanvalueS
     ),
-    "segmenttitle-c": SummaryToJSON(value.segmenttitleC),
-    "segmenttitle-f": SummaryToJSON(value.segmenttitleF),
-    "segmenttitle-s": SummaryToJSON(value.segmenttitleS),
+    'segmenttitle-c': SummaryToJSON(value.segmenttitleC),
+    'segmenttitle-f': SummaryToJSON(value.segmenttitleF),
+    'segmenttitle-s': SummaryToJSON(value.segmenttitleS),
     totalcashvalue: SummaryToJSON(value.totalcashvalue),
-    "totalcashvalue-c": SummaryToJSON(value.totalcashvalueC),
-    "totalcashvalue-f": SummaryToJSON(value.totalcashvalueF),
-    "totalcashvalue-s": SummaryToJSON(value.totalcashvalueS),
+    'totalcashvalue-c': SummaryToJSON(value.totalcashvalueC),
+    'totalcashvalue-f': SummaryToJSON(value.totalcashvalueF),
+    'totalcashvalue-s': SummaryToJSON(value.totalcashvalueS),
     totaldebitcardpendingcharges: SummaryToJSON(
       value.totaldebitcardpendingcharges
     ),
-    "totaldebitcardpendingcharges-c": SummaryToJSON(
+    'totaldebitcardpendingcharges-c': SummaryToJSON(
       value.totaldebitcardpendingchargesC
     ),
-    "totaldebitcardpendingcharges-f": SummaryToJSON(
+    'totaldebitcardpendingcharges-f': SummaryToJSON(
       value.totaldebitcardpendingchargesF
     ),
-    "totaldebitcardpendingcharges-s": SummaryToJSON(
+    'totaldebitcardpendingcharges-s': SummaryToJSON(
       value.totaldebitcardpendingchargesS
     ),
-    "tradingtype-f": SummaryToJSON(value.tradingtypeF),
-    "tradingtype-s": SummaryToJSON(value.tradingtypeS),
-  };
+    'tradingtype-f': SummaryToJSON(value.tradingtypeF),
+    'tradingtype-s': SummaryToJSON(value.tradingtypeS),
+  }
 }

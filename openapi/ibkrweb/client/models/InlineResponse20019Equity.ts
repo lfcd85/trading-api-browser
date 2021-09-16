@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,25 +24,25 @@ export interface InlineResponse20019Equity {
    * @type {string}
    * @memberof InlineResponse20019Equity
    */
-  current?: string;
+  current?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20019Equity
    */
-  change?: string;
+  change?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20019Equity
    */
-  after?: string;
+  after?: string
 }
 
 export function InlineResponse20019EquityFromJSON(
   json: any
 ): InlineResponse20019Equity {
-  return InlineResponse20019EquityFromJSONTyped(json, false);
+  return InlineResponse20019EquityFromJSONTyped(json, false)
 }
 
 export function InlineResponse20019EquityFromJSONTyped(
@@ -50,27 +50,27 @@ export function InlineResponse20019EquityFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20019Equity {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    current: !exists(json, "current") ? undefined : json["current"],
-    change: !exists(json, "change") ? undefined : json["change"],
-    after: !exists(json, "after") ? undefined : json["after"],
-  };
+    current: !exists(json, 'current') ? undefined : json['current'],
+    change: !exists(json, 'change') ? undefined : json['change'],
+    after: !exists(json, 'after') ? undefined : json['after'],
+  }
 }
 
 export function InlineResponse20019EquityToJSON(
   value?: InlineResponse20019Equity | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     current: value.current,
     change: value.change,
     after: value.after,
-  };
+  }
 }

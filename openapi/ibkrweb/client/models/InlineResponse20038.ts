@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,41 +24,41 @@ export interface InlineResponse20038 {
    * @type {number}
    * @memberof InlineResponse20038
    */
-  lOGINTYPE?: number;
+  lOGINTYPE?: number
   /**
    * Username
    * @type {string}
    * @memberof InlineResponse20038
    */
-  uSERNAME?: string;
+  uSERNAME?: string
   /**
    * User ID
    * @type {number}
    * @memberof InlineResponse20038
    */
-  uSERID?: number;
+  uSERID?: number
   /**
    * Time in milliseconds until session expires. Caller needs to call the again to re-validate session
    * @type {number}
    * @memberof InlineResponse20038
    */
-  expire?: number;
+  expire?: number
   /**
    * true if session was validated; false if not.
    * @type {boolean}
    * @memberof InlineResponse20038
    */
-  rESULT?: boolean;
+  rESULT?: boolean
   /**
    * Time of session validation
    * @type {number}
    * @memberof InlineResponse20038
    */
-  aUTHTIME?: number;
+  aUTHTIME?: number
 }
 
 export function InlineResponse20038FromJSON(json: any): InlineResponse20038 {
-  return InlineResponse20038FromJSONTyped(json, false);
+  return InlineResponse20038FromJSONTyped(json, false)
 }
 
 export function InlineResponse20038FromJSONTyped(
@@ -66,26 +66,26 @@ export function InlineResponse20038FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20038 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    lOGINTYPE: !exists(json, "LOGIN_TYPE") ? undefined : json["LOGIN_TYPE"],
-    uSERNAME: !exists(json, "USER_NAME") ? undefined : json["USER_NAME"],
-    uSERID: !exists(json, "USER_ID") ? undefined : json["USER_ID"],
-    expire: !exists(json, "expire") ? undefined : json["expire"],
-    rESULT: !exists(json, "RESULT") ? undefined : json["RESULT"],
-    aUTHTIME: !exists(json, "AUTH_TIME") ? undefined : json["AUTH_TIME"],
-  };
+    lOGINTYPE: !exists(json, 'LOGIN_TYPE') ? undefined : json['LOGIN_TYPE'],
+    uSERNAME: !exists(json, 'USER_NAME') ? undefined : json['USER_NAME'],
+    uSERID: !exists(json, 'USER_ID') ? undefined : json['USER_ID'],
+    expire: !exists(json, 'expire') ? undefined : json['expire'],
+    rESULT: !exists(json, 'RESULT') ? undefined : json['RESULT'],
+    aUTHTIME: !exists(json, 'AUTH_TIME') ? undefined : json['AUTH_TIME'],
+  }
 }
 
 export function InlineResponse20038ToJSON(
   value?: InlineResponse20038 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     LOGIN_TYPE: value.lOGINTYPE,
@@ -94,5 +94,5 @@ export function InlineResponse20038ToJSON(
     expire: value.expire,
     RESULT: value.rESULT,
     AUTH_TIME: value.aUTHTIME,
-  };
+  }
 }

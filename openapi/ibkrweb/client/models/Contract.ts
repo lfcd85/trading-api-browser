@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   ContractRules,
   ContractRulesFromJSON,
   ContractRulesFromJSONTyped,
   ContractRulesToJSON,
-} from "./";
+} from './'
 
 /**
  * Contains all details of the contract, including rules you can use when placing orders
@@ -31,71 +31,71 @@ export interface Contract {
    * @type {boolean}
    * @memberof Contract
    */
-  rTH?: boolean;
+  rTH?: boolean
   /**
    * same as that in request
    * @type {string}
    * @memberof Contract
    */
-  conId?: string;
+  conId?: string
   /**
    * Contracts company name
    * @type {string}
    * @memberof Contract
    */
-  companyName?: string;
+  companyName?: string
   /**
    *
    * @type {string}
    * @memberof Contract
    */
-  exchange?: string;
+  exchange?: string
   /**
    * for exmple FB
    * @type {string}
    * @memberof Contract
    */
-  localSymbol?: string;
+  localSymbol?: string
   /**
    * for example STK
    * @type {string}
    * @memberof Contract
    */
-  instrumentType?: string;
+  instrumentType?: string
   /**
    *
    * @type {string}
    * @memberof Contract
    */
-  currency?: string;
+  currency?: string
   /**
    *
    * @type {string}
    * @memberof Contract
    */
-  companyName?: string;
+  companyName?: string
   /**
    *
    * @type {string}
    * @memberof Contract
    */
-  category?: string;
+  category?: string
   /**
    *
    * @type {string}
    * @memberof Contract
    */
-  industry?: string;
+  industry?: string
   /**
    *
    * @type {ContractRules}
    * @memberof Contract
    */
-  rules?: ContractRules;
+  rules?: ContractRules
 }
 
 export function ContractFromJSON(json: any): Contract {
-  return ContractFromJSONTyped(json, false);
+  return ContractFromJSONTyped(json, false)
 }
 
 export function ContractFromJSONTyped(
@@ -103,37 +103,37 @@ export function ContractFromJSONTyped(
   ignoreDiscriminator: boolean
 ): Contract {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    rTH: !exists(json, "r_t_h") ? undefined : json["r_t_h"],
-    conId: !exists(json, "con_id") ? undefined : json["con_id"],
-    companyName: !exists(json, "company_name")
+    rTH: !exists(json, 'r_t_h') ? undefined : json['r_t_h'],
+    conId: !exists(json, 'con_id') ? undefined : json['con_id'],
+    companyName: !exists(json, 'company_name')
       ? undefined
-      : json["company_name"],
-    exchange: !exists(json, "exchange") ? undefined : json["exchange"],
-    localSymbol: !exists(json, "local_symbol")
+      : json['company_name'],
+    exchange: !exists(json, 'exchange') ? undefined : json['exchange'],
+    localSymbol: !exists(json, 'local_symbol')
       ? undefined
-      : json["local_symbol"],
-    instrumentType: !exists(json, "instrument_type")
+      : json['local_symbol'],
+    instrumentType: !exists(json, 'instrument_type')
       ? undefined
-      : json["instrument_type"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    companyName: !exists(json, "companyName") ? undefined : json["companyName"],
-    category: !exists(json, "category") ? undefined : json["category"],
-    industry: !exists(json, "industry") ? undefined : json["industry"],
-    rules: !exists(json, "rules")
+      : json['instrument_type'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    companyName: !exists(json, 'companyName') ? undefined : json['companyName'],
+    category: !exists(json, 'category') ? undefined : json['category'],
+    industry: !exists(json, 'industry') ? undefined : json['industry'],
+    rules: !exists(json, 'rules')
       ? undefined
-      : ContractRulesFromJSON(json["rules"]),
-  };
+      : ContractRulesFromJSON(json['rules']),
+  }
 }
 
 export function ContractToJSON(value?: Contract | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     r_t_h: value.rTH,
@@ -147,5 +147,5 @@ export function ContractToJSON(value?: Contract | null): any {
     category: value.category,
     industry: value.industry,
     rules: ContractRulesToJSON(value.rules),
-  };
+  }
 }

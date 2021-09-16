@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,18 +24,18 @@ export interface InlineResponse20017 {
    * @type {string}
    * @memberof InlineResponse20017
    */
-  id?: string;
+  id?: string
   /**
    * Please note here, if the message is a question, you have to reply to question in order to submit
    * the order successfully. See more in the "/iserver/reply/{replyid}" endpoint.
    * @type {Array<string>}
    * @memberof InlineResponse20017
    */
-  message?: Array<string>;
+  message?: Array<string>
 }
 
 export function InlineResponse20017FromJSON(json: any): InlineResponse20017 {
-  return InlineResponse20017FromJSONTyped(json, false);
+  return InlineResponse20017FromJSONTyped(json, false)
 }
 
 export function InlineResponse20017FromJSONTyped(
@@ -43,25 +43,25 @@ export function InlineResponse20017FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20017 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    id: !exists(json, "id") ? undefined : json["id"],
-    message: !exists(json, "message") ? undefined : json["message"],
-  };
+    id: !exists(json, 'id') ? undefined : json['id'],
+    message: !exists(json, 'message') ? undefined : json['message'],
+  }
 }
 
 export function InlineResponse20017ToJSON(
   value?: InlineResponse20017 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     id: value.id,
     message: value.message,
-  };
+  }
 }

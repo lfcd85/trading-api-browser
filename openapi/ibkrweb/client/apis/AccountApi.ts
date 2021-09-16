@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   Account,
   AccountFromJSON,
@@ -35,22 +35,22 @@ import {
   SetAccount,
   SetAccountFromJSON,
   SetAccountToJSON,
-} from "../models";
+} from '../models'
 
 export interface IserverAccountPostRequest {
-  body: SetAccount;
+  body: SetAccount
 }
 
 export interface PortfolioAccountIdLedgerGetRequest {
-  accountId: string;
+  accountId: string
 }
 
 export interface PortfolioAccountIdMetaGetRequest {
-  accountId: string;
+  accountId: string
 }
 
 export interface PortfolioAccountIdSummaryGetRequest {
-  accountId: string;
+  accountId: string
 }
 
 /**
@@ -64,23 +64,23 @@ export class AccountApi extends runtime.BaseAPI {
   async iserverAccountPnlPartitionedGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse20031>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/pnl/partitioned`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20031FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -92,8 +92,8 @@ export class AccountApi extends runtime.BaseAPI {
   ): Promise<InlineResponse20031> {
     const response = await this.iserverAccountPnlPartitionedGetRaw(
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -109,31 +109,31 @@ export class AccountApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: SetAccountToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20012FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -147,8 +147,8 @@ export class AccountApi extends runtime.BaseAPI {
     const response = await this.iserverAccountPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -158,23 +158,23 @@ export class AccountApi extends runtime.BaseAPI {
   async iserverAccountsGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse20011>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/accounts`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20011FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -184,8 +184,8 @@ export class AccountApi extends runtime.BaseAPI {
   async iserverAccountsGet(
     initOverrides?: RequestInit
   ): Promise<InlineResponse20011> {
-    const response = await this.iserverAccountsGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.iserverAccountsGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -201,31 +201,31 @@ export class AccountApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling portfolioAccountIdLedgerGet."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling portfolioAccountIdLedgerGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/portfolio/{accountId}/ledger`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20036FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -239,8 +239,8 @@ export class AccountApi extends runtime.BaseAPI {
     const response = await this.portfolioAccountIdLedgerGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -256,31 +256,31 @@ export class AccountApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling portfolioAccountIdMetaGet."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling portfolioAccountIdMetaGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/portfolio/{accountId}/meta`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(AccountFromJSON)
-    );
+    )
   }
 
   /**
@@ -294,8 +294,8 @@ export class AccountApi extends runtime.BaseAPI {
     const response = await this.portfolioAccountIdMetaGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -311,31 +311,31 @@ export class AccountApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling portfolioAccountIdSummaryGet."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling portfolioAccountIdSummaryGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/portfolio/{accountId}/summary`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20035FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -349,8 +349,8 @@ export class AccountApi extends runtime.BaseAPI {
     const response = await this.portfolioAccountIdSummaryGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -360,23 +360,23 @@ export class AccountApi extends runtime.BaseAPI {
   async portfolioAccountsGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<Array<Account>>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/portfolio/accounts`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(AccountFromJSON)
-    );
+    )
   }
 
   /**
@@ -386,8 +386,8 @@ export class AccountApi extends runtime.BaseAPI {
   async portfolioAccountsGet(
     initOverrides?: RequestInit
   ): Promise<Array<Account>> {
-    const response = await this.portfolioAccountsGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.portfolioAccountsGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -397,23 +397,23 @@ export class AccountApi extends runtime.BaseAPI {
   async portfolioSubaccountsGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<Account>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/portfolio/subaccounts`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       AccountFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -421,7 +421,7 @@ export class AccountApi extends runtime.BaseAPI {
    * List of Sub-Accounts
    */
   async portfolioSubaccountsGet(initOverrides?: RequestInit): Promise<Account> {
-    const response = await this.portfolioSubaccountsGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.portfolioSubaccountsGetRaw(initOverrides)
+    return await response.value()
   }
 }

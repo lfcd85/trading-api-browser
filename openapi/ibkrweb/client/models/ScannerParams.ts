@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   ScannerParamsInstrumentList,
   ScannerParamsInstrumentListFromJSON,
@@ -26,7 +26,7 @@ import {
   ScannerParamsScanTypeListFromJSON,
   ScannerParamsScanTypeListFromJSONTyped,
   ScannerParamsScanTypeListToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -39,29 +39,29 @@ export interface ScannerParams {
    * @type {ScannerParamsInstrumentList}
    * @memberof ScannerParams
    */
-  instrumentList?: ScannerParamsInstrumentList;
+  instrumentList?: ScannerParamsInstrumentList
   /**
    *
    * @type {ScannerParamsLocationTree}
    * @memberof ScannerParams
    */
-  locationTree?: ScannerParamsLocationTree;
+  locationTree?: ScannerParamsLocationTree
   /**
    * Contains list of filters supported for the scanner
    * @type {Array<object>}
    * @memberof ScannerParams
    */
-  filterList?: Array<object>;
+  filterList?: Array<object>
   /**
    *
    * @type {ScannerParamsScanTypeList}
    * @memberof ScannerParams
    */
-  scanTypeList?: ScannerParamsScanTypeList;
+  scanTypeList?: ScannerParamsScanTypeList
 }
 
 export function ScannerParamsFromJSON(json: any): ScannerParams {
-  return ScannerParamsFromJSONTyped(json, false);
+  return ScannerParamsFromJSONTyped(json, false)
 }
 
 export function ScannerParamsFromJSONTyped(
@@ -69,33 +69,33 @@ export function ScannerParamsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerParams {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    instrumentList: !exists(json, "InstrumentList")
+    instrumentList: !exists(json, 'InstrumentList')
       ? undefined
-      : ScannerParamsInstrumentListFromJSON(json["InstrumentList"]),
-    locationTree: !exists(json, "LocationTree")
+      : ScannerParamsInstrumentListFromJSON(json['InstrumentList']),
+    locationTree: !exists(json, 'LocationTree')
       ? undefined
-      : ScannerParamsLocationTreeFromJSON(json["LocationTree"]),
-    filterList: !exists(json, "FilterList") ? undefined : json["FilterList"],
-    scanTypeList: !exists(json, "ScanTypeList")
+      : ScannerParamsLocationTreeFromJSON(json['LocationTree']),
+    filterList: !exists(json, 'FilterList') ? undefined : json['FilterList'],
+    scanTypeList: !exists(json, 'ScanTypeList')
       ? undefined
-      : ScannerParamsScanTypeListFromJSON(json["ScanTypeList"]),
-  };
+      : ScannerParamsScanTypeListFromJSON(json['ScanTypeList']),
+  }
 }
 
 export function ScannerParamsToJSON(value?: ScannerParams | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     InstrumentList: ScannerParamsInstrumentListToJSON(value.instrumentList),
     LocationTree: ScannerParamsLocationTreeToJSON(value.locationTree),
     FilterList: value.filterList,
     ScanTypeList: ScannerParamsScanTypeListToJSON(value.scanTypeList),
-  };
+  }
 }

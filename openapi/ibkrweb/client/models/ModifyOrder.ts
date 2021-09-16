@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,78 +24,78 @@ export interface ModifyOrder {
    * @type {string}
    * @memberof ModifyOrder
    */
-  acctId?: string;
+  acctId?: string
   /**
    *
    * @type {number}
    * @memberof ModifyOrder
    */
-  conid?: number;
+  conid?: number
   /**
    * for example LMT
    * @type {string}
    * @memberof ModifyOrder
    */
-  orderType?: string;
+  orderType?: string
   /**
    *
    * @type {boolean}
    * @memberof ModifyOrder
    */
-  outsideRTH?: boolean;
+  outsideRTH?: boolean
   /**
    *
    * @type {number}
    * @memberof ModifyOrder
    */
-  price?: number;
+  price?: number
   /**
    *
    * @type {number}
    * @memberof ModifyOrder
    */
-  auxPrice?: number;
+  auxPrice?: number
   /**
    * SELL or BUY
    * @type {string}
    * @memberof ModifyOrder
    */
-  side?: string;
+  side?: string
   /**
    * optional, not required
    * @type {string}
    * @memberof ModifyOrder
    */
-  listingExchange?: string;
+  listingExchange?: string
   /**
    * The ticker symbol of the original place order
    * @type {string}
    * @memberof ModifyOrder
    */
-  ticker?: string;
+  ticker?: string
   /**
    * Specify a time in force to change how long your order will continue to work in the market
    * @type {string}
    * @memberof ModifyOrder
    */
-  tif?: string;
+  tif?: string
   /**
    * usually integer, for some special cases can be float numbers
    * @type {number}
    * @memberof ModifyOrder
    */
-  quantity?: number;
+  quantity?: number
   /**
    * Set to true if you want to pause a working order.
    * For details refer to the [TWS Users' Guide:](https://guides.interactivebrokers.com/tws/twsguide.html#usersguidebook/getstarted/pause_execution.htm)
    * @type {boolean}
    * @memberof ModifyOrder
    */
-  deactivated?: boolean;
+  deactivated?: boolean
 }
 
 export function ModifyOrderFromJSON(json: any): ModifyOrder {
-  return ModifyOrderFromJSONTyped(json, false);
+  return ModifyOrderFromJSONTyped(json, false)
 }
 
 export function ModifyOrderFromJSONTyped(
@@ -103,32 +103,32 @@ export function ModifyOrderFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ModifyOrder {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    acctId: !exists(json, "acctId") ? undefined : json["acctId"],
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    orderType: !exists(json, "orderType") ? undefined : json["orderType"],
-    outsideRTH: !exists(json, "outsideRTH") ? undefined : json["outsideRTH"],
-    price: !exists(json, "price") ? undefined : json["price"],
-    auxPrice: !exists(json, "auxPrice") ? undefined : json["auxPrice"],
-    side: !exists(json, "side") ? undefined : json["side"],
-    listingExchange: !exists(json, "listingExchange")
+    acctId: !exists(json, 'acctId') ? undefined : json['acctId'],
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    orderType: !exists(json, 'orderType') ? undefined : json['orderType'],
+    outsideRTH: !exists(json, 'outsideRTH') ? undefined : json['outsideRTH'],
+    price: !exists(json, 'price') ? undefined : json['price'],
+    auxPrice: !exists(json, 'auxPrice') ? undefined : json['auxPrice'],
+    side: !exists(json, 'side') ? undefined : json['side'],
+    listingExchange: !exists(json, 'listingExchange')
       ? undefined
-      : json["listingExchange"],
-    ticker: !exists(json, "ticker") ? undefined : json["ticker"],
-    tif: !exists(json, "tif") ? undefined : json["tif"],
-    quantity: !exists(json, "quantity") ? undefined : json["quantity"],
-    deactivated: !exists(json, "deactivated") ? undefined : json["deactivated"],
-  };
+      : json['listingExchange'],
+    ticker: !exists(json, 'ticker') ? undefined : json['ticker'],
+    tif: !exists(json, 'tif') ? undefined : json['tif'],
+    quantity: !exists(json, 'quantity') ? undefined : json['quantity'],
+    deactivated: !exists(json, 'deactivated') ? undefined : json['deactivated'],
+  }
 }
 
 export function ModifyOrderToJSON(value?: ModifyOrder | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     acctId: value.acctId,
@@ -143,5 +143,5 @@ export function ModifyOrderToJSON(value?: ModifyOrder | null): any {
     tif: value.tif,
     quantity: value.quantity,
     deactivated: value.deactivated,
-  };
+  }
 }

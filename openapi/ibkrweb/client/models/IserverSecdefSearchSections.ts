@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,37 +24,37 @@ export interface IserverSecdefSearchSections {
    * @type {string}
    * @memberof IserverSecdefSearchSections
    */
-  secType?: string;
+  secType?: string
   /**
    * List of expiration month(s) and year(s) in MMMYY format separated by semicolon
    * @type {string}
    * @memberof IserverSecdefSearchSections
    */
-  months?: string;
+  months?: string
   /**
    * Underlying symbol
    * @type {string}
    * @memberof IserverSecdefSearchSections
    */
-  symbol?: string;
+  symbol?: string
   /**
    * Listing Exchange
    * @type {string}
    * @memberof IserverSecdefSearchSections
    */
-  exchange?: string;
+  exchange?: string
   /**
    * For combo's defines the asset class for each leg
    * @type {string}
    * @memberof IserverSecdefSearchSections
    */
-  legSecType?: string;
+  legSecType?: string
 }
 
 export function IserverSecdefSearchSectionsFromJSON(
   json: any
 ): IserverSecdefSearchSections {
-  return IserverSecdefSearchSectionsFromJSONTyped(json, false);
+  return IserverSecdefSearchSectionsFromJSONTyped(json, false)
 }
 
 export function IserverSecdefSearchSectionsFromJSONTyped(
@@ -62,25 +62,25 @@ export function IserverSecdefSearchSectionsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): IserverSecdefSearchSections {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    secType: !exists(json, "secType") ? undefined : json["secType"],
-    months: !exists(json, "months") ? undefined : json["months"],
-    symbol: !exists(json, "symbol") ? undefined : json["symbol"],
-    exchange: !exists(json, "exchange") ? undefined : json["exchange"],
-    legSecType: !exists(json, "legSecType") ? undefined : json["legSecType"],
-  };
+    secType: !exists(json, 'secType') ? undefined : json['secType'],
+    months: !exists(json, 'months') ? undefined : json['months'],
+    symbol: !exists(json, 'symbol') ? undefined : json['symbol'],
+    exchange: !exists(json, 'exchange') ? undefined : json['exchange'],
+    legSecType: !exists(json, 'legSecType') ? undefined : json['legSecType'],
+  }
 }
 
 export function IserverSecdefSearchSectionsToJSON(
   value?: IserverSecdefSearchSections | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     secType: value.secType,
@@ -88,5 +88,5 @@ export function IserverSecdefSearchSectionsToJSON(
     symbol: value.symbol,
     exchange: value.exchange,
     legSecType: value.legSecType,
-  };
+  }
 }

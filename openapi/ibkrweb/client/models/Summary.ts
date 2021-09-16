@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   SummaryAccountSummaries,
   SummaryAccountSummariesFromJSON,
@@ -30,7 +30,7 @@ import {
   SummaryTotalFromJSON,
   SummaryTotalFromJSONTyped,
   SummaryTotalToJSON,
-} from "./";
+} from './'
 
 /**
  * account information
@@ -43,83 +43,83 @@ export interface Summary {
    * @type {SummaryTotal}
    * @memberof Summary
    */
-  total?: SummaryTotal;
+  total?: SummaryTotal
   /**
    * date format-- yyyy-MM-dd
    * @type {string}
    * @memberof Summary
    */
-  startDate?: string;
+  startDate?: string
   /**
    *
    * @type {Array<SummaryExcludedAccounts>}
    * @memberof Summary
    */
-  excludedAccounts?: Array<SummaryExcludedAccounts>;
+  excludedAccounts?: Array<SummaryExcludedAccounts>
   /**
    *
    * @type {string}
    * @memberof Summary
    */
-  lastSuccessfulUpdate?: string;
+  lastSuccessfulUpdate?: string
   /**
    *
    * @type {Array<SummaryAccountSummaries>}
    * @memberof Summary
    */
-  accountSummaries?: Array<SummaryAccountSummaries>;
+  accountSummaries?: Array<SummaryAccountSummaries>
   /**
    *
    * @type {string}
    * @memberof Summary
    */
-  endDate?: string;
+  endDate?: string
   /**
    * indicator of user having configured any external accounts
    * @type {boolean}
    * @memberof Summary
    */
-  hasExternalAccounts?: boolean;
+  hasExternalAccounts?: boolean
   /**
    *
    * @type {number}
    * @memberof Summary
    */
-  rc?: number;
+  rc?: number
   /**
    *
    * @type {string}
    * @memberof Summary
    */
-  currency?: string;
+  currency?: string
   /**
    *
    * @type {string}
    * @memberof Summary
    */
-  userId?: string;
+  userId?: string
   /**
    *
    * @type {string}
    * @memberof Summary
    */
-  pm?: string;
+  pm?: string
   /**
    *
    * @type {string}
    * @memberof Summary
    */
-  view?: string;
+  view?: string
   /**
    *
    * @type {SummaryBalanceByDate}
    * @memberof Summary
    */
-  balanceByDate?: SummaryBalanceByDate;
+  balanceByDate?: SummaryBalanceByDate
 }
 
 export function SummaryFromJSON(json: any): Summary {
-  return SummaryFromJSONTyped(json, false);
+  return SummaryFromJSONTyped(json, false)
 }
 
 export function SummaryFromJSONTyped(
@@ -127,47 +127,47 @@ export function SummaryFromJSONTyped(
   ignoreDiscriminator: boolean
 ): Summary {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    total: !exists(json, "total")
+    total: !exists(json, 'total')
       ? undefined
-      : SummaryTotalFromJSON(json["total"]),
-    startDate: !exists(json, "startDate") ? undefined : json["startDate"],
-    excludedAccounts: !exists(json, "excludedAccounts")
+      : SummaryTotalFromJSON(json['total']),
+    startDate: !exists(json, 'startDate') ? undefined : json['startDate'],
+    excludedAccounts: !exists(json, 'excludedAccounts')
       ? undefined
-      : (json["excludedAccounts"] as Array<any>).map(
+      : (json['excludedAccounts'] as Array<any>).map(
           SummaryExcludedAccountsFromJSON
         ),
-    lastSuccessfulUpdate: !exists(json, "lastSuccessfulUpdate")
+    lastSuccessfulUpdate: !exists(json, 'lastSuccessfulUpdate')
       ? undefined
-      : json["lastSuccessfulUpdate"],
-    accountSummaries: !exists(json, "accountSummaries")
+      : json['lastSuccessfulUpdate'],
+    accountSummaries: !exists(json, 'accountSummaries')
       ? undefined
-      : (json["accountSummaries"] as Array<any>).map(
+      : (json['accountSummaries'] as Array<any>).map(
           SummaryAccountSummariesFromJSON
         ),
-    endDate: !exists(json, "endDate") ? undefined : json["endDate"],
-    hasExternalAccounts: !exists(json, "hasExternalAccounts")
+    endDate: !exists(json, 'endDate') ? undefined : json['endDate'],
+    hasExternalAccounts: !exists(json, 'hasExternalAccounts')
       ? undefined
-      : json["hasExternalAccounts"],
-    rc: !exists(json, "rc") ? undefined : json["rc"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    userId: !exists(json, "userId") ? undefined : json["userId"],
-    pm: !exists(json, "pm") ? undefined : json["pm"],
-    view: !exists(json, "view") ? undefined : json["view"],
-    balanceByDate: !exists(json, "balanceByDate")
+      : json['hasExternalAccounts'],
+    rc: !exists(json, 'rc') ? undefined : json['rc'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    userId: !exists(json, 'userId') ? undefined : json['userId'],
+    pm: !exists(json, 'pm') ? undefined : json['pm'],
+    view: !exists(json, 'view') ? undefined : json['view'],
+    balanceByDate: !exists(json, 'balanceByDate')
       ? undefined
-      : SummaryBalanceByDateFromJSON(json["balanceByDate"]),
-  };
+      : SummaryBalanceByDateFromJSON(json['balanceByDate']),
+  }
 }
 
 export function SummaryToJSON(value?: Summary | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     total: SummaryTotalToJSON(value.total),
@@ -193,5 +193,5 @@ export function SummaryToJSON(value?: Summary | null): any {
     pm: value.pm,
     view: value.view,
     balanceByDate: SummaryBalanceByDateToJSON(value.balanceByDate),
-  };
+  }
 }

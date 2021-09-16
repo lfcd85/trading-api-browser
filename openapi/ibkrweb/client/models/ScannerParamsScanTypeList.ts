@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   ScannerParamsScanTypeListScanType,
   ScannerParamsScanTypeListScanTypeFromJSON,
   ScannerParamsScanTypeListScanTypeFromJSONTyped,
   ScannerParamsScanTypeListScanTypeToJSON,
-} from "./";
+} from './'
 
 /**
  * Contains list of scan types for which scanner can be ran
@@ -31,13 +31,13 @@ export interface ScannerParamsScanTypeList {
    * @type {Array<ScannerParamsScanTypeListScanType>}
    * @memberof ScannerParamsScanTypeList
    */
-  scanType?: Array<ScannerParamsScanTypeListScanType>;
+  scanType?: Array<ScannerParamsScanTypeListScanType>
 }
 
 export function ScannerParamsScanTypeListFromJSON(
   json: any
 ): ScannerParamsScanTypeList {
-  return ScannerParamsScanTypeListFromJSONTyped(json, false);
+  return ScannerParamsScanTypeListFromJSONTyped(json, false)
 }
 
 export function ScannerParamsScanTypeListFromJSONTyped(
@@ -45,25 +45,25 @@ export function ScannerParamsScanTypeListFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerParamsScanTypeList {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    scanType: !exists(json, "ScanType")
+    scanType: !exists(json, 'ScanType')
       ? undefined
-      : (json["ScanType"] as Array<any>).map(
+      : (json['ScanType'] as Array<any>).map(
           ScannerParamsScanTypeListScanTypeFromJSON
         ),
-  };
+  }
 }
 
 export function ScannerParamsScanTypeListToJSON(
   value?: ScannerParamsScanTypeList | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     ScanType:
@@ -72,5 +72,5 @@ export function ScannerParamsScanTypeListToJSON(
         : (value.scanType as Array<any>).map(
             ScannerParamsScanTypeListScanTypeToJSON
           ),
-  };
+  }
 }

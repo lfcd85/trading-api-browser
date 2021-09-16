@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   PerformanceCps,
   PerformanceCpsFromJSON,
@@ -26,7 +26,7 @@ import {
   PerformanceTppsFromJSON,
   PerformanceTppsFromJSONTyped,
   PerformanceTppsToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -39,53 +39,53 @@ export interface Performance {
    * @type {string}
    * @memberof Performance
    */
-  id?: string;
+  id?: string
   /**
    *
    * @type {PerformanceCps}
    * @memberof Performance
    */
-  cps?: PerformanceCps;
+  cps?: PerformanceCps
   /**
    *
    * @type {PerformanceTpps}
    * @memberof Performance
    */
-  tpps?: PerformanceTpps;
+  tpps?: PerformanceTpps
   /**
    *
    * @type {PerformanceNav}
    * @memberof Performance
    */
-  nav?: PerformanceNav;
+  nav?: PerformanceNav
   /**
    *
    * @type {string}
    * @memberof Performance
    */
-  pm?: string;
+  pm?: string
   /**
    *
    * @type {Array<string>}
    * @memberof Performance
    */
-  included?: Array<string>;
+  included?: Array<string>
   /**
    *
    * @type {string}
    * @memberof Performance
    */
-  currencyType?: string;
+  currencyType?: string
   /**
    *
    * @type {number}
    * @memberof Performance
    */
-  rc?: number;
+  rc?: number
 }
 
 export function PerformanceFromJSON(json: any): Performance {
-  return PerformanceFromJSONTyped(json, false);
+  return PerformanceFromJSONTyped(json, false)
 }
 
 export function PerformanceFromJSONTyped(
@@ -93,30 +93,30 @@ export function PerformanceFromJSONTyped(
   ignoreDiscriminator: boolean
 ): Performance {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    id: !exists(json, "id") ? undefined : json["id"],
-    cps: !exists(json, "cps") ? undefined : PerformanceCpsFromJSON(json["cps"]),
-    tpps: !exists(json, "tpps")
+    id: !exists(json, 'id') ? undefined : json['id'],
+    cps: !exists(json, 'cps') ? undefined : PerformanceCpsFromJSON(json['cps']),
+    tpps: !exists(json, 'tpps')
       ? undefined
-      : PerformanceTppsFromJSON(json["tpps"]),
-    nav: !exists(json, "nav") ? undefined : PerformanceNavFromJSON(json["nav"]),
-    pm: !exists(json, "pm") ? undefined : json["pm"],
-    included: !exists(json, "included") ? undefined : json["included"],
-    currencyType: !exists(json, "currencyType")
+      : PerformanceTppsFromJSON(json['tpps']),
+    nav: !exists(json, 'nav') ? undefined : PerformanceNavFromJSON(json['nav']),
+    pm: !exists(json, 'pm') ? undefined : json['pm'],
+    included: !exists(json, 'included') ? undefined : json['included'],
+    currencyType: !exists(json, 'currencyType')
       ? undefined
-      : json["currencyType"],
-    rc: !exists(json, "rc") ? undefined : json["rc"],
-  };
+      : json['currencyType'],
+    rc: !exists(json, 'rc') ? undefined : json['rc'],
+  }
 }
 
 export function PerformanceToJSON(value?: Performance | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     id: value.id,
@@ -127,5 +127,5 @@ export function PerformanceToJSON(value?: Performance | null): any {
     included: value.included,
     currencyType: value.currencyType,
     rc: value.rc,
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   CalendarRequestDate,
   CalendarRequestDateFromJSON,
@@ -22,7 +22,7 @@ import {
   CalendarRequestFiltersFromJSON,
   CalendarRequestFiltersFromJSONTyped,
   CalendarRequestFiltersToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -35,17 +35,17 @@ export interface CalendarRequest {
    * @type {CalendarRequestDate}
    * @memberof CalendarRequest
    */
-  date?: CalendarRequestDate;
+  date?: CalendarRequestDate
   /**
    *
    * @type {CalendarRequestFilters}
    * @memberof CalendarRequest
    */
-  filters?: CalendarRequestFilters;
+  filters?: CalendarRequestFilters
 }
 
 export function CalendarRequestFromJSON(json: any): CalendarRequest {
-  return CalendarRequestFromJSONTyped(json, false);
+  return CalendarRequestFromJSONTyped(json, false)
 }
 
 export function CalendarRequestFromJSONTyped(
@@ -53,27 +53,27 @@ export function CalendarRequestFromJSONTyped(
   ignoreDiscriminator: boolean
 ): CalendarRequest {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    date: !exists(json, "date")
+    date: !exists(json, 'date')
       ? undefined
-      : CalendarRequestDateFromJSON(json["date"]),
-    filters: !exists(json, "filters")
+      : CalendarRequestDateFromJSON(json['date']),
+    filters: !exists(json, 'filters')
       ? undefined
-      : CalendarRequestFiltersFromJSON(json["filters"]),
-  };
+      : CalendarRequestFiltersFromJSON(json['filters']),
+  }
 }
 
 export function CalendarRequestToJSON(value?: CalendarRequest | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     date: CalendarRequestDateToJSON(value.date),
     filters: CalendarRequestFiltersToJSON(value.filters),
-  };
+  }
 }

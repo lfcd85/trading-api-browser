@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,23 +24,23 @@ export interface InlineResponse20018 {
    * @type {string}
    * @memberof InlineResponse20018
    */
-  orderId?: string;
+  orderId?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20018
    */
-  orderStatus?: string;
+  orderStatus?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20018
    */
-  localOrderId?: string;
+  localOrderId?: string
 }
 
 export function InlineResponse20018FromJSON(json: any): InlineResponse20018 {
-  return InlineResponse20018FromJSONTyped(json, false);
+  return InlineResponse20018FromJSONTyped(json, false)
 }
 
 export function InlineResponse20018FromJSONTyped(
@@ -48,31 +48,31 @@ export function InlineResponse20018FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20018 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    orderId: !exists(json, "order_id") ? undefined : json["order_id"],
-    orderStatus: !exists(json, "order_status")
+    orderId: !exists(json, 'order_id') ? undefined : json['order_id'],
+    orderStatus: !exists(json, 'order_status')
       ? undefined
-      : json["order_status"],
-    localOrderId: !exists(json, "local_order_id")
+      : json['order_status'],
+    localOrderId: !exists(json, 'local_order_id')
       ? undefined
-      : json["local_order_id"],
-  };
+      : json['local_order_id'],
+  }
 }
 
 export function InlineResponse20018ToJSON(
   value?: InlineResponse20018 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     order_id: value.orderId,
     order_status: value.orderStatus,
     local_order_id: value.localOrderId,
-  };
+  }
 }

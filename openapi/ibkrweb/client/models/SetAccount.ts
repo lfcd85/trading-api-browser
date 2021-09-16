@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,11 +24,11 @@ export interface SetAccount {
    * @type {string}
    * @memberof SetAccount
    */
-  acctId?: string;
+  acctId?: string
 }
 
 export function SetAccountFromJSON(json: any): SetAccount {
-  return SetAccountFromJSONTyped(json, false);
+  return SetAccountFromJSONTyped(json, false)
 }
 
 export function SetAccountFromJSONTyped(
@@ -36,21 +36,21 @@ export function SetAccountFromJSONTyped(
   ignoreDiscriminator: boolean
 ): SetAccount {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    acctId: !exists(json, "acctId") ? undefined : json["acctId"],
-  };
+    acctId: !exists(json, 'acctId') ? undefined : json['acctId'],
+  }
 }
 
 export function SetAccountToJSON(value?: SetAccount | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     acctId: value.acctId,
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,41 +24,41 @@ export interface AuthStatus {
    * @type {boolean}
    * @memberof AuthStatus
    */
-  authenticated?: boolean;
+  authenticated?: boolean
   /**
    * Connected to backend
    * @type {boolean}
    * @memberof AuthStatus
    */
-  connected?: boolean;
+  connected?: boolean
   /**
    * Brokerage session is competing, e.g. user is logged in to IBKR Mobile, WebTrader, TWS or other trading platforms.
    * @type {boolean}
    * @memberof AuthStatus
    */
-  competing?: boolean;
+  competing?: boolean
   /**
    * Authentication failed, why.
    * @type {string}
    * @memberof AuthStatus
    */
-  fail?: string;
+  fail?: string
   /**
    * System messages that may affect trading
    * @type {string}
    * @memberof AuthStatus
    */
-  message?: string;
+  message?: string
   /**
    * Prompt messages that may affect trading or the account
    * @type {Array<string>}
    * @memberof AuthStatus
    */
-  prompts?: Array<string>;
+  prompts?: Array<string>
 }
 
 export function AuthStatusFromJSON(json: any): AuthStatus {
-  return AuthStatusFromJSONTyped(json, false);
+  return AuthStatusFromJSONTyped(json, false)
 }
 
 export function AuthStatusFromJSONTyped(
@@ -66,26 +66,26 @@ export function AuthStatusFromJSONTyped(
   ignoreDiscriminator: boolean
 ): AuthStatus {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    authenticated: !exists(json, "authenticated")
+    authenticated: !exists(json, 'authenticated')
       ? undefined
-      : json["authenticated"],
-    connected: !exists(json, "connected") ? undefined : json["connected"],
-    competing: !exists(json, "competing") ? undefined : json["competing"],
-    fail: !exists(json, "fail") ? undefined : json["fail"],
-    message: !exists(json, "message") ? undefined : json["message"],
-    prompts: !exists(json, "prompts") ? undefined : json["prompts"],
-  };
+      : json['authenticated'],
+    connected: !exists(json, 'connected') ? undefined : json['connected'],
+    competing: !exists(json, 'competing') ? undefined : json['competing'],
+    fail: !exists(json, 'fail') ? undefined : json['fail'],
+    message: !exists(json, 'message') ? undefined : json['message'],
+    prompts: !exists(json, 'prompts') ? undefined : json['prompts'],
+  }
 }
 
 export function AuthStatusToJSON(value?: AuthStatus | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     authenticated: value.authenticated,
@@ -94,5 +94,5 @@ export function AuthStatusToJSON(value?: AuthStatus | null): any {
     fail: value.fail,
     message: value.message,
     prompts: value.prompts,
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   IbcustEntityInfoAddress,
   IbcustEntityInfoAddressFromJSON,
@@ -22,7 +22,7 @@ import {
   IbcustEntityInfoNameFromJSON,
   IbcustEntityInfoNameFromJSONTyped,
   IbcustEntityInfoNameToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -35,43 +35,43 @@ export interface IbcustEntityInfoEntities {
    * @type {boolean}
    * @memberof IbcustEntityInfoEntities
    */
-  canTrade?: boolean;
+  canTrade?: boolean
   /**
    *
    * @type {boolean}
    * @memberof IbcustEntityInfoEntities
    */
-  canSign?: boolean;
+  canSign?: boolean
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoEntities
    */
-  type?: string;
+  type?: string
   /**
    *
    * @type {IbcustEntityInfoName}
    * @memberof IbcustEntityInfoEntities
    */
-  name?: IbcustEntityInfoName;
+  name?: IbcustEntityInfoName
   /**
    *
    * @type {IbcustEntityInfoAddress}
    * @memberof IbcustEntityInfoEntities
    */
-  address?: IbcustEntityInfoAddress;
+  address?: IbcustEntityInfoAddress
   /**
    *
    * @type {Array<object>}
    * @memberof IbcustEntityInfoEntities
    */
-  identDocs?: Array<object>;
+  identDocs?: Array<object>
 }
 
 export function IbcustEntityInfoEntitiesFromJSON(
   json: any
 ): IbcustEntityInfoEntities {
-  return IbcustEntityInfoEntitiesFromJSONTyped(json, false);
+  return IbcustEntityInfoEntitiesFromJSONTyped(json, false)
 }
 
 export function IbcustEntityInfoEntitiesFromJSONTyped(
@@ -79,30 +79,30 @@ export function IbcustEntityInfoEntitiesFromJSONTyped(
   ignoreDiscriminator: boolean
 ): IbcustEntityInfoEntities {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    canTrade: !exists(json, "canTrade") ? undefined : json["canTrade"],
-    canSign: !exists(json, "canSign") ? undefined : json["canSign"],
-    type: !exists(json, "type") ? undefined : json["type"],
-    name: !exists(json, "name")
+    canTrade: !exists(json, 'canTrade') ? undefined : json['canTrade'],
+    canSign: !exists(json, 'canSign') ? undefined : json['canSign'],
+    type: !exists(json, 'type') ? undefined : json['type'],
+    name: !exists(json, 'name')
       ? undefined
-      : IbcustEntityInfoNameFromJSON(json["name"]),
-    address: !exists(json, "address")
+      : IbcustEntityInfoNameFromJSON(json['name']),
+    address: !exists(json, 'address')
       ? undefined
-      : IbcustEntityInfoAddressFromJSON(json["address"]),
-    identDocs: !exists(json, "identDocs") ? undefined : json["identDocs"],
-  };
+      : IbcustEntityInfoAddressFromJSON(json['address']),
+    identDocs: !exists(json, 'identDocs') ? undefined : json['identDocs'],
+  }
 }
 
 export function IbcustEntityInfoEntitiesToJSON(
   value?: IbcustEntityInfoEntities | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     canTrade: value.canTrade,
@@ -111,5 +111,5 @@ export function IbcustEntityInfoEntitiesToJSON(
     name: IbcustEntityInfoNameToJSON(value.name),
     address: IbcustEntityInfoAddressToJSON(value.address),
     identDocs: value.identDocs,
-  };
+  }
 }

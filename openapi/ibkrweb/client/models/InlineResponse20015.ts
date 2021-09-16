@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,41 +24,41 @@ export interface InlineResponse20015 {
    * @type {number}
    * @memberof InlineResponse20015
    */
-  requestId?: number;
+  requestId?: number
   /**
    *
    * @type {number}
    * @memberof InlineResponse20015
    */
-  orderId?: number;
+  orderId?: number
   /**
    *
    * @type {boolean}
    * @memberof InlineResponse20015
    */
-  success?: boolean;
+  success?: boolean
   /**
    *
    * @type {string}
    * @memberof InlineResponse20015
    */
-  text?: string;
+  text?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20015
    */
-  orderStatus?: string;
+  orderStatus?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20015
    */
-  failureList?: string;
+  failureList?: string
 }
 
 export function InlineResponse20015FromJSON(json: any): InlineResponse20015 {
-  return InlineResponse20015FromJSONTyped(json, false);
+  return InlineResponse20015FromJSONTyped(json, false)
 }
 
 export function InlineResponse20015FromJSONTyped(
@@ -66,30 +66,30 @@ export function InlineResponse20015FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20015 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    requestId: !exists(json, "request_id") ? undefined : json["request_id"],
-    orderId: !exists(json, "order_id") ? undefined : json["order_id"],
-    success: !exists(json, "success") ? undefined : json["success"],
-    text: !exists(json, "text") ? undefined : json["text"],
-    orderStatus: !exists(json, "order_status")
+    requestId: !exists(json, 'request_id') ? undefined : json['request_id'],
+    orderId: !exists(json, 'order_id') ? undefined : json['order_id'],
+    success: !exists(json, 'success') ? undefined : json['success'],
+    text: !exists(json, 'text') ? undefined : json['text'],
+    orderStatus: !exists(json, 'order_status')
       ? undefined
-      : json["order_status"],
-    failureList: !exists(json, "failure_list")
+      : json['order_status'],
+    failureList: !exists(json, 'failure_list')
       ? undefined
-      : json["failure_list"],
-  };
+      : json['failure_list'],
+  }
 }
 
 export function InlineResponse20015ToJSON(
   value?: InlineResponse20015 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     request_id: value.requestId,
@@ -98,5 +98,5 @@ export function InlineResponse20015ToJSON(
     text: value.text,
     order_status: value.orderStatus,
     failure_list: value.failureList,
-  };
+  }
 }

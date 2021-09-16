@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,17 +24,17 @@ export interface InlineResponse20026 {
    * @type {Array<string>}
    * @memberof InlineResponse20026
    */
-  call?: Array<string>;
+  call?: Array<string>
   /**
    *
    * @type {Array<string>}
    * @memberof InlineResponse20026
    */
-  put?: Array<string>;
+  put?: Array<string>
 }
 
 export function InlineResponse20026FromJSON(json: any): InlineResponse20026 {
-  return InlineResponse20026FromJSONTyped(json, false);
+  return InlineResponse20026FromJSONTyped(json, false)
 }
 
 export function InlineResponse20026FromJSONTyped(
@@ -42,25 +42,25 @@ export function InlineResponse20026FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20026 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    call: !exists(json, "call") ? undefined : json["call"],
-    put: !exists(json, "put") ? undefined : json["put"],
-  };
+    call: !exists(json, 'call') ? undefined : json['call'],
+    put: !exists(json, 'put') ? undefined : json['put'],
+  }
 }
 
 export function InlineResponse20026ToJSON(
   value?: InlineResponse20026 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     call: value.call,
     put: value.put,
-  };
+  }
 }

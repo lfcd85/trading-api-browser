@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   AlertRequest,
   AlertRequestFromJSON,
@@ -32,29 +32,29 @@ import {
   InlineResponse20015,
   InlineResponse20015FromJSON,
   InlineResponse20015ToJSON,
-} from "../models";
+} from '../models'
 
 export interface IserverAccountAccountIdAlertActivatePostRequest {
-  accountId: string;
-  body: InlineObject3;
+  accountId: string
+  body: InlineObject3
 }
 
 export interface IserverAccountAccountIdAlertAlertIdDeleteRequest {
-  accountId: string;
-  alertId: string;
+  accountId: string
+  alertId: string
 }
 
 export interface IserverAccountAccountIdAlertPostRequest {
-  accountId: string;
-  body: AlertRequest;
+  accountId: string
+  body: AlertRequest
 }
 
 export interface IserverAccountAccountIdAlertsGetRequest {
-  accountId: string;
+  accountId: string
 }
 
 export interface IserverAccountAlertIdGetRequest {
-  id: string;
+  id: string
 }
 
 /**
@@ -74,9 +74,9 @@ export class AlertApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdAlertActivatePost."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdAlertActivatePost.'
+      )
     }
 
     if (
@@ -84,34 +84,34 @@ export class AlertApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdAlertActivatePost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdAlertActivatePost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/:accountId/alert/activate`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject3ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20015FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -125,8 +125,8 @@ export class AlertApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdAlertActivatePostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -142,9 +142,9 @@ export class AlertApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdAlertAlertIdDelete."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdAlertAlertIdDelete.'
+      )
     }
 
     if (
@@ -152,36 +152,36 @@ export class AlertApi extends runtime.BaseAPI {
       requestParameters.alertId === undefined
     ) {
       throw new runtime.RequiredError(
-        "alertId",
-        "Required parameter requestParameters.alertId was null or undefined when calling iserverAccountAccountIdAlertAlertIdDelete."
-      );
+        'alertId',
+        'Required parameter requestParameters.alertId was null or undefined when calling iserverAccountAccountIdAlertAlertIdDelete.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/:accountId/alert/:alertId`
           .replace(
-            `{${"accountId"}}`,
+            `{${'accountId'}}`,
             encodeURIComponent(String(requestParameters.accountId))
           )
           .replace(
-            `{${"alertId"}}`,
+            `{${'alertId'}}`,
             encodeURIComponent(String(requestParameters.alertId))
           ),
-        method: "DELETE",
+        method: 'DELETE',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20015FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -195,8 +195,8 @@ export class AlertApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdAlertAlertIdDeleteRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -212,9 +212,9 @@ export class AlertApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdAlertPost."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdAlertPost.'
+      )
     }
 
     if (
@@ -222,34 +222,34 @@ export class AlertApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdAlertPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling iserverAccountAccountIdAlertPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/account/{accountId}/alert`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: AlertRequestToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20013FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -263,8 +263,8 @@ export class AlertApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdAlertPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -280,31 +280,31 @@ export class AlertApi extends runtime.BaseAPI {
       requestParameters.accountId === undefined
     ) {
       throw new runtime.RequiredError(
-        "accountId",
-        "Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdAlertsGet."
-      );
+        'accountId',
+        'Required parameter requestParameters.accountId was null or undefined when calling iserverAccountAccountIdAlertsGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/:accountId/alerts`.replace(
-          `{${"accountId"}}`,
+          `{${'accountId'}}`,
           encodeURIComponent(String(requestParameters.accountId))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20014FromJSON)
-    );
+    )
   }
 
   /**
@@ -318,8 +318,8 @@ export class AlertApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAccountIdAlertsGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -332,31 +332,31 @@ export class AlertApi extends runtime.BaseAPI {
   ): Promise<runtime.ApiResponse<AlertResponse>> {
     if (requestParameters.id === null || requestParameters.id === undefined) {
       throw new runtime.RequiredError(
-        "id",
-        "Required parameter requestParameters.id was null or undefined when calling iserverAccountAlertIdGet."
-      );
+        'id',
+        'Required parameter requestParameters.id was null or undefined when calling iserverAccountAlertIdGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/alert/:id`.replace(
-          `{${"id"}}`,
+          `{${'id'}}`,
           encodeURIComponent(String(requestParameters.id))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       AlertResponseFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -370,8 +370,8 @@ export class AlertApi extends runtime.BaseAPI {
     const response = await this.iserverAccountAlertIdGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -381,23 +381,23 @@ export class AlertApi extends runtime.BaseAPI {
   async iserverAccountMtaGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<AlertResponse>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/mta`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       AlertResponseFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -407,7 +407,7 @@ export class AlertApi extends runtime.BaseAPI {
   async iserverAccountMtaGet(
     initOverrides?: RequestInit
   ): Promise<AlertResponse> {
-    const response = await this.iserverAccountMtaGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.iserverAccountMtaGetRaw(initOverrides)
+    return await response.value()
   }
 }

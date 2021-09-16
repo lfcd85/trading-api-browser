@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,31 +24,31 @@ export interface SummaryBalanceByDateSeries {
    * @type {string}
    * @memberof SummaryBalanceByDateSeries
    */
-  id?: string;
+  id?: string
   /**
    *
    * @type {string}
    * @memberof SummaryBalanceByDateSeries
    */
-  groupId?: string;
+  groupId?: string
   /**
    *
    * @type {string}
    * @memberof SummaryBalanceByDateSeries
    */
-  name?: string;
+  name?: string
   /**
    *
    * @type {Array<Array<number>>}
    * @memberof SummaryBalanceByDateSeries
    */
-  date?: Array<Array<number>>;
+  date?: Array<Array<number>>
 }
 
 export function SummaryBalanceByDateSeriesFromJSON(
   json: any
 ): SummaryBalanceByDateSeries {
-  return SummaryBalanceByDateSeriesFromJSONTyped(json, false);
+  return SummaryBalanceByDateSeriesFromJSONTyped(json, false)
 }
 
 export function SummaryBalanceByDateSeriesFromJSONTyped(
@@ -56,29 +56,29 @@ export function SummaryBalanceByDateSeriesFromJSONTyped(
   ignoreDiscriminator: boolean
 ): SummaryBalanceByDateSeries {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    id: !exists(json, "id") ? undefined : json["id"],
-    groupId: !exists(json, "groupId") ? undefined : json["groupId"],
-    name: !exists(json, "name") ? undefined : json["name"],
-    date: !exists(json, "date") ? undefined : json["date"],
-  };
+    id: !exists(json, 'id') ? undefined : json['id'],
+    groupId: !exists(json, 'groupId') ? undefined : json['groupId'],
+    name: !exists(json, 'name') ? undefined : json['name'],
+    date: !exists(json, 'date') ? undefined : json['date'],
+  }
 }
 
 export function SummaryBalanceByDateSeriesToJSON(
   value?: SummaryBalanceByDateSeries | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     id: value.id,
     groupId: value.groupId,
     name: value.name,
     date: value.date,
-  };
+  }
 }

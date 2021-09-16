@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,13 +24,13 @@ export interface InlineObject11 {
    * @type {Array<string>}
    * @memberof InlineObject11
    */
-  acctIds?: Array<string>;
+  acctIds?: Array<string>
   /**
    * Frequency of cumulative performance data points: 'D'aily, 'M'onthly,'Q'uarterly.
    * @type {string}
    * @memberof InlineObject11
    */
-  freq?: InlineObject11FreqEnum;
+  freq?: InlineObject11FreqEnum
 }
 
 /**
@@ -38,13 +38,13 @@ export interface InlineObject11 {
  * @enum {string}
  */
 export enum InlineObject11FreqEnum {
-  D = "D",
-  M = "M",
-  Q = "Q",
+  D = 'D',
+  M = 'M',
+  Q = 'Q',
 }
 
 export function InlineObject11FromJSON(json: any): InlineObject11 {
-  return InlineObject11FromJSONTyped(json, false);
+  return InlineObject11FromJSONTyped(json, false)
 }
 
 export function InlineObject11FromJSONTyped(
@@ -52,23 +52,23 @@ export function InlineObject11FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject11 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    acctIds: !exists(json, "acctIds") ? undefined : json["acctIds"],
-    freq: !exists(json, "freq") ? undefined : json["freq"],
-  };
+    acctIds: !exists(json, 'acctIds') ? undefined : json['acctIds'],
+    freq: !exists(json, 'freq') ? undefined : json['freq'],
+  }
 }
 
 export function InlineObject11ToJSON(value?: InlineObject11 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     acctIds: value.acctIds,
     freq: value.freq,
-  };
+  }
 }

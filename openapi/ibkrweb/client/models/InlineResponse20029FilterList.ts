@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,31 +24,31 @@ export interface InlineResponse20029FilterList {
    * @type {string}
    * @memberof InlineResponse20029FilterList
    */
-  group?: string;
+  group?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20029FilterList
    */
-  displayName?: string;
+  displayName?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20029FilterList
    */
-  code?: string;
+  code?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20029FilterList
    */
-  type?: string;
+  type?: string
 }
 
 export function InlineResponse20029FilterListFromJSON(
   json: any
 ): InlineResponse20029FilterList {
-  return InlineResponse20029FilterListFromJSONTyped(json, false);
+  return InlineResponse20029FilterListFromJSONTyped(json, false)
 }
 
 export function InlineResponse20029FilterListFromJSONTyped(
@@ -56,31 +56,31 @@ export function InlineResponse20029FilterListFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20029FilterList {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    group: !exists(json, "group") ? undefined : json["group"],
-    displayName: !exists(json, "display_name")
+    group: !exists(json, 'group') ? undefined : json['group'],
+    displayName: !exists(json, 'display_name')
       ? undefined
-      : json["display_name"],
-    code: !exists(json, "code") ? undefined : json["code"],
-    type: !exists(json, "type") ? undefined : json["type"],
-  };
+      : json['display_name'],
+    code: !exists(json, 'code') ? undefined : json['code'],
+    type: !exists(json, 'type') ? undefined : json['type'],
+  }
 }
 
 export function InlineResponse20029FilterListToJSON(
   value?: InlineResponse20029FilterList | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     group: value.group,
     display_name: value.displayName,
     code: value.code,
     type: value.type,
-  };
+  }
 }

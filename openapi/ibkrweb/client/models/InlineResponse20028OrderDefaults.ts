@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   InlineResponse20028String,
   InlineResponse20028StringFromJSON,
   InlineResponse20028StringFromJSONTyped,
   InlineResponse20028StringToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,13 +31,13 @@ export interface InlineResponse20028OrderDefaults {
    * @type {Array<InlineResponse20028String>}
    * @memberof InlineResponse20028OrderDefaults
    */
-  string?: Array<InlineResponse20028String>;
+  string?: Array<InlineResponse20028String>
 }
 
 export function InlineResponse20028OrderDefaultsFromJSON(
   json: any
 ): InlineResponse20028OrderDefaults {
-  return InlineResponse20028OrderDefaultsFromJSONTyped(json, false);
+  return InlineResponse20028OrderDefaultsFromJSONTyped(json, false)
 }
 
 export function InlineResponse20028OrderDefaultsFromJSONTyped(
@@ -45,28 +45,28 @@ export function InlineResponse20028OrderDefaultsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20028OrderDefaults {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    string: !exists(json, "string")
+    string: !exists(json, 'string')
       ? undefined
-      : (json["string"] as Array<any>).map(InlineResponse20028StringFromJSON),
-  };
+      : (json['string'] as Array<any>).map(InlineResponse20028StringFromJSON),
+  }
 }
 
 export function InlineResponse20028OrderDefaultsToJSON(
   value?: InlineResponse20028OrderDefaults | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     string:
       value.string === undefined
         ? undefined
         : (value.string as Array<any>).map(InlineResponse20028StringToJSON),
-  };
+  }
 }

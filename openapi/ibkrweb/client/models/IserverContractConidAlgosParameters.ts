@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,67 +24,67 @@ export interface IserverContractConidAlgosParameters {
    * @type {string}
    * @memberof IserverContractConidAlgosParameters
    */
-  id: string;
+  id: string
   /**
    * If true a value must be entered.
    * @type {boolean}
    * @memberof IserverContractConidAlgosParameters
    */
-  required?: boolean;
+  required?: boolean
   /**
    * Descriptive name of the parameter.
    * @type {string}
    * @memberof IserverContractConidAlgosParameters
    */
-  name?: string;
+  name?: string
   /**
    * Format of the parameter.
    * @type {string}
    * @memberof IserverContractConidAlgosParameters
    */
-  valueClassName: IserverContractConidAlgosParametersValueClassNameEnum;
+  valueClassName: IserverContractConidAlgosParametersValueClassNameEnum
   /**
    * Smallest value, only applies to parameters with valueClassName=Double.
    * @type {number}
    * @memberof IserverContractConidAlgosParameters
    */
-  minValue?: number;
+  minValue?: number
   /**
    * Largest value, only applies to parameters with valueClassName=Double.
    * @type {number}
    * @memberof IserverContractConidAlgosParameters
    */
-  maxValue?: number;
+  maxValue?: number
   /**
    * User configured preset for this parameter.
    * @type {boolean}
    * @memberof IserverContractConidAlgosParameters
    */
-  defaultValue?: boolean;
+  defaultValue?: boolean
   /**
    * The list of choices
    * @type {string}
    * @memberof IserverContractConidAlgosParameters
    */
-  legalStrings?: string;
+  legalStrings?: string
   /**
    * Detailed description of the parameter.
    * @type {string}
    * @memberof IserverContractConidAlgosParameters
    */
-  description?: string;
+  description?: string
   /**
    * The order in UI, used when building dynamic UI so that more important parameters are presented first.
    * @type {number}
    * @memberof IserverContractConidAlgosParameters
    */
-  guiRank?: number;
+  guiRank?: number
   /**
    * If true, must specify parameter using market rule format. Only applies to parameters with valueClassName=Double.
    * @type {boolean}
    * @memberof IserverContractConidAlgosParameters
    */
-  priceMarketRule?: boolean;
+  priceMarketRule?: boolean
   /**
    * The rules that UI should apply to algo parameters depending on chosen order type:
    *  * MKT:speedUp:=:no - hide SpeedUp param when MKT is chosen for order type.
@@ -93,7 +93,7 @@ export interface IserverContractConidAlgosParameters {
    * @type {string}
    * @memberof IserverContractConidAlgosParameters
    */
-  enabledConditions?: IserverContractConidAlgosParametersEnabledConditionsEnum;
+  enabledConditions?: IserverContractConidAlgosParametersEnabledConditionsEnum
 }
 
 /**
@@ -101,25 +101,25 @@ export interface IserverContractConidAlgosParameters {
  * @enum {string}
  */
 export enum IserverContractConidAlgosParametersValueClassNameEnum {
-  Double = "double",
-  String = "string",
-  Time = "time",
-  Boolean = "boolean",
+  Double = 'double',
+  String = 'string',
+  Time = 'time',
+  Boolean = 'boolean',
 }
 /**
  * @export
  * @enum {string}
  */
 export enum IserverContractConidAlgosParametersEnabledConditionsEnum {
-  MkTspeedUpno = "MKT:speedUp:=:no",
-  LmTstrategyTypeempty = "LMT:strategyType:<>:empty",
-  MkTstrategyTypeMarketable = "MKT:strategyType:=:Marketable",
+  MkTspeedUpno = 'MKT:speedUp:=:no',
+  LmTstrategyTypeempty = 'LMT:strategyType:<>:empty',
+  MkTstrategyTypeMarketable = 'MKT:strategyType:=:Marketable',
 }
 
 export function IserverContractConidAlgosParametersFromJSON(
   json: any
 ): IserverContractConidAlgosParameters {
-  return IserverContractConidAlgosParametersFromJSONTyped(json, false);
+  return IserverContractConidAlgosParametersFromJSONTyped(json, false)
 }
 
 export function IserverContractConidAlgosParametersFromJSONTyped(
@@ -127,40 +127,40 @@ export function IserverContractConidAlgosParametersFromJSONTyped(
   ignoreDiscriminator: boolean
 ): IserverContractConidAlgosParameters {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    id: json["id"],
-    required: !exists(json, "required") ? undefined : json["required"],
-    name: !exists(json, "name") ? undefined : json["name"],
-    valueClassName: json["valueClassName"],
-    minValue: !exists(json, "minValue") ? undefined : json["minValue"],
-    maxValue: !exists(json, "maxValue") ? undefined : json["maxValue"],
-    defaultValue: !exists(json, "defaultValue")
+    id: json['id'],
+    required: !exists(json, 'required') ? undefined : json['required'],
+    name: !exists(json, 'name') ? undefined : json['name'],
+    valueClassName: json['valueClassName'],
+    minValue: !exists(json, 'minValue') ? undefined : json['minValue'],
+    maxValue: !exists(json, 'maxValue') ? undefined : json['maxValue'],
+    defaultValue: !exists(json, 'defaultValue')
       ? undefined
-      : json["defaultValue"],
-    legalStrings: !exists(json, "legalStrings")
+      : json['defaultValue'],
+    legalStrings: !exists(json, 'legalStrings')
       ? undefined
-      : json["legalStrings"],
-    description: !exists(json, "description") ? undefined : json["description"],
-    guiRank: !exists(json, "guiRank") ? undefined : json["guiRank"],
-    priceMarketRule: !exists(json, "priceMarketRule")
+      : json['legalStrings'],
+    description: !exists(json, 'description') ? undefined : json['description'],
+    guiRank: !exists(json, 'guiRank') ? undefined : json['guiRank'],
+    priceMarketRule: !exists(json, 'priceMarketRule')
       ? undefined
-      : json["priceMarketRule"],
-    enabledConditions: !exists(json, "enabledConditions")
+      : json['priceMarketRule'],
+    enabledConditions: !exists(json, 'enabledConditions')
       ? undefined
-      : json["enabledConditions"],
-  };
+      : json['enabledConditions'],
+  }
 }
 
 export function IserverContractConidAlgosParametersToJSON(
   value?: IserverContractConidAlgosParameters | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     id: value.id,
@@ -175,5 +175,5 @@ export function IserverContractConidAlgosParametersToJSON(
     guiRank: value.guiRank,
     priceMarketRule: value.priceMarketRule,
     enabledConditions: value.enabledConditions,
-  };
+  }
 }

@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   TransactionsTransactions,
   TransactionsTransactionsFromJSON,
   TransactionsTransactionsFromJSONTyped,
   TransactionsTransactionsToJSON,
-} from "./";
+} from './'
 
 /**
  * account transactions
@@ -31,41 +31,41 @@ export interface Transactions {
    * @type {string}
    * @memberof Transactions
    */
-  id?: string;
+  id?: string
   /**
    * same as request
    * @type {string}
    * @memberof Transactions
    */
-  currency?: string;
+  currency?: string
   /**
    * Indicates whether current day and realtime data is included in the result
    * @type {boolean}
    * @memberof Transactions
    */
-  includesRealTime?: boolean;
+  includesRealTime?: boolean
   /**
    * Period start date. Epoch time, GMT
    * @type {number}
    * @memberof Transactions
    */
-  from?: number;
+  from?: number
   /**
    * Period end date. Epoch time, GMT
    * @type {number}
    * @memberof Transactions
    */
-  to?: number;
+  to?: number
   /**
    * Sorted by date descending
    * @type {Array<TransactionsTransactions>}
    * @memberof Transactions
    */
-  transactions?: Array<TransactionsTransactions>;
+  transactions?: Array<TransactionsTransactions>
 }
 
 export function TransactionsFromJSON(json: any): Transactions {
-  return TransactionsFromJSONTyped(json, false);
+  return TransactionsFromJSONTyped(json, false)
 }
 
 export function TransactionsFromJSONTyped(
@@ -73,30 +73,30 @@ export function TransactionsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): Transactions {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    id: !exists(json, "id") ? undefined : json["id"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    includesRealTime: !exists(json, "includesRealTime")
+    id: !exists(json, 'id') ? undefined : json['id'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    includesRealTime: !exists(json, 'includesRealTime')
       ? undefined
-      : json["includesRealTime"],
-    from: !exists(json, "from") ? undefined : json["from"],
-    to: !exists(json, "to") ? undefined : json["to"],
-    transactions: !exists(json, "transactions")
+      : json['includesRealTime'],
+    from: !exists(json, 'from') ? undefined : json['from'],
+    to: !exists(json, 'to') ? undefined : json['to'],
+    transactions: !exists(json, 'transactions')
       ? undefined
-      : (json["transactions"] as Array<any>).map(
+      : (json['transactions'] as Array<any>).map(
           TransactionsTransactionsFromJSON
         ),
-  };
+  }
 }
 
 export function TransactionsToJSON(value?: Transactions | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     id: value.id,
@@ -110,5 +110,5 @@ export function TransactionsToJSON(value?: Transactions | null): any {
         : (value.transactions as Array<any>).map(
             TransactionsTransactionsToJSON
           ),
-  };
+  }
 }

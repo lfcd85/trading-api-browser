@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   InlineObject11,
   InlineObject11FromJSON,
@@ -32,18 +32,18 @@ import {
   Transactions,
   TransactionsFromJSON,
   TransactionsToJSON,
-} from "../models";
+} from '../models'
 
 export interface PaPerformancePostRequest {
-  body: InlineObject11;
+  body: InlineObject11
 }
 
 export interface PaSummaryPostRequest {
-  body: InlineObject12;
+  body: InlineObject12
 }
 
 export interface PaTransactionsPostRequest {
-  body: InlineObject13;
+  body: InlineObject13
 }
 
 /**
@@ -63,31 +63,31 @@ export class PortfolioAnalystApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling paPerformancePost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling paPerformancePost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/pa/performance`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject11ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       PerformanceFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -101,8 +101,8 @@ export class PortfolioAnalystApi extends runtime.BaseAPI {
     const response = await this.paPerformancePostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -118,31 +118,31 @@ export class PortfolioAnalystApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling paSummaryPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling paSummaryPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/pa/summary`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject12ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       SummaryFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -156,8 +156,8 @@ export class PortfolioAnalystApi extends runtime.BaseAPI {
     const response = await this.paSummaryPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -173,31 +173,31 @@ export class PortfolioAnalystApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling paTransactionsPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling paTransactionsPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/pa/transactions`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject13ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       TransactionsFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -211,7 +211,7 @@ export class PortfolioAnalystApi extends runtime.BaseAPI {
     const response = await this.paTransactionsPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 }

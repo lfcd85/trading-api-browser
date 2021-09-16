@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,11 +24,11 @@ export interface InlineObject6 {
    * @type {boolean}
    * @memberof InlineObject6
    */
-  confirmed?: boolean;
+  confirmed?: boolean
 }
 
 export function InlineObject6FromJSON(json: any): InlineObject6 {
-  return InlineObject6FromJSONTyped(json, false);
+  return InlineObject6FromJSONTyped(json, false)
 }
 
 export function InlineObject6FromJSONTyped(
@@ -36,21 +36,21 @@ export function InlineObject6FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject6 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    confirmed: !exists(json, "confirmed") ? undefined : json["confirmed"],
-  };
+    confirmed: !exists(json, 'confirmed') ? undefined : json['confirmed'],
+  }
 }
 
 export function InlineObject6ToJSON(value?: InlineObject6 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     confirmed: value.confirmed,
-  };
+  }
 }

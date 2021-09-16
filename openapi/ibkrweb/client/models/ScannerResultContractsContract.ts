@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,25 +24,25 @@ export interface ScannerResultContractsContract {
    * @type {string}
    * @memberof ScannerResultContractsContract
    */
-  inScanTime?: string;
+  inScanTime?: string
   /**
    *
    * @type {number}
    * @memberof ScannerResultContractsContract
    */
-  distance?: number;
+  distance?: number
   /**
    *
    * @type {number}
    * @memberof ScannerResultContractsContract
    */
-  contractID?: number;
+  contractID?: number
 }
 
 export function ScannerResultContractsContractFromJSON(
   json: any
 ): ScannerResultContractsContract {
-  return ScannerResultContractsContractFromJSONTyped(json, false);
+  return ScannerResultContractsContractFromJSONTyped(json, false)
 }
 
 export function ScannerResultContractsContractFromJSONTyped(
@@ -50,27 +50,27 @@ export function ScannerResultContractsContractFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerResultContractsContract {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    inScanTime: !exists(json, "inScanTime") ? undefined : json["inScanTime"],
-    distance: !exists(json, "distance") ? undefined : json["distance"],
-    contractID: !exists(json, "contractID") ? undefined : json["contractID"],
-  };
+    inScanTime: !exists(json, 'inScanTime') ? undefined : json['inScanTime'],
+    distance: !exists(json, 'distance') ? undefined : json['distance'],
+    contractID: !exists(json, 'contractID') ? undefined : json['contractID'],
+  }
 }
 
 export function ScannerResultContractsContractToJSON(
   value?: ScannerResultContractsContract | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     inScanTime: value.inScanTime,
     distance: value.distance,
     contractID: value.contractID,
-  };
+  }
 }

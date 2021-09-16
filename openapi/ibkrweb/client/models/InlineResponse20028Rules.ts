@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   InlineResponse20028CqtTypes,
   InlineResponse20028CqtTypesFromJSON,
@@ -42,7 +42,7 @@ import {
   InlineResponse20028TifTypesFromJSON,
   InlineResponse20028TifTypesFromJSONTyped,
   InlineResponse20028TifTypesToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -55,157 +55,157 @@ export interface InlineResponse20028Rules {
    * @type {boolean}
    * @memberof InlineResponse20028Rules
    */
-  algoEligible?: boolean;
+  algoEligible?: boolean
   /**
    *
    * @type {string}
    * @memberof InlineResponse20028Rules
    */
-  error?: string;
+  error?: string
   /**
    *
    * @type {Array<InlineResponse20028OrderTypes>}
    * @memberof InlineResponse20028Rules
    */
-  orderTypes?: Array<InlineResponse20028OrderTypes>;
+  orderTypes?: Array<InlineResponse20028OrderTypes>
   /**
    *
    * @type {Array<InlineResponse20028IbalgoTypes>}
    * @memberof InlineResponse20028Rules
    */
-  ibalgoTypes?: Array<InlineResponse20028IbalgoTypes>;
+  ibalgoTypes?: Array<InlineResponse20028IbalgoTypes>
   /**
    *
    * @type {Array<InlineResponse20028FraqTypes>}
    * @memberof InlineResponse20028Rules
    */
-  fraqTypes?: Array<InlineResponse20028FraqTypes>;
+  fraqTypes?: Array<InlineResponse20028FraqTypes>
   /**
    *
    * @type {Array<InlineResponse20028CqtTypes>}
    * @memberof InlineResponse20028Rules
    */
-  cqtTypes?: Array<InlineResponse20028CqtTypes>;
+  cqtTypes?: Array<InlineResponse20028CqtTypes>
   /**
    * If object returned will provide the defaults based on user settings
    * @type {Array<InlineResponse20028OrderDefaults>}
    * @memberof InlineResponse20028Rules
    */
-  orderDefaults?: Array<InlineResponse20028OrderDefaults>;
+  orderDefaults?: Array<InlineResponse20028OrderDefaults>
   /**
    *
    * @type {Array<InlineResponse20028OrderTypesOutside>}
    * @memberof InlineResponse20028Rules
    */
-  orderTypesOutside?: Array<InlineResponse20028OrderTypesOutside>;
+  orderTypesOutside?: Array<InlineResponse20028OrderTypesOutside>
   /**
    * Default quantity
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  defaultSize?: number;
+  defaultSize?: number
   /**
    * cash value
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  cashSize?: number;
+  cashSize?: number
   /**
    * increment quantity value
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  sizeIncrement?: number;
+  sizeIncrement?: number
   /**
    *
    * @type {Array<InlineResponse20028TifTypes>}
    * @memberof InlineResponse20028Rules
    */
-  tifTypes?: Array<InlineResponse20028TifTypes>;
+  tifTypes?: Array<InlineResponse20028TifTypes>
   /**
    * Default time in force value
    * @type {string}
    * @memberof InlineResponse20028Rules
    */
-  defaultTIF?: string;
+  defaultTIF?: string
   /**
    * Limit price
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  limitPrice?: number;
+  limitPrice?: number
   /**
    * Stop price
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  stopprice?: number;
+  stopprice?: number
   /**
    * Order origin designation for US securities options and Options Clearing Corporation
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  orderOrigination?: number;
+  orderOrigination?: number
   /**
    * order preview required
    * @type {boolean}
    * @memberof InlineResponse20028Rules
    */
-  preview?: boolean;
+  preview?: boolean
   /**
    *
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  displaySize?: number;
+  displaySize?: number
   /**
    * decimal places for fractional order size
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  fraqInt?: number;
+  fraqInt?: number
   /**
    * Cash currency for the contract
    * @type {string}
    * @memberof InlineResponse20028Rules
    */
-  cashCcy?: string;
+  cashCcy?: string
   /**
    * Increment value for cash quantity
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  cashQtyIncr?: number;
+  cashQtyIncr?: number
   /**
    * Price Magnifier
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  priceMagnifier?: number;
+  priceMagnifier?: number
   /**
    * trading negative price support
    * @type {boolean}
    * @memberof InlineResponse20028Rules
    */
-  negativeCapable?: boolean;
+  negativeCapable?: boolean
   /**
    * Price increment value
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  increment?: number;
+  increment?: number
   /**
    * Number of digits for price increment
    * @type {number}
    * @memberof InlineResponse20028Rules
    */
-  incrementDigits?: number;
+  incrementDigits?: number
 }
 
 export function InlineResponse20028RulesFromJSON(
   json: any
 ): InlineResponse20028Rules {
-  return InlineResponse20028RulesFromJSONTyped(json, false);
+  return InlineResponse20028RulesFromJSONTyped(json, false)
 }
 
 export function InlineResponse20028RulesFromJSONTyped(
@@ -213,85 +213,85 @@ export function InlineResponse20028RulesFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20028Rules {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    algoEligible: !exists(json, "algoEligible")
+    algoEligible: !exists(json, 'algoEligible')
       ? undefined
-      : json["algoEligible"],
-    error: !exists(json, "error") ? undefined : json["error"],
-    orderTypes: !exists(json, "orderTypes")
+      : json['algoEligible'],
+    error: !exists(json, 'error') ? undefined : json['error'],
+    orderTypes: !exists(json, 'orderTypes')
       ? undefined
-      : (json["orderTypes"] as Array<any>).map(
+      : (json['orderTypes'] as Array<any>).map(
           InlineResponse20028OrderTypesFromJSON
         ),
-    ibalgoTypes: !exists(json, "ibalgoTypes")
+    ibalgoTypes: !exists(json, 'ibalgoTypes')
       ? undefined
-      : (json["ibalgoTypes"] as Array<any>).map(
+      : (json['ibalgoTypes'] as Array<any>).map(
           InlineResponse20028IbalgoTypesFromJSON
         ),
-    fraqTypes: !exists(json, "fraqTypes")
+    fraqTypes: !exists(json, 'fraqTypes')
       ? undefined
-      : (json["fraqTypes"] as Array<any>).map(
+      : (json['fraqTypes'] as Array<any>).map(
           InlineResponse20028FraqTypesFromJSON
         ),
-    cqtTypes: !exists(json, "cqtTypes")
+    cqtTypes: !exists(json, 'cqtTypes')
       ? undefined
-      : (json["cqtTypes"] as Array<any>).map(
+      : (json['cqtTypes'] as Array<any>).map(
           InlineResponse20028CqtTypesFromJSON
         ),
-    orderDefaults: !exists(json, "orderDefaults")
+    orderDefaults: !exists(json, 'orderDefaults')
       ? undefined
-      : (json["orderDefaults"] as Array<any>).map(
+      : (json['orderDefaults'] as Array<any>).map(
           InlineResponse20028OrderDefaultsFromJSON
         ),
-    orderTypesOutside: !exists(json, "orderTypesOutside")
+    orderTypesOutside: !exists(json, 'orderTypesOutside')
       ? undefined
-      : (json["orderTypesOutside"] as Array<any>).map(
+      : (json['orderTypesOutside'] as Array<any>).map(
           InlineResponse20028OrderTypesOutsideFromJSON
         ),
-    defaultSize: !exists(json, "defaultSize") ? undefined : json["defaultSize"],
-    cashSize: !exists(json, "cashSize") ? undefined : json["cashSize"],
-    sizeIncrement: !exists(json, "sizeIncrement")
+    defaultSize: !exists(json, 'defaultSize') ? undefined : json['defaultSize'],
+    cashSize: !exists(json, 'cashSize') ? undefined : json['cashSize'],
+    sizeIncrement: !exists(json, 'sizeIncrement')
       ? undefined
-      : json["sizeIncrement"],
-    tifTypes: !exists(json, "tifTypes")
+      : json['sizeIncrement'],
+    tifTypes: !exists(json, 'tifTypes')
       ? undefined
-      : (json["tifTypes"] as Array<any>).map(
+      : (json['tifTypes'] as Array<any>).map(
           InlineResponse20028TifTypesFromJSON
         ),
-    defaultTIF: !exists(json, "defaultTIF") ? undefined : json["defaultTIF"],
-    limitPrice: !exists(json, "limitPrice") ? undefined : json["limitPrice"],
-    stopprice: !exists(json, "stopprice") ? undefined : json["stopprice"],
-    orderOrigination: !exists(json, "orderOrigination")
+    defaultTIF: !exists(json, 'defaultTIF') ? undefined : json['defaultTIF'],
+    limitPrice: !exists(json, 'limitPrice') ? undefined : json['limitPrice'],
+    stopprice: !exists(json, 'stopprice') ? undefined : json['stopprice'],
+    orderOrigination: !exists(json, 'orderOrigination')
       ? undefined
-      : json["orderOrigination"],
-    preview: !exists(json, "preview") ? undefined : json["preview"],
-    displaySize: !exists(json, "displaySize") ? undefined : json["displaySize"],
-    fraqInt: !exists(json, "fraqInt") ? undefined : json["fraqInt"],
-    cashCcy: !exists(json, "cashCcy") ? undefined : json["cashCcy"],
-    cashQtyIncr: !exists(json, "cashQtyIncr") ? undefined : json["cashQtyIncr"],
-    priceMagnifier: !exists(json, "priceMagnifier")
+      : json['orderOrigination'],
+    preview: !exists(json, 'preview') ? undefined : json['preview'],
+    displaySize: !exists(json, 'displaySize') ? undefined : json['displaySize'],
+    fraqInt: !exists(json, 'fraqInt') ? undefined : json['fraqInt'],
+    cashCcy: !exists(json, 'cashCcy') ? undefined : json['cashCcy'],
+    cashQtyIncr: !exists(json, 'cashQtyIncr') ? undefined : json['cashQtyIncr'],
+    priceMagnifier: !exists(json, 'priceMagnifier')
       ? undefined
-      : json["priceMagnifier"],
-    negativeCapable: !exists(json, "negativeCapable")
+      : json['priceMagnifier'],
+    negativeCapable: !exists(json, 'negativeCapable')
       ? undefined
-      : json["negativeCapable"],
-    increment: !exists(json, "increment") ? undefined : json["increment"],
-    incrementDigits: !exists(json, "incrementDigits")
+      : json['negativeCapable'],
+    increment: !exists(json, 'increment') ? undefined : json['increment'],
+    incrementDigits: !exists(json, 'incrementDigits')
       ? undefined
-      : json["incrementDigits"],
-  };
+      : json['incrementDigits'],
+  }
 }
 
 export function InlineResponse20028RulesToJSON(
   value?: InlineResponse20028Rules | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     algoEligible: value.algoEligible,
@@ -350,5 +350,5 @@ export function InlineResponse20028RulesToJSON(
     negativeCapable: value.negativeCapable,
     increment: value.increment,
     incrementDigits: value.incrementDigits,
-  };
+  }
 }

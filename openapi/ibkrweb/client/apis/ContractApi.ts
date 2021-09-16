@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   Contract,
   ContractFromJSON,
@@ -47,61 +47,61 @@ import {
   InlineResponse429,
   InlineResponse429FromJSON,
   InlineResponse429ToJSON,
-} from "../models";
+} from '../models'
 
 export interface IserverContractConidAlgosGetRequest {
-  conid: string;
-  algos?: string;
-  addDescription?: string;
-  addParams?: string;
+  conid: string
+  algos?: string
+  addDescription?: string
+  addParams?: string
 }
 
 export interface IserverContractConidInfoAndRulesGetRequest {
-  conid: string;
-  isBuy: boolean;
+  conid: string
+  isBuy: boolean
 }
 
 export interface IserverContractConidInfoGetRequest {
-  conid: string;
+  conid: string
 }
 
 export interface IserverSecdefInfoGetRequest {
-  conid: string;
-  sectype: string;
-  month?: string;
-  exchange?: string;
-  strike?: string;
-  right?: string;
+  conid: string
+  sectype: string
+  month?: string
+  exchange?: string
+  strike?: string
+  right?: string
 }
 
 export interface IserverSecdefSearchPostRequest {
-  symbol: InlineObject8;
+  symbol: InlineObject8
 }
 
 export interface IserverSecdefStrikesGetRequest {
-  conid: string;
-  sectype: string;
-  month: string;
-  exchange?: string;
+  conid: string
+  sectype: string
+  month: string
+  exchange?: string
 }
 
 export interface TrsrvFuturesGetRequest {
-  symbols: string;
+  symbols: string
 }
 
 export interface TrsrvSecdefPostRequest {
-  body: InlineObject9;
+  body: InlineObject9
 }
 
 export interface TrsrvSecdefScheduleGetRequest {
-  assetClass: string;
-  symbol: string;
-  exchange?: string;
-  exchangeFilter?: string;
+  assetClass: string
+  symbol: string
+  exchange?: string
+  exchangeFilter?: string
 }
 
 export interface TrsrvStocksGetRequest {
-  symbols: string;
+  symbols: string
 }
 
 /**
@@ -121,43 +121,43 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.conid === undefined
     ) {
       throw new runtime.RequiredError(
-        "conid",
-        "Required parameter requestParameters.conid was null or undefined when calling iserverContractConidAlgosGet."
-      );
+        'conid',
+        'Required parameter requestParameters.conid was null or undefined when calling iserverContractConidAlgosGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.algos !== undefined) {
-      queryParameters["algos"] = requestParameters.algos;
+      queryParameters['algos'] = requestParameters.algos
     }
 
     if (requestParameters.addDescription !== undefined) {
-      queryParameters["addDescription"] = requestParameters.addDescription;
+      queryParameters['addDescription'] = requestParameters.addDescription
     }
 
     if (requestParameters.addParams !== undefined) {
-      queryParameters["addParams"] = requestParameters.addParams;
+      queryParameters['addParams'] = requestParameters.addParams
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/contract/{conid}/algos`.replace(
-          `{${"conid"}}`,
+          `{${'conid'}}`,
           encodeURIComponent(String(requestParameters.conid))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20027FromJSON)
-    );
+    )
   }
 
   /**
@@ -171,8 +171,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.iserverContractConidAlgosGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -188,9 +188,9 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.conid === undefined
     ) {
       throw new runtime.RequiredError(
-        "conid",
-        "Required parameter requestParameters.conid was null or undefined when calling iserverContractConidInfoAndRulesGet."
-      );
+        'conid',
+        'Required parameter requestParameters.conid was null or undefined when calling iserverContractConidInfoAndRulesGet.'
+      )
     }
 
     if (
@@ -198,35 +198,35 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.isBuy === undefined
     ) {
       throw new runtime.RequiredError(
-        "isBuy",
-        "Required parameter requestParameters.isBuy was null or undefined when calling iserverContractConidInfoAndRulesGet."
-      );
+        'isBuy',
+        'Required parameter requestParameters.isBuy was null or undefined when calling iserverContractConidInfoAndRulesGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.isBuy !== undefined) {
-      queryParameters["isBuy"] = requestParameters.isBuy;
+      queryParameters['isBuy'] = requestParameters.isBuy
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/contract/{conid}/info-and-rules`.replace(
-          `{${"conid"}}`,
+          `{${'conid'}}`,
           encodeURIComponent(String(requestParameters.conid))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20028FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -240,8 +240,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.iserverContractConidInfoAndRulesGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -257,31 +257,31 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.conid === undefined
     ) {
       throw new runtime.RequiredError(
-        "conid",
-        "Required parameter requestParameters.conid was null or undefined when calling iserverContractConidInfoGet."
-      );
+        'conid',
+        'Required parameter requestParameters.conid was null or undefined when calling iserverContractConidInfoGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/contract/{conid}/info`.replace(
-          `{${"conid"}}`,
+          `{${'conid'}}`,
           encodeURIComponent(String(requestParameters.conid))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       ContractFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -295,8 +295,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.iserverContractConidInfoGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -312,9 +312,9 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.conid === undefined
     ) {
       throw new runtime.RequiredError(
-        "conid",
-        "Required parameter requestParameters.conid was null or undefined when calling iserverSecdefInfoGet."
-      );
+        'conid',
+        'Required parameter requestParameters.conid was null or undefined when calling iserverSecdefInfoGet.'
+      )
     }
 
     if (
@@ -322,50 +322,50 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.sectype === undefined
     ) {
       throw new runtime.RequiredError(
-        "sectype",
-        "Required parameter requestParameters.sectype was null or undefined when calling iserverSecdefInfoGet."
-      );
+        'sectype',
+        'Required parameter requestParameters.sectype was null or undefined when calling iserverSecdefInfoGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.conid !== undefined) {
-      queryParameters["conid"] = requestParameters.conid;
+      queryParameters['conid'] = requestParameters.conid
     }
 
     if (requestParameters.sectype !== undefined) {
-      queryParameters["sectype"] = requestParameters.sectype;
+      queryParameters['sectype'] = requestParameters.sectype
     }
 
     if (requestParameters.month !== undefined) {
-      queryParameters["month"] = requestParameters.month;
+      queryParameters['month'] = requestParameters.month
     }
 
     if (requestParameters.exchange !== undefined) {
-      queryParameters["exchange"] = requestParameters.exchange;
+      queryParameters['exchange'] = requestParameters.exchange
     }
 
     if (requestParameters.strike !== undefined) {
-      queryParameters["strike"] = requestParameters.strike;
+      queryParameters['strike'] = requestParameters.strike
     }
 
     if (requestParameters.right !== undefined) {
-      queryParameters["right"] = requestParameters.right;
+      queryParameters['right'] = requestParameters.right
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/secdef/info`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
-    return new runtime.JSONApiResponse<any>(response);
+    return new runtime.JSONApiResponse<any>(response)
   }
 
   /**
@@ -379,8 +379,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.iserverSecdefInfoGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -396,31 +396,31 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.symbol === undefined
     ) {
       throw new runtime.RequiredError(
-        "symbol",
-        "Required parameter requestParameters.symbol was null or undefined when calling iserverSecdefSearchPost."
-      );
+        'symbol',
+        'Required parameter requestParameters.symbol was null or undefined when calling iserverSecdefSearchPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/iserver/secdef/search`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject8ToJSON(requestParameters.symbol),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20025FromJSON)
-    );
+    )
   }
 
   /**
@@ -434,8 +434,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.iserverSecdefSearchPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -451,9 +451,9 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.conid === undefined
     ) {
       throw new runtime.RequiredError(
-        "conid",
-        "Required parameter requestParameters.conid was null or undefined when calling iserverSecdefStrikesGet."
-      );
+        'conid',
+        'Required parameter requestParameters.conid was null or undefined when calling iserverSecdefStrikesGet.'
+      )
     }
 
     if (
@@ -461,9 +461,9 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.sectype === undefined
     ) {
       throw new runtime.RequiredError(
-        "sectype",
-        "Required parameter requestParameters.sectype was null or undefined when calling iserverSecdefStrikesGet."
-      );
+        'sectype',
+        'Required parameter requestParameters.sectype was null or undefined when calling iserverSecdefStrikesGet.'
+      )
     }
 
     if (
@@ -471,44 +471,44 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.month === undefined
     ) {
       throw new runtime.RequiredError(
-        "month",
-        "Required parameter requestParameters.month was null or undefined when calling iserverSecdefStrikesGet."
-      );
+        'month',
+        'Required parameter requestParameters.month was null or undefined when calling iserverSecdefStrikesGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.conid !== undefined) {
-      queryParameters["conid"] = requestParameters.conid;
+      queryParameters['conid'] = requestParameters.conid
     }
 
     if (requestParameters.sectype !== undefined) {
-      queryParameters["sectype"] = requestParameters.sectype;
+      queryParameters['sectype'] = requestParameters.sectype
     }
 
     if (requestParameters.month !== undefined) {
-      queryParameters["month"] = requestParameters.month;
+      queryParameters['month'] = requestParameters.month
     }
 
     if (requestParameters.exchange !== undefined) {
-      queryParameters["exchange"] = requestParameters.exchange;
+      queryParameters['exchange'] = requestParameters.exchange
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/secdef/strikes`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20026FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -522,8 +522,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.iserverSecdefStrikesGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -539,32 +539,32 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.symbols === undefined
     ) {
       throw new runtime.RequiredError(
-        "symbols",
-        "Required parameter requestParameters.symbols was null or undefined when calling trsrvFuturesGet."
-      );
+        'symbols',
+        'Required parameter requestParameters.symbols was null or undefined when calling trsrvFuturesGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.symbols !== undefined) {
-      queryParameters["symbols"] = requestParameters.symbols;
+      queryParameters['symbols'] = requestParameters.symbols
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/trsrv/futures`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20033FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -578,8 +578,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.trsrvFuturesGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -595,29 +595,29 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling trsrvSecdefPost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling trsrvSecdefPost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/trsrv/secdef`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject9ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
-    return new runtime.JSONApiResponse<any>(response);
+    return new runtime.JSONApiResponse<any>(response)
   }
 
   /**
@@ -631,8 +631,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.trsrvSecdefPostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -648,9 +648,9 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.assetClass === undefined
     ) {
       throw new runtime.RequiredError(
-        "assetClass",
-        "Required parameter requestParameters.assetClass was null or undefined when calling trsrvSecdefScheduleGet."
-      );
+        'assetClass',
+        'Required parameter requestParameters.assetClass was null or undefined when calling trsrvSecdefScheduleGet.'
+      )
     }
 
     if (
@@ -658,44 +658,44 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.symbol === undefined
     ) {
       throw new runtime.RequiredError(
-        "symbol",
-        "Required parameter requestParameters.symbol was null or undefined when calling trsrvSecdefScheduleGet."
-      );
+        'symbol',
+        'Required parameter requestParameters.symbol was null or undefined when calling trsrvSecdefScheduleGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.assetClass !== undefined) {
-      queryParameters["assetClass"] = requestParameters.assetClass;
+      queryParameters['assetClass'] = requestParameters.assetClass
     }
 
     if (requestParameters.symbol !== undefined) {
-      queryParameters["symbol"] = requestParameters.symbol;
+      queryParameters['symbol'] = requestParameters.symbol
     }
 
     if (requestParameters.exchange !== undefined) {
-      queryParameters["exchange"] = requestParameters.exchange;
+      queryParameters['exchange'] = requestParameters.exchange
     }
 
     if (requestParameters.exchangeFilter !== undefined) {
-      queryParameters["exchangeFilter"] = requestParameters.exchangeFilter;
+      queryParameters['exchangeFilter'] = requestParameters.exchangeFilter
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/trsrv/secdef/schedule`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20032FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -709,8 +709,8 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.trsrvSecdefScheduleGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -726,32 +726,32 @@ export class ContractApi extends runtime.BaseAPI {
       requestParameters.symbols === undefined
     ) {
       throw new runtime.RequiredError(
-        "symbols",
-        "Required parameter requestParameters.symbols was null or undefined when calling trsrvStocksGet."
-      );
+        'symbols',
+        'Required parameter requestParameters.symbols was null or undefined when calling trsrvStocksGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.symbols !== undefined) {
-      queryParameters["symbols"] = requestParameters.symbols;
+      queryParameters['symbols'] = requestParameters.symbols
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/trsrv/stocks`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20034FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -765,7 +765,7 @@ export class ContractApi extends runtime.BaseAPI {
     const response = await this.trsrvStocksGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 }

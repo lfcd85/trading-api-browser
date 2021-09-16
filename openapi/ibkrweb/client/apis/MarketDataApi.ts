@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   HistoryData,
   HistoryDataFromJSON,
@@ -35,24 +35,24 @@ import {
   SystemError,
   SystemErrorFromJSON,
   SystemErrorToJSON,
-} from "../models";
+} from '../models'
 
 export interface IserverMarketdataConidUnsubscribeGetRequest {
-  conid: string;
+  conid: string
 }
 
 export interface IserverMarketdataHistoryGetRequest {
-  conid: string;
-  period: string;
-  exchange?: string;
-  bar?: string;
-  outsideRth?: boolean;
+  conid: string
+  period: string
+  exchange?: string
+  bar?: string
+  outsideRth?: boolean
 }
 
 export interface IserverMarketdataSnapshotGetRequest {
-  conids: string;
-  since?: number;
-  fields?: string;
+  conids: string
+  since?: number
+  fields?: string
 }
 
 /**
@@ -72,31 +72,31 @@ export class MarketDataApi extends runtime.BaseAPI {
       requestParameters.conid === undefined
     ) {
       throw new runtime.RequiredError(
-        "conid",
-        "Required parameter requestParameters.conid was null or undefined when calling iserverMarketdataConidUnsubscribeGet."
-      );
+        'conid',
+        'Required parameter requestParameters.conid was null or undefined when calling iserverMarketdataConidUnsubscribeGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/marketdata/{conid}/unsubscribe`.replace(
-          `{${"conid"}}`,
+          `{${'conid'}}`,
           encodeURIComponent(String(requestParameters.conid))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20023FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -110,8 +110,8 @@ export class MarketDataApi extends runtime.BaseAPI {
     const response = await this.iserverMarketdataConidUnsubscribeGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -127,9 +127,9 @@ export class MarketDataApi extends runtime.BaseAPI {
       requestParameters.conid === undefined
     ) {
       throw new runtime.RequiredError(
-        "conid",
-        "Required parameter requestParameters.conid was null or undefined when calling iserverMarketdataHistoryGet."
-      );
+        'conid',
+        'Required parameter requestParameters.conid was null or undefined when calling iserverMarketdataHistoryGet.'
+      )
     }
 
     if (
@@ -137,48 +137,48 @@ export class MarketDataApi extends runtime.BaseAPI {
       requestParameters.period === undefined
     ) {
       throw new runtime.RequiredError(
-        "period",
-        "Required parameter requestParameters.period was null or undefined when calling iserverMarketdataHistoryGet."
-      );
+        'period',
+        'Required parameter requestParameters.period was null or undefined when calling iserverMarketdataHistoryGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.conid !== undefined) {
-      queryParameters["conid"] = requestParameters.conid;
+      queryParameters['conid'] = requestParameters.conid
     }
 
     if (requestParameters.exchange !== undefined) {
-      queryParameters["exchange"] = requestParameters.exchange;
+      queryParameters['exchange'] = requestParameters.exchange
     }
 
     if (requestParameters.period !== undefined) {
-      queryParameters["period"] = requestParameters.period;
+      queryParameters['period'] = requestParameters.period
     }
 
     if (requestParameters.bar !== undefined) {
-      queryParameters["bar"] = requestParameters.bar;
+      queryParameters['bar'] = requestParameters.bar
     }
 
     if (requestParameters.outsideRth !== undefined) {
-      queryParameters["outsideRth"] = requestParameters.outsideRth;
+      queryParameters['outsideRth'] = requestParameters.outsideRth
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/marketdata/history`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       HistoryDataFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -192,8 +192,8 @@ export class MarketDataApi extends runtime.BaseAPI {
     const response = await this.iserverMarketdataHistoryGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -209,40 +209,40 @@ export class MarketDataApi extends runtime.BaseAPI {
       requestParameters.conids === undefined
     ) {
       throw new runtime.RequiredError(
-        "conids",
-        "Required parameter requestParameters.conids was null or undefined when calling iserverMarketdataSnapshotGet."
-      );
+        'conids',
+        'Required parameter requestParameters.conids was null or undefined when calling iserverMarketdataSnapshotGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.conids !== undefined) {
-      queryParameters["conids"] = requestParameters.conids;
+      queryParameters['conids'] = requestParameters.conids
     }
 
     if (requestParameters.since !== undefined) {
-      queryParameters["since"] = requestParameters.since;
+      queryParameters['since'] = requestParameters.since
     }
 
     if (requestParameters.fields !== undefined) {
-      queryParameters["fields"] = requestParameters.fields;
+      queryParameters['fields'] = requestParameters.fields
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/marketdata/snapshot`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse20022FromJSON)
-    );
+    )
   }
 
   /**
@@ -256,8 +256,8 @@ export class MarketDataApi extends runtime.BaseAPI {
     const response = await this.iserverMarketdataSnapshotGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -267,23 +267,23 @@ export class MarketDataApi extends runtime.BaseAPI {
   async iserverMarketdataUnsubscribeallGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse20024>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/marketdata/unsubscribeall`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20024FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -295,7 +295,7 @@ export class MarketDataApi extends runtime.BaseAPI {
   ): Promise<InlineResponse20024> {
     const response = await this.iserverMarketdataUnsubscribeallGetRaw(
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 }

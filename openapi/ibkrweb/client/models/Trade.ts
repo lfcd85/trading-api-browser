@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,13 +24,13 @@ export interface Trade {
    * @type {string}
    * @memberof Trade
    */
-  executionId?: string;
+  executionId?: string
   /**
    * Underlying Symbol
    * @type {string}
    * @memberof Trade
    */
-  symbol?: string;
+  symbol?: string
   /**
    * The side of the market of the order.
    *   * B - Buy contract near posted ask price
@@ -39,133 +39,133 @@ export interface Trade {
    * @type {string}
    * @memberof Trade
    */
-  side?: TradeSideEnum;
+  side?: TradeSideEnum
   /**
    * Formatted description of the order "%side% %size% @ %price% on %exchange%".
    * @type {string}
    * @memberof Trade
    */
-  orderDescription?: string;
+  orderDescription?: string
   /**
    * Time of Status update in format "YYYYMMDD-hh:mm:ss".
    * @type {string}
    * @memberof Trade
    */
-  tradeTime?: string;
+  tradeTime?: string
   /**
    * Time of status update in format unix time.
    * @type {number}
    * @memberof Trade
    */
-  tradeTimeR?: number;
+  tradeTimeR?: number
   /**
    * Quantity of the order
    * @type {string}
    * @memberof Trade
    */
-  size?: string;
+  size?: string
   /**
    * Average Price
    * @type {string}
    * @memberof Trade
    */
-  price?: string;
+  price?: string
   /**
    * User defined string used to identify the order. Value is set using "cOID" field while placing an order.
    * @type {string}
    * @memberof Trade
    */
-  orderRef?: string;
+  orderRef?: string
   /**
    * User that submitted order
    * @type {string}
    * @memberof Trade
    */
-  submitter?: string;
+  submitter?: string
   /**
    * Exchange or venue of order
    * @type {string}
    * @memberof Trade
    */
-  exchange?: string;
+  exchange?: string
   /**
    * Commission of the order
    * @type {number}
    * @memberof Trade
    */
-  commission?: number;
+  commission?: number
   /**
    * Net cost of the order, including contract multiplier and quantity.
    * @type {number}
    * @memberof Trade
    */
-  netAmount?: number;
+  netAmount?: number
   /**
    * accountCode
    * @type {string}
    * @memberof Trade
    */
-  account?: string;
+  account?: string
   /**
    * Account Number
    * @type {string}
    * @memberof Trade
    */
-  acountCode?: string;
+  acountCode?: string
   /**
    * Contracts company name
    * @type {string}
    * @memberof Trade
    */
-  companyName?: string;
+  companyName?: string
   /**
    * Format contract name
    * @type {string}
    * @memberof Trade
    */
-  contractDescription1?: string;
+  contractDescription1?: string
   /**
    * Asset class
    * @type {string}
    * @memberof Trade
    */
-  secType?: string;
+  secType?: string
   /**
    * IBKR's contract identifier
    * @type {string}
    * @memberof Trade
    */
-  conid?: string;
+  conid?: string
   /**
    * conid and exchange. Format supports conid or conid@exchange
    * @type {string}
    * @memberof Trade
    */
-  conidex?: string;
+  conidex?: string
   /**
    * Total quantity owned for this contract
    * @type {string}
    * @memberof Trade
    */
-  position?: string;
+  position?: string
   /**
    * Firm which will settle the trade. For IBExecution customers only.
    * @type {string}
    * @memberof Trade
    */
-  clearingId?: string;
+  clearingId?: string
   /**
    * Specifies the true beneficiary of the order. For IBExecution customers only.
    * @type {string}
    * @memberof Trade
    */
-  clearingName?: string;
+  clearingName?: string
   /**
    * If order adds liquidity to the market.
    * @type {number}
    * @memberof Trade
    */
-  liquidationTrade?: number;
+  liquidationTrade?: number
 }
 
 /**
@@ -173,13 +173,13 @@ export interface Trade {
  * @enum {string}
  */
 export enum TradeSideEnum {
-  B = "B",
-  S = "S",
-  X = "X",
+  B = 'B',
+  S = 'S',
+  X = 'X',
 }
 
 export function TradeFromJSON(json: any): Trade {
-  return TradeFromJSONTyped(json, false);
+  return TradeFromJSONTyped(json, false)
 }
 
 export function TradeFromJSONTyped(
@@ -187,56 +187,56 @@ export function TradeFromJSONTyped(
   ignoreDiscriminator: boolean
 ): Trade {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    executionId: !exists(json, "execution_id")
+    executionId: !exists(json, 'execution_id')
       ? undefined
-      : json["execution_id"],
-    symbol: !exists(json, "symbol") ? undefined : json["symbol"],
-    side: !exists(json, "side") ? undefined : json["side"],
-    orderDescription: !exists(json, "order_description")
+      : json['execution_id'],
+    symbol: !exists(json, 'symbol') ? undefined : json['symbol'],
+    side: !exists(json, 'side') ? undefined : json['side'],
+    orderDescription: !exists(json, 'order_description')
       ? undefined
-      : json["order_description"],
-    tradeTime: !exists(json, "trade_time") ? undefined : json["trade_time"],
-    tradeTimeR: !exists(json, "trade_time_r")
+      : json['order_description'],
+    tradeTime: !exists(json, 'trade_time') ? undefined : json['trade_time'],
+    tradeTimeR: !exists(json, 'trade_time_r')
       ? undefined
-      : json["trade_time_r"],
-    size: !exists(json, "size") ? undefined : json["size"],
-    price: !exists(json, "price") ? undefined : json["price"],
-    orderRef: !exists(json, "order_ref") ? undefined : json["order_ref"],
-    submitter: !exists(json, "submitter") ? undefined : json["submitter"],
-    exchange: !exists(json, "exchange") ? undefined : json["exchange"],
-    commission: !exists(json, "commission") ? undefined : json["commission"],
-    netAmount: !exists(json, "net_amount") ? undefined : json["net_amount"],
-    account: !exists(json, "account") ? undefined : json["account"],
-    acountCode: !exists(json, "acountCode") ? undefined : json["acountCode"],
-    companyName: !exists(json, "company_name")
+      : json['trade_time_r'],
+    size: !exists(json, 'size') ? undefined : json['size'],
+    price: !exists(json, 'price') ? undefined : json['price'],
+    orderRef: !exists(json, 'order_ref') ? undefined : json['order_ref'],
+    submitter: !exists(json, 'submitter') ? undefined : json['submitter'],
+    exchange: !exists(json, 'exchange') ? undefined : json['exchange'],
+    commission: !exists(json, 'commission') ? undefined : json['commission'],
+    netAmount: !exists(json, 'net_amount') ? undefined : json['net_amount'],
+    account: !exists(json, 'account') ? undefined : json['account'],
+    acountCode: !exists(json, 'acountCode') ? undefined : json['acountCode'],
+    companyName: !exists(json, 'company_name')
       ? undefined
-      : json["company_name"],
-    contractDescription1: !exists(json, "contract_description_1")
+      : json['company_name'],
+    contractDescription1: !exists(json, 'contract_description_1')
       ? undefined
-      : json["contract_description_1"],
-    secType: !exists(json, "sec_type") ? undefined : json["sec_type"],
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    conidex: !exists(json, "conidex") ? undefined : json["conidex"],
-    position: !exists(json, "position") ? undefined : json["position"],
-    clearingId: !exists(json, "clearing_id") ? undefined : json["clearing_id"],
-    clearingName: !exists(json, "clearing_name")
+      : json['contract_description_1'],
+    secType: !exists(json, 'sec_type') ? undefined : json['sec_type'],
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    conidex: !exists(json, 'conidex') ? undefined : json['conidex'],
+    position: !exists(json, 'position') ? undefined : json['position'],
+    clearingId: !exists(json, 'clearing_id') ? undefined : json['clearing_id'],
+    clearingName: !exists(json, 'clearing_name')
       ? undefined
-      : json["clearing_name"],
-    liquidationTrade: !exists(json, "liquidation_trade")
+      : json['clearing_name'],
+    liquidationTrade: !exists(json, 'liquidation_trade')
       ? undefined
-      : json["liquidation_trade"],
-  };
+      : json['liquidation_trade'],
+  }
 }
 
 export function TradeToJSON(value?: Trade | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     execution_id: value.executionId,
@@ -263,5 +263,5 @@ export function TradeToJSON(value?: Trade | null): any {
     clearing_id: value.clearingId,
     clearing_name: value.clearingName,
     liquidation_trade: value.liquidationTrade,
-  };
+  }
 }

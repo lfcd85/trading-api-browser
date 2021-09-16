@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   HistoryResultBars,
   HistoryResultBarsFromJSON,
   HistoryResultBarsFromJSONTyped,
   HistoryResultBarsToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,11 +31,11 @@ export interface HistoryResult {
    * @type {HistoryResultBars}
    * @memberof HistoryResult
    */
-  bars?: HistoryResultBars;
+  bars?: HistoryResultBars
 }
 
 export function HistoryResultFromJSON(json: any): HistoryResult {
-  return HistoryResultFromJSONTyped(json, false);
+  return HistoryResultFromJSONTyped(json, false)
 }
 
 export function HistoryResultFromJSONTyped(
@@ -43,23 +43,23 @@ export function HistoryResultFromJSONTyped(
   ignoreDiscriminator: boolean
 ): HistoryResult {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    bars: !exists(json, "bars")
+    bars: !exists(json, 'bars')
       ? undefined
-      : HistoryResultBarsFromJSON(json["bars"]),
-  };
+      : HistoryResultBarsFromJSON(json['bars']),
+  }
 }
 
 export function HistoryResultToJSON(value?: HistoryResult | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     bars: HistoryResultBarsToJSON(value.bars),
-  };
+  }
 }

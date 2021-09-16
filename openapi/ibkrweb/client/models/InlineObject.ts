@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,11 +24,11 @@ export interface InlineObject {
    * @type {boolean}
    * @memberof InlineObject
    */
-  enabled?: boolean;
+  enabled?: boolean
 }
 
 export function InlineObjectFromJSON(json: any): InlineObject {
-  return InlineObjectFromJSONTyped(json, false);
+  return InlineObjectFromJSONTyped(json, false)
 }
 
 export function InlineObjectFromJSONTyped(
@@ -36,21 +36,21 @@ export function InlineObjectFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    enabled: !exists(json, "enabled") ? undefined : json["enabled"],
-  };
+    enabled: !exists(json, 'enabled') ? undefined : json['enabled'],
+  }
 }
 
 export function InlineObjectToJSON(value?: InlineObject | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     enabled: value.enabled,
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   InlineResponse20032Sessions,
   InlineResponse20032SessionsFromJSON,
@@ -22,7 +22,7 @@ import {
   InlineResponse20032TradingTimesFromJSON,
   InlineResponse20032TradingTimesFromJSONTyped,
   InlineResponse20032TradingTimesToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -35,31 +35,31 @@ export interface InlineResponse20032Schedules {
    * @type {number}
    * @memberof InlineResponse20032Schedules
    */
-  clearingCycleEndTime?: number;
+  clearingCycleEndTime?: number
   /**
    * 20000101 stands for any Sat, 20000102 stands for any Sun, ... 20000107 stands for any Fri. Any other date stands for itself.
    * @type {number}
    * @memberof InlineResponse20032Schedules
    */
-  tradingScheduleDate?: number;
+  tradingScheduleDate?: number
   /**
    *
    * @type {InlineResponse20032Sessions}
    * @memberof InlineResponse20032Schedules
    */
-  sessions?: InlineResponse20032Sessions;
+  sessions?: InlineResponse20032Sessions
   /**
    *
    * @type {InlineResponse20032TradingTimes}
    * @memberof InlineResponse20032Schedules
    */
-  tradingTimes?: InlineResponse20032TradingTimes;
+  tradingTimes?: InlineResponse20032TradingTimes
 }
 
 export function InlineResponse20032SchedulesFromJSON(
   json: any
 ): InlineResponse20032Schedules {
-  return InlineResponse20032SchedulesFromJSONTyped(json, false);
+  return InlineResponse20032SchedulesFromJSONTyped(json, false)
 }
 
 export function InlineResponse20032SchedulesFromJSONTyped(
@@ -67,37 +67,37 @@ export function InlineResponse20032SchedulesFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20032Schedules {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    clearingCycleEndTime: !exists(json, "clearingCycleEndTime")
+    clearingCycleEndTime: !exists(json, 'clearingCycleEndTime')
       ? undefined
-      : json["clearingCycleEndTime"],
-    tradingScheduleDate: !exists(json, "tradingScheduleDate")
+      : json['clearingCycleEndTime'],
+    tradingScheduleDate: !exists(json, 'tradingScheduleDate')
       ? undefined
-      : json["tradingScheduleDate"],
-    sessions: !exists(json, "sessions")
+      : json['tradingScheduleDate'],
+    sessions: !exists(json, 'sessions')
       ? undefined
-      : InlineResponse20032SessionsFromJSON(json["sessions"]),
-    tradingTimes: !exists(json, "tradingTimes")
+      : InlineResponse20032SessionsFromJSON(json['sessions']),
+    tradingTimes: !exists(json, 'tradingTimes')
       ? undefined
-      : InlineResponse20032TradingTimesFromJSON(json["tradingTimes"]),
-  };
+      : InlineResponse20032TradingTimesFromJSON(json['tradingTimes']),
+  }
 }
 
 export function InlineResponse20032SchedulesToJSON(
   value?: InlineResponse20032Schedules | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     clearingCycleEndTime: value.clearingCycleEndTime,
     tradingScheduleDate: value.tradingScheduleDate,
     sessions: InlineResponse20032SessionsToJSON(value.sessions),
     tradingTimes: InlineResponse20032TradingTimesToJSON(value.tradingTimes),
-  };
+  }
 }

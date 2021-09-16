@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,79 +24,79 @@ export interface CalendarRequestFilters {
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  recentlyHeld?: string;
+  recentlyHeld?: string
   /**
    * value can be 'true' or 'false'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  corporateEarnings?: string;
+  corporateEarnings?: string
   /**
    * value can be 'true' or 'false'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  divExDates?: string;
+  divExDates?: string
   /**
    * value can be 'true' or 'false'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  ipo?: string;
+  ipo?: string
   /**
    * value can be 'true' or 'false'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  splits?: string;
+  splits?: string
   /**
    * value can be 'true' or 'false'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  corporateEvents?: string;
+  corporateEvents?: string
   /**
    * value can be 'true' or 'false'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  economicEvents?: string;
+  economicEvents?: string
   /**
    * value can be 'true' or 'false'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  optionShowMonthly?: string;
+  optionShowMonthly?: string
   /**
    * value can be 'true' or 'false'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  optionShowWeekly?: string;
+  optionShowWeekly?: string
   /**
    * default is 'All'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  country?: string;
+  country?: string
   /**
    * default is '250'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  limit?: string;
+  limit?: string
   /**
    * default is '50'.
    * @type {string}
    * @memberof CalendarRequestFilters
    */
-  limitRegion?: string;
+  limitRegion?: string
 }
 
 export function CalendarRequestFiltersFromJSON(
   json: any
 ): CalendarRequestFilters {
-  return CalendarRequestFiltersFromJSONTyped(json, false);
+  return CalendarRequestFiltersFromJSONTyped(json, false)
 }
 
 export function CalendarRequestFiltersFromJSONTyped(
@@ -104,46 +104,46 @@ export function CalendarRequestFiltersFromJSONTyped(
   ignoreDiscriminator: boolean
 ): CalendarRequestFilters {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    recentlyHeld: !exists(json, "recently_held")
+    recentlyHeld: !exists(json, 'recently_held')
       ? undefined
-      : json["recently_held"],
-    corporateEarnings: !exists(json, "corporate_earnings")
+      : json['recently_held'],
+    corporateEarnings: !exists(json, 'corporate_earnings')
       ? undefined
-      : json["corporate_earnings"],
-    divExDates: !exists(json, "DivExDates") ? undefined : json["DivExDates"],
-    ipo: !exists(json, "ipo") ? undefined : json["ipo"],
-    splits: !exists(json, "splits") ? undefined : json["splits"],
-    corporateEvents: !exists(json, "corporate_events")
+      : json['corporate_earnings'],
+    divExDates: !exists(json, 'DivExDates') ? undefined : json['DivExDates'],
+    ipo: !exists(json, 'ipo') ? undefined : json['ipo'],
+    splits: !exists(json, 'splits') ? undefined : json['splits'],
+    corporateEvents: !exists(json, 'corporate_events')
       ? undefined
-      : json["corporate_events"],
-    economicEvents: !exists(json, "economic_events")
+      : json['corporate_events'],
+    economicEvents: !exists(json, 'economic_events')
       ? undefined
-      : json["economic_events"],
-    optionShowMonthly: !exists(json, "option_show_monthly")
+      : json['economic_events'],
+    optionShowMonthly: !exists(json, 'option_show_monthly')
       ? undefined
-      : json["option_show_monthly"],
-    optionShowWeekly: !exists(json, "option_show_weekly")
+      : json['option_show_monthly'],
+    optionShowWeekly: !exists(json, 'option_show_weekly')
       ? undefined
-      : json["option_show_weekly"],
-    country: !exists(json, "country") ? undefined : json["country"],
-    limit: !exists(json, "limit") ? undefined : json["limit"],
-    limitRegion: !exists(json, "limit_region")
+      : json['option_show_weekly'],
+    country: !exists(json, 'country') ? undefined : json['country'],
+    limit: !exists(json, 'limit') ? undefined : json['limit'],
+    limitRegion: !exists(json, 'limit_region')
       ? undefined
-      : json["limit_region"],
-  };
+      : json['limit_region'],
+  }
 }
 
 export function CalendarRequestFiltersToJSON(
   value?: CalendarRequestFilters | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     recently_held: value.recentlyHeld,
@@ -158,5 +158,5 @@ export function CalendarRequestFiltersToJSON(
     country: value.country,
     limit: value.limit,
     limit_region: value.limitRegion,
-  };
+  }
 }

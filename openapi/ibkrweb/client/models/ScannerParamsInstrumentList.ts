@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   ScannerParamsInstrumentListInstrument,
   ScannerParamsInstrumentListInstrumentFromJSON,
   ScannerParamsInstrumentListInstrumentFromJSONTyped,
   ScannerParamsInstrumentListInstrumentToJSON,
-} from "./";
+} from './'
 
 /**
  * Contains list of instruments for which scanner can be ran
@@ -31,13 +31,13 @@ export interface ScannerParamsInstrumentList {
    * @type {Array<ScannerParamsInstrumentListInstrument>}
    * @memberof ScannerParamsInstrumentList
    */
-  instrument?: Array<ScannerParamsInstrumentListInstrument>;
+  instrument?: Array<ScannerParamsInstrumentListInstrument>
 }
 
 export function ScannerParamsInstrumentListFromJSON(
   json: any
 ): ScannerParamsInstrumentList {
-  return ScannerParamsInstrumentListFromJSONTyped(json, false);
+  return ScannerParamsInstrumentListFromJSONTyped(json, false)
 }
 
 export function ScannerParamsInstrumentListFromJSONTyped(
@@ -45,25 +45,25 @@ export function ScannerParamsInstrumentListFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerParamsInstrumentList {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    instrument: !exists(json, "Instrument")
+    instrument: !exists(json, 'Instrument')
       ? undefined
-      : (json["Instrument"] as Array<any>).map(
+      : (json['Instrument'] as Array<any>).map(
           ScannerParamsInstrumentListInstrumentFromJSON
         ),
-  };
+  }
 }
 
 export function ScannerParamsInstrumentListToJSON(
   value?: ScannerParamsInstrumentList | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     Instrument:
@@ -72,5 +72,5 @@ export function ScannerParamsInstrumentListToJSON(
         : (value.instrument as Array<any>).map(
             ScannerParamsInstrumentListInstrumentToJSON
           ),
-  };
+  }
 }

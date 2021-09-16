@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   SummaryBalanceByDateSeries,
   SummaryBalanceByDateSeriesFromJSON,
   SummaryBalanceByDateSeriesFromJSONTyped,
   SummaryBalanceByDateSeriesToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,11 +31,11 @@ export interface SummaryBalanceByDate {
    * @type {Array<SummaryBalanceByDateSeries>}
    * @memberof SummaryBalanceByDate
    */
-  series?: Array<SummaryBalanceByDateSeries>;
+  series?: Array<SummaryBalanceByDateSeries>
 }
 
 export function SummaryBalanceByDateFromJSON(json: any): SummaryBalanceByDate {
-  return SummaryBalanceByDateFromJSONTyped(json, false);
+  return SummaryBalanceByDateFromJSONTyped(json, false)
 }
 
 export function SummaryBalanceByDateFromJSONTyped(
@@ -43,28 +43,28 @@ export function SummaryBalanceByDateFromJSONTyped(
   ignoreDiscriminator: boolean
 ): SummaryBalanceByDate {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    series: !exists(json, "series")
+    series: !exists(json, 'series')
       ? undefined
-      : (json["series"] as Array<any>).map(SummaryBalanceByDateSeriesFromJSON),
-  };
+      : (json['series'] as Array<any>).map(SummaryBalanceByDateSeriesFromJSON),
+  }
 }
 
 export function SummaryBalanceByDateToJSON(
   value?: SummaryBalanceByDate | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     series:
       value.series === undefined
         ? undefined
         : (value.series as Array<any>).map(SummaryBalanceByDateSeriesToJSON),
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,41 +24,41 @@ export interface InlineResponse20013 {
    * @type {number}
    * @memberof InlineResponse20013
    */
-  requestId?: number;
+  requestId?: number
   /**
    *
    * @type {number}
    * @memberof InlineResponse20013
    */
-  orderId?: number;
+  orderId?: number
   /**
    *
    * @type {boolean}
    * @memberof InlineResponse20013
    */
-  success?: boolean;
+  success?: boolean
   /**
    *
    * @type {string}
    * @memberof InlineResponse20013
    */
-  text?: string;
+  text?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20013
    */
-  orderStatus?: string;
+  orderStatus?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20013
    */
-  warningMessage?: string;
+  warningMessage?: string
 }
 
 export function InlineResponse20013FromJSON(json: any): InlineResponse20013 {
-  return InlineResponse20013FromJSONTyped(json, false);
+  return InlineResponse20013FromJSONTyped(json, false)
 }
 
 export function InlineResponse20013FromJSONTyped(
@@ -66,30 +66,30 @@ export function InlineResponse20013FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20013 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    requestId: !exists(json, "request_id") ? undefined : json["request_id"],
-    orderId: !exists(json, "order_id") ? undefined : json["order_id"],
-    success: !exists(json, "success") ? undefined : json["success"],
-    text: !exists(json, "text") ? undefined : json["text"],
-    orderStatus: !exists(json, "order_status")
+    requestId: !exists(json, 'request_id') ? undefined : json['request_id'],
+    orderId: !exists(json, 'order_id') ? undefined : json['order_id'],
+    success: !exists(json, 'success') ? undefined : json['success'],
+    text: !exists(json, 'text') ? undefined : json['text'],
+    orderStatus: !exists(json, 'order_status')
       ? undefined
-      : json["order_status"],
-    warningMessage: !exists(json, "warning_message")
+      : json['order_status'],
+    warningMessage: !exists(json, 'warning_message')
       ? undefined
-      : json["warning_message"],
-  };
+      : json['warning_message'],
+  }
 }
 
 export function InlineResponse20013ToJSON(
   value?: InlineResponse20013 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     request_id: value.requestId,
@@ -98,5 +98,5 @@ export function InlineResponse20013ToJSON(
     text: value.text,
     order_status: value.orderStatus,
     warning_message: value.warningMessage,
-  };
+  }
 }

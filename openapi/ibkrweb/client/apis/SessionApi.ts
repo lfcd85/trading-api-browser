@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   AuthStatus,
   AuthStatusFromJSON,
@@ -23,7 +23,7 @@ import {
   InlineResponse20038,
   InlineResponse20038FromJSON,
   InlineResponse20038ToJSON,
-} from "../models";
+} from '../models'
 
 /**
  *
@@ -36,23 +36,23 @@ export class SessionApi extends runtime.BaseAPI {
   async iserverAuthStatusPostRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<AuthStatus>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/auth/status`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       AuthStatusFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -62,8 +62,8 @@ export class SessionApi extends runtime.BaseAPI {
   async iserverAuthStatusPost(
     initOverrides?: RequestInit
   ): Promise<AuthStatus> {
-    const response = await this.iserverAuthStatusPostRaw(initOverrides);
-    return await response.value();
+    const response = await this.iserverAuthStatusPostRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -73,23 +73,23 @@ export class SessionApi extends runtime.BaseAPI {
   async iserverReauthenticatePostRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<AuthStatus>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/reauthenticate`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       AuthStatusFromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -99,8 +99,8 @@ export class SessionApi extends runtime.BaseAPI {
   async iserverReauthenticatePost(
     initOverrides?: RequestInit
   ): Promise<AuthStatus> {
-    const response = await this.iserverReauthenticatePostRaw(initOverrides);
-    return await response.value();
+    const response = await this.iserverReauthenticatePostRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -110,23 +110,23 @@ export class SessionApi extends runtime.BaseAPI {
   async logoutPostRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse200>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/logout`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse200FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -134,8 +134,8 @@ export class SessionApi extends runtime.BaseAPI {
    * Ends the current session
    */
   async logoutPost(initOverrides?: RequestInit): Promise<InlineResponse200> {
-    const response = await this.logoutPostRaw(initOverrides);
-    return await response.value();
+    const response = await this.logoutPostRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -145,23 +145,23 @@ export class SessionApi extends runtime.BaseAPI {
   async ssoValidateGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse20038>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/sso/validate`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20038FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -171,8 +171,8 @@ export class SessionApi extends runtime.BaseAPI {
   async ssoValidateGet(
     initOverrides?: RequestInit
   ): Promise<InlineResponse20038> {
-    const response = await this.ssoValidateGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.ssoValidateGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -182,21 +182,21 @@ export class SessionApi extends runtime.BaseAPI {
   async ticklePostRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<void>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/tickle`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
-    return new runtime.VoidApiResponse(response);
+    return new runtime.VoidApiResponse(response)
   }
 
   /**
@@ -204,6 +204,6 @@ export class SessionApi extends runtime.BaseAPI {
    * Ping the server to keep the session open
    */
   async ticklePost(initOverrides?: RequestInit): Promise<void> {
-    await this.ticklePostRaw(initOverrides);
+    await this.ticklePostRaw(initOverrides)
   }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,55 +24,55 @@ export interface IbcustEntityInfoAddress {
    * @type {string}
    * @memberof IbcustEntityInfoAddress
    */
-  street?: string;
+  street?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoAddress
    */
-  street2?: string;
+  street2?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoAddress
    */
-  city?: string;
+  city?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoAddress
    */
-  state?: string;
+  state?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoAddress
    */
-  postalCode?: string;
+  postalCode?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoAddress
    */
-  country?: string;
+  country?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoAddress
    */
-  countryCode?: string;
+  countryCode?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoAddress
    */
-  compact?: string;
+  compact?: string
 }
 
 export function IbcustEntityInfoAddressFromJSON(
   json: any
 ): IbcustEntityInfoAddress {
-  return IbcustEntityInfoAddressFromJSONTyped(json, false);
+  return IbcustEntityInfoAddressFromJSONTyped(json, false)
 }
 
 export function IbcustEntityInfoAddressFromJSONTyped(
@@ -80,28 +80,28 @@ export function IbcustEntityInfoAddressFromJSONTyped(
   ignoreDiscriminator: boolean
 ): IbcustEntityInfoAddress {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    street: !exists(json, "street") ? undefined : json["street"],
-    street2: !exists(json, "street2") ? undefined : json["street2"],
-    city: !exists(json, "city") ? undefined : json["city"],
-    state: !exists(json, "state") ? undefined : json["state"],
-    postalCode: !exists(json, "postalCode") ? undefined : json["postalCode"],
-    country: !exists(json, "country") ? undefined : json["country"],
-    countryCode: !exists(json, "countryCode") ? undefined : json["countryCode"],
-    compact: !exists(json, "compact") ? undefined : json["compact"],
-  };
+    street: !exists(json, 'street') ? undefined : json['street'],
+    street2: !exists(json, 'street2') ? undefined : json['street2'],
+    city: !exists(json, 'city') ? undefined : json['city'],
+    state: !exists(json, 'state') ? undefined : json['state'],
+    postalCode: !exists(json, 'postalCode') ? undefined : json['postalCode'],
+    country: !exists(json, 'country') ? undefined : json['country'],
+    countryCode: !exists(json, 'countryCode') ? undefined : json['countryCode'],
+    compact: !exists(json, 'compact') ? undefined : json['compact'],
+  }
 }
 
 export function IbcustEntityInfoAddressToJSON(
   value?: IbcustEntityInfoAddress | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     street: value.street,
@@ -112,5 +112,5 @@ export function IbcustEntityInfoAddressToJSON(
     country: value.country,
     countryCode: value.countryCode,
     compact: value.compact,
-  };
+  }
 }

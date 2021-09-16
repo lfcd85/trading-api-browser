@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,17 +24,17 @@ export interface CalendarRequestDate {
    * @type {string}
    * @memberof CalendarRequestDate
    */
-  start?: string;
+  start?: string
   /**
    * end date of a period. for example 20180808-0400
    * @type {string}
    * @memberof CalendarRequestDate
    */
-  end?: string;
+  end?: string
 }
 
 export function CalendarRequestDateFromJSON(json: any): CalendarRequestDate {
-  return CalendarRequestDateFromJSONTyped(json, false);
+  return CalendarRequestDateFromJSONTyped(json, false)
 }
 
 export function CalendarRequestDateFromJSONTyped(
@@ -42,25 +42,25 @@ export function CalendarRequestDateFromJSONTyped(
   ignoreDiscriminator: boolean
 ): CalendarRequestDate {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    start: !exists(json, "start") ? undefined : json["start"],
-    end: !exists(json, "end") ? undefined : json["end"],
-  };
+    start: !exists(json, 'start') ? undefined : json['start'],
+    end: !exists(json, 'end') ? undefined : json['end'],
+  }
 }
 
 export function CalendarRequestDateToJSON(
   value?: CalendarRequestDate | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     start: value.start,
     end: value.end,
-  };
+  }
 }

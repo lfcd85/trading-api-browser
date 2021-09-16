@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   InlineResponse20029Locations,
   InlineResponse20029LocationsFromJSON,
   InlineResponse20029LocationsFromJSONTyped,
   InlineResponse20029LocationsToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,25 +31,25 @@ export interface InlineResponse20029LocationTree {
    * @type {string}
    * @memberof InlineResponse20029LocationTree
    */
-  displayName?: string;
+  displayName?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20029LocationTree
    */
-  type?: string;
+  type?: string
   /**
    *
    * @type {Array<InlineResponse20029Locations>}
    * @memberof InlineResponse20029LocationTree
    */
-  locations?: Array<InlineResponse20029Locations>;
+  locations?: Array<InlineResponse20029Locations>
 }
 
 export function InlineResponse20029LocationTreeFromJSON(
   json: any
 ): InlineResponse20029LocationTree {
-  return InlineResponse20029LocationTreeFromJSONTyped(json, false);
+  return InlineResponse20029LocationTreeFromJSONTyped(json, false)
 }
 
 export function InlineResponse20029LocationTreeFromJSONTyped(
@@ -57,29 +57,29 @@ export function InlineResponse20029LocationTreeFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20029LocationTree {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    displayName: !exists(json, "display_name")
+    displayName: !exists(json, 'display_name')
       ? undefined
-      : json["display_name"],
-    type: !exists(json, "type") ? undefined : json["type"],
-    locations: !exists(json, "locations")
+      : json['display_name'],
+    type: !exists(json, 'type') ? undefined : json['type'],
+    locations: !exists(json, 'locations')
       ? undefined
-      : (json["locations"] as Array<any>).map(
+      : (json['locations'] as Array<any>).map(
           InlineResponse20029LocationsFromJSON
         ),
-  };
+  }
 }
 
 export function InlineResponse20029LocationTreeToJSON(
   value?: InlineResponse20029LocationTree | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     display_name: value.displayName,
@@ -90,5 +90,5 @@ export function InlineResponse20029LocationTreeToJSON(
         : (value.locations as Array<any>).map(
             InlineResponse20029LocationsToJSON
           ),
-  };
+  }
 }

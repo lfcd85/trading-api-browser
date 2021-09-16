@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -25,33 +25,33 @@ export interface OrderRequest {
    * @type {string}
    * @memberof OrderRequest
    */
-  acctId?: string;
+  acctId?: string
   /**
    * conid is the identifier of the security you want to trade, you can find the
    * conid with /iserver/secdef/search.
    * @type {number}
    * @memberof OrderRequest
    */
-  conid?: number;
+  conid?: number
   /**
    * The contract-identifier (conid) and security type (type) specified as a concatenated value, conid:type
    * @type {string}
    * @memberof OrderRequest
    */
-  secType?: string;
+  secType?: string
   /**
    * Customer Order ID. An arbitrary string that can be used to identify the order, e.g "my-fb-order". The
    * value must be unique for a 24h span. Please do not set this value for child orders when placing a bracket order.
    * @type {string}
    * @memberof OrderRequest
    */
-  cOID?: string;
+  cOID?: string
   /**
    * Only specify for child orders when placing bracket orders. The parentId for the child order(s) must be equal to the cOId (customer order id) of the parent.
    * @type {string}
    * @memberof OrderRequest
    */
-  parentId?: string;
+  parentId?: string
   /**
    * The order-type determines what type of order you want to send.
    * LMT - A limit order is an order to buy or sell at the specified price or better.
@@ -62,7 +62,7 @@ export interface OrderRequest {
    * @type {string}
    * @memberof OrderRequest
    */
-  orderType?: string;
+  orderType?: string
   /**
    * listingExchange is optional. By default we use "SMART" routing. Possible values are available via this end
    * point: /v1/portal/iserver/contract/{conid}/info, see valid_exchange: e.g: SMART,AMEX,NYSE,
@@ -70,43 +70,43 @@ export interface OrderRequest {
    * @type {string}
    * @memberof OrderRequest
    */
-  listingExchange?: string;
+  listingExchange?: string
   /**
    * set to true if you want to place a single group orders(OCA)
    * @type {boolean}
    * @memberof OrderRequest
    */
-  isSingleGroup?: boolean;
+  isSingleGroup?: boolean
   /**
    * set to true if the order can be executed outside regular trading hours.
    * @type {boolean}
    * @memberof OrderRequest
    */
-  outsideRTH?: boolean;
+  outsideRTH?: boolean
   /**
    * optional if order is LMT, or STOP_LIMIT, this is the limit price. For STP this is the stop price. For MIDPRICE this is the option price cap.
    * @type {number}
    * @memberof OrderRequest
    */
-  price?: number;
+  price?: number
   /**
    * optional if order is STOP_LIMIT, this is the stop price. You must specify both price and auxPrice for STOP_LIMIT orders.
    * @type {object}
    * @memberof OrderRequest
    */
-  auxPrice?: object;
+  auxPrice?: object
   /**
    * SELL or BUY
    * @type {string}
    * @memberof OrderRequest
    */
-  side?: string;
+  side?: string
   /**
    * This is the  underlying symbol for the contract.
    * @type {string}
    * @memberof OrderRequest
    */
-  ticker?: string;
+  ticker?: string
   /**
    * The Time-In-Force determines how long the order remains active on the market.
    *   * GTC - use Good-Till-Cancel for orders to remain active until it executes or cancelled.
@@ -116,61 +116,61 @@ export interface OrderRequest {
    * @type {string}
    * @memberof OrderRequest
    */
-  tif?: string;
+  tif?: string
   /**
    * Custom order reference
    * @type {string}
    * @memberof OrderRequest
    */
-  referrer?: string;
+  referrer?: string
   /**
    * usually integer, for some special cases can be float numbers
    * @type {number}
    * @memberof OrderRequest
    */
-  quantity?: number;
+  quantity?: number
   /**
    * double number, this is the cash quantity field which can only be used for FX conversion order. When using 'fxQty' you don't need to specify 'quantity'.
    * @type {number}
    * @memberof OrderRequest
    */
-  fxQty?: number;
+  fxQty?: number
   /**
    * If true, the system will use the Price Management Algo to submit the order.
    * https://www.interactivebrokers.com/en/index.php?f=43423
    * @type {boolean}
    * @memberof OrderRequest
    */
-  useAdaptive?: boolean;
+  useAdaptive?: boolean
   /**
    * set to true if the order is a FX conversion order
    * @type {boolean}
    * @memberof OrderRequest
    */
-  isCcyConv?: boolean;
+  isCcyConv?: boolean
   /**
    * Set the allocation method when placing an order using an FA account for a group
    * Possible allocation methods are "NetLiquidity", "AvailableEquity", "EqualQuantity" and "PctChange".
    * @type {string}
    * @memberof OrderRequest
    */
-  allocationMethod?: string;
+  allocationMethod?: string
   /**
    * Specify which IB Algo algorithm to use for this order.
    * @type {string}
    * @memberof OrderRequest
    */
-  strategy?: string;
+  strategy?: string
   /**
    * The IB Algo parameters for the specified algorithm.
    * @type {object}
    * @memberof OrderRequest
    */
-  strategyParameters?: object;
+  strategyParameters?: object
 }
 
 export function OrderRequestFromJSON(json: any): OrderRequest {
-  return OrderRequestFromJSONTyped(json, false);
+  return OrderRequestFromJSONTyped(json, false)
 }
 
 export function OrderRequestFromJSONTyped(
@@ -178,48 +178,48 @@ export function OrderRequestFromJSONTyped(
   ignoreDiscriminator: boolean
 ): OrderRequest {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    acctId: !exists(json, "acctId") ? undefined : json["acctId"],
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    secType: !exists(json, "secType") ? undefined : json["secType"],
-    cOID: !exists(json, "cOID") ? undefined : json["cOID"],
-    parentId: !exists(json, "parentId") ? undefined : json["parentId"],
-    orderType: !exists(json, "orderType") ? undefined : json["orderType"],
-    listingExchange: !exists(json, "listingExchange")
+    acctId: !exists(json, 'acctId') ? undefined : json['acctId'],
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    secType: !exists(json, 'secType') ? undefined : json['secType'],
+    cOID: !exists(json, 'cOID') ? undefined : json['cOID'],
+    parentId: !exists(json, 'parentId') ? undefined : json['parentId'],
+    orderType: !exists(json, 'orderType') ? undefined : json['orderType'],
+    listingExchange: !exists(json, 'listingExchange')
       ? undefined
-      : json["listingExchange"],
-    isSingleGroup: !exists(json, "isSingleGroup")
+      : json['listingExchange'],
+    isSingleGroup: !exists(json, 'isSingleGroup')
       ? undefined
-      : json["isSingleGroup"],
-    outsideRTH: !exists(json, "outsideRTH") ? undefined : json["outsideRTH"],
-    price: !exists(json, "price") ? undefined : json["price"],
-    auxPrice: !exists(json, "auxPrice") ? undefined : json["auxPrice"],
-    side: !exists(json, "side") ? undefined : json["side"],
-    ticker: !exists(json, "ticker") ? undefined : json["ticker"],
-    tif: !exists(json, "tif") ? undefined : json["tif"],
-    referrer: !exists(json, "referrer") ? undefined : json["referrer"],
-    quantity: !exists(json, "quantity") ? undefined : json["quantity"],
-    fxQty: !exists(json, "fxQty") ? undefined : json["fxQty"],
-    useAdaptive: !exists(json, "useAdaptive") ? undefined : json["useAdaptive"],
-    isCcyConv: !exists(json, "isCcyConv") ? undefined : json["isCcyConv"],
-    allocationMethod: !exists(json, "allocationMethod")
+      : json['isSingleGroup'],
+    outsideRTH: !exists(json, 'outsideRTH') ? undefined : json['outsideRTH'],
+    price: !exists(json, 'price') ? undefined : json['price'],
+    auxPrice: !exists(json, 'auxPrice') ? undefined : json['auxPrice'],
+    side: !exists(json, 'side') ? undefined : json['side'],
+    ticker: !exists(json, 'ticker') ? undefined : json['ticker'],
+    tif: !exists(json, 'tif') ? undefined : json['tif'],
+    referrer: !exists(json, 'referrer') ? undefined : json['referrer'],
+    quantity: !exists(json, 'quantity') ? undefined : json['quantity'],
+    fxQty: !exists(json, 'fxQty') ? undefined : json['fxQty'],
+    useAdaptive: !exists(json, 'useAdaptive') ? undefined : json['useAdaptive'],
+    isCcyConv: !exists(json, 'isCcyConv') ? undefined : json['isCcyConv'],
+    allocationMethod: !exists(json, 'allocationMethod')
       ? undefined
-      : json["allocationMethod"],
-    strategy: !exists(json, "strategy") ? undefined : json["strategy"],
-    strategyParameters: !exists(json, "strategyParameters")
+      : json['allocationMethod'],
+    strategy: !exists(json, 'strategy') ? undefined : json['strategy'],
+    strategyParameters: !exists(json, 'strategyParameters')
       ? undefined
-      : json["strategyParameters"],
-  };
+      : json['strategyParameters'],
+  }
 }
 
 export function OrderRequestToJSON(value?: OrderRequest | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     acctId: value.acctId,
@@ -244,5 +244,5 @@ export function OrderRequestToJSON(value?: OrderRequest | null): any {
     allocationMethod: value.allocationMethod,
     strategy: value.strategy,
     strategyParameters: value.strategyParameters,
-  };
+  }
 }

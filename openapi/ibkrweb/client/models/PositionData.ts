@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,23 +24,23 @@ export interface PositionData {
    * @type {number}
    * @memberof PositionData
    */
-  conid?: number;
+  conid?: number
   /**
    * Number of shares or quantity of the position.
    * @type {number}
    * @memberof PositionData
    */
-  position?: number;
+  position?: number
   /**
    * Average cost of the position.
    * @type {number}
    * @memberof PositionData
    */
-  avgCost?: number;
+  avgCost?: number
 }
 
 export function PositionDataFromJSON(json: any): PositionData {
-  return PositionDataFromJSONTyped(json, false);
+  return PositionDataFromJSONTyped(json, false)
 }
 
 export function PositionDataFromJSONTyped(
@@ -48,25 +48,25 @@ export function PositionDataFromJSONTyped(
   ignoreDiscriminator: boolean
 ): PositionData {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    position: !exists(json, "position") ? undefined : json["position"],
-    avgCost: !exists(json, "avgCost") ? undefined : json["avgCost"],
-  };
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    position: !exists(json, 'position') ? undefined : json['position'],
+    avgCost: !exists(json, 'avgCost') ? undefined : json['avgCost'],
+  }
 }
 
 export function PositionDataToJSON(value?: PositionData | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     conid: value.conid,
     position: value.position,
     avgCost: value.avgCost,
-  };
+  }
 }

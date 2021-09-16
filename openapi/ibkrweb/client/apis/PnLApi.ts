@@ -12,12 +12,12 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   InlineResponse20031,
   InlineResponse20031FromJSON,
   InlineResponse20031ToJSON,
-} from "../models";
+} from '../models'
 
 /**
  *
@@ -30,23 +30,23 @@ export class PnLApi extends runtime.BaseAPI {
   async iserverAccountPnlPartitionedGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse20031>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/pnl/partitioned`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse20031FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -58,7 +58,7 @@ export class PnLApi extends runtime.BaseAPI {
   ): Promise<InlineResponse20031> {
     const response = await this.iserverAccountPnlPartitionedGetRaw(
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 }

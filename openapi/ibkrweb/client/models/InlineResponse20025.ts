@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   IserverSecdefSearchSections,
   IserverSecdefSearchSectionsFromJSON,
   IserverSecdefSearchSectionsFromJSONTyped,
   IserverSecdefSearchSectionsToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,65 +31,65 @@ export interface InlineResponse20025 {
    * @type {number}
    * @memberof InlineResponse20025
    */
-  conid?: number;
+  conid?: number
   /**
    * Company Name - Exchange
    * @type {string}
    * @memberof InlineResponse20025
    */
-  companyHeader?: string;
+  companyHeader?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20025
    */
-  companyName?: string;
+  companyName?: string
   /**
    * Underlying symbol
    * @type {string}
    * @memberof InlineResponse20025
    */
-  symbol?: string;
+  symbol?: string
   /**
    * Exchange
    * @type {string}
    * @memberof InlineResponse20025
    */
-  description?: string;
+  description?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20025
    */
-  restricted?: string;
+  restricted?: string
   /**
    * List of Future Option expirations in YYYMMDD format separated by semicolon
    * @type {string}
    * @memberof InlineResponse20025
    */
-  fop?: string;
+  fop?: string
   /**
    * List of Option expirations in YYYYMMDD format separated by semicolon
    * @type {string}
    * @memberof InlineResponse20025
    */
-  opt?: string;
+  opt?: string
   /**
    * List of Warrant expirations in YYYYMMDD format separated by semicolon
    * @type {string}
    * @memberof InlineResponse20025
    */
-  war?: string;
+  war?: string
   /**
    *
    * @type {Array<IserverSecdefSearchSections>}
    * @memberof InlineResponse20025
    */
-  sections?: Array<IserverSecdefSearchSections>;
+  sections?: Array<IserverSecdefSearchSections>
 }
 
 export function InlineResponse20025FromJSON(json: any): InlineResponse20025 {
-  return InlineResponse20025FromJSONTyped(json, false);
+  return InlineResponse20025FromJSONTyped(json, false)
 }
 
 export function InlineResponse20025FromJSONTyped(
@@ -97,36 +97,36 @@ export function InlineResponse20025FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20025 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    companyHeader: !exists(json, "companyHeader")
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    companyHeader: !exists(json, 'companyHeader')
       ? undefined
-      : json["companyHeader"],
-    companyName: !exists(json, "companyName") ? undefined : json["companyName"],
-    symbol: !exists(json, "symbol") ? undefined : json["symbol"],
-    description: !exists(json, "description") ? undefined : json["description"],
-    restricted: !exists(json, "restricted") ? undefined : json["restricted"],
-    fop: !exists(json, "fop") ? undefined : json["fop"],
-    opt: !exists(json, "opt") ? undefined : json["opt"],
-    war: !exists(json, "war") ? undefined : json["war"],
-    sections: !exists(json, "sections")
+      : json['companyHeader'],
+    companyName: !exists(json, 'companyName') ? undefined : json['companyName'],
+    symbol: !exists(json, 'symbol') ? undefined : json['symbol'],
+    description: !exists(json, 'description') ? undefined : json['description'],
+    restricted: !exists(json, 'restricted') ? undefined : json['restricted'],
+    fop: !exists(json, 'fop') ? undefined : json['fop'],
+    opt: !exists(json, 'opt') ? undefined : json['opt'],
+    war: !exists(json, 'war') ? undefined : json['war'],
+    sections: !exists(json, 'sections')
       ? undefined
-      : (json["sections"] as Array<any>).map(
+      : (json['sections'] as Array<any>).map(
           IserverSecdefSearchSectionsFromJSON
         ),
-  };
+  }
 }
 
 export function InlineResponse20025ToJSON(
   value?: InlineResponse20025 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     conid: value.conid,
@@ -142,5 +142,5 @@ export function InlineResponse20025ToJSON(
       value.sections === undefined
         ? undefined
         : (value.sections as Array<any>).map(IserverSecdefSearchSectionsToJSON),
-  };
+  }
 }

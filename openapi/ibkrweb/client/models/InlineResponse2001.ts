@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,11 +24,11 @@ export interface InlineResponse2001 {
    * @type {object}
    * @memberof InlineResponse2001
    */
-  challenge?: object;
+  challenge?: object
 }
 
 export function InlineResponse2001FromJSON(json: any): InlineResponse2001 {
-  return InlineResponse2001FromJSONTyped(json, false);
+  return InlineResponse2001FromJSONTyped(json, false)
 }
 
 export function InlineResponse2001FromJSONTyped(
@@ -36,23 +36,23 @@ export function InlineResponse2001FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse2001 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    challenge: !exists(json, "challenge") ? undefined : json["challenge"],
-  };
+    challenge: !exists(json, 'challenge') ? undefined : json['challenge'],
+  }
 }
 
 export function InlineResponse2001ToJSON(
   value?: InlineResponse2001 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     challenge: value.challenge,
-  };
+  }
 }

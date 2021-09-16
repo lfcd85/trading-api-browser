@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   ScannerResultContracts,
   ScannerResultContractsFromJSON,
   ScannerResultContractsFromJSONTyped,
   ScannerResultContractsToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,47 +31,47 @@ export interface ScannerResult {
    * @type {number}
    * @memberof ScannerResult
    */
-  total?: number;
+  total?: number
   /**
    *
    * @type {number}
    * @memberof ScannerResult
    */
-  size?: number;
+  size?: number
   /**
    *
    * @type {number}
    * @memberof ScannerResult
    */
-  offset?: number;
+  offset?: number
   /**
    *
    * @type {string}
    * @memberof ScannerResult
    */
-  scanTime?: string;
+  scanTime?: string
   /**
    *
    * @type {number}
    * @memberof ScannerResult
    */
-  id?: number;
+  id?: number
   /**
    *
    * @type {string}
    * @memberof ScannerResult
    */
-  position?: string;
+  position?: string
   /**
    *
    * @type {ScannerResultContracts}
    * @memberof ScannerResult
    */
-  contracts?: ScannerResultContracts;
+  contracts?: ScannerResultContracts
 }
 
 export function ScannerResultFromJSON(json: any): ScannerResult {
-  return ScannerResultFromJSONTyped(json, false);
+  return ScannerResultFromJSONTyped(json, false)
 }
 
 export function ScannerResultFromJSONTyped(
@@ -79,27 +79,27 @@ export function ScannerResultFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerResult {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    total: !exists(json, "total") ? undefined : json["total"],
-    size: !exists(json, "size") ? undefined : json["size"],
-    offset: !exists(json, "offset") ? undefined : json["offset"],
-    scanTime: !exists(json, "scanTime") ? undefined : json["scanTime"],
-    id: !exists(json, "id") ? undefined : json["id"],
-    position: !exists(json, "position") ? undefined : json["position"],
-    contracts: !exists(json, "Contracts")
+    total: !exists(json, 'total') ? undefined : json['total'],
+    size: !exists(json, 'size') ? undefined : json['size'],
+    offset: !exists(json, 'offset') ? undefined : json['offset'],
+    scanTime: !exists(json, 'scanTime') ? undefined : json['scanTime'],
+    id: !exists(json, 'id') ? undefined : json['id'],
+    position: !exists(json, 'position') ? undefined : json['position'],
+    contracts: !exists(json, 'Contracts')
       ? undefined
-      : ScannerResultContractsFromJSON(json["Contracts"]),
-  };
+      : ScannerResultContractsFromJSON(json['Contracts']),
+  }
 }
 
 export function ScannerResultToJSON(value?: ScannerResult | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     total: value.total,
@@ -109,5 +109,5 @@ export function ScannerResultToJSON(value?: ScannerResult | null): any {
     id: value.id,
     position: value.position,
     Contracts: ScannerResultContractsToJSON(value.contracts),
-  };
+  }
 }

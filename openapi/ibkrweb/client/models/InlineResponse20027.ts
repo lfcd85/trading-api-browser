@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   IserverContractConidAlgosParameters,
   IserverContractConidAlgosParametersFromJSON,
   IserverContractConidAlgosParametersFromJSONTyped,
   IserverContractConidAlgosParametersToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,29 +31,29 @@ export interface InlineResponse20027 {
    * @type {string}
    * @memberof InlineResponse20027
    */
-  name?: string;
+  name?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20027
    */
-  description?: string;
+  description?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20027
    */
-  id?: string;
+  id?: string
   /**
    *
    * @type {Array<IserverContractConidAlgosParameters>}
    * @memberof InlineResponse20027
    */
-  parameters?: Array<IserverContractConidAlgosParameters>;
+  parameters?: Array<IserverContractConidAlgosParameters>
 }
 
 export function InlineResponse20027FromJSON(json: any): InlineResponse20027 {
-  return InlineResponse20027FromJSONTyped(json, false);
+  return InlineResponse20027FromJSONTyped(json, false)
 }
 
 export function InlineResponse20027FromJSONTyped(
@@ -61,28 +61,28 @@ export function InlineResponse20027FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20027 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    name: !exists(json, "name") ? undefined : json["name"],
-    description: !exists(json, "description") ? undefined : json["description"],
-    id: !exists(json, "id") ? undefined : json["id"],
-    parameters: !exists(json, "parameters")
+    name: !exists(json, 'name') ? undefined : json['name'],
+    description: !exists(json, 'description') ? undefined : json['description'],
+    id: !exists(json, 'id') ? undefined : json['id'],
+    parameters: !exists(json, 'parameters')
       ? undefined
-      : (json["parameters"] as Array<any>).map(
+      : (json['parameters'] as Array<any>).map(
           IserverContractConidAlgosParametersFromJSON
         ),
-  };
+  }
 }
 
 export function InlineResponse20027ToJSON(
   value?: InlineResponse20027 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     name: value.name,
@@ -94,5 +94,5 @@ export function InlineResponse20027ToJSON(
         : (value.parameters as Array<any>).map(
             IserverContractConidAlgosParametersToJSON
           ),
-  };
+  }
 }

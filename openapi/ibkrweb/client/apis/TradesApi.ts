@@ -12,8 +12,8 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
-import { Trade, TradeFromJSON, TradeToJSON } from "../models";
+import * as runtime from '../runtime'
+import { Trade, TradeFromJSON, TradeToJSON } from '../models'
 
 /**
  *
@@ -26,23 +26,23 @@ export class TradesApi extends runtime.BaseAPI {
   async iserverAccountTradesGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<Array<Trade>>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/iserver/account/trades`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(TradeFromJSON)
-    );
+    )
   }
 
   /**
@@ -52,7 +52,7 @@ export class TradesApi extends runtime.BaseAPI {
   async iserverAccountTradesGet(
     initOverrides?: RequestInit
   ): Promise<Array<Trade>> {
-    const response = await this.iserverAccountTradesGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.iserverAccountTradesGetRaw(initOverrides)
+    return await response.value()
   }
 }

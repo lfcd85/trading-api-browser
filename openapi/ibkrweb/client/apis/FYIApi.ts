@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 import {
   InlineObject,
   InlineObjectFromJSON,
@@ -35,45 +35,45 @@ import {
   InlineResponse2006,
   InlineResponse2006FromJSON,
   InlineResponse2006ToJSON,
-} from "../models";
+} from '../models'
 
 export interface FyiDeliveryoptionsDeviceIdDeleteRequest {
-  deviceId: string;
+  deviceId: string
 }
 
 export interface FyiDeliveryoptionsDevicePostRequest {
-  body: InlineObject1;
+  body: InlineObject1
 }
 
 export interface FyiDeliveryoptionsEmailPutRequest {
-  enabled: string;
+  enabled: string
 }
 
 export interface FyiDisclaimerTypecodeGetRequest {
-  typecode: string;
+  typecode: string
 }
 
 export interface FyiDisclaimerTypecodePutRequest {
-  typecode: string;
+  typecode: string
 }
 
 export interface FyiNotificationsGetRequest {
-  max: string;
-  exclude?: string;
-  include?: string;
+  max: string
+  exclude?: string
+  include?: string
 }
 
 export interface FyiNotificationsMoreGetRequest {
-  id: string;
+  id: string
 }
 
 export interface FyiNotificationsNotificationIdPutRequest {
-  notificationId: string;
+  notificationId: string
 }
 
 export interface FyiSettingsTypecodePostRequest {
-  typecode: string;
-  body: InlineObject;
+  typecode: string
+  body: InlineObject
 }
 
 /**
@@ -92,29 +92,29 @@ export class FYIApi extends runtime.BaseAPI {
       requestParameters.deviceId === undefined
     ) {
       throw new runtime.RequiredError(
-        "deviceId",
-        "Required parameter requestParameters.deviceId was null or undefined when calling fyiDeliveryoptionsDeviceIdDelete."
-      );
+        'deviceId',
+        'Required parameter requestParameters.deviceId was null or undefined when calling fyiDeliveryoptionsDeviceIdDelete.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/deliveryoptions/{deviceId}`.replace(
-          `{${"deviceId"}}`,
+          `{${'deviceId'}}`,
           encodeURIComponent(String(requestParameters.deviceId))
         ),
-        method: "DELETE",
+        method: 'DELETE',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
-    return new runtime.JSONApiResponse<any>(response);
+    return new runtime.JSONApiResponse<any>(response)
   }
 
   /**
@@ -127,8 +127,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiDeliveryoptionsDeviceIdDeleteRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -143,31 +143,31 @@ export class FYIApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling fyiDeliveryoptionsDevicePost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling fyiDeliveryoptionsDevicePost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/fyi/deliveryoptions/device`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObject1ToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2005FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -180,8 +180,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiDeliveryoptionsDevicePostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -196,32 +196,32 @@ export class FYIApi extends runtime.BaseAPI {
       requestParameters.enabled === undefined
     ) {
       throw new runtime.RequiredError(
-        "enabled",
-        "Required parameter requestParameters.enabled was null or undefined when calling fyiDeliveryoptionsEmailPut."
-      );
+        'enabled',
+        'Required parameter requestParameters.enabled was null or undefined when calling fyiDeliveryoptionsEmailPut.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.enabled !== undefined) {
-      queryParameters["enabled"] = requestParameters.enabled;
+      queryParameters['enabled'] = requestParameters.enabled
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/deliveryoptions/email`,
-        method: "PUT",
+        method: 'PUT',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2005FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -234,8 +234,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiDeliveryoptionsEmailPutRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -245,23 +245,23 @@ export class FYIApi extends runtime.BaseAPI {
   async fyiDeliveryoptionsGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse2006>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/deliveryoptions`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2006FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -271,8 +271,8 @@ export class FYIApi extends runtime.BaseAPI {
   async fyiDeliveryoptionsGet(
     initOverrides?: RequestInit
   ): Promise<InlineResponse2006> {
-    const response = await this.fyiDeliveryoptionsGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.fyiDeliveryoptionsGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -287,31 +287,31 @@ export class FYIApi extends runtime.BaseAPI {
       requestParameters.typecode === undefined
     ) {
       throw new runtime.RequiredError(
-        "typecode",
-        "Required parameter requestParameters.typecode was null or undefined when calling fyiDisclaimerTypecodeGet."
-      );
+        'typecode',
+        'Required parameter requestParameters.typecode was null or undefined when calling fyiDisclaimerTypecodeGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/disclaimer/{typecode}`.replace(
-          `{${"typecode"}}`,
+          `{${'typecode'}}`,
           encodeURIComponent(String(requestParameters.typecode))
         ),
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2004FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -324,8 +324,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiDisclaimerTypecodeGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -340,31 +340,31 @@ export class FYIApi extends runtime.BaseAPI {
       requestParameters.typecode === undefined
     ) {
       throw new runtime.RequiredError(
-        "typecode",
-        "Required parameter requestParameters.typecode was null or undefined when calling fyiDisclaimerTypecodePut."
-      );
+        'typecode',
+        'Required parameter requestParameters.typecode was null or undefined when calling fyiDisclaimerTypecodePut.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/disclaimer/{typecode}`.replace(
-          `{${"typecode"}}`,
+          `{${'typecode'}}`,
           encodeURIComponent(String(requestParameters.typecode))
         ),
-        method: "PUT",
+        method: 'PUT',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2005FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -377,8 +377,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiDisclaimerTypecodePutRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -390,38 +390,38 @@ export class FYIApi extends runtime.BaseAPI {
   ): Promise<runtime.ApiResponse<Array<object>>> {
     if (requestParameters.max === null || requestParameters.max === undefined) {
       throw new runtime.RequiredError(
-        "max",
-        "Required parameter requestParameters.max was null or undefined when calling fyiNotificationsGet."
-      );
+        'max',
+        'Required parameter requestParameters.max was null or undefined when calling fyiNotificationsGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.exclude !== undefined) {
-      queryParameters["exclude"] = requestParameters.exclude;
+      queryParameters['exclude'] = requestParameters.exclude
     }
 
     if (requestParameters.include !== undefined) {
-      queryParameters["include"] = requestParameters.include;
+      queryParameters['include'] = requestParameters.include
     }
 
     if (requestParameters.max !== undefined) {
-      queryParameters["max"] = requestParameters.max;
+      queryParameters['max'] = requestParameters.max
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/notifications`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
-    return new runtime.JSONApiResponse<any>(response);
+    return new runtime.JSONApiResponse<any>(response)
   }
 
   /**
@@ -434,8 +434,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiNotificationsGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -447,30 +447,30 @@ export class FYIApi extends runtime.BaseAPI {
   ): Promise<runtime.ApiResponse<Array<object>>> {
     if (requestParameters.id === null || requestParameters.id === undefined) {
       throw new runtime.RequiredError(
-        "id",
-        "Required parameter requestParameters.id was null or undefined when calling fyiNotificationsMoreGet."
-      );
+        'id',
+        'Required parameter requestParameters.id was null or undefined when calling fyiNotificationsMoreGet.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
     if (requestParameters.id !== undefined) {
-      queryParameters["id"] = requestParameters.id;
+      queryParameters['id'] = requestParameters.id
     }
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/notifications/more`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
-    return new runtime.JSONApiResponse<any>(response);
+    return new runtime.JSONApiResponse<any>(response)
   }
 
   /**
@@ -483,8 +483,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiNotificationsMoreGetRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -499,29 +499,29 @@ export class FYIApi extends runtime.BaseAPI {
       requestParameters.notificationId === undefined
     ) {
       throw new runtime.RequiredError(
-        "notificationId",
-        "Required parameter requestParameters.notificationId was null or undefined when calling fyiNotificationsNotificationIdPut."
-      );
+        'notificationId',
+        'Required parameter requestParameters.notificationId was null or undefined when calling fyiNotificationsNotificationIdPut.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/notifications/{notificationId}`.replace(
-          `{${"notificationId"}}`,
+          `{${'notificationId'}}`,
           encodeURIComponent(String(requestParameters.notificationId))
         ),
-        method: "PUT",
+        method: 'PUT',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
-    return new runtime.JSONApiResponse<any>(response);
+    return new runtime.JSONApiResponse<any>(response)
   }
 
   /**
@@ -534,8 +534,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiNotificationsNotificationIdPutRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -545,23 +545,23 @@ export class FYIApi extends runtime.BaseAPI {
   async fyiSettingsGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<Array<InlineResponse2003>>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/settings`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       jsonValue.map(InlineResponse2003FromJSON)
-    );
+    )
   }
 
   /**
@@ -571,8 +571,8 @@ export class FYIApi extends runtime.BaseAPI {
   async fyiSettingsGet(
     initOverrides?: RequestInit
   ): Promise<Array<InlineResponse2003>> {
-    const response = await this.fyiSettingsGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.fyiSettingsGetRaw(initOverrides)
+    return await response.value()
   }
 
   /**
@@ -588,9 +588,9 @@ export class FYIApi extends runtime.BaseAPI {
       requestParameters.typecode === undefined
     ) {
       throw new runtime.RequiredError(
-        "typecode",
-        "Required parameter requestParameters.typecode was null or undefined when calling fyiSettingsTypecodePost."
-      );
+        'typecode',
+        'Required parameter requestParameters.typecode was null or undefined when calling fyiSettingsTypecodePost.'
+      )
     }
 
     if (
@@ -598,32 +598,32 @@ export class FYIApi extends runtime.BaseAPI {
       requestParameters.body === undefined
     ) {
       throw new runtime.RequiredError(
-        "body",
-        "Required parameter requestParameters.body was null or undefined when calling fyiSettingsTypecodePost."
-      );
+        'body',
+        'Required parameter requestParameters.body was null or undefined when calling fyiSettingsTypecodePost.'
+      )
     }
 
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
-    headerParameters["Content-Type"] = "application/json";
+    headerParameters['Content-Type'] = 'application/json'
 
     const response = await this.request(
       {
         path: `/fyi/settings/{typecode}`.replace(
-          `{${"typecode"}}`,
+          `{${'typecode'}}`,
           encodeURIComponent(String(requestParameters.typecode))
         ),
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
         body: InlineObjectToJSON(requestParameters.body),
       },
       initOverrides
-    );
+    )
 
-    return new runtime.JSONApiResponse<any>(response);
+    return new runtime.JSONApiResponse<any>(response)
   }
 
   /**
@@ -637,8 +637,8 @@ export class FYIApi extends runtime.BaseAPI {
     const response = await this.fyiSettingsTypecodePostRaw(
       requestParameters,
       initOverrides
-    );
-    return await response.value();
+    )
+    return await response.value()
   }
 
   /**
@@ -648,23 +648,23 @@ export class FYIApi extends runtime.BaseAPI {
   async fyiUnreadnumberGetRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<InlineResponse2002>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/fyi/unreadnumber`,
-        method: "GET",
+        method: 'GET',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
     return new runtime.JSONApiResponse(response, (jsonValue) =>
       InlineResponse2002FromJSON(jsonValue)
-    );
+    )
   }
 
   /**
@@ -674,7 +674,7 @@ export class FYIApi extends runtime.BaseAPI {
   async fyiUnreadnumberGet(
     initOverrides?: RequestInit
   ): Promise<InlineResponse2002> {
-    const response = await this.fyiUnreadnumberGetRaw(initOverrides);
-    return await response.value();
+    const response = await this.fyiUnreadnumberGetRaw(initOverrides)
+    return await response.value()
   }
 }

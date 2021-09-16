@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,17 +24,17 @@ export interface OrderDataWarnings {
    * @type {string}
    * @memberof OrderDataWarnings
    */
-  pRICECAP?: string;
+  pRICECAP?: string
   /**
    *
    * @type {string}
    * @memberof OrderDataWarnings
    */
-  tIME?: string;
+  tIME?: string
 }
 
 export function OrderDataWarningsFromJSON(json: any): OrderDataWarnings {
-  return OrderDataWarningsFromJSONTyped(json, false);
+  return OrderDataWarningsFromJSONTyped(json, false)
 }
 
 export function OrderDataWarningsFromJSONTyped(
@@ -42,23 +42,23 @@ export function OrderDataWarningsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): OrderDataWarnings {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    pRICECAP: !exists(json, "PRICECAP") ? undefined : json["PRICECAP"],
-    tIME: !exists(json, "TIME") ? undefined : json["TIME"],
-  };
+    pRICECAP: !exists(json, 'PRICECAP') ? undefined : json['PRICECAP'],
+    tIME: !exists(json, 'TIME') ? undefined : json['TIME'],
+  }
 }
 
 export function OrderDataWarningsToJSON(value?: OrderDataWarnings | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     PRICECAP: value.pRICECAP,
     TIME: value.tIME,
-  };
+  }
 }

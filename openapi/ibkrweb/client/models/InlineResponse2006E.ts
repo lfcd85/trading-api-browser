@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  * device
  * @export
@@ -24,29 +24,29 @@ export interface InlineResponse2006E {
    * @type {string}
    * @memberof InlineResponse2006E
    */
-  nM?: string;
+  nM?: string
   /**
    * device id
    * @type {string}
    * @memberof InlineResponse2006E
    */
-  i?: string;
+  i?: string
   /**
    * unique device id
    * @type {string}
    * @memberof InlineResponse2006E
    */
-  uI?: string;
+  uI?: string
   /**
    * device is enabled or not 0-true, 1-false.
    * @type {string}
    * @memberof InlineResponse2006E
    */
-  a?: string;
+  a?: string
 }
 
 export function InlineResponse2006EFromJSON(json: any): InlineResponse2006E {
-  return InlineResponse2006EFromJSONTyped(json, false);
+  return InlineResponse2006EFromJSONTyped(json, false)
 }
 
 export function InlineResponse2006EFromJSONTyped(
@@ -54,29 +54,29 @@ export function InlineResponse2006EFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse2006E {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    nM: !exists(json, "NM") ? undefined : json["NM"],
-    i: !exists(json, "I") ? undefined : json["I"],
-    uI: !exists(json, "UI") ? undefined : json["UI"],
-    a: !exists(json, "A") ? undefined : json["A"],
-  };
+    nM: !exists(json, 'NM') ? undefined : json['NM'],
+    i: !exists(json, 'I') ? undefined : json['I'],
+    uI: !exists(json, 'UI') ? undefined : json['UI'],
+    a: !exists(json, 'A') ? undefined : json['A'],
+  }
 }
 
 export function InlineResponse2006EToJSON(
   value?: InlineResponse2006E | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     NM: value.nM,
     I: value.i,
     UI: value.uI,
     A: value.a,
-  };
+  }
 }

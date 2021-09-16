@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,41 +24,41 @@ export interface PerformanceCpsData {
    * @type {string}
    * @memberof PerformanceCpsData
    */
-  id?: string;
+  id?: string
   /**
    * for example-- acctid
    * @type {string}
    * @memberof PerformanceCpsData
    */
-  idType?: string;
+  idType?: string
   /**
    * start date-- yyyyMMdd
    * @type {string}
    * @memberof PerformanceCpsData
    */
-  start?: string;
+  start?: string
   /**
    *
    * @type {string}
    * @memberof PerformanceCpsData
    */
-  baseCurrency?: string;
+  baseCurrency?: string
   /**
    * each value stands for price change percent of corresponding date in dates array
    * @type {Array<number>}
    * @memberof PerformanceCpsData
    */
-  returns?: Array<number>;
+  returns?: Array<number>
   /**
    * end date-- yyyyMMdd
    * @type {string}
    * @memberof PerformanceCpsData
    */
-  end?: string;
+  end?: string
 }
 
 export function PerformanceCpsDataFromJSON(json: any): PerformanceCpsData {
-  return PerformanceCpsDataFromJSONTyped(json, false);
+  return PerformanceCpsDataFromJSONTyped(json, false)
 }
 
 export function PerformanceCpsDataFromJSONTyped(
@@ -66,28 +66,28 @@ export function PerformanceCpsDataFromJSONTyped(
   ignoreDiscriminator: boolean
 ): PerformanceCpsData {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    id: !exists(json, "id") ? undefined : json["id"],
-    idType: !exists(json, "idType") ? undefined : json["idType"],
-    start: !exists(json, "start") ? undefined : json["start"],
-    baseCurrency: !exists(json, "baseCurrency")
+    id: !exists(json, 'id') ? undefined : json['id'],
+    idType: !exists(json, 'idType') ? undefined : json['idType'],
+    start: !exists(json, 'start') ? undefined : json['start'],
+    baseCurrency: !exists(json, 'baseCurrency')
       ? undefined
-      : json["baseCurrency"],
-    returns: !exists(json, "returns") ? undefined : json["returns"],
-    end: !exists(json, "end") ? undefined : json["end"],
-  };
+      : json['baseCurrency'],
+    returns: !exists(json, 'returns') ? undefined : json['returns'],
+    end: !exists(json, 'end') ? undefined : json['end'],
+  }
 }
 
 export function PerformanceCpsDataToJSON(
   value?: PerformanceCpsData | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     id: value.id,
@@ -96,5 +96,5 @@ export function PerformanceCpsDataToJSON(
     baseCurrency: value.baseCurrency,
     returns: value.returns,
     end: value.end,
-  };
+  }
 }

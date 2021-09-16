@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,35 +24,35 @@ export interface InlineResponse2003 {
    * @type {number}
    * @memberof InlineResponse2003
    */
-  a?: number;
+  a?: number
   /**
    * fyi code
    * @type {string}
    * @memberof InlineResponse2003
    */
-  fC?: string;
+  fC?: string
   /**
    * disclaimer read, 1 = yes, = 0 no.
    * @type {number}
    * @memberof InlineResponse2003
    */
-  h?: number;
+  h?: number
   /**
    * detailed description
    * @type {string}
    * @memberof InlineResponse2003
    */
-  fD?: string;
+  fD?: string
   /**
    * title
    * @type {string}
    * @memberof InlineResponse2003
    */
-  fN?: string;
+  fN?: string
 }
 
 export function InlineResponse2003FromJSON(json: any): InlineResponse2003 {
-  return InlineResponse2003FromJSONTyped(json, false);
+  return InlineResponse2003FromJSONTyped(json, false)
 }
 
 export function InlineResponse2003FromJSONTyped(
@@ -60,25 +60,25 @@ export function InlineResponse2003FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse2003 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    a: !exists(json, "A") ? undefined : json["A"],
-    fC: !exists(json, "FC") ? undefined : json["FC"],
-    h: !exists(json, "H") ? undefined : json["H"],
-    fD: !exists(json, "FD") ? undefined : json["FD"],
-    fN: !exists(json, "FN") ? undefined : json["FN"],
-  };
+    a: !exists(json, 'A') ? undefined : json['A'],
+    fC: !exists(json, 'FC') ? undefined : json['FC'],
+    h: !exists(json, 'H') ? undefined : json['H'],
+    fD: !exists(json, 'FD') ? undefined : json['FD'],
+    fN: !exists(json, 'FN') ? undefined : json['FN'],
+  }
 }
 
 export function InlineResponse2003ToJSON(
   value?: InlineResponse2003 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     A: value.a,
@@ -86,5 +86,5 @@ export function InlineResponse2003ToJSON(
     H: value.h,
     FD: value.fD,
     FN: value.fN,
-  };
+  }
 }

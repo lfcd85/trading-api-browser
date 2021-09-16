@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,23 +24,23 @@ export interface IbcustEntityInfoName {
    * @type {string}
    * @memberof IbcustEntityInfoName
    */
-  salutation?: string;
+  salutation?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoName
    */
-  firstName?: string;
+  firstName?: string
   /**
    *
    * @type {string}
    * @memberof IbcustEntityInfoName
    */
-  lastName?: string;
+  lastName?: string
 }
 
 export function IbcustEntityInfoNameFromJSON(json: any): IbcustEntityInfoName {
-  return IbcustEntityInfoNameFromJSONTyped(json, false);
+  return IbcustEntityInfoNameFromJSONTyped(json, false)
 }
 
 export function IbcustEntityInfoNameFromJSONTyped(
@@ -48,27 +48,27 @@ export function IbcustEntityInfoNameFromJSONTyped(
   ignoreDiscriminator: boolean
 ): IbcustEntityInfoName {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    salutation: !exists(json, "salutation") ? undefined : json["salutation"],
-    firstName: !exists(json, "firstName") ? undefined : json["firstName"],
-    lastName: !exists(json, "lastName") ? undefined : json["lastName"],
-  };
+    salutation: !exists(json, 'salutation') ? undefined : json['salutation'],
+    firstName: !exists(json, 'firstName') ? undefined : json['firstName'],
+    lastName: !exists(json, 'lastName') ? undefined : json['lastName'],
+  }
 }
 
 export function IbcustEntityInfoNameToJSON(
   value?: IbcustEntityInfoName | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     salutation: value.salutation,
     firstName: value.firstName,
     lastName: value.lastName,
-  };
+  }
 }

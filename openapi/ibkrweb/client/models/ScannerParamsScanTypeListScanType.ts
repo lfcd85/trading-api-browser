@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,25 +24,25 @@ export interface ScannerParamsScanTypeListScanType {
    * @type {string}
    * @memberof ScannerParamsScanTypeListScanType
    */
-  instruments?: string;
+  instruments?: string
   /**
    *
    * @type {string}
    * @memberof ScannerParamsScanTypeListScanType
    */
-  displayName?: string;
+  displayName?: string
   /**
    * scan code which ahs to be provided while querying scanner with this scan type
    * @type {string}
    * @memberof ScannerParamsScanTypeListScanType
    */
-  scanCode?: string;
+  scanCode?: string
 }
 
 export function ScannerParamsScanTypeListScanTypeFromJSON(
   json: any
 ): ScannerParamsScanTypeListScanType {
-  return ScannerParamsScanTypeListScanTypeFromJSONTyped(json, false);
+  return ScannerParamsScanTypeListScanTypeFromJSONTyped(json, false)
 }
 
 export function ScannerParamsScanTypeListScanTypeFromJSONTyped(
@@ -50,27 +50,27 @@ export function ScannerParamsScanTypeListScanTypeFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerParamsScanTypeListScanType {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    instruments: !exists(json, "instruments") ? undefined : json["instruments"],
-    displayName: !exists(json, "displayName") ? undefined : json["displayName"],
-    scanCode: !exists(json, "scanCode") ? undefined : json["scanCode"],
-  };
+    instruments: !exists(json, 'instruments') ? undefined : json['instruments'],
+    displayName: !exists(json, 'displayName') ? undefined : json['displayName'],
+    scanCode: !exists(json, 'scanCode') ? undefined : json['scanCode'],
+  }
 }
 
 export function ScannerParamsScanTypeListScanTypeToJSON(
   value?: ScannerParamsScanTypeListScanType | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     instruments: value.instruments,
     displayName: value.displayName,
     scanCode: value.scanCode,
-  };
+  }
 }

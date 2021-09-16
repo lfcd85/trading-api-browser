@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,31 +24,31 @@ export interface ScannerParamsLocationTreeLocation {
    * @type {string}
    * @memberof ScannerParamsLocationTreeLocation
    */
-  instruments?: string;
+  instruments?: string
   /**
    *
    * @type {string}
    * @memberof ScannerParamsLocationTreeLocation
    */
-  displayName?: string;
+  displayName?: string
   /**
    *
    * @type {string}
    * @memberof ScannerParamsLocationTreeLocation
    */
-  locationCode?: string;
+  locationCode?: string
   /**
    *
    * @type {string}
    * @memberof ScannerParamsLocationTreeLocation
    */
-  routeExchange?: string;
+  routeExchange?: string
 }
 
 export function ScannerParamsLocationTreeLocationFromJSON(
   json: any
 ): ScannerParamsLocationTreeLocation {
-  return ScannerParamsLocationTreeLocationFromJSONTyped(json, false);
+  return ScannerParamsLocationTreeLocationFromJSONTyped(json, false)
 }
 
 export function ScannerParamsLocationTreeLocationFromJSONTyped(
@@ -56,33 +56,33 @@ export function ScannerParamsLocationTreeLocationFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerParamsLocationTreeLocation {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    instruments: !exists(json, "instruments") ? undefined : json["instruments"],
-    displayName: !exists(json, "displayName") ? undefined : json["displayName"],
-    locationCode: !exists(json, "locationCode")
+    instruments: !exists(json, 'instruments') ? undefined : json['instruments'],
+    displayName: !exists(json, 'displayName') ? undefined : json['displayName'],
+    locationCode: !exists(json, 'locationCode')
       ? undefined
-      : json["locationCode"],
-    routeExchange: !exists(json, "routeExchange")
+      : json['locationCode'],
+    routeExchange: !exists(json, 'routeExchange')
       ? undefined
-      : json["routeExchange"],
-  };
+      : json['routeExchange'],
+  }
 }
 
 export function ScannerParamsLocationTreeLocationToJSON(
   value?: ScannerParamsLocationTreeLocation | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     instruments: value.instruments,
     displayName: value.displayName,
     locationCode: value.locationCode,
     routeExchange: value.routeExchange,
-  };
+  }
 }

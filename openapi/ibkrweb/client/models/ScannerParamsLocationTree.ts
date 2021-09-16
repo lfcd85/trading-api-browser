@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   ScannerParamsLocationTreeLocation,
   ScannerParamsLocationTreeLocationFromJSON,
   ScannerParamsLocationTreeLocationFromJSONTyped,
   ScannerParamsLocationTreeLocationToJSON,
-} from "./";
+} from './'
 
 /**
  * Contains list of instruments for which scanner can be ran
@@ -31,13 +31,13 @@ export interface ScannerParamsLocationTree {
    * @type {Array<ScannerParamsLocationTreeLocation>}
    * @memberof ScannerParamsLocationTree
    */
-  location?: Array<ScannerParamsLocationTreeLocation>;
+  location?: Array<ScannerParamsLocationTreeLocation>
 }
 
 export function ScannerParamsLocationTreeFromJSON(
   json: any
 ): ScannerParamsLocationTree {
-  return ScannerParamsLocationTreeFromJSONTyped(json, false);
+  return ScannerParamsLocationTreeFromJSONTyped(json, false)
 }
 
 export function ScannerParamsLocationTreeFromJSONTyped(
@@ -45,25 +45,25 @@ export function ScannerParamsLocationTreeFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerParamsLocationTree {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    location: !exists(json, "Location")
+    location: !exists(json, 'Location')
       ? undefined
-      : (json["Location"] as Array<any>).map(
+      : (json['Location'] as Array<any>).map(
           ScannerParamsLocationTreeLocationFromJSON
         ),
-  };
+  }
 }
 
 export function ScannerParamsLocationTreeToJSON(
   value?: ScannerParamsLocationTree | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     Location:
@@ -72,5 +72,5 @@ export function ScannerParamsLocationTreeToJSON(
         : (value.location as Array<any>).map(
             ScannerParamsLocationTreeLocationToJSON
           ),
-  };
+  }
 }

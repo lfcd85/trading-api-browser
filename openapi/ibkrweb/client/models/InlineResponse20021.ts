@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,29 +24,29 @@ export interface InlineResponse20021 {
    * @type {string}
    * @memberof InlineResponse20021
    */
-  orderId?: string;
+  orderId?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20021
    */
-  msg?: string;
+  msg?: string
   /**
    *
    * @type {number}
    * @memberof InlineResponse20021
    */
-  conid?: number;
+  conid?: number
   /**
    *
    * @type {string}
    * @memberof InlineResponse20021
    */
-  account?: string;
+  account?: string
 }
 
 export function InlineResponse20021FromJSON(json: any): InlineResponse20021 {
-  return InlineResponse20021FromJSONTyped(json, false);
+  return InlineResponse20021FromJSONTyped(json, false)
 }
 
 export function InlineResponse20021FromJSONTyped(
@@ -54,29 +54,29 @@ export function InlineResponse20021FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20021 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    orderId: !exists(json, "order_id") ? undefined : json["order_id"],
-    msg: !exists(json, "msg") ? undefined : json["msg"],
-    conid: !exists(json, "conid") ? undefined : json["conid"],
-    account: !exists(json, "account") ? undefined : json["account"],
-  };
+    orderId: !exists(json, 'order_id') ? undefined : json['order_id'],
+    msg: !exists(json, 'msg') ? undefined : json['msg'],
+    conid: !exists(json, 'conid') ? undefined : json['conid'],
+    account: !exists(json, 'account') ? undefined : json['account'],
+  }
 }
 
 export function InlineResponse20021ToJSON(
   value?: InlineResponse20021 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     order_id: value.orderId,
     msg: value.msg,
     conid: value.conid,
     account: value.account,
-  };
+  }
 }

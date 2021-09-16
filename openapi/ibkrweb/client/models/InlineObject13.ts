@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,29 +24,29 @@ export interface InlineObject13 {
    * @type {Array<string>}
    * @memberof InlineObject13
    */
-  acctIds?: Array<string>;
+  acctIds?: Array<string>
   /**
    *
    * @type {Array<number>}
    * @memberof InlineObject13
    */
-  conids?: Array<number>;
+  conids?: Array<number>
   /**
    * optional defaults to USD.
    * @type {string}
    * @memberof InlineObject13
    */
-  currency?: string;
+  currency?: string
   /**
    * optional, default value is 90
    * @type {number}
    * @memberof InlineObject13
    */
-  days?: number;
+  days?: number
 }
 
 export function InlineObject13FromJSON(json: any): InlineObject13 {
-  return InlineObject13FromJSONTyped(json, false);
+  return InlineObject13FromJSONTyped(json, false)
 }
 
 export function InlineObject13FromJSONTyped(
@@ -54,27 +54,27 @@ export function InlineObject13FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject13 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    acctIds: !exists(json, "acctIds") ? undefined : json["acctIds"],
-    conids: !exists(json, "conids") ? undefined : json["conids"],
-    currency: !exists(json, "currency") ? undefined : json["currency"],
-    days: !exists(json, "days") ? undefined : json["days"],
-  };
+    acctIds: !exists(json, 'acctIds') ? undefined : json['acctIds'],
+    conids: !exists(json, 'conids') ? undefined : json['conids'],
+    currency: !exists(json, 'currency') ? undefined : json['currency'],
+    days: !exists(json, 'days') ? undefined : json['days'],
+  }
 }
 
 export function InlineObject13ToJSON(value?: InlineObject13 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     acctIds: value.acctIds,
     conids: value.conids,
     currency: value.currency,
     days: value.days,
-  };
+  }
 }

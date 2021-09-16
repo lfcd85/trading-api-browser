@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   InlineResponse2009AcctList,
   InlineResponse2009AcctListFromJSON,
   InlineResponse2009AcctListFromJSONTyped,
   InlineResponse2009AcctListToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,17 +31,17 @@ export interface InlineResponse2009 {
    * @type {string}
    * @memberof InlineResponse2009
    */
-  mainAcct?: string;
+  mainAcct?: string
   /**
    * List of tradeable or Sub Accounts
    * @type {Array<InlineResponse2009AcctList>}
    * @memberof InlineResponse2009
    */
-  acctList?: Array<InlineResponse2009AcctList>;
+  acctList?: Array<InlineResponse2009AcctList>
 }
 
 export function InlineResponse2009FromJSON(json: any): InlineResponse2009 {
-  return InlineResponse2009FromJSONTyped(json, false);
+  return InlineResponse2009FromJSONTyped(json, false)
 }
 
 export function InlineResponse2009FromJSONTyped(
@@ -49,26 +49,26 @@ export function InlineResponse2009FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse2009 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    mainAcct: !exists(json, "mainAcct") ? undefined : json["mainAcct"],
-    acctList: !exists(json, "acctList")
+    mainAcct: !exists(json, 'mainAcct') ? undefined : json['mainAcct'],
+    acctList: !exists(json, 'acctList')
       ? undefined
-      : (json["acctList"] as Array<any>).map(
+      : (json['acctList'] as Array<any>).map(
           InlineResponse2009AcctListFromJSON
         ),
-  };
+  }
 }
 
 export function InlineResponse2009ToJSON(
   value?: InlineResponse2009 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     mainAcct: value.mainAcct,
@@ -76,5 +76,5 @@ export function InlineResponse2009ToJSON(
       value.acctList === undefined
         ? undefined
         : (value.acctList as Array<any>).map(InlineResponse2009AcctListToJSON),
-  };
+  }
 }

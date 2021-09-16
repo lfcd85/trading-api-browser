@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,41 +24,41 @@ export interface StatsData {
    * @type {number}
    * @memberof StatsData
    */
-  conid?: number;
+  conid?: number
   /**
    *
    * @type {string}
    * @memberof StatsData
    */
-  exchange?: string;
+  exchange?: string
   /**
    *
    * @type {number}
    * @memberof StatsData
    */
-  v?: number;
+  v?: number
   /**
    *
    * @type {number}
    * @memberof StatsData
    */
-  t?: number;
+  t?: number
   /**
    *
    * @type {number}
    * @memberof StatsData
    */
-  tT?: number;
+  tT?: number
   /**
    * Object, payload depends on event type. See confluence page for IGEvntUpd.
    * @type {string}
    * @memberof StatsData
    */
-  p?: string;
+  p?: string
 }
 
 export function StatsDataFromJSON(json: any): StatsData {
-  return StatsDataFromJSONTyped(json, false);
+  return StatsDataFromJSONTyped(json, false)
 }
 
 export function StatsDataFromJSONTyped(
@@ -66,24 +66,24 @@ export function StatsDataFromJSONTyped(
   ignoreDiscriminator: boolean
 ): StatsData {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    conid: !exists(json, "Conid") ? undefined : json["Conid"],
-    exchange: !exists(json, "Exchange") ? undefined : json["Exchange"],
-    v: !exists(json, "V") ? undefined : json["V"],
-    t: !exists(json, "T") ? undefined : json["T"],
-    tT: !exists(json, "TT") ? undefined : json["TT"],
-    p: !exists(json, "P") ? undefined : json["P"],
-  };
+    conid: !exists(json, 'Conid') ? undefined : json['Conid'],
+    exchange: !exists(json, 'Exchange') ? undefined : json['Exchange'],
+    v: !exists(json, 'V') ? undefined : json['V'],
+    t: !exists(json, 'T') ? undefined : json['T'],
+    tT: !exists(json, 'TT') ? undefined : json['TT'],
+    p: !exists(json, 'P') ? undefined : json['P'],
+  }
 }
 
 export function StatsDataToJSON(value?: StatsData | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     Conid: value.conid,
@@ -92,5 +92,5 @@ export function StatsDataToJSON(value?: StatsData | null): any {
     T: value.t,
     TT: value.tT,
     P: value.p,
-  };
+  }
 }

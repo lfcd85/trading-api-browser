@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,13 +24,13 @@ export interface InlineResponse20028FraqTypes {
    * @type {string}
    * @memberof InlineResponse20028FraqTypes
    */
-  _0?: string;
+  _0?: string
 }
 
 export function InlineResponse20028FraqTypesFromJSON(
   json: any
 ): InlineResponse20028FraqTypes {
-  return InlineResponse20028FraqTypesFromJSONTyped(json, false);
+  return InlineResponse20028FraqTypesFromJSONTyped(json, false)
 }
 
 export function InlineResponse20028FraqTypesFromJSONTyped(
@@ -38,23 +38,23 @@ export function InlineResponse20028FraqTypesFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20028FraqTypes {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    _0: !exists(json, "0") ? undefined : json["0"],
-  };
+    _0: !exists(json, '0') ? undefined : json['0'],
+  }
 }
 
 export function InlineResponse20028FraqTypesToJSON(
   value?: InlineResponse20028FraqTypes | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
-    "0": value._0,
-  };
+    '0': value._0,
+  }
 }

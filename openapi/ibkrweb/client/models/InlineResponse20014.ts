@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,47 +24,47 @@ export interface InlineResponse20014 {
    * @type {number}
    * @memberof InlineResponse20014
    */
-  orderId?: number;
+  orderId?: number
   /**
    * account id
    * @type {string}
    * @memberof InlineResponse20014
    */
-  account?: string;
+  account?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20014
    */
-  alertName?: string;
+  alertName?: string
   /**
    * Value can only be 0 or 1, 1 means active
    * @type {number}
    * @memberof InlineResponse20014
    */
-  alertActive?: number;
+  alertActive?: number
   /**
    * format, YYYYMMDD-HH:mm:ss, the time when you created the alert
    * @type {string}
    * @memberof InlineResponse20014
    */
-  orderTime?: string;
+  orderTime?: string
   /**
    * whether the alert has been triggered or not
    * @type {boolean}
    * @memberof InlineResponse20014
    */
-  alertTriggered?: boolean;
+  alertTriggered?: boolean
   /**
    * whether the alert can be repeatable or not, value can be 1 or 0. 1 means true
    * @type {number}
    * @memberof InlineResponse20014
    */
-  alertRepeatable?: number;
+  alertRepeatable?: number
 }
 
 export function InlineResponse20014FromJSON(json: any): InlineResponse20014 {
-  return InlineResponse20014FromJSONTyped(json, false);
+  return InlineResponse20014FromJSONTyped(json, false)
 }
 
 export function InlineResponse20014FromJSONTyped(
@@ -72,33 +72,33 @@ export function InlineResponse20014FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20014 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    orderId: !exists(json, "order_id") ? undefined : json["order_id"],
-    account: !exists(json, "account") ? undefined : json["account"],
-    alertName: !exists(json, "alert_name") ? undefined : json["alert_name"],
-    alertActive: !exists(json, "alert_active")
+    orderId: !exists(json, 'order_id') ? undefined : json['order_id'],
+    account: !exists(json, 'account') ? undefined : json['account'],
+    alertName: !exists(json, 'alert_name') ? undefined : json['alert_name'],
+    alertActive: !exists(json, 'alert_active')
       ? undefined
-      : json["alert_active"],
-    orderTime: !exists(json, "order_time") ? undefined : json["order_time"],
-    alertTriggered: !exists(json, "alert_triggered")
+      : json['alert_active'],
+    orderTime: !exists(json, 'order_time') ? undefined : json['order_time'],
+    alertTriggered: !exists(json, 'alert_triggered')
       ? undefined
-      : json["alert_triggered"],
-    alertRepeatable: !exists(json, "alert_repeatable")
+      : json['alert_triggered'],
+    alertRepeatable: !exists(json, 'alert_repeatable')
       ? undefined
-      : json["alert_repeatable"],
-  };
+      : json['alert_repeatable'],
+  }
 }
 
 export function InlineResponse20014ToJSON(
   value?: InlineResponse20014 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     order_id: value.orderId,
@@ -108,5 +108,5 @@ export function InlineResponse20014ToJSON(
     order_time: value.orderTime,
     alert_triggered: value.alertTriggered,
     alert_repeatable: value.alertRepeatable,
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,7 +24,7 @@ export interface InlineObject4 {
    * @type {Array<string>}
    * @memberof InlineObject4
    */
-  filters?: Array<InlineObject4FiltersEnum>;
+  filters?: Array<InlineObject4FiltersEnum>
 }
 
 /**
@@ -32,19 +32,19 @@ export interface InlineObject4 {
  * @enum {string}
  */
 export enum InlineObject4FiltersEnum {
-  Inactive = "inactive",
-  PendingSubmit = "pending_submit",
-  PreSubmitted = "pre_submitted",
-  Submitted = "submitted",
-  Filled = "filled",
-  PendingCancel = "pending_cancel",
-  Cancelled = "cancelled",
-  WarnState = "warn_state",
-  SortByTime = "sort_by_time",
+  Inactive = 'inactive',
+  PendingSubmit = 'pending_submit',
+  PreSubmitted = 'pre_submitted',
+  Submitted = 'submitted',
+  Filled = 'filled',
+  PendingCancel = 'pending_cancel',
+  Cancelled = 'cancelled',
+  WarnState = 'warn_state',
+  SortByTime = 'sort_by_time',
 }
 
 export function InlineObject4FromJSON(json: any): InlineObject4 {
-  return InlineObject4FromJSONTyped(json, false);
+  return InlineObject4FromJSONTyped(json, false)
 }
 
 export function InlineObject4FromJSONTyped(
@@ -52,21 +52,21 @@ export function InlineObject4FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject4 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    filters: !exists(json, "filters") ? undefined : json["filters"],
-  };
+    filters: !exists(json, 'filters') ? undefined : json['filters'],
+  }
 }
 
 export function InlineObject4ToJSON(value?: InlineObject4 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     filters: value.filters,
-  };
+  }
 }

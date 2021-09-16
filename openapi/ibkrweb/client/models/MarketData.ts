@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,59 +24,59 @@ export interface MarketData {
    * @type {number}
    * @memberof MarketData
    */
-  conid?: number;
+  conid?: number
   /**
    * Exchange
    * @type {string}
    * @memberof MarketData
    */
-  exchange?: string;
+  exchange?: string
   /**
    *
    * @type {number}
    * @memberof MarketData
    */
-  minTick?: number;
+  minTick?: number
   /**
    *
    * @type {number}
    * @memberof MarketData
    */
-  last?: number;
+  last?: number
   /**
    *
    * @type {number}
    * @memberof MarketData
    */
-  lastSize?: number;
+  lastSize?: number
   /**
    *
    * @type {number}
    * @memberof MarketData
    */
-  bid?: number;
+  bid?: number
   /**
    *
    * @type {number}
    * @memberof MarketData
    */
-  bidSize?: number;
+  bidSize?: number
   /**
    *
    * @type {number}
    * @memberof MarketData
    */
-  ask?: number;
+  ask?: number
   /**
    *
    * @type {number}
    * @memberof MarketData
    */
-  askSize?: number;
+  askSize?: number
 }
 
 export function MarketDataFromJSON(json: any): MarketData {
-  return MarketDataFromJSONTyped(json, false);
+  return MarketDataFromJSONTyped(json, false)
 }
 
 export function MarketDataFromJSONTyped(
@@ -84,27 +84,27 @@ export function MarketDataFromJSONTyped(
   ignoreDiscriminator: boolean
 ): MarketData {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    conid: !exists(json, "Conid") ? undefined : json["Conid"],
-    exchange: !exists(json, "Exchange") ? undefined : json["Exchange"],
-    minTick: !exists(json, "minTick") ? undefined : json["minTick"],
-    last: !exists(json, "Last") ? undefined : json["Last"],
-    lastSize: !exists(json, "LastSize") ? undefined : json["LastSize"],
-    bid: !exists(json, "Bid") ? undefined : json["Bid"],
-    bidSize: !exists(json, "BidSize") ? undefined : json["BidSize"],
-    ask: !exists(json, "Ask") ? undefined : json["Ask"],
-    askSize: !exists(json, "AskSize") ? undefined : json["AskSize"],
-  };
+    conid: !exists(json, 'Conid') ? undefined : json['Conid'],
+    exchange: !exists(json, 'Exchange') ? undefined : json['Exchange'],
+    minTick: !exists(json, 'minTick') ? undefined : json['minTick'],
+    last: !exists(json, 'Last') ? undefined : json['Last'],
+    lastSize: !exists(json, 'LastSize') ? undefined : json['LastSize'],
+    bid: !exists(json, 'Bid') ? undefined : json['Bid'],
+    bidSize: !exists(json, 'BidSize') ? undefined : json['BidSize'],
+    ask: !exists(json, 'Ask') ? undefined : json['Ask'],
+    askSize: !exists(json, 'AskSize') ? undefined : json['AskSize'],
+  }
 }
 
 export function MarketDataToJSON(value?: MarketData | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     Conid: value.conid,
@@ -116,5 +116,5 @@ export function MarketDataToJSON(value?: MarketData | null): any {
     BidSize: value.bidSize,
     Ask: value.ask,
     AskSize: value.askSize,
-  };
+  }
 }

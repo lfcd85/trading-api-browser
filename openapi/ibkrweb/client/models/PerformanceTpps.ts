@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   PerformanceCpsData,
   PerformanceCpsDataFromJSON,
   PerformanceCpsDataFromJSONTyped,
   PerformanceCpsDataToJSON,
-} from "./";
+} from './'
 
 /**
  * Time period performance data
@@ -31,23 +31,23 @@ export interface PerformanceTpps {
    * @type {Array<string>}
    * @memberof PerformanceTpps
    */
-  dates?: Array<string>;
+  dates?: Array<string>
   /**
    * M means Month
    * @type {string}
    * @memberof PerformanceTpps
    */
-  freq?: string;
+  freq?: string
   /**
    *
    * @type {Array<PerformanceCpsData>}
    * @memberof PerformanceTpps
    */
-  data?: Array<PerformanceCpsData>;
+  data?: Array<PerformanceCpsData>
 }
 
 export function PerformanceTppsFromJSON(json: any): PerformanceTpps {
-  return PerformanceTppsFromJSONTyped(json, false);
+  return PerformanceTppsFromJSONTyped(json, false)
 }
 
 export function PerformanceTppsFromJSONTyped(
@@ -55,23 +55,23 @@ export function PerformanceTppsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): PerformanceTpps {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    dates: !exists(json, "dates") ? undefined : json["dates"],
-    freq: !exists(json, "freq") ? undefined : json["freq"],
-    data: !exists(json, "data")
+    dates: !exists(json, 'dates') ? undefined : json['dates'],
+    freq: !exists(json, 'freq') ? undefined : json['freq'],
+    data: !exists(json, 'data')
       ? undefined
-      : (json["data"] as Array<any>).map(PerformanceCpsDataFromJSON),
-  };
+      : (json['data'] as Array<any>).map(PerformanceCpsDataFromJSON),
+  }
 }
 
 export function PerformanceTppsToJSON(value?: PerformanceTpps | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     dates: value.dates,
@@ -80,5 +80,5 @@ export function PerformanceTppsToJSON(value?: PerformanceTpps | null): any {
       value.data === undefined
         ? undefined
         : (value.data as Array<any>).map(PerformanceCpsDataToJSON),
-  };
+  }
 }

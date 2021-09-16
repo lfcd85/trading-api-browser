@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,37 +24,37 @@ export interface ScannerParamsInstrumentListInstrument {
    * @type {string}
    * @memberof ScannerParamsInstrumentListInstrument
    */
-  type?: string;
+  type?: string
   /**
    * Display name for the instrument
    * @type {string}
    * @memberof ScannerParamsInstrumentListInstrument
    */
-  name?: string;
+  name?: string
   /**
    *
    * @type {string}
    * @memberof ScannerParamsInstrumentListInstrument
    */
-  shortName?: string;
+  shortName?: string
   /**
    * Sec Type of the instrument. This field is not provided if its value is same as 'type'
    * @type {string}
    * @memberof ScannerParamsInstrumentListInstrument
    */
-  secType?: string;
+  secType?: string
   /**
    * Supported filters for the instrument separated by a comma
    * @type {string}
    * @memberof ScannerParamsInstrumentListInstrument
    */
-  filters?: string;
+  filters?: string
 }
 
 export function ScannerParamsInstrumentListInstrumentFromJSON(
   json: any
 ): ScannerParamsInstrumentListInstrument {
-  return ScannerParamsInstrumentListInstrumentFromJSONTyped(json, false);
+  return ScannerParamsInstrumentListInstrumentFromJSONTyped(json, false)
 }
 
 export function ScannerParamsInstrumentListInstrumentFromJSONTyped(
@@ -62,25 +62,25 @@ export function ScannerParamsInstrumentListInstrumentFromJSONTyped(
   ignoreDiscriminator: boolean
 ): ScannerParamsInstrumentListInstrument {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    type: !exists(json, "type") ? undefined : json["type"],
-    name: !exists(json, "name") ? undefined : json["name"],
-    shortName: !exists(json, "shortName") ? undefined : json["shortName"],
-    secType: !exists(json, "secType") ? undefined : json["secType"],
-    filters: !exists(json, "filters") ? undefined : json["filters"],
-  };
+    type: !exists(json, 'type') ? undefined : json['type'],
+    name: !exists(json, 'name') ? undefined : json['name'],
+    shortName: !exists(json, 'shortName') ? undefined : json['shortName'],
+    secType: !exists(json, 'secType') ? undefined : json['secType'],
+    filters: !exists(json, 'filters') ? undefined : json['filters'],
+  }
 }
 
 export function ScannerParamsInstrumentListInstrumentToJSON(
   value?: ScannerParamsInstrumentListInstrument | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     type: value.type,
@@ -88,5 +88,5 @@ export function ScannerParamsInstrumentListInstrumentToJSON(
     shortName: value.shortName,
     secType: value.secType,
     filters: value.filters,
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,19 +24,19 @@ export interface InlineResponse20029Locations {
    * @type {string}
    * @memberof InlineResponse20029Locations
    */
-  displayName?: string;
+  displayName?: string
   /**
    *
    * @type {string}
    * @memberof InlineResponse20029Locations
    */
-  type?: string;
+  type?: string
 }
 
 export function InlineResponse20029LocationsFromJSON(
   json: any
 ): InlineResponse20029Locations {
-  return InlineResponse20029LocationsFromJSONTyped(json, false);
+  return InlineResponse20029LocationsFromJSONTyped(json, false)
 }
 
 export function InlineResponse20029LocationsFromJSONTyped(
@@ -44,27 +44,27 @@ export function InlineResponse20029LocationsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20029Locations {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    displayName: !exists(json, "display_name")
+    displayName: !exists(json, 'display_name')
       ? undefined
-      : json["display_name"],
-    type: !exists(json, "type") ? undefined : json["type"],
-  };
+      : json['display_name'],
+    type: !exists(json, 'type') ? undefined : json['type'],
+  }
 }
 
 export function InlineResponse20029LocationsToJSON(
   value?: InlineResponse20029Locations | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     display_name: value.displayName,
     type: value.type,
-  };
+  }
 }

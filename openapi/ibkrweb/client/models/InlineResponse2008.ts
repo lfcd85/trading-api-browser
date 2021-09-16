@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,23 +24,23 @@ export interface InlineResponse2008 {
    * @type {boolean}
    * @memberof InlineResponse2008
    */
-  authenticated?: boolean;
+  authenticated?: boolean
   /**
    * Login session is connected
    * @type {boolean}
    * @memberof InlineResponse2008
    */
-  connected?: boolean;
+  connected?: boolean
   /**
    * server name
    * @type {string}
    * @memberof InlineResponse2008
    */
-  name?: string;
+  name?: string
 }
 
 export function InlineResponse2008FromJSON(json: any): InlineResponse2008 {
-  return InlineResponse2008FromJSONTyped(json, false);
+  return InlineResponse2008FromJSONTyped(json, false)
 }
 
 export function InlineResponse2008FromJSONTyped(
@@ -48,29 +48,29 @@ export function InlineResponse2008FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse2008 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    authenticated: !exists(json, "authenticated")
+    authenticated: !exists(json, 'authenticated')
       ? undefined
-      : json["authenticated"],
-    connected: !exists(json, "connected") ? undefined : json["connected"],
-    name: !exists(json, "name") ? undefined : json["name"],
-  };
+      : json['authenticated'],
+    connected: !exists(json, 'connected') ? undefined : json['connected'],
+    name: !exists(json, 'name') ? undefined : json['name'],
+  }
 }
 
 export function InlineResponse2008ToJSON(
   value?: InlineResponse2008 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     authenticated: value.authenticated,
     connected: value.connected,
     name: value.name,
-  };
+  }
 }

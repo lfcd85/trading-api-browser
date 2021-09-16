@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,23 +24,23 @@ export interface InlineResponse20011 {
    * @type {Array<string>}
    * @memberof InlineResponse20011
    */
-  accounts?: Array<string>;
+  accounts?: Array<string>
   /**
    * Account Id and its alias
    * @type {object}
    * @memberof InlineResponse20011
    */
-  aliases?: object;
+  aliases?: object
   /**
    *
    * @type {string}
    * @memberof InlineResponse20011
    */
-  selectedAccount?: string;
+  selectedAccount?: string
 }
 
 export function InlineResponse20011FromJSON(json: any): InlineResponse20011 {
-  return InlineResponse20011FromJSONTyped(json, false);
+  return InlineResponse20011FromJSONTyped(json, false)
 }
 
 export function InlineResponse20011FromJSONTyped(
@@ -48,29 +48,29 @@ export function InlineResponse20011FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20011 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    accounts: !exists(json, "accounts") ? undefined : json["accounts"],
-    aliases: !exists(json, "aliases") ? undefined : json["aliases"],
-    selectedAccount: !exists(json, "selectedAccount")
+    accounts: !exists(json, 'accounts') ? undefined : json['accounts'],
+    aliases: !exists(json, 'aliases') ? undefined : json['aliases'],
+    selectedAccount: !exists(json, 'selectedAccount')
       ? undefined
-      : json["selectedAccount"],
-  };
+      : json['selectedAccount'],
+  }
 }
 
 export function InlineResponse20011ToJSON(
   value?: InlineResponse20011 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     accounts: value.accounts,
     aliases: value.aliases,
     selectedAccount: value.selectedAccount,
-  };
+  }
 }

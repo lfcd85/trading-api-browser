@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,11 +24,11 @@ export interface InlineObject12 {
    * @type {Array<string>}
    * @memberof InlineObject12
    */
-  acctIds?: Array<string>;
+  acctIds?: Array<string>
 }
 
 export function InlineObject12FromJSON(json: any): InlineObject12 {
-  return InlineObject12FromJSONTyped(json, false);
+  return InlineObject12FromJSONTyped(json, false)
 }
 
 export function InlineObject12FromJSONTyped(
@@ -36,21 +36,21 @@ export function InlineObject12FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject12 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    acctIds: !exists(json, "acctIds") ? undefined : json["acctIds"],
-  };
+    acctIds: !exists(json, 'acctIds') ? undefined : json['acctIds'],
+  }
 }
 
 export function InlineObject12ToJSON(value?: InlineObject12 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     acctIds: value.acctIds,
-  };
+  }
 }

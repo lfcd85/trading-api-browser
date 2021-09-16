@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,35 +24,35 @@ export interface AccountParent {
    * @type {Array<string>}
    * @memberof AccountParent
    */
-  mmc?: Array<string>;
+  mmc?: Array<string>
   /**
    * Account Number for Money Manager Client
    * @type {string}
    * @memberof AccountParent
    */
-  accountId?: string;
+  accountId?: string
   /**
    * Is MM a Parent Account
    * @type {boolean}
    * @memberof AccountParent
    */
-  isMParent?: boolean;
+  isMParent?: boolean
   /**
    * Is MM a Child Account
    * @type {boolean}
    * @memberof AccountParent
    */
-  isMChild?: boolean;
+  isMChild?: boolean
   /**
    * Is a Multiplex Account. These are account models with individual account being parent and managed account being child.
    * @type {boolean}
    * @memberof AccountParent
    */
-  isMultiplex?: boolean;
+  isMultiplex?: boolean
 }
 
 export function AccountParentFromJSON(json: any): AccountParent {
-  return AccountParentFromJSONTyped(json, false);
+  return AccountParentFromJSONTyped(json, false)
 }
 
 export function AccountParentFromJSONTyped(
@@ -60,23 +60,23 @@ export function AccountParentFromJSONTyped(
   ignoreDiscriminator: boolean
 ): AccountParent {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    mmc: !exists(json, "mmc") ? undefined : json["mmc"],
-    accountId: !exists(json, "accountId") ? undefined : json["accountId"],
-    isMParent: !exists(json, "isMParent") ? undefined : json["isMParent"],
-    isMChild: !exists(json, "isMChild") ? undefined : json["isMChild"],
-    isMultiplex: !exists(json, "isMultiplex") ? undefined : json["isMultiplex"],
-  };
+    mmc: !exists(json, 'mmc') ? undefined : json['mmc'],
+    accountId: !exists(json, 'accountId') ? undefined : json['accountId'],
+    isMParent: !exists(json, 'isMParent') ? undefined : json['isMParent'],
+    isMChild: !exists(json, 'isMChild') ? undefined : json['isMChild'],
+    isMultiplex: !exists(json, 'isMultiplex') ? undefined : json['isMultiplex'],
+  }
 }
 
 export function AccountParentToJSON(value?: AccountParent | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     mmc: value.mmc,
@@ -84,5 +84,5 @@ export function AccountParentToJSON(value?: AccountParent | null): any {
     isMParent: value.isMParent,
     isMChild: value.isMChild,
     isMultiplex: value.isMultiplex,
-  };
+  }
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,11 +24,11 @@ export interface InlineResponse2002 {
    * @type {number}
    * @memberof InlineResponse2002
    */
-  bN?: number;
+  bN?: number
 }
 
 export function InlineResponse2002FromJSON(json: any): InlineResponse2002 {
-  return InlineResponse2002FromJSONTyped(json, false);
+  return InlineResponse2002FromJSONTyped(json, false)
 }
 
 export function InlineResponse2002FromJSONTyped(
@@ -36,23 +36,23 @@ export function InlineResponse2002FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse2002 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    bN: !exists(json, "BN") ? undefined : json["BN"],
-  };
+    bN: !exists(json, 'BN') ? undefined : json['BN'],
+  }
 }
 
 export function InlineResponse2002ToJSON(
   value?: InlineResponse2002 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     BN: value.bN,
-  };
+  }
 }

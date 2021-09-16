@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,17 +24,17 @@ export interface InlineResponse400 {
    * @type {string}
    * @memberof InlineResponse400
    */
-  error?: string;
+  error?: string
   /**
    *
    * @type {number}
    * @memberof InlineResponse400
    */
-  statusCode?: number;
+  statusCode?: number
 }
 
 export function InlineResponse400FromJSON(json: any): InlineResponse400 {
-  return InlineResponse400FromJSONTyped(json, false);
+  return InlineResponse400FromJSONTyped(json, false)
 }
 
 export function InlineResponse400FromJSONTyped(
@@ -42,23 +42,23 @@ export function InlineResponse400FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse400 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    error: !exists(json, "error") ? undefined : json["error"],
-    statusCode: !exists(json, "statusCode") ? undefined : json["statusCode"],
-  };
+    error: !exists(json, 'error') ? undefined : json['error'],
+    statusCode: !exists(json, 'statusCode') ? undefined : json['statusCode'],
+  }
 }
 
 export function InlineResponse400ToJSON(value?: InlineResponse400 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     error: value.error,
     statusCode: value.statusCode,
-  };
+  }
 }

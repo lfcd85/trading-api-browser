@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import * as runtime from "../runtime";
+import * as runtime from '../runtime'
 
 /**
  *
@@ -25,21 +25,21 @@ export class StreamingApi extends runtime.BaseAPI {
   async wsPostRaw(
     initOverrides?: RequestInit
   ): Promise<runtime.ApiResponse<void>> {
-    const queryParameters: any = {};
+    const queryParameters: any = {}
 
-    const headerParameters: runtime.HTTPHeaders = {};
+    const headerParameters: runtime.HTTPHeaders = {}
 
     const response = await this.request(
       {
         path: `/ws`,
-        method: "POST",
+        method: 'POST',
         headers: headerParameters,
         query: queryParameters,
       },
       initOverrides
-    );
+    )
 
-    return new runtime.VoidApiResponse(response);
+    return new runtime.VoidApiResponse(response)
   }
 
   /**
@@ -47,6 +47,6 @@ export class StreamingApi extends runtime.BaseAPI {
    * Websocket Endpoint
    */
   async wsPost(initOverrides?: RequestInit): Promise<void> {
-    await this.wsPostRaw(initOverrides);
+    await this.wsPostRaw(initOverrides)
   }
 }

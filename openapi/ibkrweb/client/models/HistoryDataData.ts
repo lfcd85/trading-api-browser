@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,41 +24,41 @@ export interface HistoryDataData {
    * @type {number}
    * @memberof HistoryDataData
    */
-  o?: number;
+  o?: number
   /**
    * close price
    * @type {number}
    * @memberof HistoryDataData
    */
-  c?: number;
+  c?: number
   /**
    * high price
    * @type {number}
    * @memberof HistoryDataData
    */
-  h?: number;
+  h?: number
   /**
    * low price
    * @type {number}
    * @memberof HistoryDataData
    */
-  l?: number;
+  l?: number
   /**
    * volume
    * @type {number}
    * @memberof HistoryDataData
    */
-  v?: number;
+  v?: number
   /**
    * unix time stamp
    * @type {number}
    * @memberof HistoryDataData
    */
-  t?: number;
+  t?: number
 }
 
 export function HistoryDataDataFromJSON(json: any): HistoryDataData {
-  return HistoryDataDataFromJSONTyped(json, false);
+  return HistoryDataDataFromJSONTyped(json, false)
 }
 
 export function HistoryDataDataFromJSONTyped(
@@ -66,24 +66,24 @@ export function HistoryDataDataFromJSONTyped(
   ignoreDiscriminator: boolean
 ): HistoryDataData {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    o: !exists(json, "o") ? undefined : json["o"],
-    c: !exists(json, "c") ? undefined : json["c"],
-    h: !exists(json, "h") ? undefined : json["h"],
-    l: !exists(json, "l") ? undefined : json["l"],
-    v: !exists(json, "v") ? undefined : json["v"],
-    t: !exists(json, "t") ? undefined : json["t"],
-  };
+    o: !exists(json, 'o') ? undefined : json['o'],
+    c: !exists(json, 'c') ? undefined : json['c'],
+    h: !exists(json, 'h') ? undefined : json['h'],
+    l: !exists(json, 'l') ? undefined : json['l'],
+    v: !exists(json, 'v') ? undefined : json['v'],
+    t: !exists(json, 't') ? undefined : json['t'],
+  }
 }
 
 export function HistoryDataDataToJSON(value?: HistoryDataData | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     o: value.o,
@@ -92,5 +92,5 @@ export function HistoryDataDataToJSON(value?: HistoryDataData | null): any {
     l: value.l,
     v: value.v,
     t: value.t,
-  };
+  }
 }

@@ -12,13 +12,13 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 import {
   OrderData,
   OrderDataFromJSON,
   OrderDataFromJSONTyped,
   OrderDataToJSON,
-} from "./";
+} from './'
 
 /**
  *
@@ -31,11 +31,11 @@ export interface InlineResponse20010 {
    * @type {Array<OrderData>}
    * @memberof InlineResponse20010
    */
-  orders?: Array<OrderData>;
+  orders?: Array<OrderData>
 }
 
 export function InlineResponse20010FromJSON(json: any): InlineResponse20010 {
-  return InlineResponse20010FromJSONTyped(json, false);
+  return InlineResponse20010FromJSONTyped(json, false)
 }
 
 export function InlineResponse20010FromJSONTyped(
@@ -43,28 +43,28 @@ export function InlineResponse20010FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20010 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    orders: !exists(json, "orders")
+    orders: !exists(json, 'orders')
       ? undefined
-      : (json["orders"] as Array<any>).map(OrderDataFromJSON),
-  };
+      : (json['orders'] as Array<any>).map(OrderDataFromJSON),
+  }
 }
 
 export function InlineResponse20010ToJSON(
   value?: InlineResponse20010 | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     orders:
       value.orders === undefined
         ? undefined
         : (value.orders as Array<any>).map(OrderDataToJSON),
-  };
+  }
 }

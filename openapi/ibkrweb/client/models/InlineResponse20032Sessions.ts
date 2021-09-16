@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  * If the LIQUID hours differs from the total trading day then a separate 'session' tag is returned.
  * @export
@@ -24,25 +24,25 @@ export interface InlineResponse20032Sessions {
    * @type {number}
    * @memberof InlineResponse20032Sessions
    */
-  openingTime?: number;
+  openingTime?: number
   /**
    *
    * @type {number}
    * @memberof InlineResponse20032Sessions
    */
-  closingTime?: number;
+  closingTime?: number
   /**
    * If the whole trading day is considered LIQUID then the value 'LIQUID' is returned.
    * @type {string}
    * @memberof InlineResponse20032Sessions
    */
-  prop?: string;
+  prop?: string
 }
 
 export function InlineResponse20032SessionsFromJSON(
   json: any
 ): InlineResponse20032Sessions {
-  return InlineResponse20032SessionsFromJSONTyped(json, false);
+  return InlineResponse20032SessionsFromJSONTyped(json, false)
 }
 
 export function InlineResponse20032SessionsFromJSONTyped(
@@ -50,27 +50,27 @@ export function InlineResponse20032SessionsFromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineResponse20032Sessions {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    openingTime: !exists(json, "openingTime") ? undefined : json["openingTime"],
-    closingTime: !exists(json, "closingTime") ? undefined : json["closingTime"],
-    prop: !exists(json, "prop") ? undefined : json["prop"],
-  };
+    openingTime: !exists(json, 'openingTime') ? undefined : json['openingTime'],
+    closingTime: !exists(json, 'closingTime') ? undefined : json['closingTime'],
+    prop: !exists(json, 'prop') ? undefined : json['prop'],
+  }
 }
 
 export function InlineResponse20032SessionsToJSON(
   value?: InlineResponse20032Sessions | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     openingTime: value.openingTime,
     closingTime: value.closingTime,
     prop: value.prop,
-  };
+  }
 }

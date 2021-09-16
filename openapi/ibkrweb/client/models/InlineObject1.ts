@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,29 +24,29 @@ export interface InlineObject1 {
    * @type {string}
    * @memberof InlineObject1
    */
-  devicename?: string;
+  devicename?: string
   /**
    *
    * @type {string}
    * @memberof InlineObject1
    */
-  deviceId?: string;
+  deviceId?: string
   /**
    *
    * @type {string}
    * @memberof InlineObject1
    */
-  uiName?: string;
+  uiName?: string
   /**
    *
    * @type {boolean}
    * @memberof InlineObject1
    */
-  enabled?: boolean;
+  enabled?: boolean
 }
 
 export function InlineObject1FromJSON(json: any): InlineObject1 {
-  return InlineObject1FromJSONTyped(json, false);
+  return InlineObject1FromJSONTyped(json, false)
 }
 
 export function InlineObject1FromJSONTyped(
@@ -54,27 +54,27 @@ export function InlineObject1FromJSONTyped(
   ignoreDiscriminator: boolean
 ): InlineObject1 {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    devicename: !exists(json, "devicename") ? undefined : json["devicename"],
-    deviceId: !exists(json, "deviceId") ? undefined : json["deviceId"],
-    uiName: !exists(json, "uiName") ? undefined : json["uiName"],
-    enabled: !exists(json, "enabled") ? undefined : json["enabled"],
-  };
+    devicename: !exists(json, 'devicename') ? undefined : json['devicename'],
+    deviceId: !exists(json, 'deviceId') ? undefined : json['deviceId'],
+    uiName: !exists(json, 'uiName') ? undefined : json['uiName'],
+    enabled: !exists(json, 'enabled') ? undefined : json['enabled'],
+  }
 }
 
 export function InlineObject1ToJSON(value?: InlineObject1 | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     devicename: value.devicename,
     deviceId: value.deviceId,
     uiName: value.uiName,
     enabled: value.enabled,
-  };
+  }
 }

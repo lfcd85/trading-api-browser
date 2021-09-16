@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,11 +24,11 @@ export interface SystemError {
    * @type {string}
    * @memberof SystemError
    */
-  error?: string;
+  error?: string
 }
 
 export function SystemErrorFromJSON(json: any): SystemError {
-  return SystemErrorFromJSONTyped(json, false);
+  return SystemErrorFromJSONTyped(json, false)
 }
 
 export function SystemErrorFromJSONTyped(
@@ -36,21 +36,21 @@ export function SystemErrorFromJSONTyped(
   ignoreDiscriminator: boolean
 ): SystemError {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    error: !exists(json, "error") ? undefined : json["error"],
-  };
+    error: !exists(json, 'error') ? undefined : json['error'],
+  }
 }
 
 export function SystemErrorToJSON(value?: SystemError | null): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     error: value.error,
-  };
+  }
 }

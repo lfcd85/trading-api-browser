@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from "../runtime";
+import { exists, mapValues } from '../runtime'
 /**
  *
  * @export
@@ -24,49 +24,49 @@ export interface SummaryAccountSummaries {
    * @type {string}
    * @memberof SummaryAccountSummaries
    */
-  chg?: string;
+  chg?: string
   /**
    *
    * @type {boolean}
    * @memberof SummaryAccountSummaries
    */
-  hasAccounts?: boolean;
+  hasAccounts?: boolean
   /**
    *
    * @type {string}
    * @memberof SummaryAccountSummaries
    */
-  accountTypeName?: string;
+  accountTypeName?: string
   /**
    *
    * @type {string}
    * @memberof SummaryAccountSummaries
    */
-  rtn?: string;
+  rtn?: string
   /**
    *
    * @type {string}
    * @memberof SummaryAccountSummaries
    */
-  endVal?: string;
+  endVal?: string
   /**
    *
    * @type {string}
    * @memberof SummaryAccountSummaries
    */
-  accountTypeCode?: string;
+  accountTypeCode?: string
   /**
    *
    * @type {string}
    * @memberof SummaryAccountSummaries
    */
-  startVal?: string;
+  startVal?: string
 }
 
 export function SummaryAccountSummariesFromJSON(
   json: any
 ): SummaryAccountSummaries {
-  return SummaryAccountSummariesFromJSONTyped(json, false);
+  return SummaryAccountSummariesFromJSONTyped(json, false)
 }
 
 export function SummaryAccountSummariesFromJSONTyped(
@@ -74,31 +74,31 @@ export function SummaryAccountSummariesFromJSONTyped(
   ignoreDiscriminator: boolean
 ): SummaryAccountSummaries {
   if (json === undefined || json === null) {
-    return json;
+    return json
   }
   return {
-    chg: !exists(json, "chg") ? undefined : json["chg"],
-    hasAccounts: !exists(json, "hasAccounts") ? undefined : json["hasAccounts"],
-    accountTypeName: !exists(json, "accountTypeName")
+    chg: !exists(json, 'chg') ? undefined : json['chg'],
+    hasAccounts: !exists(json, 'hasAccounts') ? undefined : json['hasAccounts'],
+    accountTypeName: !exists(json, 'accountTypeName')
       ? undefined
-      : json["accountTypeName"],
-    rtn: !exists(json, "rtn") ? undefined : json["rtn"],
-    endVal: !exists(json, "endVal") ? undefined : json["endVal"],
-    accountTypeCode: !exists(json, "accountTypeCode")
+      : json['accountTypeName'],
+    rtn: !exists(json, 'rtn') ? undefined : json['rtn'],
+    endVal: !exists(json, 'endVal') ? undefined : json['endVal'],
+    accountTypeCode: !exists(json, 'accountTypeCode')
       ? undefined
-      : json["accountTypeCode"],
-    startVal: !exists(json, "startVal") ? undefined : json["startVal"],
-  };
+      : json['accountTypeCode'],
+    startVal: !exists(json, 'startVal') ? undefined : json['startVal'],
+  }
 }
 
 export function SummaryAccountSummariesToJSON(
   value?: SummaryAccountSummaries | null
 ): any {
   if (value === undefined) {
-    return undefined;
+    return undefined
   }
   if (value === null) {
-    return null;
+    return null
   }
   return {
     chg: value.chg,
@@ -108,5 +108,5 @@ export function SummaryAccountSummariesToJSON(
     endVal: value.endVal,
     accountTypeCode: value.accountTypeCode,
     startVal: value.startVal,
-  };
+  }
 }
