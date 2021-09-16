@@ -17,6 +17,9 @@ export const SideMenu: React.FC = () => {
     setOpen({ ...open, [broker]: !open[broker] })
   }
 
+  const interactiveBrokersWebAPIServerURL =
+    process.env.NEXT_PUBLIC_INTERACTIVE_BROKERS_WEB_API_SERVER_URL
+
   return (
     <Paper elevation={0} className="w-60 h-full border-r fixed">
       <List>
@@ -26,7 +29,7 @@ export const SideMenu: React.FC = () => {
         <Collapse in={open.interactiveBrokers}>
           <List disablePadding>
             <a
-              href="https://localhost:5000"
+              href={interactiveBrokersWebAPIServerURL}
               target="_blank"
               rel="noopener noreferrer"
             >
