@@ -53,12 +53,13 @@ export const SideMenu: React.FC = () => {
         </ListItem>
         <Collapse in={open.alpaca}>
           <List disablePadding>
-            <ListItem button className="pl-8">
-              Account
-            </ListItem>
-            <ListItem button className="pl-8">
-              Market
-            </ListItem>
+            <Link href="/alpaca/account">
+              <a>
+                <ListItem button className="pl-8">
+                  Account
+                </ListItem>
+              </a>
+            </Link>
           </List>
         </Collapse>
       </List>

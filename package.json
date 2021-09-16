@@ -13,6 +13,7 @@
     "openapi:ibkrweb": "run-s openapi:ibkrweb-raw prettier:openapi tsnocheck:openapi"
   },
   "dependencies": {
+    "@master-chief/alpaca": "^6.3.2",
     "@material-ui/core": "^4.12.3",
     "next": "11.1.2",
     "react": "17.0.2",
