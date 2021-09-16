@@ -1,4 +1,4 @@
-/* tslint:disable */
+// @ts-nocheck
 /* eslint-disable */
 /**
  * Client Portal Web API

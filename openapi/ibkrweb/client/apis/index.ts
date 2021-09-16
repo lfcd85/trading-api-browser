@@ -1,4 +1,4 @@
-/* tslint:disable */
+// @ts-nocheck
 /* eslint-disable */
 export * from "./AccountApi";
 export * from "./AlertApi";

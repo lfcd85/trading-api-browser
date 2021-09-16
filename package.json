@@ -9,7 +9,8 @@
     "lint": "next lint",
     "openapi:ibkrweb-raw": "openapi-generator-cli generate -i ./openapi/ibkrweb/swagger.json -g typescript-fetch -o ./openapi/ibkrweb/client -c ./openapi-generator.config.json --skip-validate-spec",
     "prettier:openapi": "prettier --write ./openapi/**/client",
-    "openapi:ibkrweb": "run-s openapi:ibkrweb-raw prettier:openapi"
+    "tsnocheck:openapi": "sed -i '' 's|^\\/\\* tslint:disable \\*\\/|\\/\\/ @ts-nocheck|g' openapi/**/client/**/*.ts; sed -i '' 's|^\\/\\* tslint:disable \\*\\/|\\/\\/ @ts-nocheck|g' openapi/**/client/*.ts",
+    "openapi:ibkrweb": "run-s openapi:ibkrweb-raw prettier:openapi tsnocheck:openapi"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
