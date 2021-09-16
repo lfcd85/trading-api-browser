@@ -1,15 +1,8 @@
-export const convertCamelCaseToCapitalizedCase = (text: string): string => {
-  const result = text.replace(/([A-Z])/g, ' $1')
-  return (result.charAt(0).toUpperCase() + result.slice(1))
-    .split(' ')
-    .map((word) => (upperCaseWords.includes(word) ? word.toUpperCase() : word))
-    .join(' ')
-}
+import { capitalCase } from 'change-case'
 
-export const convertSnakeCaseToCapitalizedCase = (text: string): string =>
-  text
-    .split('_')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+export const convertToCapitalCase = (text: string): string =>
+  capitalCase(text)
+    .split(' ')
     .map((word) => (upperCaseWords.includes(word) ? word.toUpperCase() : word))
     .join(' ')
 

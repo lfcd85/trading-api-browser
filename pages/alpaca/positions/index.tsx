@@ -2,10 +2,11 @@ import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Position } from '@master-chief/alpaca'
-
 import { useAlpacaApi } from '~/hooks/useAlpacaApi'
-import { convertSnakeCaseToCapitalizedCase } from '~/utils'
+import { convertToCapitalCase } from '~/utils'
 import { DataGrid, GridColDef, GridRowData } from '@mui/x-data-grid'
+import { camelCase } from 'change-case'
+import camelcaseKeys from 'camelcase-keys'
 
 const AlpacaPositions: NextPage = () => {
   const { alpacaApi } = useAlpacaApi()
@@ -25,8 +26,8 @@ const AlpacaPositions: NextPage = () => {
         Object.keys(positions[0])
           .filter((key) => key !== 'raw')
           .map((key) => ({
-            field: key,
-            headerName: convertSnakeCaseToCapitalizedCase(key),
+            field: camelCase(key),
+            headerName: convertToCapitalCase(key),
             width: Math.max(
               key.length * 14,
               (positions[0] as any)[key].toString().length * 10
@@ -38,7 +39,7 @@ const AlpacaPositions: NextPage = () => {
       setRows(
         positions.map((position) => {
           const { raw, ...row } = position
-          return row
+          return camelcaseKeys(row)
         })
       )
     }
@@ -55,7 +56,7 @@ const AlpacaPositions: NextPage = () => {
           <DataGrid
             rows={rows}
             columns={columns}
-            getRowId={(row) => row.asset_id}
+            getRowId={(row) => row.assetId}
             pageSize={20}
             rowsPerPageOptions={[20]}
           />

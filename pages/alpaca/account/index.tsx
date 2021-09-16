@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import { useAlpacaApi } from '~/hooks/useAlpacaApi'
-import { convertSnakeCaseToCapitalizedCase } from '~/utils'
+import { convertToCapitalCase } from '~/utils'
 import { Table, TableBody, TableCell, TableRow } from '@material-ui/core'
 
 const AlpacaAccount: NextPage = () => {
@@ -31,7 +31,7 @@ const AlpacaAccount: NextPage = () => {
                   key !== 'raw' && (
                     <TableRow key={key}>
                       <TableCell component="th" scope="row">
-                        {convertSnakeCaseToCapitalizedCase(key)}
+                        {convertToCapitalCase(key)}
                       </TableCell>
                       <TableCell>{account[key].toString()}</TableCell>
                     </TableRow>

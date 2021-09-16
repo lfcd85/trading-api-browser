@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import { useInteractiveBrokersWebApi } from '~/hooks/useInteractiveBrokersWebApi'
 import { Account } from 'openapi/ibkrweb/client'
-import { convertCamelCaseToCapitalizedCase } from '~/utils'
+import { convertToCapitalCase } from '~/utils'
 import { Table, TableBody, TableCell, TableRow } from '@material-ui/core'
 
 const InteractiveBrokersAccounts: NextPage = () => {
@@ -41,7 +41,7 @@ const InteractiveBrokersAccounts: NextPage = () => {
                             {Object.keys(object).map((objectKey) => (
                               <TableRow key={objectKey}>
                                 <TableCell component="th" scope="row">
-                                  {convertCamelCaseToCapitalizedCase(objectKey)}
+                                  {convertToCapitalCase(objectKey)}
                                 </TableCell>
                                 <TableCell>
                                   {(object as any)[objectKey]?.toString()}
@@ -58,7 +58,7 @@ const InteractiveBrokersAccounts: NextPage = () => {
                   return (
                     <TableRow key={key}>
                       <TableCell component="th" scope="row">
-                        {convertCamelCaseToCapitalizedCase(key)}
+                        {convertToCapitalCase(key)}
                       </TableCell>
                       <TableCell>{getValue()}</TableCell>
                     </TableRow>
