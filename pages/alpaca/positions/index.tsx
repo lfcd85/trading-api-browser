@@ -30,7 +30,7 @@ const AlpacaPositions: NextPage = () => {
             headerName: convertToCapitalCase(key),
             width: Math.max(
               key.length * 14,
-              (positions[0] as any)[key].toString().length * 10
+              (positions[0] as any)[key]?.toString()?.length * 10 || 0
             ),
             minWidth: 150,
           }))

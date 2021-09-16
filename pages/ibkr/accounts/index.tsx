@@ -9,7 +9,7 @@ import { Table, TableBody, TableCell, TableRow } from '@material-ui/core'
 
 const InteractiveBrokersAccounts: NextPage = () => {
   const { portfolioApi } = useInteractiveBrokersWebApi()
-  const [accounts, setAccounts] = React.useState<Array<Account>>()
+  const [accounts, setAccounts] = React.useState<Account[]>()
 
   React.useEffect(() => {
     if (!accounts) {

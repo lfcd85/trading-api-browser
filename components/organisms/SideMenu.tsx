@@ -45,6 +45,13 @@ export const SideMenu: React.FC = () => {
                 </ListItem>
               </a>
             </Link>
+            <Link href="/ibkr/positions">
+              <a>
+                <ListItem button className="pl-8">
+                  Positions
+                </ListItem>
+              </a>
+            </Link>
           </List>
         </Collapse>
 
