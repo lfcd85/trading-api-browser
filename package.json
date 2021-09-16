@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint \"./**/*.{ts,tsx,js,jsx}\"",
     "openapi:ibkrweb-raw": "openapi-generator-cli generate -i ./openapi/ibkrweb/swagger.json -g typescript-fetch -o ./openapi/ibkrweb/client -c ./openapi-generator.config.json --skip-validate-spec",
     "prettier:openapi": "prettier --write ./openapi/**/client",
     "tsnocheck:openapi": "sed -i '' 's|^\\/\\* tslint:disable \\*\\/|\\/\\/ @ts-nocheck|g' openapi/**/client/**/*.ts; sed -i '' 's|^\\/\\* tslint:disable \\*\\/|\\/\\/ @ts-nocheck|g' openapi/**/client/*.ts",
