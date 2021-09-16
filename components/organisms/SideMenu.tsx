@@ -6,6 +6,7 @@ import {
   ListItemText,
   Collapse,
 } from '@material-ui/core'
+import Link from 'next/link'
 import { Broker } from '~/types'
 
 export const SideMenu: React.FC = () => {
@@ -37,12 +38,13 @@ export const SideMenu: React.FC = () => {
                 Login
               </ListItem>
             </a>
-            <ListItem button className="pl-8">
-              Account
-            </ListItem>
-            <ListItem button className="pl-8">
-              Market
-            </ListItem>
+            <Link href="/ibkr/accounts">
+              <a>
+                <ListItem button className="pl-8">
+                  Accounts
+                </ListItem>
+              </a>
+            </Link>
           </List>
         </Collapse>
 

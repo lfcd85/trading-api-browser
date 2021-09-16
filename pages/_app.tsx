@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="w60">
         <SideMenu />
       </div>
-      <div className="ml-60">
+      <div className="ml-60 w-screen h-screen">
         <Component {...pageProps} />
       </div>
     </div>
