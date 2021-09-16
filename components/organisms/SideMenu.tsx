@@ -25,6 +25,15 @@ export const SideMenu: React.FC = () => {
         </ListItem>
         <Collapse in={open.interactiveBrokers}>
           <List disablePadding>
+            <a
+              href="https://localhost:5000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ListItem button className="pl-8">
+                Login
+              </ListItem>
+            </a>
             <ListItem button className="pl-8">
               Account
             </ListItem>
