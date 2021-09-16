@@ -60,6 +60,13 @@ export const SideMenu: React.FC = () => {
                 </ListItem>
               </a>
             </Link>
+            <Link href="/alpaca/positions">
+              <a>
+                <ListItem button className="pl-8">
+                  Positions
+                </ListItem>
+              </a>
+            </Link>
           </List>
         </Collapse>
       </List>
