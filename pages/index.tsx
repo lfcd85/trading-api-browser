@@ -53,7 +53,10 @@ const Home: NextPage = () => {
           </a>
         </div>
 
-        <Button>Material UI</Button>
+        <div className="flex flex-col">
+          <Button>Material UI</Button>
+          <Button>Tailwind CSS</Button>
+        </div>
       </main>
 
       <footer className={styles.footer}>
