@@ -7,3 +7,6 @@ export const convertToCapitalCase = (text: string): string =>
     .join(' ')
 
 export const upperCaseWords = ['Id']
+
+export const sleep = (milliseconds: number): Promise<void> =>
+  new Promise((resolve) => setTimeout(resolve, milliseconds))

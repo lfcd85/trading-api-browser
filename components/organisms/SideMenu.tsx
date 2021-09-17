@@ -76,6 +76,21 @@ export const SideMenu: React.FC = () => {
             </Link>
           </List>
         </Collapse>
+
+        <ListItem button onClick={() => handleClick('polygonIo')}>
+          <ListItemText>Polygon.io</ListItemText>
+        </ListItem>
+        <Collapse in={open.polygonIo}>
+          <List disablePadding>
+            <Link href="/polygonio/tickers">
+              <a>
+                <ListItem button className="pl-8">
+                  Tickers
+                </ListItem>
+              </a>
+            </Link>
+          </List>
+        </Collapse>
       </List>
     </Paper>
   )
