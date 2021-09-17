@@ -91,6 +91,21 @@ export const SideMenu: React.FC = () => {
             </Link>
           </List>
         </Collapse>
+
+        <ListItem button onClick={() => handleClick('alphaVantage')}>
+          <ListItemText>Alpha Vantage</ListItemText>
+        </ListItem>
+        <Collapse in={open.alphaVantage}>
+          <List disablePadding>
+            <Link href="/alphavantage/overview">
+              <a>
+                <ListItem button className="pl-8">
+                  Company Overview
+                </ListItem>
+              </a>
+            </Link>
+          </List>
+        </Collapse>
       </List>
     </Paper>
   )

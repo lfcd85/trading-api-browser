@@ -1,1 +1,5 @@
-export type Broker = 'interactiveBrokers' | 'alpaca' | 'polygonIo'
+export type Broker =
+  | 'interactiveBrokers'
+  | 'alpaca'
+  | 'polygonIo'
+  | 'alphaVantage'
